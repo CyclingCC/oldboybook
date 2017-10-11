@@ -118,7 +118,9 @@ Linux的标志和吉祥物为一只名字叫作Tux的企鹅——Torvalds' Unix�
 
 ![](/assets/import1.png)
 
-                                       图1-2
+```
+                                   图1-2
+```
 
 ## 2.7 Linux的发展过程
 
@@ -147,6 +149,8 @@ Linux的标志和吉祥物为一只名字叫作Tux的企鹅——Torvalds' Unix�
 ### 2.7.2 Linux发展历程中相关人物
 
 我们一定要向前辈们致以深深的敬意，没有他们，就没有今天优秀的Linux系统存在了\\(图1-3\\)
+
+![](/assets/图1-3.png)
 
 ```
         ![](/assets/图1-3.png)

@@ -116,9 +116,12 @@ Linux系统的诞生开始与芬兰赫尔辛基大学的以为计算机系的学
 
 Linux的标志和吉祥物为一只名字叫作Tux的企鹅——Torvalds' Unix，如图1-2所示。
 
-                                              ![](/assets/import1.png)
+![](/assets/import1.png)
 
-                                                                                图1-2
+```
+
+                                           图1-2
+```
 
 ## 2.7 Linux的发展过程
 
@@ -234,13 +237,9 @@ Linux系统之所以受到广大计算机爱好者的喜爱，主要原因有两
 
 ## 5.1 Linux的发行版介绍
 
-Linux内核\\(kernel\\)版本主要有4个系列，分别为Linux kernel2.2、Linux kernel2.4、Linux kernel 2.6、Linux kernel3.x，更多更新的内核版本请浏览https://www.kernel.org。
-
-
+Linux内核\\(kernel\\)版本主要有4个系列，分别为Linux kernel2.2、Linux kernel2.4、Linux kernel 2.6、Linux kernel3.x，更多更新的内核版本请浏览[https://www.kernel.org。](https://www.kernel.org。)
 
 Linux的发行商包括Slackware、Redhat、Debian、Fedora、TurboLinux、Mandrake、SUSE、CentOS、Ubuntu、红旗，麒麟••••••
-
-
 
 下面来看看期中几个重要的发型版本:
 

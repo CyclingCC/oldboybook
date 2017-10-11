@@ -116,11 +116,9 @@ Linux系统的诞生开始与芬兰赫尔辛基大学的以为计算机系的学
 
 Linux的标志和吉祥物为一只名字叫作Tux的企鹅——Torvalds' Unix，如图1-2所示。
 
-```
-                                                  ![](/assets/import1.png)
+                                              ![](/assets/import1.png)
 
                                                                                 图1-2
-```
 
 ## 2.7 Linux的发展过程
 
@@ -232,17 +230,19 @@ Linux系统之所以受到广大计算机爱好者的喜爱，主要原因有两
 
     Linux具有Unix的全部优秀特性，任何可以获得Unix几乎所有优秀功能，并且Linux系统更开放，社区开发和全世界的使用者也更活跃。
 
-第5章如何选择Linux发行版
+# 第5章如何选择Linux发行版
 
-5.1 Linux的发行版介绍
+## 5.1 Linux的发行版介绍
 
-```
-Linux内核\(kernel\)版本主要有4个系列，分别为Linux kernel2.2、Linux kernel2.4、Linux kernel 2.6、Linux kernel3.x，更多更新的内核版本请浏览https://www.kernel.org。
+Linux内核\\(kernel\\)版本主要有4个系列，分别为Linux kernel2.2、Linux kernel2.4、Linux kernel 2.6、Linux kernel3.x，更多更新的内核版本请浏览https://www.kernel.org。
+
+
 
 Linux的发行商包括Slackware、Redhat、Debian、Fedora、TurboLinux、Mandrake、SUSE、CentOS、Ubuntu、红旗，麒麟••••••
 
+
+
 下面来看看期中几个重要的发型版本:
-```
 
     Redhat： Redhat Linux9.0的内核为2.4.20。在版本9.0后，Redhat不在遵循GPL协议，成为收费产品\(但仍开源\)，发展的新版本一次为Redhat3.x、Redhat4.x、Redhat5.x、Redhat6.x、Redhat7.x、Redhat Enterprise6.x。
 
@@ -252,9 +252,9 @@ Linux的发行商包括Slackware、Redhat、Debian、Fedora、TurboLinux、Mandr
 
 提示：有关Linux操作系统，记住Redhat、CentOS、Ubuntu、Fedora、SUSE、Debian等即可。
 
-5.2 选择适合的Linux系统学习
+## 5.2 选择适合的Linux系统学习
 
-5.2.1 Linux发行版本应用场景
+### 5.2.1 Linux发行版本应用场景
 
 Linux发行版本选择
 
@@ -272,7 +272,7 @@ Fedora=稳定之后=&gt;Redhat=去Logo去除收费=&gt;CentOS
 
 中文    红旗Linux，中标麒麟Linux
 
-5.2.2 选择CentOS  Linux版本
+### 5.2.2 选择CentOS  Linux版本
 
 ```
 本诉讲解的Linux运维技术主要是基于CentOS x86\_64 Linux的，绝大部分知识几乎无需任何修改同样适用于Redhat Linux等同源或类似Linux系统版本。

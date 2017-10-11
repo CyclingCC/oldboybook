@@ -218,13 +218,15 @@ Linux操作系统 = Linux内核 + GNU项目软件 + 必要的应用程序
 | :--- | :--- | :--- |
 | 开发者Linus Torvalds | 项目发起人Richard Stallman | BSD Unix和X Windows以及成千上万的程序员 |
 
-      !\[\]\(/assets/图1-5.png\)
+
+
+![](/assets/图1-5.png)
 
 
 
-                                                       图1-4      为Linux系统的核心组成原理示意图
 
-                                                       
+
+                                                   图1-4      为Linux系统的核心组成原理示意图
 
 # 第4章 Linux特点
 

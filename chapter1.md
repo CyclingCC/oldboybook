@@ -218,15 +218,11 @@ Linux操作系统 = Linux内核 + GNU项目软件 + 必要的应用程序
 | :--- | :--- | :--- |
 | 开发者Linus Torvalds | 项目发起人Richard Stallman | BSD Unix和X Windows以及成千上万的程序员 |
 
-
-
 ![](/assets/图1-5.png)
 
-
-
-
-
-                                                   图1-4      为Linux系统的核心组成原理示意图
+```
+                                               图1-4      为Linux系统的核心组成原理示意图
+```
 
 # 第4章 Linux特点
 
@@ -240,9 +236,11 @@ Linux系统之所以受到广大计算机爱好者的喜爱，主要原因有两
 
     Linux具有Unix的全部优秀特性，任何可以获得Unix几乎所有优秀功能，并且Linux系统更开放，社区开发和全世界的使用者也更活跃。
 
-# 第5章如何选择Linux发行版
+# 第5章 如何选择Linux发行版   
 
 ## 5.1 Linux的发行版介绍
+
+![](/assets/图1-6.png)
 
 Linux内核\\(kernel\\)版本主要有4个系列，分别为Linux kernel2.2、Linux kernel2.4、Linux kernel 2.6、Linux kernel3.x，更多更新的内核版本请浏览[https://www.kernel.org。](https://www.kernel.org。)
 
@@ -250,13 +248,13 @@ Linux的发行商包括Slackware、Redhat、Debian、Fedora、TurboLinux、Mandr
 
 下面来看看期中几个重要的发型版本:
 
-    Redhat： Redhat Linux9.0的内核为2.4.20。在版本9.0后，Redhat不在遵循GPL协议，成为收费产品\(但仍开源\)，发展的新版本一次为Redhat3.x、Redhat4.x、Redhat5.x、Redhat6.x、Redhat7.x、Redhat Enterprise6.x。
+*     Redhat： Redhat Linux9.0的内核为2.4.20。在版本9.0后，Redhat不在遵循GPL协议，成为收费产品\(但仍开源\)，发展的新版本一次为Redhat3.x、Redhat4.x、Redhat5.x、Redhat6.x、Redhat7.x、Redhat Enterprise6.x。
+*     Fedora: 为Redhat的一个分支，仍遵循GPL协议，可以认为是Redhat预发布版。\(就像是游戏的公测版\)
+*     CentOS\(community Enterprise Operating System\)：与Redhat做到二进制级别的一模一样，Redhat的另一个重要分支，以Redhat所发布的源代码重建符合GPL许可协议的Linux系统，即将Redhat Linux源代码的商标Logo以及非自由软件部分去除在编译而成的版本，目前CentOS已被Redhat公司收购，但仍开源免费，CentOS Linux是国内互联网公司使用最多的Linux系统版本，也是本书的"主人公"，本书后面所有的内容讲解都是基于CentOS这个操作系统的，绝大部分内容几乎无需任何修改同样适合其他操作系统版本。
 
-    Fedora: 为Redhat的一个分支，仍遵循GPL协议，可以认为是Redhat预发布版。\(就像是游戏的公测版\)
-
-    CentOS\(community Enterprise Operating System\)：与Redhat做到二进制级别的一模一样，Redhat的另一个重要分支，以Redhat所发布的源代码重建符合GPL许可协议的Linux系统，即将Redhat Linux源代码的商标Logo以及非自由软件部分去除在编译而成的版本，目前CentOS已被Redhat公司收购，但仍开源免费，CentOS Linux是国内互联网公司使用最多的Linux系统版本，也是本书的"主人公"，本书后面所有的内容讲解都是基于CentOS这个操作系统的，绝大部分内容几乎无需任何修改同样适合其他操作系统版本。
-
+```
 提示：有关Linux操作系统，记住Redhat、CentOS、Ubuntu、Fedora、SUSE、Debian等即可。
+```
 
 ## 5.2 选择适合的Linux系统学习
 
@@ -280,11 +278,9 @@ Fedora=稳定之后=&gt;Redhat=去Logo去除收费=&gt;CentOS
 
 ### 5.2.2 选择CentOS  Linux版本
 
-```
-本诉讲解的Linux运维技术主要是基于CentOS x86\_64 Linux的，绝大部分知识几乎无需任何修改同样适用于Redhat Linux等同源或类似Linux系统版本。
+本诉讲解的Linux运维技术主要是基于CentOS x86\\_64 Linux的，绝大部分知识几乎无需任何修改同样适用于Redhat Linux等同源或类似Linux系统版本。
 
 下面是CentOS的主流版本在国内互联网企业的使用现状说明：
-```
 
     CentOS 5系列：占25%左右，主流版本有CentOS 5.5 、CentOS 5.8、CentOS 5.10、CentOS 5.11，不推介新手学习了。=&gt;Linux kernrl 2.4
 
@@ -292,11 +288,13 @@ Fedora=稳定之后=&gt;Redhat=去Logo去除收费=&gt;CentOS
 
     CentOS 7系列：最新的系统，目前正式使用的企业不多，因此不建议去玩它，最好学习目前企业使用较多的6系列，等过2年企业都上了CentOS7的系统，就可以轻松转过去了，不要盲目选择较高的版本。
 
-小面试题：你们公司服务器使用的版本系统是什么？
 
-CentOS 6.8 X86\_64 内核版本3.6.32
 
-面试技巧：大家被面试官问及使用什么样操作系统时，一定要一次性说出来\(系统版本、内核版本、32位和64位\)，例如：我们工作中使用的是CentOS 6.7 x86\_64位Linux系统，内核版本为2.6.32-573，这才是一个合格的Linux运维人员的表现。
+`小面试题：你们公司服务器使用的版本系统是什么？`
+
+`CentOS 6.8 X86_64 内核版本3.6.32`
+
+`面试技巧：大家被面试官问及使用什么样操作系统时，一定要一次性说出来(系统版本、内核版本、32位和64位)，例如：我们工作中使用的是CentOS 6.7 x86_64位Linux系统，内核版本为2.6.32-573，这才是一个合格的Linux运维人员的表现。`
 
 # 第6章 总结
 

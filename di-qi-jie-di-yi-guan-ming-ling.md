@@ -351,7 +351,7 @@ date -s "2016-03-22"
 
 ## 6.4 面试题：删除一个目录下的所有文件，但保留一个指定文件
 
-http://oldboy.blog.51cto.com/2561410/1650380
+[http://oldboy.blog.51cto.com/2561410/1650380](http://oldboy.blog.51cto.com/2561410/1650380)
 
 解答：
 
@@ -369,13 +369,13 @@ file1  file10  file2  file3  file4  file5  file6  file7  file8  file9
 
 file1  file10  file2  file3  file4  file5  file6  file7  file8  file9
 
-\[root@oldboy xx\]\# find /xx -type f ! -name "file10"\|xargs rm -f 
+\[root@oldboy xx\]\# find /xx -type f ! -name "file10"\|xargs rm -f
 
 \[root@oldboy xx\]\# ls
 
 file10
 
-\[root@oldboy xx\]\# find /xx -type f ! -name "file10" -exec rm -f {} \;     
+\[root@oldboy xx\]\# find /xx -type f ! -name "file10" -exec rm -f {} \;
 
 \[root@oldboy xx\]\# ls
 
@@ -417,17 +417,15 @@ rm -f \`ls\|grep -v "\boldboy1\b"\`
 
 #### 从运维角度，任何删除性的操作都应该事先备份后在执行或者确认有备份存在。
 
+# 第7章 find命令
 
-
-第7章 find命令
-
-7.1  find命令格式
+## 7.1 find命令格式
 
 find    在哪找\(目录\)    找什么类型\(-type\)   叫什么\(-name\)     ...     ...     ...
 
 find    /data           -type  \[ f  d ...\]      -name  "\*.txt"
 
-7.2 find    查找文件或目录  -type  f  d    -name     -mtime \(+7 7 -7\)   -exec 行动
+## 7.2 find    查找文件或目录  -type  f  d    -name     -mtime \(+7 7 -7\)   -exec 行动
 
 \[root@oldboy ~\]\# find / -type f  -name "oldgirl.txt"
 
@@ -437,17 +435,15 @@ find / -type f  -name "oldgirl.txt" -exec rm {} \;
 
 find /data -type f -name "oldboy.txt" -mtime +7 -exec rm {} \;
 
-- mtime +7  修改时间7天前
+## 7.3 mtime +7  修改时间7天前
 
 find /data -type f -name "oldboy.txt" -mtime +7 -exec cp {} /tmp/ \;
 
 cp  \`find /data -type f -name "oldboy.txt"\` /tmp/
 
-企业面试题：查找/oldboy下所有7天前的以log结尾的文件移动到/tmp下
+### 企业面试题：查找/oldboy下所有7天前的以log结尾的文件移动到/tmp下
 
 find /oldboy/ -type f -name "\*.log" -mtime +7 -exec mv {} /tmp/ \;
 
-http://oldboy.blog.51cto.com/2561410/1750481
-
-
+[http://oldboy.blog.51cto.com/2561410/1750481](http://oldboy.blog.51cto.com/2561410/1750481)
 

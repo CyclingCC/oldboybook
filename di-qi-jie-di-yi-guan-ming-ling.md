@@ -733,15 +733,13 @@ tree /root/
 
 └── sersync.tar.gz
 
-
-
 0 directories, 5 files
 
-第15章 alias命令
+# 第15章 alias命令
 
-15.1 alias 查看别名
+#### 15.1 alias 查看别名
 
-\[root@oldboy oldboy\]\# alias 
+\[root@oldboy oldboy\]\# alias
 
 alias cp='cp -i'
 
@@ -755,7 +753,7 @@ alias mv='mv -i'
 
 alias which='alias \| /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
 
-15.2  设置别名
+#### 15.2  设置别名
 
 \[root@oldboy oldboy\]\# alias rm='echo "this command does not allow to use."'
 
@@ -765,11 +763,11 @@ this command does not allow to use.
 
 echo "alias rm='echo do not use rm' " &gt;&gt; /etc/profile
 
-15.3 取消别名   
+#### 15.3 取消别名
 
 unalias rm
 
-15.4  别名作用
+#### 15.4  别名作用
 
 \[root@oldboy oldboy\]\# cp a.txt /tmp/
 
@@ -777,13 +775,13 @@ cp: overwrite \`/tmp/a.txt'? y
 
 \[root@oldboy oldboy\]\# \cp a.txt /tmp/
 
-\[root@oldboy oldboy\]\# /bin/cp a.txt /tmp/ 
+\[root@oldboy oldboy\]\# /bin/cp a.txt /tmp/
 
-\[root@oldboy oldboy\]\# cp -i a.txt /tmp/     
+\[root@oldboy oldboy\]\# cp -i a.txt /tmp/
 
 cp: overwrite \`/tmp/a.txt'? ^C
 
-\[root@oldboy oldboy\]\# alias 
+\[root@oldboy oldboy\]\# alias
 
 alias cp='cp -i'
 
@@ -801,7 +799,7 @@ alias which='alias \| /usr/bin/which --tty-only --read-alias --show-dot --show-t
 
 \[root@oldboy oldboy\]\# unalias cp
 
-\[root@oldboy oldboy\]\# alias     
+\[root@oldboy oldboy\]\# alias
 
 alias l.='ls -d .\* --color=auto'
 
@@ -817,7 +815,7 @@ alias which='alias \| /usr/bin/which --tty-only --read-alias --show-dot --show-t
 
 \[root@oldboy oldboy\]\# alias\|grep cp
 
-\[root@oldboy oldboy\]\# cp a.txt /tmp/   
+\[root@oldboy oldboy\]\# cp a.txt /tmp/
 
 \[root@oldboy oldboy\]\# cp a.txt /tmp/
 
@@ -825,9 +823,377 @@ alias which='alias \| /usr/bin/which --tty-only --read-alias --show-dot --show-t
 
 cp: overwrite \`/tmp/a.txt'?
 
-15.5  定义别名永久生效
+#### 15.5  定义别名永久生效
 
 source /etc/profile 全局生效
 
 ~/.bashrc    当前用户生效
+
+# 第16章 sed命令 
+
+sed \*\*\*\*\* 擅长取行，替换，linux三剑客老二
+
+sed  \[选项\]  \[sed命令\]  \[输入文件\]
+
+-n 取消默认输出，功能p\(print\)打印
+
+   例：取行：sed -n '20,30p' ett.txt 
+
+g与s联合使用时，表示对当前行全局匹配替换，s常说的查找并替换，用一个字符串替换成另一个
+
+-e允许多项编辑
+
+-i修改文件内容（修改磁盘上的内容）
+
+#### 16.1  sed过滤
+
+sed -n '/oldboy/p' test.txt
+
+\[root@oldboy ~\]\# sed -n '20,30p' a.txt 
+
+20
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+#### 16.2  sed替换
+
+\[root@oldboy ~\]\# sed 's\#oldgirl\#gongli\#' a.txt 
+
+oldboy gongli 
+
+gongli
+
+\#是分隔符，分隔符可以是任意的
+
+#### 16.3  sed删除
+
+\[root@oldboy data\]\# cat test.txt 
+
+test
+
+liyao
+
+oldboy
+
+\[root@oldboy36 ~\]\# sed -n '/oldboy/!p' oldboy.txt 
+
+test
+
+liyao
+
+\[root@oldboy36 ~\]\# sed '/oldboy/d' oldboy.txt
+
+test
+
+liyao
+
+#### 16.4  sed修改文件内容
+
+\[root@oldboy ~\]\# sed -i 's\#oldgirl\#gongli\#g' a.txt 
+
+\[root@oldboy ~\]\# cat a.txt 
+
+oldboy gongli 
+
+gongli
+
+# 第17章 awk命令
+
+#### 17.1 awk   linux三剑客老大  
+
+NR  行号
+
+==   等于
+
+$0  整行
+
+\[root@oldboy ~\]\# awk 'NR&gt;19&&NR&lt;31' a.txt 
+
+20
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+seq 50 \|awk 'NR==20,NR==30 {print}'
+
+\[root@oldboy36 ~\]\# awk '!/oldboy/' oldboy.txt 
+
+test
+
+liyao
+
+\[root@oldboy data\]\# ifconfig eth0\|awk -F "\[ :\]+" 'NR==2 {print $4}'
+
+10.0.0.30
+
+\[root@oldboy oldboy\]\# ifconfig eth0\|sed -nr 's\#^.\*dr:\(.\*\) B.\*$\#\1\#gp'
+
+192.168.33.128 
+
+\[root@oldboy oldboy\]\# ifconfig eth0\|awk -F "\[ :\]+" 'NR==2 {print $4}'
+
+192.168.33.128
+
+
+
+# 第18章  实战题目
+
+/oldboy目录下文件中内容oldboy替换为oldgirl
+
+#### 18.1  创建环境
+
+mkdir -p /oldboy/test
+
+cd /oldboy
+
+echo "oldboy"&gt;test/del.sh
+
+echo "oldboy"&gt;test.sh
+
+echo "oldboy"&gt;t.sh
+
+touch oldboy.txt
+
+touch alex.txt
+
+#### 18.2  找出文件
+
+\[root@oldboyedu36 oldboy\]\# \#找到你要处理的东西
+
+\[root@oldboyedu36 oldboy\]\# find /oldboy/ -type f 
+
+/oldboy/alex.txt
+
+/oldboy/test.sh
+
+/oldboy/test/del.sh
+
+/oldboy/oldboy.txt
+
+/oldboy/t.sh
+
+\[root@oldboyedu36 oldboy\]\# find /oldboy/ -type f -name "\*.sh"
+
+/oldboy/test.sh
+
+/oldboy/test/del.sh
+
+/oldboy/t.sh
+
+#### 18.3 把一个文件中的oldboy替换为oldgirl
+
+sed 's\#找谁\#替换成啥\#g'
+
+\[root@oldboyedu36 oldboy\]\# sed 's\#oldboy\#oldgirl\#g' /oldboy/test.sh 
+
+oldgirl
+
+\[root@oldboyedu36 oldboy\]\# cat /oldboy/test.sh 
+
+oldboy
+
+\[root@oldboyedu36 oldboy\]\# sed -i 's\#oldboy\#oldgirl\#g' /oldboy/test.sh 
+
+\[root@oldboyedu36 oldboy\]\# cat /oldboy/test.sh 
+
+oldgirl
+
+#### 18.4 用find命令找到文件，然后用sed修改文件内容
+
+\[root@oldboyedu36 oldboy\]\# find /oldboy/ -type f -name "\*.sh"
+
+/oldboy/test.sh
+
+/oldboy/test/del.sh
+
+/oldboy/t.sh
+
+\[root@oldboyedu36 oldboy\]\# \#\#先看看结果对不对
+
+\[root@oldboyedu36 oldboy\]\# sed 's\#oldboy\#oldgirl\#g' /oldboy/test.sh^C
+
+\[root@oldboyedu36 oldboy\]\# sed 's\#oldboy\#oldgirl\#g' /oldboy/test.sh^C
+
+\[root@oldboyedu36 oldboy\]\# find /oldboy/ -type f -name "\*.sh"\|xargs sed 's\#oldboy\#oldgirl\#g' /oldboy/test.sh
+
+oldgirl
+
+oldgirl
+
+oldgirl
+
+oldgirl
+
+\[root@oldboyedu36 oldboy\]\# \#\#结果对了 -i
+
+ \[root@oldboyedu36 oldboy\]\# find /oldboy/ -type f -name "\*.sh"\|xargs sed -i 's\#oldboy\#oldgirl\#g' /oldboy/test.sh
+
+\[root@oldboyedu36 oldboy\]\# cat /oldboy/test.sh 
+
+oldgirl
+
+\[root@oldboyedu36 oldboy\]\# cat /oldboy/test/del.sh 
+
+oldgirl
+
+#### 18.5  其它方法
+
+方法二
+
+\[root@oldboyedu36 ~\]\# \#\#\# 
+
+\[root@oldboyedu36 ~\]\# which mkdir
+
+/bin/mkdir
+
+\[root@oldboyedu36 ~\]\# ls -l /bin/mkdir
+
+-rwxr-xr-x. 1 root root 50056 Mar 23 02:52 /bin/mkdir
+
+\[root@oldboyedu36 ~\]\# 
+
+\[root@oldboyedu36 ~\]\# \#\#\#把上面两条命令合起来
+
+ \[root@oldboyedu36 ~\]\# \#\#\#ls -l 此处放置的是which mkdir命令的结果
+
+\[root@oldboyedu36 ~\]\# ls -l which mkdir 
+
+ls: cannot access which: No such file or directory
+
+ls: cannot access mkdir: No such file or directory
+
+\[root@oldboyedu36 ~\]\# ls -l $\(which mkdir\)
+
+-rwxr-xr-x. 1 root root 50056 Mar 23 02:52 /bin/mkdir
+
+\[root@oldboyedu36 ~\]\# \#\#$\(\)  表示 先执行里面的"命令",然后把命令结果留下来
+
+\[root@oldboyedu36 ~\]\# \#\#$\(\)  =====  \`\` 
+
+$\(\)  &lt;==&gt;  \`\`    在一个命令中包含另一个命令
+
+\[root@oldboyedu36 ~\]\# \#sed 's\#oldboy\#oldgirl\#g'  文件名字 文件 文件 文件 
+
+\[root@oldboyedu36 ~\]\# \#sed 's\#oldboy\#oldgirl\#g'   这些文件怎么得到的？
+
+\[root@oldboyedu36 ~\]\# \#sed 's\#oldboy\#oldgirl\#g'   find命令的结果
+
+\[root@oldboyedu36 ~\]\# \#sed 's\#oldboy\#oldgirl\#g'   $\(find /oldboy/ -type f -name "\*.sh"\)
+
+\[root@oldboyedu36 ~\]\# sed 's\#oldboy\#oldgirl\#g'   $\(find /oldboy/ -type f -name "\*.sh"\)
+
+oldgirl
+
+oldgirl
+
+oldgirl
+
+方法三
+
+\[root@oldboyedu36 ~\]\# \#\#\# 
+
+\[root@oldboyedu36 ~\]\# find /oldboy/ -type f -name "\*.sh"
+
+/oldboy/test.sh
+
+/oldboy/test/del.sh
+
+/oldboy/t.sh
+
+\[root@oldboyedu36 ~\]\# find /oldboy/ -type f -name "\*.sh" -exec ls -l {} \;
+
+-rw-r--r--. 1 root root 7 May  3 06:27 /oldboy/test.sh
+
+-rw-r--r--. 1 root root 7 May  3 06:27 /oldboy/test/del.sh
+
+-rw-r--r--. 1 root root 7 May  3 06:27 /oldboy/t.sh
+
+\[root@oldboyedu36 ~\]\# find /oldboy/ -type f -name "\*.sh" -exec sed 's\#oldboy\#oldgirl\#g' {} \;
+
+oldgirl
+
+oldgirl
+
+oldgirl
+
+#### 18.6  修改网卡ip
+
+find /etc/ -type f -name "\*eth0" \|xargs sed 's\#IPADDR=.\*\#IPADDR=10.0.0.200\#'
+
+# 第19章  linux命令帮助
+
+man  命令/配置文件
+
+命令  --help
+
+help  命令  （用于linux内置命令）
+
+info  命令
+
+搜索  linux  ls  命令
+
+http://man.linuxde.net/
+
+http://linux.51yip.com/
+
+http://www.shouce.ren/api/linux/\#
+
+
+
+# 第20章  常用快捷键
+
+tab键   命令或路径补全功能
+
+ctrl+c  终止当前命令或程序
+
+ctrl+d  退出当前shell
+
+ctrl+l  清屏
+
+ctrl+a  命令行光标移到行首
+
+ctrl+e  命令行光标移到行尾
+
+ctrl+u  命令行删除光标到行首的内容
+
+ctrl+k  命令行删除光标到行尾的内容
+
+ctrl+r  命令行搜索
+
+
 

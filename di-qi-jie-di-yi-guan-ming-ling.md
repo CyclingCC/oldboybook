@@ -423,11 +423,9 @@ rm -f \`ls\|grep -v "\boldboy1\b"\`
 
 find    在哪找\(目录\)    找什么类型\(-type\)   叫什么\(-name\)     ...     ...     ...
 
-find    /data           -type  \[ f  d ...\]      -name  "\*.txt"
+find    /data                     -type  \[ f  d ...\]      -name  "\*.txt"
 
-## 7.2 find    查找文件或目录  
-
-
+## 7.2 find    查找文件或目录
 
 \[root@oldboy ~\]\# find / -type f  -name "oldgirl.txt"
 
@@ -443,7 +441,7 @@ find /data -type f -name "oldboy.txt" -mtime +7 -exec rm {} \;
 
 -name
 
--mtime \(+7 7 -7\) 
+-mtime \(+7 7 -7\)
 
 -exec 行动
 
@@ -458,6 +456,4 @@ cp  \`find /data -type f -name "oldboy.txt"\` /tmp/
 find /oldboy/ -type f -name "\*.log" -mtime +7 -exec mv {} /tmp/ \;
 
 [http://oldboy.blog.51cto.com/2561410/1750481](http://oldboy.blog.51cto.com/2561410/1750481)
-
-
 

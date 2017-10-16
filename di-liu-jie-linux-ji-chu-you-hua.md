@@ -77,8 +77,6 @@ iptables 0:off 1:off 2:off 3:off 4:off 5:off 6:off
 1. 关闭当前正在运行的进程（服务）=====&gt;/etc/init.d/iptablesstop  
    1. 让他在开机不启动======&gt;chkconfigiptablesoff
 
-
-
 # 第2章 字符集修改过程
 
 什么是字符集？
@@ -88,10 +86,6 @@ iptables 0:off 1:off 2:off 3:off 4:off 5:off 6:off
 1）GBK：定长，双字节，不是国际标准，支持的系统不少，实际企业用的不多
 
 2）UTF-8：非定长，1~4字节，广泛支持，MYSQL也使用UTF-8，企业广泛使用
-
-
-
-
 
 提示：
 
@@ -109,15 +103,13 @@ zh\_CN.GBK
 
 这个中文显示配置要跟自己的xshell客户端的配置一致
 
-## 1.1查看系统当前的字符集
+## 2.1查看系统当前的字符集
 
 \[root@oldboy35-moban ~\]\# echo $LANG
 
 en\_US.UTF-8
 
-
-
-## 1.2系统字符集配置文件的位置
+## 2.2系统字符集配置文件的位置
 
 \[root@oldboy35-moban ~\]\# cat /etc/sysconfig/i18n
 
@@ -125,27 +117,21 @@ LANG="en\_US.UTF-8"
 
 SYSFONT="latarcyrheb-sun16"
 
-
-
-## 1.3备份
+## 2.3备份
 
 \[root@oldboy35-moban ~\]\# cp /etc/sysconfig/i18n /etc/sysconfig/i18n.bak
 
-## 1.4修改配置文件
+## 2.4修改配置文件
 
 法一：\[root@oldboy35-moban ~\]\# echo 'LANG="zh\_CN.UTF-8"' &gt;/etc/sysconfig/i18n
 
 法二：\[root@oldboy35-moban ~\]\# vi /etc/sysconfig/i18n 添加LANG="zh\_CN.UTF-8"内容
 
-
-
-## 1.5让配置文件生效
+## 2.5让配置文件生效
 
 \[root@oldboy35-moban ~\]\# source /etc/sysconfig/i18n 使上文修改生效
 
-
-
-## 1.6查看系统当前的字符
+## 2.6查看系统当前的字符
 
 \[root@oldboy35-moban ~\]\# echo＄LANG
 
@@ -153,7 +139,7 @@ SYSFONT="latarcyrheb-sun16"
 
 zh\_CN.UTF-8
 
-## 1.7恢复原有英文环境
+## 2.7恢复原有英文环境
 
 \[root@oldboy35-moban ~\]\# \cp /etc/sysconfig/i18n.bak /etc/sysconfig/i18n
 
@@ -163,7 +149,7 @@ zh\_CN.UTF-8
 
 en\_US.UTF-8
 
-## 1.8小结：
+## 2.8小结：
 
 如果乱码了，解决方法：
 
@@ -182,6 +168,4 @@ echo 'LANG=en\_US.UTF-8' &gt;/etc/sysconfig/i18n
 source /etc/sysconfig/i18n
 
 4.检查
-
-
 

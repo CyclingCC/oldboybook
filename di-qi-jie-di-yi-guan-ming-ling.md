@@ -523,23 +523,23 @@ find /data -type f -name "oldboy.txt"\|xargs -i cp {} /tmp/
 
 #### xargs 又称管道命令，构造参数等。是给命令传递参数的一个过滤器,也是组合多个命令的一个工具 它把一个数据流分割为一些足够小的块,以方便过滤器和命令进行处理 。简单的说 就是把 其他命令的给它的数据 传递给它后面的命令作为参数
 
-### 9.1  xargs  从标准输入获取内容创建和执行命令    
+### 9.1  xargs  从标准输入获取内容创建和执行命令
 
 -n 数字   做分组，几个一组  -i  {}
 
 \[root@oldboy ~\]\# echo 1 2 3 4 &gt;a.txt
 
-\[root@oldboy ~\]\# cat a.txt 
+\[root@oldboy ~\]\# cat a.txt
 
 1 2 3 4
 
-\[root@oldboy ~\]\# xargs -n 2 &lt; a.txt 
+\[root@oldboy ~\]\# xargs -n 2 &lt; a.txt
 
 1 2
 
 3 4
 
-\[root@oldboy ~\]\# find /data/ -type d -name "\*.txt" 
+\[root@oldboy ~\]\# find /data/ -type d -name "\*.txt"
 
 /data/10.txt
 
@@ -573,5 +573,119 @@ find /data -type f -name "oldboy.txt"\|xargs -i cp {} /tmp/
 
 /data/9.txt /data/7.txt
 
+# 第10章 grep命令
 
+#### 10.1  已知文件test.txt内容为：
+
+#### test
+
+#### liyao 
+
+#### oldboy
+
+#### 请给出输出test.txt文件内容时，不包含oldboy字符串的命令
+
+#### 10.2 grep  筛子  想要的不想要的分开   默认筛子中的要
+
+\[root@oldboy data\]\# cat test.txt 
+
+test
+
+liyao
+
+oldboy
+
+\[root@oldboy data\]\# grep "oldboy" test.txt 
+
+oldboy
+
+\[root@oldboy data\]\# grep "oldboy" test.txt -v
+
+test
+
+liyao
+
+#### 10.3 只查看ett.txt文件（共100行）内第20到第30行的内容
+
+\[root@oldboy ~\]\# grep 20 -A 10 a.txt      记忆方法  after
+
+20
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+\[root@oldboy ~\]\# grep 30 -B 10 a.txt     记忆方法  before
+
+20
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+\[root@oldboy ~\]\# grep 25 -C5 a.txt    
+
+20
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+# 第11章 head命令
+
+####  显示文件前面的内容    默认前10行
+
+\[root@oldboy data\]\# head -2 test.txt 
+
+test
+
+liyao
 

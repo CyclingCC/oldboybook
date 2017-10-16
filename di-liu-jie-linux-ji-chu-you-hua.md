@@ -87,6 +87,8 @@ iptables 0:off 1:off 2:off 3:off 4:off 5:off 6:off
 
 2）UTF-8：非定长，1~4字节，广泛支持，MYSQL也使用UTF-8，企业广泛使用
 
+![](/assets/6-2.png)
+
 提示：
 
 乱码的核心解决方法：
@@ -103,13 +105,13 @@ zh\_CN.GBK
 
 这个中文显示配置要跟自己的xshell客户端的配置一致
 
-## 2.1查看系统当前的字符集
+## 2.1 查看系统当前的字符集
 
 \[root@oldboy35-moban ~\]\# echo $LANG
 
 en\_US.UTF-8
 
-## 2.2系统字符集配置文件的位置
+## 2.2 系统字符集配置文件的位置
 
 \[root@oldboy35-moban ~\]\# cat /etc/sysconfig/i18n
 
@@ -117,21 +119,21 @@ LANG="en\_US.UTF-8"
 
 SYSFONT="latarcyrheb-sun16"
 
-## 2.3备份
+## 2.3 备份
 
 \[root@oldboy35-moban ~\]\# cp /etc/sysconfig/i18n /etc/sysconfig/i18n.bak
 
-## 2.4修改配置文件
+## 2.4 修改配置文件
 
 法一：\[root@oldboy35-moban ~\]\# echo 'LANG="zh\_CN.UTF-8"' &gt;/etc/sysconfig/i18n
 
 法二：\[root@oldboy35-moban ~\]\# vi /etc/sysconfig/i18n 添加LANG="zh\_CN.UTF-8"内容
 
-## 2.5让配置文件生效
+## 2.5 让配置文件生效
 
 \[root@oldboy35-moban ~\]\# source /etc/sysconfig/i18n 使上文修改生效
 
-## 2.6查看系统当前的字符
+## 2.6 查看系统当前的字符
 
 \[root@oldboy35-moban ~\]\# echo＄LANG
 
@@ -139,7 +141,7 @@ SYSFONT="latarcyrheb-sun16"
 
 zh\_CN.UTF-8
 
-## 2.7恢复原有英文环境
+## 2.7 恢复原有英文环境
 
 \[root@oldboy35-moban ~\]\# \cp /etc/sysconfig/i18n.bak /etc/sysconfig/i18n
 
@@ -149,7 +151,7 @@ zh\_CN.UTF-8
 
 en\_US.UTF-8
 
-## 2.8小结：
+## 2.8 小结
 
 如果乱码了，解决方法：
 

@@ -115,8 +115,6 @@ vimtutor
 5. 2&gt;    错误重定向
 6. 2&gt;&gt;   错误追加重定向
 
-
-
 1、标准输入（stdin）：代码0，使用 &lt; 或 &lt;&lt; 数据流向从右向左
 
 2、标准输出（stdout）: 代码1，使用 &gt; 或 &gt;&gt;  数据流向从左向右
@@ -129,7 +127,7 @@ vimtutor
 
 \[root@oldboy data\]\# echo 'I am study linux.' &gt;oldboy.txt
 
-\[root@oldboy data\]\# cat oldboy.txt      
+\[root@oldboy data\]\# cat oldboy.txt
 
 I am study linux.
 
@@ -141,7 +139,7 @@ echo 'I am study linux.' &gt;oldboy.txt
 
 \[root@oldboy data\]\# echo -e 'I am study linux\nI am study'&gt;&gt;b.txt
 
-\[root@oldboy data\]\# cat b.txt 
+\[root@oldboy data\]\# cat b.txt
 
 I am study linux
 
@@ -149,27 +147,27 @@ I am study
 
 \[root@oldboy data\]\# cho "hello oldboy" &gt; all.txt 2&gt;&1
 
-\[root@oldboy data\]\# cat all.txt 
+\[root@oldboy data\]\# cat all.txt
 
 -bash: cho: command not found
 
-\[root@oldboy data\]\# &gt;all.txt 
+\[root@oldboy data\]\# &gt;all.txt
 
-\[root@oldboy data\]\# cat all.txt 
+\[root@oldboy data\]\# cat all.txt
 
-\[root@oldboy data\]\# cho "hello oldboy" &&gt; all.txt 
+\[root@oldboy data\]\# cho "hello oldboy" &&gt; all.txt
 
-\[root@oldboy data\]\# cat all.txt 
+\[root@oldboy data\]\# cat all.txt
 
 -bash: cho: command not found
 
-\[root@oldboy data\]\# &gt; all.txt 
+\[root@oldboy data\]\# &gt; all.txt
 
-\[root@oldboy data\]\# cat all.txt 
+\[root@oldboy data\]\# cat all.txt
 
-\[root@oldboy data\]\# cho "hello oldboy" &gt; all.txt 2&gt; all.txt 
+\[root@oldboy data\]\# cho "hello oldboy" &gt; all.txt 2&gt; all.txt
 
-\[root@oldboy data\]\# cat all.txt 
+\[root@oldboy data\]\# cat all.txt
 
 -bash: cho: command not found
 
@@ -189,13 +187,13 @@ xargs -n2 &lt; /data/oldboy.txt
 
 5
 
-\[root@oldboy data\]\# cat b.txt 
+\[root@oldboy data\]\# cat b.txt
 
 I am study linux
 
 I am study
 
-\[root@oldboy data\]\# xargs -n1 &lt;b.txt 
+\[root@oldboy data\]\# xargs -n1 &lt;b.txt
 
 I
 
@@ -211,7 +209,7 @@ am
 
 study
 
-\[root@oldboy data\]\# xargs -n2 &lt;b.txt  
+\[root@oldboy data\]\# xargs -n2 &lt;b.txt
 
 I am
 
@@ -221,9 +219,7 @@ I am
 
 study
 
-
-
-echo oldboy 2&gt;a.txt 1&gt;b.txt 
+echo oldboy 2&gt;a.txt 1&gt;b.txt
 
 echo oldboy &gt;a.txt 2&gt;&1       错误和正确放在一起
 
@@ -233,7 +229,7 @@ echo oldboy &gt;a.txt 2&gt;&1       错误和正确放在一起
 
 oldboy
 
-\[root@oldboy data\]\# cat a.txt 
+\[root@oldboy data\]\# cat a.txt
 
 oldboy
 
@@ -244,6 +240,46 @@ oldboy
 &gt; EOF
 
 
+
+# 第4章 cp命令
+
+## 4.1  cp  拷贝文件或目录    默认只能拷贝文件
+
+## 4.2  cp命令格式
+
+cp   \[OPTION\]...  SOURCE...            DIRECTORY
+
+cp   \[选项\]       文件（或目录）...       目录
+
+cp   \[OPTION\]...   -t  DIRECTORY       SOURCE...
+
+cp   \[选项\]        -t  目录              文件（或目录）...
+
+## 4.3 参数选项
+
+-r   \(递归\)  拷贝目录   
+
+-p  保持属性
+
+-a  完全拷贝  相当于 -pdr
+
+## 把oldboy.txt文件拷贝到/tmp下
+
+cp /data/oldboy.txt /tmp/
+
+cp -r /data /tmp/
+
+## 已知/tmp下已经存在test.txt文件，如何执行命令才能把/mnt/test.txt拷贝到/tmp下覆盖掉/tmp/test.txt，而让系统不提示是否覆盖
+
+## cp不提示：
+
+\[root@oldboy oldboy\]\# cp a.txt /tmp/
+
+cp: overwrite \`/tmp/a.txt'? y
+
+\[root@oldboy oldboy\]\# \cp a.txt /tmp/
+
+\[root@oldboy oldboy\]\# /bin/cp a.txt /tmp/
 
 
 

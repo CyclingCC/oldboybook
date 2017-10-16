@@ -703,7 +703,7 @@ oldboy
 
 Linux 中一个预设的外部命令，一般用作一堆数字的简化写法
 
-\[root@oldboy data\]\# seq 1  2  9 \|xargs 
+\[root@oldboy data\]\# seq 1  2  9 \|xargs
 
 1 3 5 7 9
 
@@ -711,9 +711,123 @@ Linux 中一个预设的外部命令，一般用作一堆数字的简化写法
 
 1 2 3 4 5
 
-\[root@oldboy data\]\# seq -s  "-" 5 
+\[root@oldboy data\]\# seq -s  "-" 5
 
 1-2-3-4-5
 
+# 第14章 tree命令
 
+#### 显示目录结构
+
+tree /root/
+
+/root/
+
+├── anaconda-ks.cfg
+
+├── init.sh
+
+├── install.log
+
+├── install.log.syslog
+
+└── sersync.tar.gz
+
+
+
+0 directories, 5 files
+
+第15章 alias命令
+
+15.1 alias 查看别名
+
+\[root@oldboy oldboy\]\# alias 
+
+alias cp='cp -i'
+
+alias l.='ls -d .\* --color=auto'
+
+alias ll='ls -l --color=auto'
+
+alias ls='ls --color=auto'
+
+alias mv='mv -i'
+
+alias which='alias \| /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+
+15.2  设置别名
+
+\[root@oldboy oldboy\]\# alias rm='echo "this command does not allow to use."'
+
+\[root@oldboy oldboy\]\# rm
+
+this command does not allow to use.
+
+echo "alias rm='echo do not use rm' " &gt;&gt; /etc/profile
+
+15.3 取消别名   
+
+unalias rm
+
+15.4  别名作用
+
+\[root@oldboy oldboy\]\# cp a.txt /tmp/
+
+cp: overwrite \`/tmp/a.txt'? y
+
+\[root@oldboy oldboy\]\# \cp a.txt /tmp/
+
+\[root@oldboy oldboy\]\# /bin/cp a.txt /tmp/ 
+
+\[root@oldboy oldboy\]\# cp -i a.txt /tmp/     
+
+cp: overwrite \`/tmp/a.txt'? ^C
+
+\[root@oldboy oldboy\]\# alias 
+
+alias cp='cp -i'
+
+alias l.='ls -d .\* --color=auto'
+
+alias ll='ls -l --color=auto'
+
+alias ls='ls --color=auto'
+
+alias mv='mv -i'
+
+alias rm='rm -i'
+
+alias which='alias \| /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+
+\[root@oldboy oldboy\]\# unalias cp
+
+\[root@oldboy oldboy\]\# alias     
+
+alias l.='ls -d .\* --color=auto'
+
+alias ll='ls -l --color=auto'
+
+alias ls='ls --color=auto'
+
+alias mv='mv -i'
+
+alias rm='rm -i'
+
+alias which='alias \| /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+
+\[root@oldboy oldboy\]\# alias\|grep cp
+
+\[root@oldboy oldboy\]\# cp a.txt /tmp/   
+
+\[root@oldboy oldboy\]\# cp a.txt /tmp/
+
+\[root@oldboy oldboy\]\# cp -i a.txt /tmp/
+
+cp: overwrite \`/tmp/a.txt'?
+
+15.5  定义别名永久生效
+
+source /etc/profile 全局生效
+
+~/.bashrc    当前用户生效
 

@@ -187,7 +187,7 @@ GNU的全称为：GNU's not unix，意思是“GNU不是Unix”，GNU计划，�
 ![](/assets/图1-4.png)
 
 ```
-                                             
+
 ```
 
 ## 3.4 GPL知识
@@ -282,11 +282,11 @@ Fedora=稳定之后=&gt;Redhat=去Logo去除收费=&gt;CentOS
 
 下面是CentOS的主流版本在国内互联网企业的使用现状说明：
 
-    CentOS 5系列：占25%左右，主流版本有CentOS 5.5 、CentOS 5.8、CentOS 5.10、CentOS 5.11，不推介新手学习了。=&gt;Linux kernrl 2.4
+1. CentOS 5系列：占25%左右，主流版本有CentOS 5.5 、CentOS 5.8、CentOS 5.10、CentOS 5.11，不推介新手学习了。=&gt;Linux kernrl 2.4
+2.  CentOS 6系列：占45%左右，主流版本有CentOS 6.2、CentOS 6.4、CentOS 6.6、CentOS 6.8，推介新手学习。=&gt;Linux kernrl 2.6
+3.  CentOS 7系列：最新的系统，目前正式使用的企业不多，因此不建议去玩它，最好学习目前企业使用较多的6系列，等过2年企业都上了CentOS7的系统，就可以轻松转过去了，不要盲目选择较高的版本。
 
-    CentOS 6系列：占45%左右，主流版本有CentOS 6.2、CentOS 6.4、CentOS 6.6、CentOS 6.8，推介新手学习。=&gt;Linux kernrl 2.6
 
-    CentOS 7系列：最新的系统，目前正式使用的企业不多，因此不建议去玩它，最好学习目前企业使用较多的6系列，等过2年企业都上了CentOS7的系统，就可以轻松转过去了，不要盲目选择较高的版本。
 
 `小面试题：你们公司服务器使用的版本系统是什么？`
 

@@ -329,13 +329,13 @@ rsync特殊
 
 # 第6章 rm命令
 
-## 6.1 rm   删除文件或目录   默认只能删文件  -f强制  -r删除目录（递归）
+#### 6.1 rm   删除文件或目录   默认只能删文件  -f强制  -r删除目录（递归）
 
-## 6.2 习惯: 慎用rm  使用mv或者find代替   空间不允许时，先备份，再删除
+#### 6.2 习惯: 慎用rm  使用mv或者find代替   空间不允许时，先备份，再删除
 
-### 进入/root目录下的data目录，删除oldboy.txt文件
+#### 进入/root目录下的data目录，删除oldboy.txt文件
 
-### 退出到上一级目录，删除data目录
+#### 退出到上一级目录，删除data目录
 
 cd /root/data
 
@@ -345,11 +345,11 @@ cd ..
 
 rm /data -r
 
-## 6.3 修改系统时间
+#### 6.3 修改系统时间
 
 date -s "2016-03-22"
 
-## 6.4 面试题：删除一个目录下的所有文件，但保留一个指定文件
+#### 6.4 面试题：删除一个目录下的所有文件，但保留一个指定文件
 
 [http://oldboy.blog.51cto.com/2561410/1650380](http://oldboy.blog.51cto.com/2561410/1650380)
 
@@ -518,6 +518,4 @@ cp \`find /data -type f -name "oldboy.txt" -mtime +7\` /tmp/
 find /data -type f -name "oldboy.txt" -mtime +7 -exec cp {} /tmp/ \;
 
 find /data -type f -name "oldboy.txt"\|xargs -i cp {} /tmp/
-
-
 

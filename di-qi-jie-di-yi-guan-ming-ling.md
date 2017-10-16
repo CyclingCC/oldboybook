@@ -579,7 +579,7 @@ find /data -type f -name "oldboy.txt"\|xargs -i cp {} /tmp/
 
 #### test
 
-#### liyao 
+#### liyao
 
 #### oldboy
 
@@ -587,7 +587,7 @@ find /data -type f -name "oldboy.txt"\|xargs -i cp {} /tmp/
 
 #### 10.2 grep  筛子  想要的不想要的分开   默认筛子中的要
 
-\[root@oldboy data\]\# cat test.txt 
+\[root@oldboy data\]\# cat test.txt
 
 test
 
@@ -595,7 +595,7 @@ liyao
 
 oldboy
 
-\[root@oldboy data\]\# grep "oldboy" test.txt 
+\[root@oldboy data\]\# grep "oldboy" test.txt
 
 oldboy
 
@@ -655,7 +655,7 @@ liyao
 
 30
 
-\[root@oldboy ~\]\# grep 25 -C5 a.txt    
+\[root@oldboy ~\]\# grep 25 -C5 a.txt
 
 20
 
@@ -681,11 +681,21 @@ liyao
 
 # 第11章 head命令
 
-####  显示文件前面的内容    默认前10行
+#### 显示文件前面的内容    默认前10行
 
-\[root@oldboy data\]\# head -2 test.txt 
+\[root@oldboy data\]\# head -2 test.txt
 
 test
 
 liyao
+
+# 第12章 tail命令
+
+#### 显示文件的尾部内容，默认后10行
+
+\[root@oldboy data\]\# tail -2 test.txt 
+
+liyao
+
+oldboy
 

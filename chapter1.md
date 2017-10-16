@@ -187,7 +187,7 @@ GNU的全称为：GNU's not unix，意思是“GNU不是Unix”，GNU计划，�
 ![](/assets/图1-4.png)
 
 ```
-                                                        ![](/assets/图1-4.png)
+                                             
 ```
 
 ## 3.4 GPL知识

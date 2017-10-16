@@ -457,8 +457,6 @@ find /oldboy/ -type f -name "\*.log" -mtime +7 -exec mv {} /tmp/ \;
 
 [http://oldboy.blog.51cto.com/2561410/1750481](http://oldboy.blog.51cto.com/2561410/1750481)
 
-
-
 # 第8章 管道 \|
 
 ##### 管道：前面的输出结果给后面的命令管道后面不支持命令别名
@@ -511,8 +509,6 @@ find /oldboy/ -type f -name "\*.log" -mtime +7 -exec mv {} /tmp/ \;
 
 -rw-r--r-- 1 root root 0 Mar 13 11:45 /data/9.txt
 
-
-
 find /data -type f -name "\*.txt" \|xargs -i mv {} /tmp/
 
 #### 3种方法：
@@ -522,8 +518,6 @@ cp \`find /data -type f -name "oldboy.txt" -mtime +7\` /tmp/
 find /data -type f -name "oldboy.txt" -mtime +7 -exec cp {} /tmp/ \;
 
 find /data -type f -name "oldboy.txt"\|xargs -i cp {} /tmp/
-
-
 
 
 

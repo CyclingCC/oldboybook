@@ -153,8 +153,6 @@ dev目录是设备文件目录，虚拟文件系统，主要存放所有系统�
 | /proc/loadavg | 系统负载平均值信息uptime ,w |
 | /proc/mounts | 设备挂载信息，df -h |
 
-
-
 ## 1.14 /root目录
 
 /root目录是超级权限用户root的家目录
@@ -171,27 +169,16 @@ dev目录是设备文件目录，虚拟文件系统，主要存放所有系统�
 
 /usr目录是系统存放用户程序，及数据，帮助文件等的目录
 
-重要子目录    功能
-
-/usr/lib    /usr/bin/和/usr/sbin/中二进制文件的库。
-
-/usr/local    一般编译软件的时候默认路径\(如,yum或rpm安装包默认路径\)
-
-/usr/bin    用户可执行文件目录
-
-/usr/sbin    非必要的系统二进制文件，例如：大量网络服务的守护进程。
-
-/usr/share    存放系统共用的东西，如帮助文件
-
-/usr/src    源码程序存放目录
-
-1. rpm –ivh 包名.rpm
-
-2. yum install 包名
-
-3. 源码\(./configure,make,make install\)定制
-
-   /usr/include    存放C/C++头文件的目录
+| 重要子目录 | 功能 |
+| :--- | :--- |
+| /usr/lib | /usr/bin/和/usr/sbin/中二进制文件的库。 |
+| /usr/local | 一般编译软件的时候默认路径\(如,yum或rpm安装包默认路径\) |
+|  |  |
+| /usr/bin | 用户可执行文件目录 |
+| /usr/sbin | 非必要的系统二进制文件，例如：大量网络服务的守护进程。 |
+| /usr/share | 存放系统共用的东西，如帮助文件 |
+| /usr/src | 源码程序存放目录1.rpm –ivh包名.rpm2.yum install包名3.源码\(./configure,make,make install\)定制 |
+| /usr/include | 存放C/C++头文件的目录 |
 
 ## 1.18 /var目录
 

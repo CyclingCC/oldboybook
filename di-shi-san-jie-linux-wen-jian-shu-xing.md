@@ -1,30 +1,26 @@
-
-
 第1章 文件属性概况
 
 \[root@oldboy36 ~\]\# ll -i /etc/hosts
 
 654109 -rw-r--r--. 1 root root 158 1月  12 2010 /etc/hosts
 
-第一列	inode索引节点（相当于人的身份证号），系统读取文件时先通过文件名找到inode号，然后才能读取文件内容
+第一列    inode索引节点（相当于人的身份证号），系统读取文件时先通过文件名找到inode号，然后才能读取文件内容
 
-第二列	文件类型及权限（第二列共11个字符：其中第一个字符是文件类型，随后的9个字符为文件的对应权限，最后一个字符点号 . 是和selinux有关的一个标识）
+第二列    文件类型及权限（第二列共11个字符：其中第一个字符是文件类型，随后的9个字符为文件的对应权限，最后一个字符点号 . 是和selinux有关的一个标识）
 
-第三列	硬链接个数
+第三列    硬链接个数
 
-第四列	文件或目录的所有者（属主）
+第四列    文件或目录的所有者（属主）
 
-第五列	文件或目录所属的组（属组）
+第五列    文件或目录所属的组（属组）
 
-第六列	文件或目录的大小
+第六列    文件或目录的大小
 
-第七、八、九列	文件或目录内容的修改时间
+第七、八、九列    文件或目录内容的修改时间
 
-第十列	文件名或目录名
+第十列    文件名或目录名
 
 注：文件名不是文件的属性，而是目录的内容
-
- 
 
 第2章 inode 和 block
 
@@ -34,7 +30,7 @@ inode号是文件在磁盘上的唯一标识
 
 inode 用来存放文件的属性，它是指向文件的一个指针
 
-格式化的本质就是创建文件系统 
+格式化的本质就是创建文件系统
 
 文件系统包括inode  和  block
 
@@ -60,15 +56,15 @@ dumpe2fs /dev/sda1
 
 132550 app    150909 data   390153 home   130062 media            1 proc  130064 srv       130054 usr
 
- 12239 a.txt  150910 data1  390154 lib      1856 mnt         130051 root       1 sys       260098 var
+12239 a.txt  150910 data1  390154 lib      1856 mnt         130051 root       1 sys       260098 var
 
 390152 bin         4 dev    390149 lib64  150965 oldboy      390158 sbin   12238 test.txt
 
 \[root@oldboy /\]\# stat /etc/hosts
 
-  File: "/etc/hosts"
+File: "/etc/hosts"
 
-  Size: 192             Blocks: 8          IO Block: 4096   普通文件
+Size: 192             Blocks: 8          IO Block: 4096   普通文件
 
 Device: 803h/2051d      Inode: 40          Links: 2
 
@@ -85,8 +81,6 @@ Change: 2016-03-13 23:14:28.539956838 +0800    文件属性
 dumpe2fs 1.41.12 \(17-May-2010\)
 
 Inode size:               256
-
-
 
 2.4 查看磁盘inode：
 
@@ -134,11 +128,7 @@ Block size:               1024
 
 Blocks per group:         8192
 
-
-
 磁盘满的标志 ：inode满 或者  block满
-
-
 
 2.6  同时查看inode和block
 
@@ -152,7 +142,7 @@ Block count:              1048576
 
 Block size:               4096
 
-Inode size:	          	256
+Inode size:                  256
 
 2.7 inode特点
 
@@ -186,7 +176,7 @@ Block size:               4096
 
 Inode size:               256
 
-\[root@oldboy ~\]\# dumpe2fs /dev/sda3 \|egrep -i 'block count\|Inode count'   
+\[root@oldboy ~\]\# dumpe2fs /dev/sda3 \|egrep -i 'block count\|Inode count'
 
 dumpe2fs 1.41.12 \(17-May-2010\)
 
@@ -209,10 +199,6 @@ ls -li  或 stat /etc/hosts
 14、如何生成及指定inode大小
 
 格式化命令 ： mkfs.ext4 -b 2048 -I 256 /dev/sdb
-
-
-
-
 
 2.8  block特点
 
@@ -238,21 +224,13 @@ ls -li  或 stat /etc/hosts
 
 11、ext3/ext4文件系统（CentOS5和6），一般都设置为4k
 
-   当前的生产环境一般设置为4k 特殊的业务，如视频可以加大block大小
-
-
-
-
+当前的生产环境一般设置为4k 特殊的业务，如视频可以加大block大小
 
 2.9  磁盘空间满
 
 inode 使用完 或者 block使用完
 
-
-
 inode满的原因   /var/spool/postfix/maildrop/  这个目录下小文件太多
-
-
 
 1、磁盘被分区格式化制作文件系统后，会分为inode和block两部分内容
 
@@ -268,77 +246,68 @@ inode满的原因   /var/spool/postfix/maildrop/  这个目录下小文件太多
 
 7、一个block只能被一个文件使用，如果文件很小block很大，剩余空间浪费，无法继续被其他文件使用
 
-
-
-
-
 第3章 文件类型
 
--type c
-
-              File is of type c:
-
-
-
-              b      block \(buffered\) special
+```
+ -type c         
+          File is of type c:
 
 
 
-              c      character \(unbuffered\) special
+          b      block \(buffered\) special
 
 
 
-              d      directory
+          c      character \(unbuffered\) special
 
 
 
-              p      named pipe \(FIFO\)
+          d      directory
 
 
 
-              f      regular file
+          p      named pipe \(FIFO\)
 
 
 
-              l      symbolic link; this is never true if the -L
-
-                     option  or the -follow option is in effect,
-
-                     unless the symbolic link is broken.  If you
-
-                     want  to  search for symbolic links when -L
-
-                     is in effect, use -xtype.
+          f      regular file
 
 
 
-              s      socket
+          l      symbolic link; this is never true if the -L
+
+                 option  or the -follow option is in effect,
+
+                 unless the symbolic link is broken.  If you
+
+                 want  to  search for symbolic links when -L
+
+                 is in effect, use -xtype.
 
 
 
-              D      door \(Solaris\)
+          s      socket
 
 
 
+          D      door \(Solaris\)
+```
 
+文件类型标识符    文件类型说明
 
-文件类型标识符	文件类型说明
+* 普通文件（文本文件、二进制文件、数据文件、压缩文件）
 
--	普通文件（文本文件、二进制文件、数据文件、压缩文件）
+d    目录（directory）
 
-d	目录（directory）
+l    软链接（link）
 
-l	软链接（link）
+b    块设备（block）
 
-b	块设备（block）
+c    字符设备（character）
 
-c	字符设备（character）
+s    socket文件
 
-s	socket文件
-
-p	管道文件（pipe）
-
-
+p    管道文件（pipe）
 
 3.1  查看文件类型
 
@@ -350,17 +319,13 @@ p	管道文件（pipe）
 
 /bin/ls: ELF 64-bit LSB executable, x86-64, version 1 \(SYSV\), dynamically linked \(uses shared libs\), for GNU/Linux 2.6.18, stripped
 
-\[root@oldboy36 ~\]\# file /var/log/wtmp 
+\[root@oldboy36 ~\]\# file /var/log/wtmp
 
 /var/log/wtmp: data
 
 \[root@oldboy36 ~\]\# file etc.tar.gz
 
 etc.tar.gz: gzip compressed data, from Unix, last modified: Thu May 11 15:00:02 2017
-
-
-
-
 
 \[root@oldboy ~\]\# lastlog
 
@@ -380,37 +345,31 @@ sync                                       \*\*从未登录过\*\*
 
 shutdown                                   \*\*从未登录过\*\*
 
-
-
 第4章 文件权限
 
 echo {0,1}{0,1}{0,1}
 
 000 001 010 011 100 101 110 111
 
-
-
 echo {0..1}{0..1}{0..1}
 
 000 001 010 011 100 101 110 111
 
-权限	r	w	x	-
+权限    r    w    x    -
 
-含义	读	写	执行	没有任何权限
+含义    读    写    执行    没有任何权限
 
-数字表示	4	2	1	0
+数字表示    4    2    1    0
 
 设置权限的方法
 
-
-
 方法1   数字表示
 
-用户	组	其它
+用户    组    其它
 
-数字之和	数字之和	数字之和
+数字之和    数字之和    数字之和
 
-r	w	x	r	w	x	r	w	x
+r    w    x    r    w    x    r    w    x
 
 方法2
 
@@ -420,25 +379,23 @@ g
 
 o
 
-a	+
+a    +
 
 -
 
-=	r
+=    r
 
 w
 
 x
 
-
-
 第5章 链接
 
 5.1  硬链接
 
-硬链接：  具有相同inode号的文件（多个文件名对应一个inode号）互为硬链接 
+硬链接：  具有相同inode号的文件（多个文件名对应一个inode号）互为硬链接
 
-硬链接\(hard link, 也称链接\)就是一个文件的多个文件名。再说白点，所谓链接无非是把文件名和计算机文件系统使用的节点号链接起来。因此我们可以用多个文件名与同一个文件进行链接，这些文件名可以在同一目录或不同目录。 
+硬链接\(hard link, 也称链接\)就是一个文件的多个文件名。再说白点，所谓链接无非是把文件名和计算机文件系统使用的节点号链接起来。因此我们可以用多个文件名与同一个文件进行链接，这些文件名可以在同一目录或不同目录。
 
 目录不能做硬链接
 
@@ -451,8 +408,6 @@ x
 删除文件的本质：文件的所有硬链接被删除，并且inode节点被其他文件占用
 
 在父目录里创建一个子目录，父目录的链接数加1
-
-
 
 硬链接小结
 
@@ -474,8 +429,6 @@ x
 
 9、对于静态文件（没有进程正在调用的文件）来讲，硬链接数为0，文件就被删除
 
-
-
 目录硬链接说明
 
 \[root@oldboy test\]\# pwd
@@ -490,10 +443,6 @@ x
 
 398269 drwxr-xr-x 3 root root 4096 Aug 26 20:20 oldboy/oldboydir/..
 
-
-
-
-
 5.2  软链接
 
 软链接又叫符号链接，这个文件包含了另一个文件的路径名。可以是任意文件或目录，可以链接不同文件系统的文件 ,  linux软链接文件类似windows的快捷方式
@@ -503,8 +452,6 @@ x
 软链接文件创建时，软链接的文件不能存在，如果存在，不能正确创建
 
 软链接占用一个inode，不占用block
-
-
 
 ln -s 源  目标
 
@@ -518,17 +465,11 @@ lrwxrwxrwx 1 root root   25 Mar 26 11:03 apache -&gt; /application/apache2.2.17
 
 drwxr-xr-x 2 root root 4096 Mar 23 23:41 apache2.2.17
 
-
-
-
-
 查看软链接文件内容
 
 \[root@xdz application\]\# readlink apache
 
 /application/apache2.2.17
-
-
 
 软链接小结
 
@@ -546,8 +487,6 @@ drwxr-xr-x 2 root root 4096 Mar 23 23:41 apache2.2.17
 
 7、删除软链接文件可以用rm命令
 
-
-
 5.3  软硬链接的区别
 
 1、软硬链接的概念
@@ -557,8 +496,6 @@ drwxr-xr-x 2 root root 4096 Mar 23 23:41 apache2.2.17
 3、对文件软硬链接的区别
 
 4、对目录软硬链接的区别
-
-
 
 在linux系统中，链接分为两种：一个是硬链接，另一个是软链接（或符号链接）
 
@@ -590,8 +527,6 @@ drwxr-xr-x 2 root root 4096 Mar 23 23:41 apache2.2.17
 
 14、软链接可以跨文件系统，硬链接不可以跨文件系统
 
-
-
 第6章  文件删除原理
 
 rm 删除文件删除的只是文件名
@@ -613,8 +548,6 @@ rm 删除文件删除的只是文件名
 2、另一个进程还在使用这个文件
 
 3、磁盘空余空间维护出现问题
-
-
 
 ln  源  目标
 
@@ -672,19 +605,15 @@ total 4
 
 393238 -rw-r--r-- 3 root root    0 Mar 26 11:16 c
 
-
-
 6.1  磁盘空间满了但是与du -sh 的结果不符---没有被彻底删除排查过程
 
 第一个里程碑-什么原因：
 
 \#\#\#\#已经删除了，但是空间没有释放
 
-\#\#\#\#已经删除了-----把文件的硬链接数量为0 
+\#\#\#\#已经删除了-----把文件的硬链接数量为0
 
 \#\#\#\#空间没有释放---还有人在使用---进程
-
-
 
 第二个里程碑-排查方法：
 
@@ -696,19 +625,15 @@ rsyslogd  1250      root    1w      REG                8,3 1888889326     274029
 
 \#\#\#这个文件没有被彻底删除
 
-
-
 第三个里程碑-解决方法
 
 \#\#重启对应的软件/服务即可
 
-\# /etc/init.d/rsyslog restart 
+\# /etc/init.d/rsyslog restart
 
 Shutting down system logger:                               \[  OK  \]
 
 Starting system logger:                                    \[  OK  \]
-
-
 
 第四个里程碑-检查结果
 
@@ -724,63 +649,45 @@ tmpfs           931M     0  931M   0% /dev/shm
 
 /dev/sdc         73K   14K   55K  21% /app/logs
 
-
-
 第五个里程碑-总结
 
 1.尽量清空日志文件不要删除
 
 2.切割日志，删除旧的文件（几天以前的）
 
-
-
 6.2  企业案例：如果向磁盘写入数据提示如下错误：No space left on device，通过df -h查看磁盘空间，发现没满，请问可能原因是什么？企业场景什么情况下会导致这个问题发生？
 
+6.3  文件删除原理，进程调用文件，但是文件硬链接数为0，文件没有被释放 ，磁盘满故障
 
+[http://oldboy.blog.51cto.com/2561410/612351](http://oldboy.blog.51cto.com/2561410/612351)
 
-6.3  文件删除原理，进程调用文件，但是文件硬链接数为0，文件没有被释放 ，磁盘满故障 
+6.4  inode满案例2：因inode节点导致执行passwd命令报错处理记录
 
-http://oldboy.blog.51cto.com/2561410/612351
-
-
-
-6.4  inode满案例2：因inode节点导致执行passwd命令报错处理记录 
-
-http://blog.sina.com.cn/s/blog\_506ed9e6010106kj.html  
-
-
+[http://blog.sina.com.cn/s/blog\_506ed9e6010106kj.html](http://blog.sina.com.cn/s/blog_506ed9e6010106kj.html)
 
 第7章   用户和组
 
 7.1  linux多用户多任务介绍
 
-   linux/unix是一个多用户、多任务的操作系统
-
-
+linux/unix是一个多用户、多任务的操作系统
 
 7.2  用户UID  组GID
 
-   在linux系统中用户是分角色的，在linux系统中，由于角色不同，权限和完成的任务也不同；
+在linux系统中用户是分角色的，在linux系统中，由于角色不同，权限和完成的任务也不同；
 
 注意：linux系统中，用户的角色是通过UID和GID识别的
 
-   
-
 UID是唯一标识一个系统用户帐号 用户名称是给人看的，linux系统只能识别UID和GID这样的数字
-
-
 
 7.3  用户分类
 
-UID	用户类型	用户特性
+UID    用户类型    用户特性
 
-0	超级用户root	linux系统超级管理员，增加一个超级用户，只需要将UID改为0即可
+0    超级用户root    linux系统超级管理员，增加一个超级用户，只需要将UID改为0即可
 
-1-499	虚拟用户	为了防止人为建立帐户的UID和系统UID冲突，这些用户不能登录
+1-499    虚拟用户    为了防止人为建立帐户的UID和系统UID冲突，这些用户不能登录
 
-500-65535	普通用户	使用 useradd oldboy 建立帐户时，默认的UID就是从500开始的
-
-
+500-65535    普通用户    使用 useradd oldboy 建立帐户时，默认的UID就是从500开始的
 
 7.4  linux安全优化
 
@@ -788,21 +695,15 @@ UID	用户类型	用户特性
 
 2、部署服务时，也会创建虚拟用户，服务运行需要
 
-
-
 7.5  查看用户信息
 
 \[root@oldboy36 ~\]\# id oldboy
 
 uid=500\(oldboy\) gid=500\(oldboy\) 组=500\(oldboy\)
 
-
-
 7.6 用户相关配置文件
 
 用户相关的文件：/etc/passwd、/etc/shadow、/etc/group、/etc/gshadow
-
-
 
 /etc/passwd
 
@@ -810,33 +711,27 @@ root     :x            :0     :0      :root       :/root          :/bin/bash
 
 用户名  :密码占位符   :UID   :GID   :用户说明  :用户家目录    :shell解释器
 
-
-
-
-
 /etc/shadow
 
-oldgirl:!!:17301:0:99999:7:::            
+oldgirl:!!:17301:0:99999:7:::
 
-oldgirl	用户名
+oldgirl    用户名
 
-:!!	加密的密码
+:!!    加密的密码
 
-:17301	从1970年1月1日起，到用户最近一次更改密码的天数
+:17301    从1970年1月1日起，到用户最近一次更改密码的天数
 
-:0	从1970年1月1日起，到用户可以更改密码的天数
+:0    从1970年1月1日起，到用户可以更改密码的天数
 
-:99999	从1970年1月1日起，到用户必须更改密码的天数
+:99999    从1970年1月1日起，到用户必须更改密码的天数
 
-:7	在用户密码过期前多少天提醒用户更改密码
+:7    在用户密码过期前多少天提醒用户更改密码
 
-:	在用户密码过期后到禁用账户的天数
+:    在用户密码过期后到禁用账户的天数
 
-:	从1970年1月1日起，到用户被禁用的天数（useradd -f）
+:    从1970年1月1日起，到用户被禁用的天数（useradd -f）
 
-:	保留
-
-
+:    保留
 
 /etc/group
 
@@ -846,15 +741,13 @@ mail    :x             :12     :mail,postfix
 
 组名    :密码占位符    :GID   :组成员
 
-
-
 第8章  文件时间
 
 ls -lhi
 
 7 8 9 三列是时间（默认是修改时间）
 
-modify  mtime  文件内容修改时间  
+modify  mtime  文件内容修改时间
 
 change  ctime   文件属性改变时间
 
@@ -864,9 +757,9 @@ access   atime  文件内容访问时间
 
 \[root@oldboy36 ~\]\# stat /etc/hosts
 
-  File: "/etc/hosts"
+File: "/etc/hosts"
 
-  Size: 158             Blocks: 8          IO Block: 4096   普通文件
+Size: 158             Blocks: 8          IO Block: 4096   普通文件
 
 Device: 803h/2051d      Inode: 654109      Links: 1
 

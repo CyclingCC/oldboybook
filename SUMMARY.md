@@ -17,7 +17,7 @@
 * [第十二节 第二关命令](di-shi-er-jie-di-er-guan-ming-ling.md)
 * [第十三节 Linux文件属性](di-shi-san-jie-linux-wen-jian-shu-xing.md)
 
-## 第一课题
 
-* [第一章 赵志超](di-yi-ke-ti/di-yi-zhang-zhao-zhi-chao.md)
+
+
 

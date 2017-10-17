@@ -14,6 +14,7 @@
 * [第九节 Linux下重要目录](di-shijie-linux-xia-zhong-yao-mu-lu.md)
 * [第十节 Linux下重要文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian.md)
 * [第十一节 Linux目录详解](di-shi-yi-jie-linux-mu-lu-xiang-jie.md)
+* [第十二节 第二关命令](di-shi-er-jie-di-er-guan-ming-ling.md)
 
 ## 第一课题
 

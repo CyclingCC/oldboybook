@@ -2,7 +2,7 @@
 
 \[root@oldboy36 ~\]\# ll -i /etc/hosts
 
-654109 -rw-r--r--. 1 root root 158 1月  12 2010 /etc/hosts
+ 
 
 第一列    inode索引节点（相当于人的身份证号），系统读取文件时先通过文件名找到inode号，然后才能读取文件内容
 

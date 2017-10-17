@@ -24,11 +24,9 @@ linux目录：一切从根开始， /  是所有目录的起点（顶点）： �
 
 倒挂的一棵树
 
-目录结构和设备是分离的，任何一个目录都可能对应一个不同的磁盘或分区 
+目录结构和设备是分离的，任何一个目录都可能对应一个不同的磁盘或分区
 
 linux系统中不同的目录可以分布在不同的磁盘分区以及不同的磁盘上，windows系统中不同分区都是独立存在的
-
-
 
 linux磁盘设备默认是无法访问的（黑屋子），没有窗户没有门。
 
@@ -36,25 +34,25 @@ linux磁盘设备默认是无法访问的（黑屋子），没有窗户没有门
 
 门窗就相当于目录，称为挂载点 /mnt
 
-1.  挂载的命令 mount
+1. 挂载的命令 mount
 
-        mount /dev/cdrom /mnt   
+   mount /dev/cdrom /mnt 
 
-    2. 查看挂载情况：
+2. 查看挂载情况：
 
-        df -h
+   df -h
 
-        cat /proc/mounts
+   cat /proc/mounts
 
-     3. 开机自动挂载：    
+3. 开机自动挂载：
 
-         /etc/fstab
+   /etc/fstab
 
-3.2  设备挂载与卸载
+## 3.2  设备挂载与卸载
 
-3.2.1  挂载
+### 3.2.1  挂载
 
-\[root@oldboyedu36 ~\]\#  
+\[root@oldboyedu36 ~\]\#
 
 \[root@oldboyedu36 ~\]\# mount /dev/cdrom /mnt/
 
@@ -62,7 +60,7 @@ mount: block device /dev/sr0 is write-protected, mounting read-only
 
 \[root@oldboyedu36 ~\]\# \#\#\#\#查看
 
-\[root@oldboyedu36 ~\]\# df 
+\[root@oldboyedu36 ~\]\# df
 
 Filesystem     1K-blocks    Used Available Use% Mounted on
 
@@ -88,7 +86,7 @@ tmpfs           931M     0  931M   0% /dev/shm
 
 \[root@oldboyedu36 ~\]\# cd /mnt/
 
-\[root@oldboyedu36 mnt\]\# ls 
+\[root@oldboyedu36 mnt\]\# ls
 
 CentOS\_BuildTag  isolinux                  RPM-GPG-KEY-CentOS-Debug-6
 
@@ -132,11 +130,7 @@ dr-xr-xr-x. 2 root root   4096 Mar 29 02:24 repodata
 
 -r--r--r--. 1 root root   3380 Mar 29 02:24 TRANS.TBL
 
-3.2.2  卸载
+### 3.2.2  卸载
 
-umount  /mnt
-
-或
-
-umount /dev/cdrom
+umount  /mnt 或 umount /dev/cdrom
 

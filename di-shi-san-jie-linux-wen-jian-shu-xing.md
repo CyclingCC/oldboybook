@@ -691,19 +691,13 @@ uid=500\(oldboy\) gid=500\(oldboy\) 组=500\(oldboy\)
 
 /etc/passwd
 
-
-
 | root        :x                 :0    :0       :root        :/root          :/bin/bash |
 | :--- |
 | 用户名 :密码占位符 :UID :GID :用户说明 :用户家目录 :shell解释器 |
 
-
-
 /etc/shadow
 
 oldgirl:!!:17301:0:99999:7:::
-
-
 
 | oldgirl | 用户名 |
 | :--- | :--- |
@@ -716,13 +710,15 @@ oldgirl:!!:17301:0:99999:7:::
 | : | 从1970年1月1日起，到用户被禁用的天数（useradd -f） |
 | : | 保留 |
 
+
+
 /etc/group
 
 mail:x:12:mail,postfix
 
-mail    :x             :12     :mail,postfix
-
-组名    :密码占位符    :GID   :组成员
+| mail :x                  :12            :mail,postfix |
+| :--- |
+| 组名 :密码占位符 :GID      :组成员 |
 
 # 第8章  文件时间
 

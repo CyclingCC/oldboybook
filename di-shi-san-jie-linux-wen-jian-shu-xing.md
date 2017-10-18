@@ -16,7 +16,7 @@
 
 注：文件名不是文件的属性，而是目录的内容
 
-第2章 inode 和 block
+# 第2章 inode 和 block
 
 索引节点，在格式化文件系统（ext2、ext3、ext4）生成的inode（身份证号） （存放文件属性，不包含文件名（姓名） ）和  block（存放文件内容）
 
@@ -32,17 +32,17 @@ inode  用来存放文件属性 用来找到block    inode 默认大小 256B
 
 block  用来存放数据，block默认大小  有  1k 、 2k 、 4k
 
-2.1  找文件的过程
+### 2.1  找文件的过程
 
 首先找到文件名，找到文件名就知道它的inode号，通过inode可以找到文件内容的存放位置（block的位置），也就找到了文件的内容
 
 文件名 在 它所在目录的block里面
 
-2.2 查看设备信息：
+### 2.2 查看设备信息：
 
 dumpe2fs /dev/sda1
 
-2.3 查看文件inode
+### 2.3 查看文件inode
 
 \[root@oldboy /\]\# ls -i
 
@@ -76,7 +76,7 @@ dumpe2fs 1.41.12 \(17-May-2010\)
 
 Inode size:               256
 
-2.4 查看磁盘inode：
+### 2.4 查看磁盘inode
 
 \[root@oldboy ~\]\# df -i
 
@@ -100,7 +100,7 @@ Inode blocks per group:   256
 
 Inode size:               128
 
-2.5 查看磁盘block：
+### 2.5 查看磁盘block
 
 \[root@oldboy ~\]\# df -h
 
@@ -124,7 +124,7 @@ Blocks per group:         8192
 
 磁盘满的标志 ：inode满 或者  block满
 
-2.6  同时查看inode和block
+### 2.6  同时查看inode和block
 
 dumpe2fs /dev/sda3 \|egrep -i "^\(inode\|block\) \(size\|count\)"
 
@@ -138,7 +138,7 @@ Block size:               4096
 
 Inode size:                  256
 
-2.7 inode特点
+### 2.7 inode特点
 
 1、磁盘被分区并格式化为ext4文件系统后生成一定数量的inode和block
 
@@ -194,7 +194,7 @@ ls -li  或 stat /etc/hosts
 
 格式化命令 ： mkfs.ext4 -b 2048 -I 256 /dev/sdb
 
-2.8  block特点
+### 2.8  block特点
 
 1、磁盘读取数据是按block为单位读取的
 
@@ -220,7 +220,7 @@ ls -li  或 stat /etc/hosts
 
 当前的生产环境一般设置为4k 特殊的业务，如视频可以加大block大小
 
-2.9  磁盘空间满
+### 2.9  磁盘空间满
 
 inode 使用完 或者 block使用完
 
@@ -240,7 +240,7 @@ inode满的原因   /var/spool/postfix/maildrop/  这个目录下小文件太多
 
 7、一个block只能被一个文件使用，如果文件很小block很大，剩余空间浪费，无法继续被其他文件使用
 
-第3章 文件类型
+### 第3章 文件类型
 
 ```
  -type c         
@@ -283,25 +283,89 @@ inode满的原因   /var/spool/postfix/maildrop/  这个目录下小文件太多
           s      socket
 
 
-
           D      door \(Solaris\)
 ```
 
-文件类型标识符    文件类型说明
+ \*/  
+ @font-face  
+	{font-family:宋体;  
+	panose-1:2 1 6 0 3 1 1 1 1 1;  
+	mso-font-alt:SimSun;  
+	mso-font-charset:134;  
+	mso-generic-font-family:auto;  
+	mso-font-pitch:variable;  
+	mso-font-signature:3 680460288 22 0 262145 0;}  
+@font-face  
+	{font-family:宋体;  
+	panose-1:2 1 6 0 3 1 1 1 1 1;  
+	mso-font-alt:SimSun;  
+	mso-font-charset:134;  
+	mso-generic-font-family:auto;  
+	mso-font-pitch:variable;  
+	mso-font-signature:3 680460288 22 0 262145 0;}  
+@font-face  
+	{font-family:"\@宋体";  
+	panose-1:2 1 6 0 3 1 1 1 1 1;  
+	mso-font-charset:134;  
+	mso-generic-font-family:auto;  
+	mso-font-pitch:variable;  
+	mso-font-signature:3 680460288 22 0 262145 0;}  
+ /\* Style Definitions \*/  
+ p.MsoNormal, li.MsoNormal, div.MsoNormal  
+	{mso-style-unhide:no;  
+	mso-style-qformat:yes;  
+	mso-style-parent:"";  
+	margin:0cm;  
+	margin-bottom:.0001pt;  
+	line-height:125%;  
+	mso-pagination:none;  
+	font-size:12.0pt;  
+	mso-bidi-font-size:11.0pt;  
+	font-family:"Times New Roman","serif";  
+	mso-fareast-font-family:宋体;  
+	mso-font-kerning:1.0pt;}  
+.MsoChpDefault  
+	{mso-style-type:export-only;  
+	mso-default-props:yes;  
+	font-size:10.0pt;  
+	mso-ansi-font-size:10.0pt;  
+	mso-bidi-font-size:10.0pt;  
+	mso-ascii-font-family:"Times New Roman";  
+	mso-fareast-font-family:宋体;  
+	mso-hansi-font-family:"Times New Roman";  
+	mso-font-kerning:0pt;}  
+ /\* Page Definitions \*/  
+ @page  
+	{mso-page-border-surround-header:no;  
+	mso-page-border-surround-footer:no;}  
+@page WordSection1  
+	{size:612.0pt 792.0pt;  
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;  
+	mso-header-margin:36.0pt;  
+	mso-footer-margin:36.0pt;  
+	mso-paper-source:0;}  
+div.WordSection1  
+	{page:WordSection1;}  
+--&gt;  
 
-* 普通文件（文本文件、二进制文件、数据文件、压缩文件）
 
-d    目录（directory）
+| 文件类型标识符 | 文件类型说明 |
+| :--- | :--- |
+| - | 普通文件（文本文件、二进制文件、数据文件、压缩文件） |
+| d | 目录（directory） |
+| l | 软链接（link） |
+| b | 块设备（block） |
+| c | 字符设备（character） |
+| s | socket文件 |
+| p | 管道文件（pipe |
 
-l    软链接（link）
 
-b    块设备（block）
 
-c    字符设备（character）
 
-s    socket文件
 
-p    管道文件（pipe）
+
+
+
 
 3.1  查看文件类型
 

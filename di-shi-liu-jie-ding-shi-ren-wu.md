@@ -730,7 +730,7 @@ HOME=/
 
 4,第二个里程碑：思考多久重复一次或者思考下一次执行是什么时候
 
-| 强调：周和日不能同时使用  |
+| 强调：周和日不能同时使用 |
 | :--- |
 
 
@@ -792,13 +792,11 @@ zhaozhichao
 
 1.9.4 要领4：定时任务命令超过2条的命令执行，最好用脚本文件
 
-```
         定时任务写法：
 
-                                     \* \* \* \* \* /bin/sh /server/scripts/log.sh &gt;dev/null 2&gt;&1
-
-         定时任务出错：给定时任务看病的日志 /var/log/cron
-```
+| \* \* \* \* \* /bin/sh /server/scripts/log.sh     &gt;/dev/null 2&gt;&1 |
+| :--- |
+| 定时任务出错：给定时任务看病的日志 /var/log/cron |
 
 1.9.5 要领5：在指定用户下执行相关定时任务
 
@@ -948,17 +946,15 @@ block满了
 
 2. block 正常的满了 df -h
 
-   ```
-    du -sh /\*
+    du -sh /\\*
 
-    du -sh /usr/\*
-   ```
+    du -sh /usr/\\*
 
-   1. block 非正常的满了 df -h
+3.  block 非正常的满了 df -h
 
-      du -sh /\*  文件的硬链接数为0，但是还有进程调用。
+   du -sh /\*  文件的硬链接数为0，但是还有进程调用。
 
-      lsof \|grep delete
+   lsof \|grep delete
 
 
 

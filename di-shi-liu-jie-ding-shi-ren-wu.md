@@ -677,7 +677,7 @@ HOME=/
 
  8,9,10,11,12,13,14,15,16,17,18
 
- 30 8,10,12,14,16,18 \* \* \*  /bin/sh /scripts/oldboy.sh     
+ 30 8,10,12,14,16,18 \* \* \*  /bin/sh /scripts/oldboy.sh
 ```
 
 ④     30 21 \* \* \* /application/apache/bin/apachectl graceful
@@ -804,19 +804,23 @@ zhaozhichao
 
 1.9.4 要领4：定时任务命令超过2条的命令执行，最好用脚本文件
 
-            定时任务写法：
+```
+        定时任务写法：
 
-                                         \* \* \* \* \* /bin/sh /server/scripts/log.sh &gt;dev/null 2&gt;&1
+                                     \* \* \* \* \* /bin/sh /server/scripts/log.sh &gt;dev/null 2&gt;&1
 
-             定时任务出错：给定时任务看病的日志 /var/log/cron
+         定时任务出错：给定时任务看病的日志 /var/log/cron
+```
 
 1.9.5 要领5：在指定用户下执行相关定时任务
 
 1.9.6 要领6：生产任务程序不要随意打印输出信息
 
-          1.定向到文件
+```
+      1.定向到文件
 
-          2. &gt;/dev/null 2&gt;&1
+      2. &gt;/dev/null 2&gt;&1
+```
 
 1.9.7 要领7：定时任务执行的脚本要规范路径
 
@@ -849,8 +853,6 @@ zhaozhichao
 7、    定时任务执行的脚本要规范路径（/server/scripts）
 
 8、    配置定时任务规范操作过程
-
-
 
 ### 1.11 crontab 定时任务生产应用问题10箴言
 
@@ -958,15 +960,17 @@ block满了
 
 2. block 正常的满了 df -h
 
-        du -sh /\*
+   ```
+    du -sh /\*
 
-        du -sh /usr/\*
+    du -sh /usr/\*
+   ```
 
-    3. block 非正常的满了 df -h  
+   1. block 非正常的满了 df -h
 
-        du -sh /\*  文件的硬链接数为0，但是还有进程调用。
+      du -sh /\*  文件的硬链接数为0，但是还有进程调用。
 
-        lsof \|grep delete
+      lsof \|grep delete
 
 
 

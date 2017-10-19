@@ -1,6 +1,6 @@
-第一章 第三关命令
+# 第一章 第三关命令
 
-1.1 请执行命令取出linux中eth0的IP地址\(请用cut，有能力者也可分别用awk,sed命令答\)。
+### 1.1 请执行命令取出linux中eth0的IP地址\(请用cut，有能力者也可分别用awk,sed命令答\)
 
 方法1
 
@@ -30,13 +30,13 @@ ifconfig eth0 \|grep -Po '\(?&lt;=addr:\)\S+'
 
 处理技巧：
 
-匹配需要的目标\\(获取的字符串如ip\\)前的字符串一般用以.....开头（^.\\*）来匹配开头，匹配的结尾写上实际的字符，如："^.\\*addr:"    表示匹配  “            inet addr:”
+匹配需要的目标\\(获取的字符串如ip\\)前的字符串一般用以.....开头（^.\_）来匹配开头，匹配的结尾写上实际的字符，如："^.\_addr:"    表示匹配  “            inet addr:”
 
 而处理需要的目标后的内容一般在匹配的开头写上实际的字符，而结尾是用以.......结尾\(.\*$\)来匹配
 
 如:   Bcast:.\*$    表示匹配  “Bcast:10.0.0.25  Mask:255.255.255.0”
 
-1.2  如何取得/etiantian文件的权限对应的数字内容，如-rw-r--r--为644，要求使用命令取得644这样的数字。
+### 1.2  如何取得/etiantian文件的权限对应的数字内容，如-rw-r--r--为644，要求使用命令取得644这样的数字
 
 \[root@oldboy test\]\# stat /etiantian\|sed -nr 's\#^.\*\\(0\(.\*\)/-.\*$\#\1\#gp'
 
@@ -106,7 +106,7 @@ HTTP/1.1 200 OK
 
 HTTP/1.1 200 OK
 
-1.3  查找当前目录下所有文件，并把文件中的www.etiantian.org字符串替换成www.oldboy.cc
+### 1.3  查找当前目录下所有文件，并把文件中的www.etiantian.org字符串替换成www.oldboy.cc
 
 \[root@xdz test\]\# mkdir a/{b,c/d} -pv
 
@@ -228,7 +228,7 @@ www.oldboy.cc
 
 www.oldboy.cc
 
-1.4  linux下通过mkdir命令创建一个新目录/oldboy/ett，它的硬链接数是多少，为什么？如果在/oldboy/ett下面再创建一个目录test。再问/oldboy/ett的硬链接数是多少？为什么
+### 1.4  linux下通过mkdir命令创建一个新目录/oldboy/ett，它的硬链接数是多少，为什么？如果在/oldboy/ett下面再创建一个目录test。再问/oldboy/ett的硬链接数是多少？为什么
 
 \[root@oldboy ~\]\# ls -ld /oldboy/ett/
 
@@ -248,7 +248,7 @@ drwxr-xr-x 2 root root 4096 4月   3 09:35 /oldboy/ett/
 
 drwxr-xr-x 3 root root 4096 Apr  3 11:31 /oldboy/ett/
 
-1.5  请问在一个命令上加什么参数可以实现下面命令的内容在同一行输出。
+### 1.5  请问在一个命令上加什么参数可以实现下面命令的内容在同一行输出
 
 echo "oldboy";echo "oldboy"
 
@@ -256,15 +256,15 @@ echo "oldboy";echo "oldboy"
 
 oldboyoldboy
 
-1.6  已知/oldboy/ett.txt文件内容为：
+### 1.6  已知/oldboy/ett.txt文件内容为：
 
-oldboy
+### oldboy
 
-olldboooy
+### olldboooy
 
-test
+### test
 
-请使用grep或egrep正则匹配的方式过滤出前两行内容
+### 请使用grep或egrep正则匹配的方式过滤出前两行内容
 
 \[root@oldboy ~\]\# grep -v "^$" ett.txt
 
@@ -520,7 +520,7 @@ oldboy
 
 olldboooy
 
-1.7  date命令
+### 1.7  date命令
 
 \[root@oldboy ~\]\# LANG=en
 
@@ -560,7 +560,7 @@ Thu May  5 00:00:00 CST 2016
 
 \[root@oldboy ~\]\# hwclock -w
 
-1.8  请给出如下格式的date命令例：11-02-26。在给出实现按周输出比如：周六输出为6，请分别给出命令
+### 1.8  请给出如下格式的date命令例：11-02-26。在给出实现按周输出比如：周六输出为6，请分别给出命令
 
 \[root@oldboy oldboy\]\# date +%F
 
@@ -606,7 +606,7 @@ Thu May  5 00:00:00 CST 2016
 
 mv oldboy\_$\(date +%w -d "-1day"\).tar.gz oldboy\_$\(date +%F -d "-1day"\).tar.gz
 
-1.9  当从root用户切到普通用户时，执行ifconfig会提示。
+### 1.9  当从root用户切到普通用户时，执行ifconfig会提示
 
 \[oldboy@student ~\]$ ifconfig -bash: ifconfig: command not found
 
@@ -622,7 +622,7 @@ echo  ' PATH=$ PATH: /sbin/ifconfig '  &gt;&gt;  ~/.bash\_profile
 
 .  ~/.bash\_profile
 
-1.10  请描述下列路径的内容是做什么的？
+### 1.10  请描述下列路径的内容是做什么的？
 
 /var/log/messages          系统日志
 
@@ -636,7 +636,7 @@ echo  ' PATH=$ PATH: /sbin/ifconfig '  &gt;&gt;  ~/.bash\_profile
 
 /etc/profile                 全局的环境配置文件
 
-1.11  如何快速查到ifconfig的全路径（假如你不知道其路径），请给出命令。
+### 1.11  如何快速查到ifconfig的全路径（假如你不知道其路径），请给出命令
 
 which
 
@@ -674,7 +674,7 @@ find查找
 
 /sbin/ifconfig
 
-1.12  请给出正确的关机和重起服务器的命令
+### 1.12  请给出正确的关机和重起服务器的命令
 
 关机
 
@@ -696,7 +696,7 @@ reboot
 
 init 6
 
-1.13  命令行快捷键命令的功能
+### 1.13  命令行快捷键命令的功能
 
 光标移动
 

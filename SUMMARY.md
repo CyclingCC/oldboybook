@@ -20,6 +20,6 @@
 * [15-oldboy-linux-正则表达式](di-shi-wu-jie-zheng-ze-biao-da-shi.md)
 * [16-oldboy-linux-定时任务](di-shi-liu-jie-ding-shi-ren-wu.md)
 * [17-oldboy-linux-第三关命令](di-shi-qi-jie-di-san-guan-ming-ling.md)
-* 18-oldboy-linux-系统权限
+* [18-oldboy-linux-系统权限](18-oldboy-linuxxi-tong-quan-xian.md)
 * [19-oldboy-linux用户管理](di-shiba-jie-linux-yong-hu-guan-li.md)
 

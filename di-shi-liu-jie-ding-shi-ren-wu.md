@@ -792,7 +792,7 @@ zhaozhichao
 
 1.9.4 要领4：定时任务命令超过2条的命令执行，最好用脚本文件
 
-    定时任务写法：
+定时任务写法：
 
 | \* \* \* \* \* /bin/sh /server/scripts/log.sh     &gt;/dev/null 2&gt;&1 |
 | :--- |
@@ -805,7 +805,7 @@ zhaozhichao
 ```
       1.定向到文件
 
-      2. &gt;/dev/null 2&gt;&1
+      2. >/dev/null 2>&1
 ```
 
 1.9.7 要领7：定时任务执行的脚本要规范路径

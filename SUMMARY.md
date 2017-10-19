@@ -25,5 +25,5 @@
 * [20-oldboy-linux-磁盘与文件系统](20-oldboy-linuxci-pan-yu-wen-jian-xi-tong.md)
 * [21-oldboy-linux-三剑客之sed命令](21-oldboy-linuxsan-jian-ke-zhi-sed-ming-ling.md)
 * 22-oldboy-linux-三剑客之awk命令
-* 23-oldboy-linux-Shell编程基础
+* [23-oldboy-linux-Shell编程基础](23-oldboy-linux-shellbian-cheng-ji-chu.md)
 

@@ -30,9 +30,7 @@ sysstat            0:off    1:on    2:on    3:on    4:on    5:on    6:off
 
 服务====&gt;守护进程
 
-```
- sshd
-```
+        sshd
 
 ### 1.3.1 命令拼接
 
@@ -560,27 +558,18 @@ crontab \[-u user\] \[ -e \| -l \| -r \]
 
 #### 1.7.6 指令选项说明
 
-参数    含义    指定示例
 
--l （小写字母L）    查看crontab文件内容。提示:l 可理解为list的缩写    crontab -l
 
--e    编辑crontab文件内容，提示：e可理解为edit的缩写    crontab -e
+| **参数** | **含义** | **指定示例** |
+| :--- | :--- | :--- |
+| **-l（小写字母L）** | 查看crontab文件内容。提示:l可理解为list的缩写 | crontab -l |
+| **-e** | 编辑crontab文件内容，提示：e可理解为edit的缩写 | crontab -e |
+| **-i** | 删除crontab文件内容，删除前会提示确认。用的很少 | crontab -r |
+| **-u user** | 指定使用的用户执行任务crontab默认编辑当前用户的定时任务配置 | crontab -u boy -l |
+|  |  | **特别强调：-i，-r参数在生产中很少用，没什么需求必须要用-e进去编辑即可，完全是自己的习惯** |
+|  |  | **补充：crontab { -l \| -e }实际上就是在操作/var/spool/cron/当前用户这样的文件。使用crontab命令的优点1、crontab命令可以检查语法2、输入方便** |
 
--i     删除crontab文件内容，删除前会提示确认。用的很少    crontab -r
-
--u user    指定使用的用户执行任务
-
-crontab默认编辑当前用户的定时任务配置    crontab -u boy -l
-
-特别强调：-i，-r参数在生产中很少用，没什么需求必须要用-e进去编辑即可，完全是自己的习惯
-
-补充：crontab { -l \| -e } 实际上就是在操作/var/spool/cron/当前用户这样的文件。
-
-使用crontab命令的优点
-
-1、    crontab命令可以检查语法
-
-2、    输入方便
+ 
 
 例子：
 

@@ -4,7 +4,7 @@
 
 * [介绍](README.md)
 * [第一节 Linux硬件基础](di-yi-jie-linux-ying-jian-ji-chu.md)
-* [第二节 Linux操作系统发展介绍及系统版本介绍](chapter1.md)
+* [第二节 Linux系统发展及系统版本介绍](chapter1.md)
 * [第三节 Linux系统安装](di-san-jie.md)
 * [第四节 Linux Xshell优化](di-wu-jie-xshell-you-hua.md)
 * [第五节 Linux 远程连接故障排查](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha.md)

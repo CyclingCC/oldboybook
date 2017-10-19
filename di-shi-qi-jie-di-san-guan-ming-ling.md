@@ -22,25 +22,19 @@ ifconfig eth0\|sed -rn '2s\#^\[^0-9\]+\(.\*\)  Bc.\*$\#\1\#p'
 
 方法5
 
-ifconfig eth0\|grep -Eo "\(\[0-9\]{1,3}\.\){3}\[0-9\]{1,3}" \|head -1 
+ifconfig eth0\|grep -Eo "\(\[0-9\]{1,3}.\){3}\[0-9\]{1,3}" \|head -1
 
 方法6
 
 ifconfig eth0 \|grep -Po '\(?&lt;=addr:\)\S+'
 
-
-
-
-
 处理技巧：
 
-	匹配需要的目标\(获取的字符串如ip\)前的字符串一般用以.....开头（^.\*）来匹配开头，匹配的结尾写上实际的字符，如："^.\*addr:"    表示匹配  “			inet addr:”
+匹配需要的目标\\(获取的字符串如ip\\)前的字符串一般用以.....开头（^.\\*）来匹配开头，匹配的结尾写上实际的字符，如："^.\\*addr:"    表示匹配  “            inet addr:”
 
 而处理需要的目标后的内容一般在匹配的开头写上实际的字符，而结尾是用以.......结尾\(.\*$\)来匹配
 
 如:   Bcast:.\*$    表示匹配  “Bcast:10.0.0.25  Mask:255.255.255.0”
-
-
 
 1.2  如何取得/etiantian文件的权限对应的数字内容，如-rw-r--r--为644，要求使用命令取得644这样的数字。
 
@@ -60,9 +54,9 @@ ifconfig eth0 \|grep -Po '\(?&lt;=addr:\)\S+'
 
 1.2.1 方法1：
 
-\[root@oldboy ~\]\# touch /etiantian 
+\[root@oldboy ~\]\# touch /etiantian
 
-\[root@oldboy ~\]\# ls -lhi /etiantian 
+\[root@oldboy ~\]\# ls -lhi /etiantian
 
 2318 -rw-r--r-- 1 root root 0 4月   3 09:58 /etiantian
 
@@ -82,13 +76,13 @@ ifconfig eth0 \|grep -Po '\(?&lt;=addr:\)\S+'
 
 1.2.3 方法3：
 
-\[root@oldboy ~\]\# stat -c %a /etiantian 
+\[root@oldboy ~\]\# stat -c %a /etiantian
 
 644
 
 1.2.4 方法4
 
-\[root@oldboy ~\]\# stat /etiantian \|awk -F "\[0/\]" 'NR==4{print $2}'   
+\[root@oldboy ~\]\# stat /etiantian \|awk -F "\[0/\]" 'NR==4{print $2}'
 
 644
 
@@ -100,7 +94,9 @@ ifconfig eth0 \|grep -Po '\(?&lt;=addr:\)\S+'
 
 curl     -s  不显示错误信息
 
-	  	 -I   取协议（http/ftp等）头
+```
+       -I   取协议（http/ftp等）头
+```
 
 \[root@oldboy ~\]\# curl -I www.baidu.com 2&gt;/dev/null \|sed -n '1p'
 
@@ -136,8 +132,6 @@ mkdir: created directory \`a/c/d'
 
 └── oldboy.log
 
-
-
 4 directories, 1 file
 
 \[root@xdz test\]\# touch a/aa.txt a/b/bb.txt a/c/cc.txt a/c/d/dd.txt
@@ -164,27 +158,21 @@ mkdir: created directory \`a/c/d'
 
 └── oldboy.log
 
-
-
 4 directories, 5 files
 
-\[root@xdz test\]\# echo "www.etiantian.org" &gt; a/aa.txt 
+\[root@xdz test\]\# echo "www.etiantian.org" &gt; a/aa.txt
 
-\[root@xdz test\]\# echo "www.etiantian.org" &gt; a/b/bb.txt 
+\[root@xdz test\]\# echo "www.etiantian.org" &gt; a/b/bb.txt
 
-\[root@xdz test\]\# echo "www.etiantian.org" &gt; a/c/cc.txt 
+\[root@xdz test\]\# echo "www.etiantian.org" &gt; a/c/cc.txt
 
-\[root@xdz test\]\# echo "www.etiantian.org" &gt; a/c/d/dd.txt 
-
-
-
-
+\[root@xdz test\]\# echo "www.etiantian.org" &gt; a/c/d/dd.txt
 
 方法1:
 
 find  +  \|xargs sed
 
-\[root@oldboy36 oldboy\]\# find /oldboy/ -type f \|xargs cat 
+\[root@oldboy36 oldboy\]\# find /oldboy/ -type f \|xargs cat
 
 www.etiantian.org
 
@@ -240,10 +228,6 @@ www.oldboy.cc
 
 www.oldboy.cc
 
-
-
-
-
 1.4  linux下通过mkdir命令创建一个新目录/oldboy/ett，它的硬链接数是多少，为什么？如果在/oldboy/ett下面再创建一个目录test。再问/oldboy/ett的硬链接数是多少？为什么
 
 \[root@oldboy ~\]\# ls -ld /oldboy/ett/
@@ -264,8 +248,6 @@ drwxr-xr-x 2 root root 4096 4月   3 09:35 /oldboy/ett/
 
 drwxr-xr-x 3 root root 4096 Apr  3 11:31 /oldboy/ett/
 
-
-
 1.5  请问在一个命令上加什么参数可以实现下面命令的内容在同一行输出。
 
 echo "oldboy";echo "oldboy"
@@ -284,7 +266,7 @@ test
 
 请使用grep或egrep正则匹配的方式过滤出前两行内容
 
-\[root@oldboy ~\]\# grep -v "^$" ett.txt    
+\[root@oldboy ~\]\# grep -v "^$" ett.txt
 
 oldboy
 
@@ -292,7 +274,7 @@ xizi
 
 xiaochao
 
-\[root@oldboy ~\]\# sed "/^$/d" ett.txt              
+\[root@oldboy ~\]\# sed "/^$/d" ett.txt
 
 oldboy
 
@@ -308,7 +290,7 @@ olldboooy
 
 test
 
-\[root@oldboy oldboy\]\# cat ett.txt 
+\[root@oldboy oldboy\]\# cat ett.txt
 
 oldboy
 
@@ -344,27 +326,27 @@ oldboy
 
 olldboooy
 
-\[root@oldboy oldboy\]\# grep "ol\{0,1\}" ett.txt  \#→重复前一个字符0-1次
+\[root@oldboy oldboy\]\# grep "ol{0,1}" ett.txt  \#→重复前一个字符0-1次
 
 oldboy
 
 olldboooy
 
-\[root@oldboy oldboy\]\# grep "ol\{5,6\}" ett.txt \#→重复前一个字符l,5-6次
+\[root@oldboy oldboy\]\# grep "ol{5,6}" ett.txt \#→重复前一个字符l,5-6次
 
-\[root@oldboy oldboy\]\# grep "ol\{0\}" ett.txt \#→重复前一个字符l,正好0次
-
-oldboy
-
-olldboooy
-
-\[root@oldboy oldboy\]\# grep "ol\[db,ldboo\]" ett.txt 
+\[root@oldboy oldboy\]\# grep "ol{0}" ett.txt \#→重复前一个字符l,正好0次
 
 oldboy
 
 olldboooy
 
-\[root@oldboy oldboy\]\# grep "ol\[dbldboo\]" ett.txt 
+\[root@oldboy oldboy\]\# grep "ol\[db,ldboo\]" ett.txt
+
+oldboy
+
+olldboooy
+
+\[root@oldboy oldboy\]\# grep "ol\[dbldboo\]" ett.txt
 
 oldboy
 
@@ -376,7 +358,7 @@ oldboy
 
 olldboooy
 
-\[root@oldboy oldboy\]\# grep "\[^t\]" ett.txt 
+\[root@oldboy oldboy\]\# grep "\[^t\]" ett.txt
 
 oldboy
 
@@ -390,109 +372,109 @@ oldboy
 
 olldboooy
 
-\[oldboy@oldboy ~\]$ grep 'ol.bo...y' a.txt 
+\[oldboy@oldboy ~\]$ grep 'ol.bo...y' a.txt
 
-\[oldboy@oldboy ~\]$ grep 'ol.bo\*y' a.txt 
-
-oldboy
-
-\[oldboy@oldboy ~\]$ grep 'bo\*y' a.txt 
+\[oldboy@oldboy ~\]$ grep 'ol.bo\*y' a.txt
 
 oldboy
 
-olldboooy
-
-\[oldboy@oldboy ~\]$ grep 'bo.\*y' a.txt 
+\[oldboy@oldboy ~\]$ grep 'bo\*y' a.txt
 
 oldboy
 
 olldboooy
 
-\[oldboy@oldboy ~\]$ grep 'bo...y' a.txt 
-
-\[oldboy@oldboy ~\]$ grep 'bo\{2,3\}y' a.txt 
-
-olldboooy
-
-\[oldboy@oldboy ~\]$ grep 'bo\{1,3\}y' a.txt 
+\[oldboy@oldboy ~\]$ grep 'bo.\*y' a.txt
 
 oldboy
 
 olldboooy
 
-\[oldboy@oldboy ~\]$ grep 'ol\{1,2\}dbo\{1,3\}y' a.txt 
+\[oldboy@oldboy ~\]$ grep 'bo...y' a.txt
+
+\[oldboy@oldboy ~\]$ grep 'bo{2,3}y' a.txt
+
+olldboooy
+
+\[oldboy@oldboy ~\]$ grep 'bo{1,3}y' a.txt
 
 oldboy
 
 olldboooy
 
-\[oldboy@oldboy ~\]$ grep 'bo\*y' a.txt 
+\[oldboy@oldboy ~\]$ grep 'ol{1,2}dbo{1,3}y' a.txt
 
 oldboy
 
 olldboooy
 
-\[oldboy@oldboy ~\]$ grep 'bo.\*y' a.txt 
+\[oldboy@oldboy ~\]$ grep 'bo\*y' a.txt
 
 oldboy
 
 olldboooy
 
-\[oldboy@oldboy ~\]$ grep 'ol.\*d' a.txt 
+\[oldboy@oldboy ~\]$ grep 'bo.\*y' a.txt
 
 oldboy
 
 olldboooy
 
-\[oldboy@oldboy ~\]$ grep 'ol.d' a.txt 
-
-olldboooy
-
-\[oldboy@oldboy ~\]$ egrep 'ol+d' a.txt 
+\[oldboy@oldboy ~\]$ grep 'ol.\*d' a.txt
 
 oldboy
 
 olldboooy
 
-\[oldboy@oldboy ~\]$ egrep 'ol?d' a.txt 
+\[oldboy@oldboy ~\]$ grep 'ol.d' a.txt
 
-oldboy
+olldboooy
 
-\[oldboy@oldboy ~\]$ egrep 'ol+?d' a.txt 
+\[oldboy@oldboy ~\]$ egrep 'ol+d' a.txt
 
 oldboy
 
 olldboooy
 
-\[oldboy@oldboy ~\]$ egrep 'ol\(db\|ldbo+?\)y' a.txt 
+\[oldboy@oldboy ~\]$ egrep 'ol?d' a.txt
 
-olldboooy
+oldboy
 
-\[oldboy@oldboy ~\]$ egrep 'ol\(db\|ldbo+?\)oy' a.txt 
+\[oldboy@oldboy ~\]$ egrep 'ol+?d' a.txt
 
 oldboy
 
 olldboooy
 
-\[oldboy@oldboy ~\]$ echo ollldboooooy &gt;&gt;a.txt 
+\[oldboy@oldboy ~\]$ egrep 'ol\(db\|ldbo+?\)y' a.txt
 
-\[oldboy@oldboy ~\]$ egrep 'ol\(db\|ldbo+?\)oy' a.txt 
+olldboooy
+
+\[oldboy@oldboy ~\]$ egrep 'ol\(db\|ldbo+?\)oy' a.txt
 
 oldboy
 
 olldboooy
 
-\[oldboy@oldboy ~\]$ egrep 'ol\(db\|ldbo+?\)\*oy' a.txt 
+\[oldboy@oldboy ~\]$ echo ollldboooooy &gt;&gt;a.txt
+
+\[oldboy@oldboy ~\]$ egrep 'ol\(db\|ldbo+?\)oy' a.txt
 
 oldboy
 
 olldboooy
 
-\[oldboy@oldboy ~\]$ egrep 'ol?d' a.txt 
+\[oldboy@oldboy ~\]$ egrep 'ol\(db\|ldbo+?\)\*oy' a.txt
 
 oldboy
 
-\[oldboy@oldboy ~\]$ egrep 'ol+d' a.txt 
+olldboooy
+
+\[oldboy@oldboy ~\]$ egrep 'ol?d' a.txt
+
+oldboy
+
+\[oldboy@oldboy ~\]$ egrep 'ol+d' a.txt
 
 oldboy
 
@@ -500,7 +482,7 @@ olldboooy
 
 ollldboooooy
 
-\[root@oldboy /data\]\# egrep "ol+dbo+y"  /oldboy/ett.txt  
+\[root@oldboy /data\]\# egrep "ol+dbo+y"  /oldboy/ett.txt
 
 oldboy
 
@@ -520,7 +502,7 @@ oldboy
 
 olldboooy
 
-\[root@oldboy /data\]\# egrep "ol+dbo+y"  /oldboy/ett.txt  
+\[root@oldboy /data\]\# egrep "ol+dbo+y"  /oldboy/ett.txt
 
 oldboy
 
@@ -542,15 +524,15 @@ olldboooy
 
 \[root@oldboy ~\]\# LANG=en
 
-\[root@oldboy ~\]\# date   
+\[root@oldboy ~\]\# date
 
 Mon Mar 21 08:36:28 CST 2016
 
-\[root@oldboy ~\]\# 
+\[root@oldboy ~\]\#
 
-\[root@oldboy ~\]\# 
+\[root@oldboy ~\]\#
 
-\[root@oldboy ~\]\# 
+\[root@oldboy ~\]\#
 
 \[root@oldboy ~\]\# date -s "2016/05/01"
 
@@ -560,7 +542,7 @@ Sun May  1 00:00:00 CST 2016
 
 Sun May  1 00:00:02 CST 2016
 
-\[root@oldboy ~\]\# date -s "20160501"  
+\[root@oldboy ~\]\# date -s "20160501"
 
 Sun May  1 00:00:00 CST 2016
 
@@ -578,19 +560,17 @@ Thu May  5 00:00:00 CST 2016
 
 \[root@oldboy ~\]\# hwclock -w
 
-
-
 1.8  请给出如下格式的date命令例：11-02-26。在给出实现按周输出比如：周六输出为6，请分别给出命令
 
 \[root@oldboy oldboy\]\# date +%F
 
 2016-04-03
 
-\[root@oldboy oldboy\]\# date +%Y-%m-%d\ %H:%M:%S
+\[root@oldboy oldboy\]\# date +%Y-%m-%d %H:%M:%S
 
 2016-04-03 11:50:24
 
- \[root@oldboy oldboy\]\# date +%F\ %T
+\[root@oldboy oldboy\]\# date +%F %T
 
 2016-04-03 11:50:45
 
@@ -620,8 +600,6 @@ Thu May  5 00:00:00 CST 2016
 
 2016-04-04
 
-
-
 \[root@oldboy ~\]\# tar zcvf oldboy\_$\(date +%F\).tar.gz ./oldboy/
 
 00:00:00切割，改名
@@ -630,7 +608,7 @@ mv oldboy\_$\(date +%w -d "-1day"\).tar.gz oldboy\_$\(date +%F -d "-1day"\).tar.
 
 1.9  当从root用户切到普通用户时，执行ifconfig会提示。
 
-\[oldboy@student ~\]$ ifconfig -bash: ifconfig: command not found   
+\[oldboy@student ~\]$ ifconfig -bash: ifconfig: command not found
 
 提示：c58会遇到，c64没有此问题。  请问这是为什么？如何解决，请给出详细解决过程
 
@@ -644,23 +622,19 @@ echo  ' PATH=$ PATH: /sbin/ifconfig '  &gt;&gt;  ~/.bash\_profile
 
 .  ~/.bash\_profile
 
-
-
 1.10  请描述下列路径的内容是做什么的？
 
 /var/log/messages          系统日志
 
-/var/log/secure				系统安全日志
+/var/log/secure                系统安全日志
 
-/var/spool/clientmqueue		邮件临时目录
+/var/spool/clientmqueue        邮件临时目录
 
-/proc/interrupts			查看中断文件
+/proc/interrupts            查看中断文件
 
-/etc/fstab					磁盘文件系统开机自动挂载文件
+/etc/fstab                    磁盘文件系统开机自动挂载文件
 
-/etc/profile 				全局的环境配置文件
-
-
+/etc/profile                 全局的环境配置文件
 
 1.11  如何快速查到ifconfig的全路径（假如你不知道其路径），请给出命令。
 
@@ -700,8 +674,6 @@ find查找
 
 /sbin/ifconfig
 
-
-
 1.12  请给出正确的关机和重起服务器的命令
 
 关机
@@ -723,8 +695,6 @@ shutdown -r now
 reboot
 
 init 6
-
-
 
 1.13  命令行快捷键命令的功能
 
@@ -752,7 +722,7 @@ ctrl + f  光标向右移动一个符号的位置
 
 命令查询
 
-Ctrl + r查找（历史命令）。 history\|grep 
+Ctrl + r查找（历史命令）。 history\|grep
 
 ctrl + p  previous ↑上一个命令
 
@@ -760,7 +730,7 @@ ctrl + n  next    ↓下一个命令
 
 其他类型
 
-Ctrl + c 终止当前命令或脚本           
+Ctrl + c 终止当前命令或脚本
 
 Ctrl + d 退出当前shell，相当于exit logout，一个个删除光标后字符。
 
@@ -772,7 +742,7 @@ esc + .   引用/使用上一个命令的最后一个参数（结尾）
 
 SecureCRT快捷键
 
-Ctrl+shift+c 命令行复制内容  
+Ctrl+shift+c 命令行复制内容
 
 Ctrl+shift+v 命令行粘贴内容
 
@@ -781,6 +751,4 @@ Xshell快捷键
 Shift+insert 粘贴
 
 Ctrl+insert 复制
-
-
 

@@ -8,7 +8,7 @@
 * [第三节 Linux系统安装](di-san-jie.md)
 * [第四节 Linux Xshell优化](di-wu-jie-xshell-you-hua.md)
 * [第五节 SSH远程连接故障问题排查](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha.md)
-* [第六节 Linux基础优化](di-liu-jie-linux-ji-chu-you-hua.md)
+* [第六节 Linux 基础优化](di-liu-jie-linux-ji-chu-you-hua.md)
 * [第七节 第一关命令](di-qi-jie-di-yi-guan-ming-ling.md)
 * [第八节 Linux目录结构](di-ba-jie.md)
 * [第九节 Linux下重要目录](di-shijie-linux-xia-zhong-yao-mu-lu.md)

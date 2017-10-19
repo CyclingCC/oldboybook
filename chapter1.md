@@ -1,8 +1,6 @@
-# 
+# 第1章 Linux简介
 
-# 第2章 Linux简介
-
-## 2.1 什么是操作系统
+## 1.1 什么是操作系统
 
 操作系统是一个用来协调、管理和控制计算机硬件和软件资源的系统程序，它位于硬件和应用程序之间。\\(内核和调用接口\\)
 
@@ -22,7 +20,7 @@ Linux系统分为：内核+shell+扩展软件
 
 思考：世界上什么操作系统使用率最高?
 
-### 2.1.1 什么是Linux？
+### 1.1.1 什么是Linux？
 
 类似Windows，Linux也是一个操作系统软件，Linux是一套开放源代码程序的、并可以自由传播的类Unix操作系统软件，支持多用户、多任务并且支持多线程和多CPU的操作系统。
 
@@ -44,13 +42,13 @@ BAT\\(百度、阿里、腾讯\\)
      滚雪球的方式来学习Linux，不断积累。
 ```
 
-## 2.2 Linux起源
+## 1.2 Linux起源
 
-### 2.2.1 Unix的历史
+### 1.2.1 Unix的历史
 
 Unix系统于1969年在AT&T的贝尔实验室诞生，20世纪70年代，它逐步盛行，这期间，又产生了一个比较重要的分支，就是大约1977年诞生的BSD\\(Berkeley Software Distribution\\)系统。从BSD系统开始，各大厂商及商业公司开始根据自身的硬件架构，并以BSD系统为基础进行Unix系统研发，从而产生了各种版本的Unix系统，例如：SUN公司的Solaris，IBM公司的AIX，HP公司的HP UNIX等。图1-3给出了Unix系统诞生、发展的时间及版本分支介绍，供读者参考。
 
-### 2.2.2 Unix的5大特性
+### 1.2.2 Unix的5大特性
 
 技术成熟，可靠性高
 
@@ -72,7 +70,7 @@ Oracle、DB2、Sybase、Informix等大型数据库，都把Unix作为其主要�
 
 正是Unix促使了C语言的诞生
 
-### 2.2.3 Unix操作系统的革命
+### 1.2.3 Unix操作系统的革命
 
 70年代中后期，由于各厂商及商业公司开发的Unix及内置软件都是针对自己公司特定硬件的，因此在其他公司的硬件上基本上无法直接于运行。
 
@@ -88,7 +86,7 @@ Oracle、DB2、Sybase、Informix等大型数据库，都把Unix作为其主要�
 
 老男孩补充：这个GNU系统后来没有流行起来。现在的GNU系统通常是使用Linux系统内核，以及使用了GNU项目贡献的一些组件加上其他相关程序组成，这样的组合被成为GNU/Linux操作系统。
 
-## 2.3 Linux诞生
+## 1.3 Linux诞生
 
 Linux系统的诞生开始与芬兰赫尔辛基大学的以为计算机系的学生，名字为Linus Torvalds。
 
@@ -100,9 +98,9 @@ Linux的标志和吉祥物为一只名字叫作Tux的企鹅——Torvalds' Unix�
                                    图1-2
 ```
 
-## 2.7 Linux的发展过程
+## 1.4 Linux的发展过程
 
-### 2.7.1 Linux的发展历程介绍
+### 1.4.1 Linux的发展历程介绍
 
 1. 1984年，Andrew S. Tanenbaum开发了用于教学的Unix系统，名为Minix。
 
@@ -124,7 +122,7 @@ Linux的标志和吉祥物为一只名字叫作Tux的企鹅——Torvalds' Unix�
 
 10. 2000年后，Linux系统日趋成熟，涌现大量基于Linux服务器平台的应用，并广泛用于基本ARM技术的嵌入式系统中。
 
-### 2.7.2 Linux发展历程中相关人物
+### 1.4.2 Linux发展历程中相关人物
 
 我们一定要向前辈们致以深深的敬意，没有他们，就没有今天优秀的Linux系统存在了\\(图1-3\\)
 
@@ -134,9 +132,9 @@ Linux的标志和吉祥物为一只名字叫作Tux的企鹅——Torvalds' Unix�
 图1-3     Linux发展历程中相关人物
 ```
 
-# 第3章 Linux核心概念
+# 第2章 Linux核心概念
 
-## 3.1 自由软件与Free Software Foundation
+## 2.1 自由软件与Free Software Foundation
 
 简单地理解，自由软件的核心就是没有商业化软件版权制约，源代码开放，可无约束自由传播。
 
@@ -146,11 +144,11 @@ Linux的标志和吉祥物为一只名字叫作Tux的企鹅——Torvalds' Unix�
 
 自由软件关乎使用者运行、复制、发布、研究、修改和改进该软件的自由。
 
-## 3.2 Free Software基金会FSF
+## 2.2 Free Software基金会FSF
 
 FSF\\(Free Software Foundation\\)的中文意思是自由软件基金会，是Richard Stallman于1984年发起和创办的。FSF的主要项目是GNU项目。GNU项目本身产生的主要软件包括：Emacs编辑软件、gcc编译软件、bash命令解释程序和编程语言，以及gawk\\(GNU sawk\\)等。
 
-## 3.3 GNU知识
+## 2.3 GNU知识
 
 GNU的全称为：GNU's not unix，意思是“GNU不是Unix”，GNU计划，又称革奴计划，是由Richard Stallman在1983年9月27日公开发起的，旨在开发一个类似 Unix ，且为 自由软件 的完整的操作系统： GNU 系统。在1985年Richard Stallman又创立了自由软件基金会（Free Software Foundation）来为GNU计划提供技术、法律以及财政支持。前面已经提到，GNU项目主要目标是建立一套完全自由和可移植的类Unix操作系统。
 
@@ -166,7 +164,7 @@ GNU的全称为：GNU's not unix，意思是“GNU不是Unix”，GNU计划，�
 
 ```
 
-## 3.4 GPL知识
+## 2.4 GPL知识
 
 概念：GPL\\(General Public Licese\\)叫作：GNU通用公共许可证。
 
@@ -182,7 +180,7 @@ FSF\(基金会\)       ---&gt;      GNU\\(项目\\)         ---&gt;       emacs,
 
 GNU\(项目\)        ---&gt;       GPL\\(员工守则\\)   ---&gt;      自由传播，修改源代码，但是必须把修改的代码发布出来。
 
-## 3.5 Linux系统组成
+## 2.5 Linux系统组成
 
 Linux操作系统 = Linux内核 + GNU项目软件 + 必要的应用程序
 
@@ -200,21 +198,21 @@ Linux操作系统 = Linux内核 + GNU项目软件 + 必要的应用程序
                                                图1-4      为Linux系统的核心组成原理示意图
 ```
 
-# 第4章 Linux特点
+# 第3章 Linux特点
 
-## 4.1 Linux为什么受欢迎
+## 3.1 Linux为什么受欢迎
 
 ```
 Linux系统之所以受到广大计算机爱好者的喜爱，主要原因有两个：
 ```
 
-    一是，Linux属于开源软件，用户不用支付任何费用就可以获得系统和系统的源代码，并且可以根据自己的需要对源码进行必要的修改，无偿使用，无约束地自由传播。
+ 一是，Linux属于开源软件，用户不用支付任何费用就可以获得系统和系统的源代码，并且可以根据自己的需要对源码进行必要的修改，无偿使用，无约束地自由传播。
 
-    Linux具有Unix的全部优秀特性，任何可以获得Unix几乎所有优秀功能，并且Linux系统更开放，社区开发和全世界的使用者也更活跃。
+二是，Linux具有Unix的全部优秀特性，任何可以获得Unix几乎所有优秀功能，并且Linux系统更开放，社区开发和全世界的使用者也更活跃。
 
-# 第5章 如何选择Linux发行版
+# 第4章 如何选择Linux发行版
 
-## 5.1 Linux的发行版介绍
+## 4.1 Linux的发行版介绍
 
 ![](/assets/图1-6.png)
 
@@ -224,17 +222,17 @@ Linux的发行商包括Slackware、Redhat、Debian、Fedora、TurboLinux、Mandr
 
 下面来看看期中几个重要的发型版本:
 
-*     Redhat： Redhat Linux9.0的内核为2.4.20。在版本9.0后，Redhat不在遵循GPL协议，成为收费产品\(但仍开源\)，发展的新版本一次为Redhat3.x、Redhat4.x、Redhat5.x、Redhat6.x、Redhat7.x、Redhat Enterprise6.x。
-*     Fedora: 为Redhat的一个分支，仍遵循GPL协议，可以认为是Redhat预发布版。\(就像是游戏的公测版\)
-*     CentOS\(community Enterprise Operating System\)：与Redhat做到二进制级别的一模一样，Redhat的另一个重要分支，以Redhat所发布的源代码重建符合GPL许可协议的Linux系统，即将Redhat Linux源代码的商标Logo以及非自由软件部分去除在编译而成的版本，目前CentOS已被Redhat公司收购，但仍开源免费，CentOS Linux是国内互联网公司使用最多的Linux系统版本，也是本书的"主人公"，本书后面所有的内容讲解都是基于CentOS这个操作系统的，绝大部分内容几乎无需任何修改同样适合其他操作系统版本。
+* Redhat： Redhat Linux9.0的内核为2.4.20。在版本9.0后，Redhat不在遵循GPL协议，成为收费产品\(但仍开源\)，发展的新版本一次为Redhat3.x、Redhat4.x、Redhat5.x、Redhat6.x、Redhat7.x、Redhat Enterprise6.x。
+* Fedora: 为Redhat的一个分支，仍遵循GPL协议，可以认为是Redhat预发布版。\(就像是游戏的公测版\)
+* CentOS\(community Enterprise Operating System\)：与Redhat做到二进制级别的一模一样，Redhat的另一个重要分支，以Redhat所发布的源代码重建符合GPL许可协议的Linux系统，即将Redhat Linux源代码的商标Logo以及非自由软件部分去除在编译而成的版本，目前CentOS已被Redhat公司收购，但仍开源免费，CentOS Linux是国内互联网公司使用最多的Linux系统版本，也是本书的"主人公"，本书后面所有的内容讲解都是基于CentOS这个操作系统的，绝大部分内容几乎无需任何修改同样适合其他操作系统版本。
 
 ```
 提示：有关Linux操作系统，记住Redhat、CentOS、Ubuntu、Fedora、SUSE、Debian等即可。
 ```
 
-## 5.2 选择适合的Linux系统学习
+## 4.2 选择适合的Linux系统学习
 
-### 5.2.1 Linux发行版本应用场景
+### 4.2.1 Linux发行版本应用场景
 
 Linux发行版本选择
 
@@ -252,7 +250,7 @@ Fedora=稳定之后=&gt;Redhat=去Logo去除收费=&gt;CentOS
 
 中文    红旗Linux，中标麒麟Linux
 
-### 5.2.2 选择CentOS  Linux版本
+### 4.2.2 选择CentOS  Linux版本
 
 本诉讲解的Linux运维技术主要是基于CentOS x86\\_64 Linux的，绝大部分知识几乎无需任何修改同样适用于Redhat Linux等同源或类似Linux系统版本。
 
@@ -268,7 +266,7 @@ Fedora=稳定之后=&gt;Redhat=去Logo去除收费=&gt;CentOS
 
 `面试技巧：大家被面试官问及使用什么样操作系统时，一定要一次性说出来(系统版本、内核版本、32位和64位)，例如：我们工作中使用的是CentOS 6.7 x86_64位Linux系统，内核版本为2.6.32-573，这才是一个合格的Linux运维人员的表现。`
 
-# 第6章 总结
+# 第5章 总结
 
 1. 了解什么是操作系统以及操作系统简单原理图
 

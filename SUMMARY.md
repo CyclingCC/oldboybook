@@ -12,7 +12,7 @@
 * [07-oldboy-linux-第一关命令](di-qi-jie-di-yi-guan-ming-ling.md)
 * [08-oldboy-linux-目录结构](di-ba-jie.md)
 * [09-oldboy-linux-重要目录](di-shijie-linux-xia-zhong-yao-mu-lu.md)
-* [10-oldboy-linux-下重要文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian.md)
+* [10-oldboy-linux-重要文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian.md)
 * [11-oldboy-linux-目录详解](di-shi-yi-jie-linux-mu-lu-xiang-jie.md)
 * [12-oldboy-linux-第二关命令](di-shi-er-jie-di-er-guan-ming-ling.md)
 * [13-oldboy-linux-文件属性](di-shi-san-jie-linux-wen-jian-shu-xing.md)

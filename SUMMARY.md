@@ -3,10 +3,10 @@
 ## linux基础知识点汇总
 
 * [介绍](README.md)
-* [第一节 Linux硬件基础](di-yi-jie-linux-ying-jian-ji-chu.md)
-* [第二节 Linux系统发展及系统版本介绍](chapter1.md)
-* [第三节 Linux系统安装](di-san-jie.md)
-* [第四节 Linux Xshell优化](di-wu-jie-xshell-you-hua.md)
+* [第一节 Linux-硬件基础](di-yi-jie-linux-ying-jian-ji-chu.md)
+* [第二节 Linux-系统发展及系统版本介绍](chapter1.md)
+* [第三节 Linux-系统安装](di-san-jie.md)
+* [第四节 Linux-Xshell优化](di-wu-jie-xshell-you-hua.md)
 * [第五节 Linux 远程连接故障排查](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha.md)
 * [第六节 Linux 基础优化](di-liu-jie-linux-ji-chu-you-hua.md)
 * [第七节 Linux 第一关命令](di-qi-jie-di-yi-guan-ming-ling.md)

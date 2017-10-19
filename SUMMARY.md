@@ -16,7 +16,7 @@
 * [第十一节 Linux目录详解](di-shi-yi-jie-linux-mu-lu-xiang-jie.md)
 * [第十二节 第二关命令](di-shi-er-jie-di-er-guan-ming-ling.md)
 * [第十三节 Linux文件属性](di-shi-san-jie-linux-wen-jian-shu-xing.md)
-* [第十四节 通配符](di-shi-si-jie-tong-pei-fu.md)
+* [第十四节 Linux通配符](di-shi-si-jie-tong-pei-fu.md)
 * [第十五节 正则表达式](di-shi-wu-jie-zheng-ze-biao-da-shi.md)
 * [第十六节 定时任务](di-shi-liu-jie-ding-shi-ren-wu.md)
 * [第十七节 第三关命令](di-shi-qi-jie-di-san-guan-ming-ling.md)

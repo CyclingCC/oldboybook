@@ -1,8 +1,8 @@
-第1章 变量
+# 第1章 变量
 
-1.1  环境变量
+### 1.1  环境变量
 
-1.1.1  查看环境变量
+#### 1.1.1  查看环境变量
 
 \[root@oldboy36 ~\]\# env
 
@@ -48,7 +48,7 @@ G\_BROKEN\_FILENAMES=1
 
 \_=/bin/env
 
-1.1.2  查看所有变量
+#### 1.1.2  查看所有变量
 
 \[root@oldboy36 ~\]\# set
 
@@ -162,11 +162,11 @@ USER=root
 
 colors=/etc/DIR\_COLORS
 
-1.2  PATH环境变量
+### 1.2  PATH环境变量
 
 PATH 环境变量 存放命令的路径/位置
 
-第2章 linux命令帮助
+# 第2章 linux命令帮助
 
 linux下面查询帮助
 
@@ -186,7 +186,7 @@ help  命令  （linux内置命令）
 
 [https://www.gnu.org/software/coreutils/manual/coreutils.html](https://www.gnu.org/software/coreutils/manual/coreutils.html)
 
-第3章 ls
+# 第3章 ls
 
 -F   给不同文件加不同符号标示
 
@@ -212,7 +212,7 @@ touch jeacen oldboy wodi.gz yingsui.gz
 
 tree
 
-3.1  tree
+### 3.1  tree
 
 \[root@oldboy oldboy\]\# tree -dLi 1
 
@@ -258,7 +258,7 @@ xingfujie
 
 ./ext
 
-3.3  ls
+### 3.3  ls
 
 \[root@oldboy36 oldboy\]\# ll -d /oldboy/\*/
 
@@ -274,7 +274,7 @@ drwxr-xr-x 2 root root 4096 May 10 10:16 /oldboy/xiaofan/
 
 drwxr-xr-x 2 root root 4096 May 10 10:16 /oldboy/xingfujie/
 
-3.4  ls  grep
+### 3.4  ls  grep
 
 \[root@oldboy oldboy\]\# ll /oldboy/ \|grep "^d"
 
@@ -302,7 +302,7 @@ drwxr-xr-x 2 root root 4096 3月  20 16:03 xiaofan/
 
 drwxr-xr-x 2 root root 4096 3月  20 16:03 xingfujie/
 
-3.5  ls   sed
+### 3.5  ls   sed
 
 \[root@oldboy36 oldboy\]\# ll /oldboy/ \|sed -n '/^d/p'
 
@@ -318,7 +318,7 @@ drwxr-xr-x 2 root root 4096 May 10 10:16 xiaofan
 
 drwxr-xr-x 2 root root 4096 May 10 10:16 xingfujie
 
-3.6  ls   awk
+### 3.6  ls   awk
 
 \[root@oldboy36 oldboy\]\# ll \|awk '$2&gt;1'
 
@@ -360,7 +360,7 @@ drwxr-xr-x 2 root root 4096 3月  20 16:03 xiaofan/
 
 drwxr-xr-x 2 root root 4096 3月  20 16:03 xingfujie/
 
-3.7  一个目录中有很多文件（ls -l 查看时好多屏），想用一条命令最快速度查看到最近更新的文件。如何看？
+### 3.7  一个目录中有很多文件（ls -l 查看时好多屏），想用一条命令最快速度查看到最近更新的文件。如何看？
 
 \[root@oldboy36 ~\]\# ls -lrt
 
@@ -382,7 +382,7 @@ drwxr-xr-x  2 root root  4096 May  7 21:26 test
 
 -rw-r--r--  1 root root   324 May  8 18:55 ett.txt
 
-第4章  cd
+# 第4章  cd
 
 假如当前目录是如下命令的结果：
 
@@ -414,7 +414,7 @@ cd      切换到家目录
 
 cd  ~oldboy  切换到oldboy家目录
 
-第5章 find
+### 第5章 find
 
 -maxdepth 1  查找深度
 
@@ -434,8 +434,6 @@ cd  ~oldboy  切换到oldboy家目录
 
 已知 apache 服务的访问日志按天记录在服务器本地目录/app/logs 下，由于磁盘空间紧张，现在要求只能保留最近 7 天的访问日志！请问如何解决？ 请给出解决办法或配置或处理命令。（提示：可以从 apache 服务配置上着手，也可以从生成出来的日志上着手。）
 
-
-
 创建环境
 
 touch -d "20170501" access\_www\_2017-04-{01..10}.log
@@ -443,8 +441,6 @@ touch -d "20170501" access\_www\_2017-04-{01..10}.log
 touch -d "20170504" access\_www\_2017-04-{11..20}.log
 
 touch -d "20170508" access\_www\_2017-04-{21..30}.log
-
-
 
 mkdir /app/logs -p
 
@@ -454,15 +450,13 @@ for n in \`seq 20\`
 
 do
 
-  date -s "2016/03/$n"
+date -s "2016/03/$n"
 
-  touch access\_www\_\`\(date +%F\)\`.log
+touch access\_www\_\`\(date +%F\)\`.log
 
 done
 
 date -s "2016/03/20 17:05"
-
-
 
 \[root@oldboy36 logs\]\# find /app/logs/ -type f -name "\*.log" -mtime +7 \|xargs ls -l
 
@@ -486,8 +480,6 @@ date -s "2016/03/20 17:05"
 
 -rw-r--r-- 1 root root 0 May  1 00:00 /app/logs/access\_www\_2017-04-10.log
 
-
-
 \[root@oldboy36 logs\]\# find /app/logs/ -type f -name "\*.log" -mtime +7 -exec ls -l {} \;
 
 -rw-r--r-- 1 root root 0 May  1 00:00 /app/logs/access\_www\_2017-04-09.log
@@ -510,27 +502,19 @@ date -s "2016/03/20 17:05"
 
 -rw-r--r-- 1 root root 0 May  1 00:00 /app/logs/access\_www\_2017-04-03.log
 
-
-
 find /app/logs/ -type f -name "acc\*.log" -mtime +7\|xargs rm -f
 
-find /app/logs/ -type f -name "acc\*.log" -mtime +7 -exec rm {} \;        
+find /app/logs/ -type f -name "acc\*.log" -mtime +7 -exec rm {} \;
 
 rm -f \`find /app/logs/ -type f -name "acc\*.log" -mtime +7\`
 
+[http://oldboy.blog.51cto.com/2561410/1750481](http://oldboy.blog.51cto.com/2561410/1750481)
 
-
-http://oldboy.blog.51cto.com/2561410/1750481
-
-
-
-第6章 tree
+# 第6章 tree
 
 -L  层数
 
 -d  目录
-
-
 
 \[root@oldboy36 oldboy\]\# tree -dL 1
 
@@ -548,8 +532,6 @@ http://oldboy.blog.51cto.com/2561410/1750481
 
 └── xingfujie
 
-
-
 \[root@oldboy36 oldboy\]\# tree -dLi 1
 
 .
@@ -566,9 +548,7 @@ xiaofan
 
 xingfujie
 
-
-
-第7章 grep
+# 第7章 grep
 
 -i 不区分大小写
 
@@ -576,7 +556,7 @@ xingfujie
 
 --color=auto
 
-\[root@oldboy logs\]\# grep -n "." nginx.conf 
+\[root@oldboy logs\]\# grep -n "." nginx.conf
 
 1:stu01
 
@@ -632,59 +612,61 @@ xingfujie
 
 alias grep='grep --color=auto'
 
-\[root@oldgirl oldboy\]\# . /etc/profile      
+\[root@oldgirl oldboy\]\# . /etc/profile
 
 welcome to oldboy linux training from /etc/profile.d
 
-\[root@oldgirl oldboy\]\# grep --color=auto"oldboy" /etc/hosts  
+\[root@oldgirl oldboy\]\# grep --color=auto"oldboy" /etc/hosts
 
-第8章 nl 命令
+# 第8章 nl 命令
 
-  显示行号，不包括空行
+显示行号，不包括空行
 
-\[root@oldboy logs\]\# nl nginx.conf 
+\[root@oldboy logs\]\# nl nginx.conf
 
-     1  stu01
+```
+ 1  stu01
 
-     2  stu02
+ 2  stu02
 
-     3  stu03
+ 3  stu03
 
-     4  stu04
+ 4  stu04
 
-     5  stu05
+ 5  stu05
 
-     6  stu06
+ 6  stu06
 
-     7  stu07
+ 7  stu07
 
-     8  stu08
+ 8  stu08
 
-     9  stu09
+ 9  stu09
 
-    10  stu10
+10  stu10
 
-    11  stu11
+11  stu11
 
-    12  stu12
+12  stu12
 
-    13  stu13
+13  stu13
 
-    14  stu14
+14  stu14
 
-    15  stu15
+15  stu15
 
-    16  stu16
+16  stu16
 
-    17  stu17
+17  stu17
 
-    18  stu18
+18  stu18
 
-    19  stu19
+19  stu19
 
-    20  stu20
+20  stu20
+```
 
-第9章 tail  
+# 第9章 tail
 
 -f   跟踪文件尾部的变化
 
@@ -692,21 +674,17 @@ welcome to oldboy linux training from /etc/profile.d
 
 tailf  相当于 tail -f
 
-
-
- 调试系统服务时，希望能实时查看/var/log/messages 系统日志的更新,如何做？
+调试系统服务时，希望能实时查看/var/log/messages 系统日志的更新,如何做？
 
 tail -f /var/log/messages
 
 tailf /var/log/messages
 
-
-
-第10章 cat
+# 第10章 cat
 
 \[root@oldboy logs\]\# echo stu{01..20}\|xargs -n1 &gt;nginx.conf
 
-\[root@oldboy logs\]\# cat nginx.conf 
+\[root@oldboy logs\]\# cat nginx.conf
 
 stu01
 
@@ -748,97 +726,101 @@ stu19
 
 stu20
 
-\[root@oldboy logs\]\# cat -n nginx.conf 
+\[root@oldboy logs\]\# cat -n nginx.conf
 
-     1  stu01
+```
+ 1  stu01
 
-     2  stu02
+ 2  stu02
 
-     3  stu03
+ 3  stu03
 
-     4  stu04
+ 4  stu04
 
-     5  stu05
+ 5  stu05
 
-     6  stu06
+ 6  stu06
 
-     7  stu07
+ 7  stu07
 
-     8  stu08
+ 8  stu08
 
-     9  stu09
+ 9  stu09
 
-    10  stu10
+10  stu10
 
-    11  stu11
+11  stu11
 
-    12  stu12
+12  stu12
 
-    13  stu13
+13  stu13
 
-    14  stu14
+14  stu14
 
-    15  stu15
+15  stu15
 
-    16  stu16
+16  stu16
 
-    17  stu17
+17  stu17
 
-    18  stu18
+18  stu18
 
-    19  stu19
+19  stu19
 
-    20  stu20
+20  stu20
+```
 
-第11章 less
+# 第11章 less
 
- \[root@oldboy logs\]\# less -N nginx.conf 
+\[root@oldboy logs\]\# less -N nginx.conf
 
-      1 stu01
+```
+  1 stu01
 
-      2 stu02
+  2 stu02
 
-      3 stu03
+  3 stu03
 
-      4 stu04
+  4 stu04
 
-      5 stu05
+  5 stu05
 
-      6 stu06
+  6 stu06
 
-      7 stu07
+  7 stu07
 
-      8 stu08
+  8 stu08
 
-      9 stu09
+  9 stu09
 
-     10 stu10
+ 10 stu10
 
-     11 stu11
+ 11 stu11
 
-     12 stu12
+ 12 stu12
 
-     13 stu13
+ 13 stu13
 
-     14 stu14
+ 14 stu14
 
-     15 stu15
+ 15 stu15
 
-     16 stu16
+ 16 stu16
 
-     17 stu17
+ 17 stu17
 
-     18 stu18
+ 18 stu18
 
-     19 stu19
+ 19 stu19
 
-     20 stu20
+ 20 stu20
+```
 
-第12章  awk  sed   grep
+# 第12章  awk  sed   grep
 
 12.1  grep
 
-\[root@oldboy36 oldboy\]\# grep -n "." nginx.conf 
+\[root@oldboy36 oldboy\]\# grep -n "." nginx.conf
 
 1:stu01
 
@@ -880,11 +862,9 @@ stu20
 
 20:stu20
 
-
-
 12.2  awk
 
- \[root@oldboy logs\]\# awk '{print NR,$0}' nginx.conf 
+\[root@oldboy logs\]\# awk '{print NR,$0}' nginx.conf
 
 1 stu01
 
@@ -928,8 +908,6 @@ stu20
 
 12.3  sed
 
-
-
 \[root@oldboy36 oldboy\]\# sed = nginx.conf \|xargs -n2
 
 1 stu01
@@ -972,8 +950,6 @@ stu20
 
 20 stu20
 
-
-
 \[root@oldboy36 oldboy\]\# sed = nginx.conf \| sed 'N;s\#\n\# \#'
 
 1 stu01
@@ -1014,11 +990,11 @@ stu20
 
 19 stu19
 
-20 stu20
+# 20 stu20
 
-第13章  打印轻量级 web 服务的配置文件 nginx.conf 内容的行号及内容，该如何做？
+# 第13章  打印轻量级 web 服务的配置文件 nginx.conf 内容的行号及内容，该如何做？
 
-nl nginx.conf（不记录空行行号） 
+nl nginx.conf（不记录空行行号）
 
 cat -n nginx.conf  &lt;==这个最常用。
 
@@ -1032,19 +1008,17 @@ awk '{print NR,$0}' messages  \#NR表示行号，$0表示整行内容。
 
 sed = oldboy.log\| sed 'N;s/\n/ /'
 
-第14章  vim 帮助
+# 第14章  vim 帮助
 
-:help G  
+:help G
 
-http://vimdoc.sourceforge.net/htmldoc/usr\_toc.html
+[http://vimdoc.sourceforge.net/htmldoc/usr\_toc.html](http://vimdoc.sourceforge.net/htmldoc/usr_toc.html)
 
+# 第15章  linux系统启动
 
+### 15.1  linux 系统运行级别一般为 0-6，请分别写出每个级别的含义
 
-第15章  linux系统启动
-
-15.1  linux 系统运行级别一般为 0-6，请分别写出每个级别的含义
-
-15.1.1  运行级别
+#### 15.1.1  运行级别
 
 0 - 停止
 
@@ -1068,7 +1042,7 @@ id:3:initdefault:
 
 15.1.3  查看运行级别
 
-\[root@oldboy36 oldboy\]\# runlevel 
+\[root@oldboy36 oldboy\]\# runlevel
 
 N 3
 
@@ -1076,37 +1050,37 @@ N 3
 
 \[root@oldboy36 oldboy\]\# init 2
 
-\[root@oldboy36 oldboy\]\# runlevel 
+\[root@oldboy36 oldboy\]\# runlevel
 
 3 2
 
-第16章 软件开机启动
+# 第16章 软件开机启动
 
-16.1  装完 Centos 系统后，希望网络文件共享服务 NFS，仅在 3 级别上开机自启动，该如何做？
+### 16.1  装完 Centos 系统后，希望网络文件共享服务 NFS，仅在 3 级别上开机自启动，该如何做？
 
 chkconfig --level 3 iptables on
 
 chkconfig iptables on
 
-16.2  查看iptables开机启动状态
+### 16.2  查看iptables开机启动状态
 
 \[root@oldboy36 oldboy\]\# chkconfig --list iptables
 
 iptables        0:off   1:off   2:off   3:off   4:off   5:off   6:off
 
-\[root@oldboy36 oldboy\]\# chkconfig \|grep iptables 
+\[root@oldboy36 oldboy\]\# chkconfig \|grep iptables
 
 iptables        0:off   1:off   2:off   3:off   4:off   5:off   6:off
 
-第17章  系统字符集
+# 第17章  系统字符集
 
- linux 系统中查看中文乱码，请问如何解决乱码问题？
+linux 系统中查看中文乱码，请问如何解决乱码问题？
 
 \[root@oldboy36 oldboy\]\# echo $LANG
 
 en\_US.UTF-8
 
-\[root@oldboy36 oldboy\]\# cat /etc/sysconfig/i18n 
+\[root@oldboy36 oldboy\]\# cat /etc/sysconfig/i18n
 
 LANG="en\_US.UTF-8"
 
@@ -1168,9 +1142,7 @@ LC\_IDENTIFICATION="en\_US.UTF-8"
 
 LC\_ALL=
 
-
-
-第18章  文件归档
+# 第18章  文件归档
 
 18.1  /etc/目录为 linux 系统的默认的配置文件及服务启动命令的目录
 
@@ -1186,41 +1158,37 @@ tar命令格式：
 
 tar   \(选项\)\(参数\)  归档文件   \[文件或目录\]
 
-参数	参数说明	其他说明
+参数    参数说明    其他说明
 
--z	gzip压缩格式 	
+-z    gzip压缩格式
 
--c	创建归档	
+-c    创建归档
 
--f	指定归档文件 	
+-f    指定归档文件
 
--r	给归档文件中添加文件	
+-r    给归档文件中添加文件
 
--t	列出归档文件的内容 	
+-t    列出归档文件的内容
 
--x	从归档中提取文件	
+-x    从归档中提取文件
 
--v	显示执行过程	
+-v    显示执行过程
 
--C  &lt;目录&gt;	指定解压到的目录	
+-C  &lt;目录&gt;    指定解压到的目录
 
---exclude=文件目录	排除文件	--exclude=/etc/services   --exclude=c --exclude=b
+--exclude=文件目录    排除文件    --exclude=/etc/services   --exclude=c --exclude=b
 
--h	需要打包的文件是软链接用此参数	
+-h    需要打包的文件是软链接用此参数
 
--P	从/开始打包	
+-P    从/开始打包
 
 tar zcf /root/etc-pc.tar.gz etc/ --exclude=etc/services
 
 tar xf etc.tar.gz -C /tmp/
 
-
-
-第19章 
+# 第19章 练习题
 
 已知如下命令及结果：
-
-
 
 \[oldboy@test ~\]$ echo "I am oldboy,myqq is 31333741"&gt;&gt;oldboy.txt
 
@@ -1230,29 +1198,23 @@ I am oldboy,myqq is 31333741
 
 现在需要从文件中过滤出“oldboy”和“31333741”字符串，请给出命令
 
-
-
 创建环境
 
-mkdir /oldboy 
+mkdir /oldboy
 
 echo "I am oldboy,myqq is 31333741"&gt;/oldboy/oldboy.txt
 
 \[root@oldboy36 oldboy\]\# cd /oldboy/
 
-\[root@oldboy36 oldboy\]\# cat oldboy.txt 
+\[root@oldboy36 oldboy\]\# cat oldboy.txt
 
 I am oldboy,myqq is 31333741
 
-
-
-19.1 方法1  sed+sed 
+19.1 方法1  sed+sed
 
 \[root@oldboy36 oldboy\]\# sed 's\#I am \#\#' oldboy.txt \|sed 's\#,myqq is\#\#'
 
 oldboy 31333741
-
-
 
 19.2  方法2  cut+sed
 
@@ -1274,31 +1236,31 @@ oldboy 31333741
 
 oldboy 31333741
 
-19.4  方法4  awk 
+19.4  方法4  awk
 
 \[root@oldboy36 oldboy\]\# awk -F "\[, \]" '{print $3,$6}' oldboy.txt
 
 oldboy 31333741
 
-\[root@oldboy36 oldboy\]\# awk -F "\[, \]" '{print $3,$NF}' oldboy.txt 
+\[root@oldboy36 oldboy\]\# awk -F "\[, \]" '{print $3,$NF}' oldboy.txt
 
 oldboy 31333741
 
-\[root@oldboy36 oldboy\]\# awk -F "\[ ,\]" '{print $3","$6}' oldboy.txt 
+\[root@oldboy36 oldboy\]\# awk -F "\[ ,\]" '{print $3","$6}' oldboy.txt
 
 oldboy,31333741
 
 19.5  方法5  cut
 
-\[root@oldboy36 oldboy\]\# cut -c6-11,20- oldboy.txt 
+\[root@oldboy36 oldboy\]\# cut -c6-11,20- oldboy.txt
 
 oldboy 31333741
 
-第20章  wc  统计数量
+# 第20章  wc  统计数量
 
-20.1   如何查看/etc/services 文件内容有多少行？
+### 20.1   如何查看/etc/services 文件内容有多少行？
 
-\[root@oldboy36 oldboy\]\# wc -l /etc/services 
+\[root@oldboy36 oldboy\]\# wc -l /etc/services
 
 10774 /etc/services
 
@@ -1306,23 +1268,11 @@ oldboy 31333741
 
 10774:iqobject        48619/udp               \# iqobject
 
-第21章 
+# 第21章
 
-21.1  过滤出/etc/services  文件包含 3306 或 1521 两数据库端口的行的内容
+### 21.1  过滤出/etc/services  文件包含 3306 或 1521 两数据库端口的行的内容
 
-\[root@oldboy36 oldboy\]\# egrep "3306\|1521" /etc/services    
-
-mysql           3306/tcp                        \# MySQL
-
-mysql           3306/udp                        \# MySQL
-
-ncube-lm        1521/tcp                \# nCube License Manager
-
-ncube-lm        1521/udp                \# nCube License Manager
-
-
-
-\[root@oldboy36 oldboy\]\# grep "3306\\|1521" /etc/services  
+\[root@oldboy36 oldboy\]\# egrep "3306\|1521" /etc/services
 
 mysql           3306/tcp                        \# MySQL
 
@@ -1332,7 +1282,17 @@ ncube-lm        1521/tcp                \# nCube License Manager
 
 ncube-lm        1521/udp                \# nCube License Manager
 
-第22章  特殊符号
+\[root@oldboy36 oldboy\]\# grep "3306\\|1521" /etc/services
+
+mysql           3306/tcp                        \# MySQL
+
+mysql           3306/udp                        \# MySQL
+
+ncube-lm        1521/tcp                \# nCube License Manager
+
+ncube-lm        1521/udp                \# nCube License Manager
+
+# 第22章  特殊符号
 
 单引号：所见即所得，吃啥吐啥
 
@@ -1340,7 +1300,7 @@ ncube-lm        1521/udp                \# nCube License Manager
 
 不加引号：和双引号类似，但是支持通配符  \*
 
-22.1 引号和不加引号的区别1：
+### 22.1 引号和不加引号的区别1：
 
 \[root@oldboytx ~\]\# touch a b
 
@@ -1364,7 +1324,7 @@ total 0
 
 -rw-r--r--. 1 root root 0 Jun 25 16:25 b
 
-22.2 引号和不加引号的区别2：
+### 22.2 引号和不加引号的区别2：
 
 \[root@oldboy36 tmp\]\# ll
 
@@ -1408,7 +1368,7 @@ total 0
 
 -rw-r--r-- 1 root root 0 6月  25 19:32 \*
 
-22.3 双引号和单引号区别1：
+### 22.3 双引号和单引号区别1：
 
 关于$
 
@@ -1420,7 +1380,7 @@ en\_US.UTF-8
 
 $LANG
 
-22.4 双引号和单引号区别2：
+### 22.4 双引号和单引号区别2：
 
 关于\`\`
 
@@ -1432,9 +1392,9 @@ $LANG
 
 \`which awk\`
 
-22.5 双引号和单引号区别3：
+### 22.5 双引号和单引号区别3：
 
-关于!
+#### 关于 !
 
 \[root@oldboytx ~\]\# echo '!ll'
 
@@ -1444,15 +1404,7 @@ $LANG
 
 echo "ll /bin/awk "
 
-ll /bin/awk 
-
-
-
-
+ll /bin/awk
 
 \#通配符    {}  \*  \[\]  ?
-
-
-
-
 

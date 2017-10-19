@@ -792,7 +792,7 @@ zhaozhichao
 
 1.9.4 要领4：定时任务命令超过2条的命令执行，最好用脚本文件
 
-        定时任务写法：
+    定时任务写法：
 
 | \* \* \* \* \* /bin/sh /server/scripts/log.sh     &gt;/dev/null 2&gt;&1 |
 | :--- |
@@ -946,11 +946,11 @@ block满了
 
 2. block 正常的满了 df -h
 
-    du -sh /\\*
+   du -sh /\\*
 
-    du -sh /usr/\\*
+   du -sh /usr/\\*
 
-3.  block 非正常的满了 df -h
+3. block 非正常的满了 df -h
 
    du -sh /\*  文件的硬链接数为0，但是还有进程调用。
 

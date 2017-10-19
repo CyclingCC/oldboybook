@@ -19,5 +19,5 @@
 * [第十四节 通配符](di-shi-si-jie-tong-pei-fu.md)
 * [第十五节 正则表达式](di-shi-wu-jie-zheng-ze-biao-da-shi.md)
 * [第十六节 定时任务](di-shi-liu-jie-ding-shi-ren-wu.md)
-* 第十七节 第三关命令
+* [第十七节 第三关命令](di-shi-qi-jie-di-san-guan-ming-ling.md)
 

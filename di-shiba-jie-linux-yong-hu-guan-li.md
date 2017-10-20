@@ -130,9 +130,7 @@ This account is currently not available.
 | visudo | \#--&gt;※visudo配置sudo权限的编辑命令；也可以不用这个命令，直接用vi来编辑/etc/sudoers实现。但推荐用visudo来操作（会自动检查语法） |
 |  |  |
 
-1.2.2 管理用户组命令汇总
-
-
+#### 1.2.2 管理用户组命令汇总
 
 | 命令 | 注释说明 |
 | :--- | :--- |
@@ -143,7 +141,7 @@ This account is currently not available.
 | groups | 显示用户所属的用户组 |
 | newgrp | 更改用户所属的有效用户组 |
 
-1.2.3 /etc/skel目录
+#### 1.2.3 /etc/skel目录
 
 新用户的老家的默认的样子，从/etc/skel目录复制过来
 
@@ -151,7 +149,7 @@ This account is currently not available.
 
 默认情况下，/etc/skel 目录下的所有文件都是隐藏文件（以点开头的文件）;通过修改、添加、删除/etc/skel目录下的文件，我们可为新创建的用户提供统一的、标准的、初始化用户环境（给所有新用户的一个家默认样子）
 
-1.2.4 企业面试案例】：请问如下登录环境故障的原理及解决办法？
+#### 1.2.4 企业面试案例】：请问如下登录环境故障的原理及解决办法？
 
 -bash-4.1$
 
@@ -223,13 +221,13 @@ alex888
 
 知识点：export PS1='\[\u@\h \W\t\]$' \#\#临时生效
 
-1.2.5 /etc/default/useradd 文件
+#### 1.2.5 /etc/default/useradd 文件
 
 useradd
 
 /etc/defalut/useradd 文件时在使用useradd添加用户事放入一个需要调用的一个默认的配置文件，可以使用“useradd -D-\* 参数 ”，这样的命令格式来修改文件里面的内容
 
-1.2.6 /etc/login.defs（了解）
+#### 1.2.6 /etc/login.defs（了解）
 
 /etc/login.defs文件时用来定义创建用户时需要的一些用户配置信息，如创建用户时，是否需要家目录，家目录权限，UID和GID的范围，用户及密码的有效期限等等
 
@@ -347,7 +345,7 @@ USERGROUPS\_ENAB yes      删除用户同时删除用户组
 
 ENCRYPT\_METHOD SHA512
 
-1.2.7 /etc/default/useradd 文件
+#### 1.2.7 /etc/default/useradd 文件
 
 useradd
 
@@ -375,35 +373,26 @@ SKEL=/etc/skel
 
 CREATE\_MAIL\_SPOOL=yes
 
-1.2.8 useradd 添加用户命令
+#### 1.2.8 useradd 添加用户命令
 
-useradd参数选项    注释说明
+| **useradd参数选项** | **注释说明** |
+| :--- | :--- |
+| **-c comment** | \#comment===\#注释说明---&gt;新账号password档的说明栏 |
+| **-d home\_dir** | \#--&gt;新账号每次登入时所使用的home\_dir。预设值为default\_home内login名称，并当成登入时目录名称 |
+| **-e expire\_date** | \#--&gt;※※账号终止日期（账号过期日期）。日期的指定格式为MM-DD-YY或者YYYY-MM-DD |
+| **-g initial\_group** | \#--&gt;※※group名称或以数字来做为用户登入起始用户组（group）主要的组。用户组名必须为系统现有存在的名称。用户组数字也须为现有存在的用户组，预设的用户组数字为1 |
+| **-G group，\[...\]** | \#---&gt;附加组，定义此用户为多个不同groups的成员。每个用户组使用“，”逗号隔开。用户组名同-g选项的限制。默认值为用户的起始用户组 |
+| **-M** | \#--&gt;※※不建议用户家目录，优先于/etc/login.defs文件的设定。一般创建虚拟用户时不建立家目录，部署服务时需要创建虚拟用户 |
+| **-s shell** | \#---&gt;※※用户登入后使用的shell名称。默认值为不填写，这样系统会帮你指定预设的登入shell（根据/etc/default/useradd预设的值）cat /etc/shells系统支持的shell |
+| **-u uid** | \#--&gt;用户的ID值。这个值必须是唯一的，除非用-o选项，数字不可为负值 |
 
--c comment    \#comment===\#注释说明 ---&gt;新账号password 档的说明栏
 
--d home\_dir     \#--&gt;新账号每次登入时所使用的home\_dir。预设值为default\_home内login名称，
 
-并当成登入时目录名称
-
--e expire\_date    \#--&gt;※※账号终止日期（账号过期日期）。日期的指定格式为MM-DD-YY或者YYYY-MM-DD
-
--g initial\_group    \#--&gt;※※group 名称或以数字来做为用户登入起始用户组（group）
-
-主要的组。用户组名必须为系统现有存在的名称。用户组数字也须为现有存在的用户组，预设的用户组数字为1
-
--G group，\[...\]    \#---&gt;附加组，定义此用户为多个不同groups的成员。每个用户组使用“，”逗号隔开。用户组名同-g选项的限制。默认值为用户的起始用户组
-
--M    \#--&gt;※※不建议用户家目录，优先于/etc/login.defs文件的设定。一般创建虚拟用户时不建立家目录，部署服务时需要创建虚拟用户
-
--s shell    \#---&gt;※※用户登入后使用的shell名称。默认值为不填写，这样系统会帮你指定预设的登入shell（根据/etc/default/useradd 预设的值）
-
-cat /etc/shells 系统支持的shell
-
-添加一个虚拟用户mysql
+#### 添加一个虚拟用户mysql
 
 \[root@oldboyedu35-nb ~\]\# \#
 
-\[root@oldboyedu35-nb ~\]\# useradd  -s /sbin/nologin -M mysql
+\[root@oldboyedu35-nb ~\]\# useradd -s /sbin/nologin -M mysql
 
 \[root@oldboyedu35-nb ~\]\# ll /home/mysql
 
@@ -415,9 +404,7 @@ su: warning: cannot change directory to /home/mysql: No such file or directory
 
 This account is currently not available.
 
--u uid    \#--&gt;用户的ID值。这个值必须是唯一的，除非用-o选项，数字不可为负值
-
-1.2.9 useradd小结
+2.9 useradd小结
 
 添加用户alex666，UID指定为999，归属为用户组 root、oldboy、sa成员，并设置其用户注释信息为HandsomeBoy，设置家目录为/alex666，其shell类型为/bin/sh
 

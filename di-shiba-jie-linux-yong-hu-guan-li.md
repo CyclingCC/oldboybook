@@ -1,14 +1,13 @@
-第1章 linux用户管理
+# 第1章 linux用户管理
 
-1.1 linux系统用户分类
+### 1.1 linux系统用户分类
 
-超级用户：UID为0代表root，皇帝linux管理员：root
+* 超级用户：UID为0代表root，皇帝linux管理员：root
+* 普通用户：UID为500-655
 
-普通用户：UID为500-65535
+                         由超级用户或具备超级用户权限的用户创建的用户
 
-                   由超级用户或具备超级用户权限的用户创建的用户
-
-虚拟用户：UID为1-499，存在满足文件或服务启动的需要。一般不能登录，只是傀儡
+* 虚拟用户：UID为1-499，存在满足文件或服务启动的需要。一般不能登录，只是傀儡
 
 每个文件和进程/服务，都需要对应一个用户和用户组
 
@@ -26,8 +25,6 @@
 
 #### passwd文件中一行的各个字段详细说明
 
-
-
 | 字段 | 账号名称 | 账号密码 | 账号UID | 账号GID | 用户说明 | 用户家目录 | shell解释器 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 解释说明 | 和用户UID对应，这是用户登录时使用的账号名称，系统中是唯一的，不能重名 | 早期的unix系统中，该字段是存放账号密码的，由于安全原因，后来把这个密码字段内容移到/etc/shadow中了。这里可以看到一个字母x，表示该用户的密码是在/etc/shadow文件中保护的 | 账号UID一般是由一个整数表示的，范围是0-65535 | 账号GID一般是由一个整数表示的，范围是0-65535，当添加账户时，默认情况下会同时建立一个与用户同名且UID和GID相同的组 | 这个字段是对这个账号的描述说明 | 用户登录后首先进入的目录，一般为“/home/用户名”这样的目录 | 当前用户登录后所使用的shell，在centos/rhel等linux系统中，默认的shell为bash，就是在这里设置的。如果不希望用户登录系统，可以通过usermod或者手工修改passwd配置，将该字段改为/sbin/nologin即可。如果你仔细看passwd文件的话，会发现大部分内置系统虚拟账号的这个字段都是/sbin/nologin,表示禁止登录系统，这是出于安全考虑的。echo $SHELLcat /etc/shells |
@@ -36,7 +33,7 @@ echo $SHELL
 
 cat /etc/shells
 
-1.1.1 /etc/passwd 每一列的含义
+#### 1.1.1 /etc/passwd 每一列的含义
 
 \[root@oldboyedu35-nb ~\]\# head -1 /etc/passwd
 
@@ -46,15 +43,13 @@ root:x:0:0:root:/root:/bin/bash
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 账号名称 | ：账号密码 | ：账号UID | ：账号GID | ：用户说明 | ：用户家目录 | ：shell解释器（命令解释器） |
 
-1.1.2 小结论
+#### 1.1.2 小结论
 
 1、    useradd添加用户会更改/etc/passwd、/etc/shadow、/etc/group、/etc/gshadow
 
 2、    passwd 为用户设置密码会更改/etc/shadow
 
-1、useradd添加用户会更改/etc/passwd、/etc/shadow、/etc/group、/etc/gshadow。
 
-2、passwd为用户设置密码会更改/etc/shadow。
 
 \[root@oldboyedu35-nb ~\]\# ll /etc/passwd /etc/shadow /etc/group /etc/gshadow
 
@@ -102,13 +97,13 @@ drwxr-xr-x. 9 root    root    4096 Apr  5 09:22 ..
 
 -rw-r--r--  1 alex888 alex888  124 May 11  2016 .bashrc
 
-1.1.3 与用户组相关的配置文件
+#### 1.1.3 与用户组相关的配置文件
 
 /etc/group     \#--&gt;用户组配置文件
 
 /etc/gshadow  \#--&gt;用户组的影子文件
 
-1.1.4 回顾shell命令解释器 -/sbin/nologin
+#### 1.1.4 回顾shell命令解释器 -/sbin/nologin
 
 \[root@oldboyedu35-nb ~\]\# \#\#\#/sbin/nologin   --- 让用户不能登陆  成为傀儡
 
@@ -118,31 +113,24 @@ This account is currently not available.
 
 \[root@oldboyedu35-nb ~\]\# \#daemon:x:2:2:daemon:/sbin:/sbin/nologin
 
-1.2 linux用户管理命令
+### 1.2 linux用户管理命令
 
-1.2.1 管理用户命令汇总
+#### 1.2.1 管理用户命令汇总
 
-命令    注释说明
 
-useradd增    \#--&gt;※同adduser命令，执行此命令可在系统中添加用户（更改四个用户文件）
 
-userdel删    执行此命令可删除用户及相关用户的配置或文件（更改四个用户文件）
-
-passwd     \#--&gt;※执行此命令可为用户设置或修改密码。更改/etc/shadow 文件
-
-change     修改用户密码属性。管理/etc/shadow文件
-
-usermod修改    \#--&gt;※修改用户信息的命令，可以通过usermod来修改登录名、用户的家目录等等
-
-id查    \#--&gt;※查看用户的UID、GID及所归属的用户组
-
-su    \#--&gt;※用户角色切换工具。su -
-
-sudo     \#--&gt;※sudo是通过另一个用户来执行命令（execute a command as another user）,su 是用来切换用户，然后通过切换到的用户来完成相应的任务，但sudo能在命令后面直接跟命令执行，比如sudo ls /root，不需要root密码就可以执行只有root才能执行相应的命令。或具备的目录权限；这个权限需要通过visudo命令或直接编辑/etc/sudoers来实现
-
-visudo    \#--&gt;※visudo 配置sudo权限的编辑命令；也可以不用这个命令，直接用vi 来编辑
-
-/etc/sudoers 实现。但推荐用visudo来操作（会自动检查语法）
+| 命令 | 注释说明 |
+| :--- | :--- |
+| useradd增 | \#--&gt;※同adduser命令，执行此命令可在系统中添加用户（更改四个用户文件） |
+| userdel删 | 执行此命令可删除用户及相关用户的配置或文件（更改四个用户文件） |
+| passwd | \#--&gt;※执行此命令可为用户设置或修改密码。更改/etc/shadow文件 |
+| change | 修改用户密码属性。管理/etc/shadow文件 |
+| usermod修改 | \#--&gt;※修改用户信息的命令，可以通过usermod来修改登录名、用户的家目录等等 |
+| id查 | \#--&gt;※查看用户的UID、GID及所归属的用户组 |
+| su | \#--&gt;※用户角色切换工具。su - |
+| sudo | \#--&gt;※sudo是通过另一个用户来执行命令（execute a command as another user）,su是用来切换用户，然后通过切换到的用户来完成相应的任务，但sudo能在命令后面直接跟命令执行，比如sudo ls /root，不需要root密码就可以执行只有root才能执行相应的命令。或具备的目录权限；这个权限需要通过visudo命令或直接编辑/etc/sudoers来实现 |
+| visudo | \#--&gt;※visudo配置sudo权限的编辑命令；也可以不用这个命令，直接用vi来编辑/etc/sudoers实现。但推荐用visudo来操作（会自动检查语法） |
+|  |  |
 
 1.2.2 管理用户组命令汇总
 

@@ -140,9 +140,9 @@ dr-xr-xr-x. 2 root root   4096 Mar 29 02:24 repodata
 
 umount  /mnt 或 umount /dev/cdrom
 
-第4章 linux下重要目录
+# 第4章 linux下重要目录
 
-4.1  根目录  /
+### 4.1  根目录  /
 
 \[root@oldboy ~\]\# tree -L 1 /
 
@@ -208,15 +208,15 @@ umount  /mnt 或 umount /dev/cdrom
 
 相对路径：相对于当前路径下的路径
 
-4.2 /bin目录
+### 4.2 /bin目录
 
 bin目录为常用二进制命令所在目录，比如ls、cp、mkdir、rm、cut等命令：/bin目录和/usr/bin类似。
 
-4.3 /boot目录
+### 4.3 /boot目录
 
 boot目录是Linux 的内核及引导系统程序所需的文件目录。
 
-4.4 /dev 目录
+### 4.4 /dev 目录
 
 dev目录是设备文件目录，虚拟文件系统，主要存放所有系统中device的相关信息，不论是使用的或未使用的设备，只要有可能使用到，就会在/dev中建立一个相对应的设备文件；设备文件分为2种类型： 字符设备文件和块设备文件\(目录中基本上都是设备文件，如硬盘设备文件/dev/sda\)
 
@@ -236,7 +236,7 @@ dev目录是设备文件目录，虚拟文件系统，主要存放所有系统�
 
 /dev/null    所谓"黑洞"，所有写入该设备的信息都将消失，如当想要将屏幕上的输出信息隐藏起来时，只要将输出信息输入到/dev/null中即可
 
-4.5 /etc 目录
+### 4.5 /etc 目录
 
 /etc目录是系统和应用软件的配置文件的默认路径、服务启动命令的存放路径
 
@@ -280,35 +280,35 @@ dev目录是设备文件目录，虚拟文件系统，主要存放所有系统�
 
 /etc/rsyslog.conf    系统日志配置
 
-4.6 /home目录
+### 4.6 /home目录
 
 /home 是普通用户的家目录默认数据存放目录
 
-4.7 /lib 目录
+### 4.7 /lib 目录
 
 这个目录里存放着系统最基本的共享链接库和内核模块。共享链接库在功能上类似于Windows里的.dll文件
 
-4.8 /lib64 目录
+### 4.8 /lib64 目录
 
 64位系统有这个文件夹，64位程序的库
 
-4.9 /mnt 目录
+### 4.9 /mnt 目录
 
 临时用于挂载文件系统的地方。一般情况下这个目录是空的，而在我们将要挂载分区时在这个目录下建立目录，再将我们将要访问的设备挂载在这个目录上，这样我们就可访问文件了
 
-4.10 /media 目录
+### 4.10 /media 目录
 
 可移动设备的挂载点，当前的操作系统通常会把U盘等设备自动挂载到该文件夹下
 
-4.11 /lost+found 目录
+### 4.11 /lost+found 目录
 
 这并不是Linux目录结构的组成部分，而是ext3文件系统用于保存丢失文件的地方。不恰当的关机操作和磁盘错误均会导致文件丢失，这意味着这些被标注为“在使用”，但却并未列于磁盘上的数据结构上。正常情况下，引导进程会运行fsck程序，该程序能发现这些文件。除了“/”分区上的这个目录外，在每个分区上均有一个lost+found目录。
 
-4.12 /opt 目录
+### 4.12 /opt 目录
 
 多数第三方软件默认安装到此位置
 
-4.13 /proc目录
+### 4.13 /proc目录
 
 它是存在于内存中的虚拟文件系统。里面保存了内核和进程的状态信息。多为文本文件，可以直接查看
 
@@ -324,19 +324,19 @@ dev目录是设备文件目录，虚拟文件系统，主要存放所有系统�
 
 /proc/mounts    设备挂载信息，df -h
 
-4.14 /root目录
+### 4.14 /root目录
 
 /root目录是超级权限用户root的家目录
 
-4.15 /sbin 目录
+### 4.15 /sbin 目录
 
 供超级用户使用的可执行文件，里面多是系统管理命令
 
-4.16 /tmp 目录
+### 4.16 /tmp 目录
 
 该目录用以保存临时文件。该目录具有Sticky特殊权限，所有用户都可以在这个目录中创建、编辑文件。但只有文件拥有者才能删除文件
 
-4.17 /usr目录
+### 4.17 /usr目录
 
 /usr目录是系统存放用户程序，及数据，帮助文件等的目录
 
@@ -362,7 +362,7 @@ dev目录是设备文件目录，虚拟文件系统，主要存放所有系统�
 
    /usr/include    存放C/C++头文件的目录
 
-4.18 /var目录
+### 4.18 /var目录
 
 /var目录是变量文件——在正常运行的系统中其内容不断变化的文件（动态的程序数据），如日志，脱机文件和临时电子邮件文件。
 
@@ -388,7 +388,7 @@ dev目录是设备文件目录，虚拟文件系统，主要存放所有系统�
 
 /var/tmp    临时文件
 
-4.19  目录层次标准FHS
+### 4.19  目录层次标准FHS
 
 [http://www.pathname.com/fhs/](http://www.pathname.com/fhs/)
 
@@ -396,9 +396,9 @@ ifdown  eth0  关闭网卡eth0
 
 ifup    eth0   开启网卡eth0
 
-第5章  linux下重要文件
+# 第5章  linux下重要文件
 
-5.1  查看路由
+### 5.1  查看路由
 
 \[root@oldboy ~\]\# route -n
 
@@ -414,7 +414,7 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 
 0.0.0.0         10.0.0.2        0.0.0.0         UG    0      0        0 eth0
 
-5.2  DNS配置文件
+### 5.2  DNS配置文件
 
 \[root@oldboy ~\]\# cat /etc/resolv.conf
 
@@ -426,7 +426,7 @@ nameserver 10.0.0.2
 
 网卡里面配置DNS优先
 
-5.3  网卡配置文件
+### 5.3  网卡配置文件
 
 cat /etc/sysconfig/network-scripts/ifcfg-eth0
 
@@ -446,7 +446,7 @@ IPADDR=10.0.0.9
 
 GATEWAY=10.0.0.2
 
-5.4  hosts文件
+### 5.4  hosts文件
 
 \[root@oldboy ~\]\# cat /etc/hosts
 
@@ -454,13 +454,13 @@ GATEWAY=10.0.0.2
 
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
 
-5.5  hosts文件在企业中的作用
+### 5.5  hosts文件在企业中的作用
 
 1、开发，产品，测试等人员，用于通过正式的域名测试产品
 
 2、服务器之间调用可以用域名（内部DNS），方便迁移
 
-5.6  主机名配置  /etc/sysconfig/network
+### 5.6  主机名配置  /etc/sysconfig/network
 
 \[root@brj ~\]\# cat /etc/sysconfig/network
 
@@ -468,17 +468,17 @@ NETWORKING=yes
 
 HOSTNAME=brj
 
-5.7  查看主机名
+### 5.7  查看主机名
 
 \[root@brj ~\]\# hostname
 
 brj
 
-5.8  临时修改主机名
+### 5.8  临时修改主机名
 
 \[root@brj ~\]\# hostname oldboy36
 
-5.9  永久修改主机名
+### 5.9  永久修改主机名
 
 \[root@brj ~\]\# sed 's\#HOSTNAME=.\*\#HOSTNAME=oldboy36\#' /etc/sysconfig/network
 
@@ -494,7 +494,7 @@ NETWORKING=yes
 
 HOSTNAME=oldboy36
 
-5.10  开机自动挂载
+### 5.10  开机自动挂载
 
 \[root@oldboy ~\]\# cat /etc/fstab
 
@@ -526,11 +526,11 @@ sysfs                   /sys                    sysfs   defaults        0 0
 
 proc                    /proc                   proc    defaults        0 0
 
-5.11  开机自动启动程序
+### 5.11  开机自动启动程序
 
 /etc/rc.local
 
-5.12  系统运行级别
+### 5.12  系统运行级别
 
 \[root@oldboy36 ~\]\# cat /etc/inittab
 
@@ -586,13 +586,13 @@ proc                    /proc                   proc    defaults        0 0
 
 id:3:initdefault:
 
-5.13  查看当前运行级别
+### 5.13  查看当前运行级别
 
 \[root@oldboy36 ~\]\# runlevel
 
 N 3
 
-5.14  切换运行级别
+### 5.14  切换运行级别
 
 \[root@oldboy36 ~\]\# init 2
 
@@ -634,7 +634,7 @@ drwxr-xr-x. 2 root root  4096 3月  13 21:02 rc6.d
 
 lrwxrwxrwx. 1 root root 16 3月   6 16:26 K01smartd -&gt; ../init.d/smartd
 
-5.15   服务管理程序目录  /etc/init.d/
+### 5.15   服务管理程序目录  /etc/init.d/
 
 \[root@oldboy36 ~\]\# /etc/init.d/iptables status
 
@@ -642,7 +642,7 @@ iptables: Firewall is not running.
 
 \[root@oldboy36 ~\]\# /etc/init.d/iptables stop
 
-5.16  环境变量配置文件
+### 5.16  环境变量配置文件
 
 /etc/profile
 
@@ -654,7 +654,7 @@ iptables: Firewall is not running.
 
 /etc/bashrc
 
-5.17  系统登录提示信息
+### 5.17  系统登录提示信息
 
 /etc/issue      认证前的输出信息，默认输出版本内核信息
 
@@ -662,7 +662,7 @@ iptables: Firewall is not running.
 
 /etc/motd    设置认证后的输出信息
 
-5.18  系统日志文件
+### 5.18  系统日志文件
 
 /var/log/messages
 
@@ -696,7 +696,7 @@ dmseg 命令可以查看系统故障信息（/var/log/dmesg） 依赖于rsyslog�
 
 /proc/mounts    设备的挂载信息，  df  -h 类似
 
-5.19  必须要掌握的重要目录文件
+### 5.19  必须要掌握的重要目录文件
 
 /etc/sysconfig/network-scripts/ifcfg-eth0
 
@@ -738,7 +738,7 @@ dmseg 命令可以查看系统故障信息（/var/log/dmesg） 依赖于rsyslog�
 
 [http://yangrong.blog.51cto.com/6945369/1288072](http://yangrong.blog.51cto.com/6945369/1288072)
 
-第6章 目录详解
+# 第6章 目录详解
 
 /      处于linux系统树形结构的最顶端，它是linux文件系统的入口，所有的目录、文件、设备都在/之下。
 
@@ -781,8 +781,6 @@ dmseg 命令可以查看系统故障信息（/var/log/dmesg） 依赖于rsyslog�
 /tmp    该目录用于存放临时文件，有时用户运行程序的时候，会产生一些临时文件。/tmp就是用来存放临时文件的。/var/tmp目录和该目录的作用是相似的。
 
 /var    该目录的内容是经常变动的，/var下有/var/log目录用来存放系统日志的目录。/var/www目录用来定义Apache服务器站点存放目录。/var/lib用来存放一些库文件。
-
-=======================================================================
 
 /usr/bin   这个目录是可执行程序的目录，普通用户就有权限执行。当我们从系统自带的软件包安装一个程序时，他的可执行文件大多会放在这个目录。相似的目录是/usr/local/bin目录。有时/usr/bin中的文件是/usr/local/bin的链接文件。
 

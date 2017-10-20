@@ -5,7 +5,9 @@
 * 超级用户：UID为0代表root，皇帝linux管理员：root
 * 普通用户：UID为500-655
 
-                         由超级用户或具备超级用户权限的用户创建的用户
+  ```
+                     由超级用户或具备超级用户权限的用户创建的用户
+  ```
 
 * 虚拟用户：UID为1-499，存在满足文件或服务启动的需要。一般不能登录，只是傀儡
 
@@ -48,8 +50,6 @@ root:x:0:0:root:/root:/bin/bash
 1、    useradd添加用户会更改/etc/passwd、/etc/shadow、/etc/group、/etc/gshadow
 
 2、    passwd 为用户设置密码会更改/etc/shadow
-
-
 
 \[root@oldboyedu35-nb ~\]\# ll /etc/passwd /etc/shadow /etc/group /etc/gshadow
 
@@ -117,8 +117,6 @@ This account is currently not available.
 
 #### 1.2.1 管理用户命令汇总
 
-
-
 | 命令 | 注释说明 |
 | :--- | :--- |
 | useradd增 | \#--&gt;※同adduser命令，执行此命令可在系统中添加用户（更改四个用户文件） |
@@ -134,19 +132,16 @@ This account is currently not available.
 
 1.2.2 管理用户组命令汇总
 
-命令    注释说明
 
-groupadd    \#--&gt;※添加用户组
 
-groupdel    删除用户组
-
-groupmod    修改用户组信息
-
-gpasswd    为用户组设置密码
-
-groups    显示用户所属的用户组
-
-newgrp    更改用户所属的有效用户组
+| 命令 | 注释说明 |
+| :--- | :--- |
+| groupadd | \#--&gt;※添加用户组 |
+| groupdel | 删除用户组 |
+| groupmod | 修改用户组信息 |
+| gpasswd | 为用户组设置密码 |
+| groups | 显示用户所属的用户组 |
+| newgrp | 更改用户所属的有效用户组 |
 
 1.2.3 /etc/skel目录
 
@@ -154,9 +149,7 @@ newgrp    更改用户所属的有效用户组
 
 /etc/skel 目录是用来存放新用户环境变量文件的目录，当我们添加新用户时，这个目录下的所有文件会自动被复制到新添加的用户的家目录下
 
-```
 默认情况下，/etc/skel 目录下的所有文件都是隐藏文件（以点开头的文件）;通过修改、添加、删除/etc/skel目录下的文件，我们可为新创建的用户提供统一的、标准的、初始化用户环境（给所有新用户的一个家默认样子）
-```
 
 1.2.4 企业面试案例】：请问如下登录环境故障的原理及解决办法？
 

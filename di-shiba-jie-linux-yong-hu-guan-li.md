@@ -386,8 +386,6 @@ CREATE\_MAIL\_SPOOL=yes
 | **-s shell** | \#---&gt;※※用户登入后使用的shell名称。默认值为不填写，这样系统会帮你指定预设的登入shell（根据/etc/default/useradd预设的值）cat /etc/shells系统支持的shell |
 | **-u uid** | \#--&gt;用户的ID值。这个值必须是唯一的，除非用-o选项，数字不可为负值 |
 
-
-
 #### 添加一个虚拟用户mysql
 
 \[root@oldboyedu35-nb ~\]\# \#
@@ -404,7 +402,7 @@ su: warning: cannot change directory to /home/mysql: No such file or directory
 
 This account is currently not available.
 
-2.9 useradd小结
+### 2.9 useradd小结
 
 添加用户alex666，UID指定为999，归属为用户组 root、oldboy、sa成员，并设置其用户注释信息为HandsomeBoy，设置家目录为/alex666，其shell类型为/bin/sh
 
@@ -434,7 +432,9 @@ alex666:x:999:999:HandsomeBoy:/alex666:/bin/sh
 
 drwx------ 2 alex666 alex666 4096 Apr  5 11:39 /alex666/
 
-1.2.10 userdel 删除用户相关命令
+![](/assets/19-1.jpg)
+
+### 1.2.10 userdel 删除用户相关命令
 
 -r 连窝端了
 

@@ -6,7 +6,7 @@
 
 普通用户：UID为500-65535
 
-			由超级用户或具备超级用户权限的用户创建的用户
+                   由超级用户或具备超级用户权限的用户创建的用户
 
 虚拟用户：UID为1-499，存在满足文件或服务启动的需要。一般不能登录，只是傀儡
 
@@ -24,43 +24,39 @@
 
 /etc/shadow /etc/group /etc/gshadow （创造一个索引（目录）软链接）
 
+#### passwd文件中一行的各个字段详细说明
 
 
-passwd文件中一行的各个字段详细说明
 
-字段	账号名称	账号密码	账号UID	账号GID	用户说明	用户家目录	shell解释器
+| 字段 | 账号名称 | 账号密码 | 账号UID | 账号GID | 用户说明 | 用户家目录 | shell解释器 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 解释说明 | 和用户UID对应，这是用户登录时使用的账号名称，系统中是唯一的，不能重名 | 早期的unix系统中，该字段是存放账号密码的，由于安全原因，后来把这个密码字段内容移到/etc/shadow中了。这里可以看到一个字母x，表示该用户的密码是在/etc/shadow文件中保护的 | 账号UID一般是由一个整数表示的，范围是0-65535 | 账号GID一般是由一个整数表示的，范围是0-65535，当添加账户时，默认情况下会同时建立一个与用户同名且UID和GID相同的组 | 这个字段是对这个账号的描述说明 | 用户登录后首先进入的目录，一般为“/home/用户名”这样的目录 | 当前用户登录后所使用的shell，在centos/rhel等linux系统中，默认的shell为bash，就是在这里设置的。如果不希望用户登录系统，可以通过usermod或者手工修改passwd配置，将该字段改为/sbin/nologin即可。如果你仔细看passwd文件的话，会发现大部分内置系统虚拟账号的这个字段都是/sbin/nologin,表示禁止登录系统，这是出于安全考虑的。echo $SHELLcat /etc/shells |
 
-解释说明	和用户UID对应，这是用户登录时使用的账号名称，系统中是唯一的，不能重名	早期的unix系统中，该字段是存放账号密码的，由于安全原因，后来把这个密码字段内容移到/etc/shadow中了。这里可以看到一个字母x，表示该用户的密码是在/etc/shadow文件中保护的	账号UID一般是由一个整数表示的，范围是0-65535	账号GID一般是由一个整数表示的，范围是0-65535，当添加账户时，默认情况下会同时建立一个与用户同名且UID和GID相同的组	这个字段是对这个账号的描述说明	用户登录 后首先进入的目录，一般为“/home/用户名”这样的目录	当前用户登录后所使用的shell，在centos/rhel等linux系统中，默认的shell为bash，就是在这里设置的。如果不希望用户登录系统，可以通过usermod或者手工修改passwd配置，将该字段改为/sbin/nologin即可。如果你仔细看passwd文件的话，会发现大部分内置系统虚拟账号的这个字段都是/sbin/nologin,表示禁止登录系统，这是出于安全考虑的。
-
-echo $SHELL 
+echo $SHELL
 
 cat /etc/shells
 
-1.1.1 /etc/passwd 每一列的含义            
+1.1.1 /etc/passwd 每一列的含义
 
 \[root@oldboyedu35-nb ~\]\# head -1 /etc/passwd
 
 root:x:0:0:root:/root:/bin/bash
 
-
-
-root	:x	:0	:0	:root	:/root	:/bin/bash
-
-账号名称	：账号密码	：账号UID	：账号GID	：用户说明	：用户家目录	：shell解释器（命令解释器）
+| root | :x | :0 | :0 | :root | :/root | :/bin/bash |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 账号名称 | ：账号密码 | ：账号UID | ：账号GID | ：用户说明 | ：用户家目录 | ：shell解释器（命令解释器） |
 
 1.1.2 小结论
 
-1、	useradd添加用户会更改/etc/passwd、/etc/shadow、/etc/group、/etc/gshadow
+1、    useradd添加用户会更改/etc/passwd、/etc/shadow、/etc/group、/etc/gshadow
 
-2、	passwd 为用户设置密码会更改/etc/shadow
+2、    passwd 为用户设置密码会更改/etc/shadow
 
 1、useradd添加用户会更改/etc/passwd、/etc/shadow、/etc/group、/etc/gshadow。
 
 2、passwd为用户设置密码会更改/etc/shadow。
 
-
-
-\[root@oldboyedu35-nb ~\]\# ll /etc/passwd /etc/shadow /etc/group /etc/gshadow 
+\[root@oldboyedu35-nb ~\]\# ll /etc/passwd /etc/shadow /etc/group /etc/gshadow
 
 -rw-r--r-- 1 root root  653 Mar 28 17:41 /etc/group
 
@@ -72,7 +68,7 @@ root	:x	:0	:0	:root	:/root	:/bin/bash
 
 \[root@oldboyedu35-nb ~\]\# useradd alex888
 
-\[root@oldboyedu35-nb ~\]\# ll /etc/passwd /etc/shadow /etc/group /etc/gshadow 
+\[root@oldboyedu35-nb ~\]\# ll /etc/passwd /etc/shadow /etc/group /etc/gshadow
 
 -rw-r--r-- 1 root root  668 Apr  5 09:22 /etc/group
 
@@ -80,19 +76,19 @@ root	:x	:0	:0	:root	:/root	:/bin/bash
 
 -rw-r--r-- 1 root root 1339 Apr  5 09:22 /etc/passwd
 
----------- 1 root root 1090 Apr  5 09:22 /etc/shadow  
+---------- 1 root root 1090 Apr  5 09:22 /etc/shadow
 
-\[root@oldboyedu35-nb ~\]\# ll /etc/profile /etc/bashrc  /root/.bash\_profile  /root/.bashrc 
+\[root@oldboyedu35-nb ~\]\# ll /etc/profile /etc/bashrc  /root/.bash\_profile  /root/.bashrc
 
--rw-r--r--  1 root root 2695 Mar 21 12:42 /etc/bashrc   \#别名 
+-rw-r--r--  1 root root 2695 Mar 21 12:42 /etc/bashrc   \#别名
 
--rw-r--r--  1 root root 1969 Mar 28 10:15 /etc/profile  \#环境变量 别名  
+-rw-r--r--  1 root root 1969 Mar 28 10:15 /etc/profile  \#环境变量 别名
 
 -rw-r--r--. 1 root root  176 May 20  2009 /root/.bash\_profile
 
 -rw-r--r--. 1 root root  177 Mar  9 22:58 /root/.bashrc
 
-\[root@oldboyedu35-nb ~\]\# ll -a  /home/alex888/ 
+\[root@oldboyedu35-nb ~\]\# ll -a  /home/alex888/
 
 total 20
 
@@ -112,9 +108,9 @@ drwxr-xr-x. 9 root    root    4096 Apr  5 09:22 ..
 
 /etc/gshadow  \#--&gt;用户组的影子文件
 
-1.1.4 回顾shell命令解释器 -/sbin/nologin                 
+1.1.4 回顾shell命令解释器 -/sbin/nologin
 
-\[root@oldboyedu35-nb ~\]\# \#\#\#/sbin/nologin   --- 让用户不能登陆  成为傀儡 
+\[root@oldboyedu35-nb ~\]\# \#\#\#/sbin/nologin   --- 让用户不能登陆  成为傀儡
 
 \[root@oldboyedu35-nb ~\]\# su - daemon
 
@@ -126,43 +122,43 @@ This account is currently not available.
 
 1.2.1 管理用户命令汇总
 
-命令	注释说明	
+命令    注释说明
 
-useradd增	\#--&gt;※同adduser命令，执行此命令可在系统中添加用户（更改四个用户文件）
+useradd增    \#--&gt;※同adduser命令，执行此命令可在系统中添加用户（更改四个用户文件）
 
-userdel删	执行此命令可删除用户及相关用户的配置或文件（更改四个用户文件）
+userdel删    执行此命令可删除用户及相关用户的配置或文件（更改四个用户文件）
 
-passwd 	\#--&gt;※执行此命令可为用户设置或修改密码。更改/etc/shadow 文件
+passwd     \#--&gt;※执行此命令可为用户设置或修改密码。更改/etc/shadow 文件
 
-change 	修改用户密码属性。管理/etc/shadow文件
+change     修改用户密码属性。管理/etc/shadow文件
 
-usermod修改	\#--&gt;※修改用户信息的命令，可以通过usermod来修改登录名、用户的家目录等等
+usermod修改    \#--&gt;※修改用户信息的命令，可以通过usermod来修改登录名、用户的家目录等等
 
-id查	\#--&gt;※查看用户的UID、GID及所归属的用户组
+id查    \#--&gt;※查看用户的UID、GID及所归属的用户组
 
-su	\#--&gt;※用户角色切换工具。su -
+su    \#--&gt;※用户角色切换工具。su -
 
-sudo 	\#--&gt;※sudo是通过另一个用户来执行命令（execute a command as another user）,su 是用来切换用户，然后通过切换到的用户来完成相应的任务，但sudo能在命令后面直接跟命令执行，比如sudo ls /root，不需要root密码就可以执行只有root才能执行相应的命令。或具备的目录权限；这个权限需要通过visudo命令或直接编辑/etc/sudoers来实现
+sudo     \#--&gt;※sudo是通过另一个用户来执行命令（execute a command as another user）,su 是用来切换用户，然后通过切换到的用户来完成相应的任务，但sudo能在命令后面直接跟命令执行，比如sudo ls /root，不需要root密码就可以执行只有root才能执行相应的命令。或具备的目录权限；这个权限需要通过visudo命令或直接编辑/etc/sudoers来实现
 
-visudo	\#--&gt;※visudo 配置sudo权限的编辑命令；也可以不用这个命令，直接用vi 来编辑
+visudo    \#--&gt;※visudo 配置sudo权限的编辑命令；也可以不用这个命令，直接用vi 来编辑
 
 /etc/sudoers 实现。但推荐用visudo来操作（会自动检查语法）
 
 1.2.2 管理用户组命令汇总
 
-命令	注释说明
+命令    注释说明
 
-groupadd	\#--&gt;※添加用户组
+groupadd    \#--&gt;※添加用户组
 
-groupdel	删除用户组
+groupdel    删除用户组
 
-groupmod	修改用户组信息
+groupmod    修改用户组信息
 
-gpasswd	为用户组设置密码
+gpasswd    为用户组设置密码
 
-groups	显示用户所属的用户组
+groups    显示用户所属的用户组
 
-newgrp	更改用户所属的有效用户组
+newgrp    更改用户所属的有效用户组
 
 1.2.3 /etc/skel目录
 
@@ -170,39 +166,41 @@ newgrp	更改用户所属的有效用户组
 
 /etc/skel 目录是用来存放新用户环境变量文件的目录，当我们添加新用户时，这个目录下的所有文件会自动被复制到新添加的用户的家目录下
 
-	默认情况下，/etc/skel 目录下的所有文件都是隐藏文件（以点开头的文件）;通过修改、添加、删除/etc/skel目录下的文件，我们可为新创建的用户提供统一的、标准的、初始化用户环境（给所有新用户的一个家默认样子）
+```
+默认情况下，/etc/skel 目录下的所有文件都是隐藏文件（以点开头的文件）;通过修改、添加、删除/etc/skel目录下的文件，我们可为新创建的用户提供统一的、标准的、初始化用户环境（给所有新用户的一个家默认样子）
+```
 
 1.2.4 企业面试案例】：请问如下登录环境故障的原理及解决办法？
 
--bash-4.1$ 
+-bash-4.1$
 
 -bash-4.1$
 
 假设切换到alex888
 
--bash-4.1$ 
+-bash-4.1$
 
 -bash-4.1$
 
-\[alex888@oldboyedu35-nb ~\]$ 
+\[alex888@oldboyedu35-nb ~\]$
 
 \[alex888@oldboyedu35-nb ~\]$
 
 第一个里程碑-模拟环境
 
-useradd alex888 
+useradd alex888
 
-su - alex888 
+su - alex888
 
 whoami
 
 \rm -f .bash\*
 
-第二个里程碑-xshell新建一个窗口-并切换到alex888用户 
+第二个里程碑-xshell新建一个窗口-并切换到alex888用户
 
 \[root@oldboyedu35-nb ~\]\# su - alex888
 
--bash-4.1$ whoami 
+-bash-4.1$ whoami
 
 alex888
 
@@ -210,9 +208,9 @@ alex888
 
 \#\#拷贝 /etc/skel 模板中的内容 到 当前用户家目录
 
--bash-4.1$ cp /etc/skel/.bash\* ~ 
+-bash-4.1$ cp /etc/skel/.bash\* ~
 
--bash-4.1$ ll -a 
+-bash-4.1$ ll -a
 
 total 20
 
@@ -226,15 +224,13 @@ drwxr-xr-x. 9 root    root    4096 Apr  5 09:22 ..
 
 -rw-r--r--  1 alex888 alex888  124 Apr  5 10:06 .bashrc
 
-第四个里程碑-检查-重新登录 
+第四个里程碑-检查-重新登录
 
 \[root@oldboyedu35-nb ~\]\# su - alex888
 
-\[alex888@oldboyedu35-nb ~\]$ whoami 
+\[alex888@oldboyedu35-nb ~\]$ whoami
 
 alex888
-
-
 
 /etc/skel 的企业场景作用：
 
@@ -244,13 +240,11 @@ alex888
 
 3、面试题，linux命令行出现-bash-4.1$问题原因及解决方法
 
-知识点：export PS1='\[\u@\h \W\t\]\$' \#\#临时生效
-
-
+知识点：export PS1='\[\u@\h \W\t\]$' \#\#临时生效
 
 1.2.5 /etc/default/useradd 文件
 
-useradd 
+useradd
 
 /etc/defalut/useradd 文件时在使用useradd添加用户事放入一个需要调用的一个默认的配置文件，可以使用“useradd -D-\* 参数 ”，这样的命令格式来修改文件里面的内容
 
@@ -274,8 +268,6 @@ useradd
 
 \#
 
-
-
 \# \*REQUIRED\*
 
 \#   Directory where mailboxes reside, \_or\_ name of file, relative to the
@@ -286,37 +278,33 @@ useradd
 
 \#
 
-\#QMAIL\_DIR	Maildir
+\#QMAIL\_DIR    Maildir
 
-MAIL\_DIR	/var/spool/mail
+MAIL\_DIR    /var/spool/mail
 
-\#MAIL\_FILE	.mail
-
-
+\#MAIL\_FILE    .mail
 
 \# Password aging controls:   密码过期时间控制
 
 \#
 
-\#	PASS\_MAX\_DAYS	Maximum number of days a password may be used.
+\#    PASS\_MAX\_DAYS    Maximum number of days a password may be used.
 
-\#	PASS\_MIN\_DAYS	Minimum number of days allowed between password changes.
+\#    PASS\_MIN\_DAYS    Minimum number of days allowed between password changes.
 
-\#	PASS\_MIN\_LEN	Minimum acceptable password length.
+\#    PASS\_MIN\_LEN    Minimum acceptable password length.
 
-\#	PASS\_WARN\_AGE	Number of days warning given before a password expires.
+\#    PASS\_WARN\_AGE    Number of days warning given before a password expires.
 
 \#
 
-PASS\_MAX\_DAYS	99999      	一个密码最长可以使用的天数：273年
+PASS\_MAX\_DAYS    99999          一个密码最长可以使用的天数：273年
 
-PASS\_MIN\_DAYS	0		   	更换密码的最小天数
+PASS\_MIN\_DAYS    0               更换密码的最小天数
 
-PASS\_MIN\_LEN	5		   	密码的最小长度	
+PASS\_MIN\_LEN    5               密码的最小长度
 
-PASS\_WARN\_AGE	7			密码失效前提前多少天数开始警告
-
-
+PASS\_WARN\_AGE    7            密码失效前提前多少天数开始警告
 
 \#
 
@@ -324,11 +312,9 @@ PASS\_WARN\_AGE	7			密码失效前提前多少天数开始警告
 
 \#
 
-UID\_MIN			  500 最小uid为500，也就是说添加用户时，UID是从500开始的，实际就是这个地方控制的
+UID\_MIN              500 最小uid为500，也就是说添加用户时，UID是从500开始的，实际就是这个地方控制的
 
-UID\_MAX			60000 最大UID为60000
-
-
+UID\_MAX            60000 最大UID为60000
 
 \#
 
@@ -336,11 +322,9 @@ UID\_MAX			60000 最大UID为60000
 
 \#
 
-GID\_MIN			  500    GID 依然是从500开始
+GID\_MIN              500    GID 依然是从500开始
 
-GID\_MAX			60000
-
-
+GID\_MAX            60000
 
 \#
 
@@ -352,9 +336,7 @@ GID\_MAX			60000
 
 \#
 
-\#USERDEL\_CMD	/usr/sbin/userdel\_local
-
-
+\#USERDEL\_CMD    /usr/sbin/userdel\_local
 
 \#
 
@@ -366,17 +348,13 @@ GID\_MAX			60000
 
 \#
 
-CREATE\_HOME	yes           是否创用户家目录，默认要求创建，可以用-m参数来控制
+CREATE\_HOME    yes           是否创用户家目录，默认要求创建，可以用-m参数来控制
 
-
-
-\# The permission mask is initialized to this value. If not specified, 
+\# The permission mask is initialized to this value. If not specified,
 
 \# the permission mask will be initialized to 022.
 
 UMASK           077  创建用户老家/家目录默认的权限
-
-
 
 \# This enables userdel to remove user groups if no members exist.
 
@@ -384,17 +362,13 @@ UMASK           077  创建用户老家/家目录默认的权限
 
 USERGROUPS\_ENAB yes      删除用户同时删除用户组
 
-
-
 \# Use SHA512 to encrypt password.
 
 ENCRYPT\_METHOD SHA512
 
-
-
 1.2.7 /etc/default/useradd 文件
 
-useradd 
+useradd
 
 /etc/default/useradd 文件是在使用useradd添加用户时的一个需要调用的一个默认的配置文件，可以使用“useradd -D-\* 参数”，这样的命令格式来修改文件里面的内容
 
@@ -420,29 +394,27 @@ SKEL=/etc/skel
 
 CREATE\_MAIL\_SPOOL=yes
 
-
-
 1.2.8 useradd 添加用户命令
 
-useradd参数选项	注释说明
+useradd参数选项    注释说明
 
--c comment	\#comment===\#注释说明 ---&gt;新账号password 档的说明栏
+-c comment    \#comment===\#注释说明 ---&gt;新账号password 档的说明栏
 
--d home\_dir 	\#--&gt;新账号每次登入时所使用的home\_dir。预设值为default\_home内login名称，
+-d home\_dir     \#--&gt;新账号每次登入时所使用的home\_dir。预设值为default\_home内login名称，
 
 并当成登入时目录名称
 
--e expire\_date	\#--&gt;※※账号终止日期（账号过期日期）。日期的指定格式为MM-DD-YY或者YYYY-MM-DD
+-e expire\_date    \#--&gt;※※账号终止日期（账号过期日期）。日期的指定格式为MM-DD-YY或者YYYY-MM-DD
 
--g initial\_group	\#--&gt;※※group 名称或以数字来做为用户登入起始用户组（group）
+-g initial\_group    \#--&gt;※※group 名称或以数字来做为用户登入起始用户组（group）
 
 主要的组。用户组名必须为系统现有存在的名称。用户组数字也须为现有存在的用户组，预设的用户组数字为1
 
--G group，\[...\]	\#---&gt;附加组，定义此用户为多个不同groups的成员。每个用户组使用“，”逗号隔开。用户组名同-g选项的限制。默认值为用户的起始用户组
+-G group，\[...\]    \#---&gt;附加组，定义此用户为多个不同groups的成员。每个用户组使用“，”逗号隔开。用户组名同-g选项的限制。默认值为用户的起始用户组
 
--M	\#--&gt;※※不建议用户家目录，优先于/etc/login.defs文件的设定。一般创建虚拟用户时不建立家目录，部署服务时需要创建虚拟用户
+-M    \#--&gt;※※不建议用户家目录，优先于/etc/login.defs文件的设定。一般创建虚拟用户时不建立家目录，部署服务时需要创建虚拟用户
 
--s shell	\#---&gt;※※用户登入后使用的shell名称。默认值为不填写，这样系统会帮你指定预设的登入shell（根据/etc/default/useradd 预设的值）
+-s shell    \#---&gt;※※用户登入后使用的shell名称。默认值为不填写，这样系统会帮你指定预设的登入shell（根据/etc/default/useradd 预设的值）
 
 cat /etc/shells 系统支持的shell
 
@@ -452,17 +424,17 @@ cat /etc/shells 系统支持的shell
 
 \[root@oldboyedu35-nb ~\]\# useradd  -s /sbin/nologin -M mysql
 
-\[root@oldboyedu35-nb ~\]\# ll /home/mysql 
+\[root@oldboyedu35-nb ~\]\# ll /home/mysql
 
 ls: cannot access /home/mysql: No such file or directory
 
-\[root@oldboyedu35-nb ~\]\# su - mysql 
+\[root@oldboyedu35-nb ~\]\# su - mysql
 
 su: warning: cannot change directory to /home/mysql: No such file or directory
 
 This account is currently not available.
 
--u uid	\#--&gt;用户的ID值。这个值必须是唯一的，除非用-o选项，数字不可为负值
+-u uid    \#--&gt;用户的ID值。这个值必须是唯一的，除非用-o选项，数字不可为负值
 
 1.2.9 useradd小结
 
@@ -474,9 +446,9 @@ This account is currently not available.
 
 groupadd: group 'oldboy' already exists
 
-\[root@oldboyedu35-nb ~\]\# groupadd sa 
+\[root@oldboyedu35-nb ~\]\# groupadd sa
 
-\[root@oldboyedu35-nb ~\]\# 
+\[root@oldboyedu35-nb ~\]\#
 
 \[root@oldboyedu35-nb ~\]\# useradd -u 999 -G root,oldboy,sa -c "HandsomeBoy"  -d /alex666 -s /bin/sh alex666
 
@@ -484,7 +456,7 @@ groupadd: group 'oldboy' already exists
 
 uid=999\(alex666\) gid=999\(alex666\) groups=999\(alex666\),0\(root\),500\(oldboy\),511\(sa\)
 
-\[root@oldboyedu35-nb ~\]\# 
+\[root@oldboyedu35-nb ~\]\#
 
 \[root@oldboyedu35-nb ~\]\# grep alex666 /etc/passwd
 
@@ -493,8 +465,6 @@ alex666:x:999:999:HandsomeBoy:/alex666:/bin/sh
 \[root@oldboyedu35-nb ~\]\# ll -d /alex666/
 
 drwx------ 2 alex666 alex666 4096 Apr  5 11:39 /alex666/
-
-
 
 1.2.10 userdel 删除用户相关命令
 
@@ -522,25 +492,25 @@ drwx------ 2 alex666 alex666 4096 Apr  5 11:39 /alex666/
 
 /etc/gshadow 用户组密码资讯文件
 
-usermod	注释说明
+usermod    注释说明
 
--e expire\_date	※加上用户账号停止日期。日期格式为MM/DD/YY（chage -E）
+-e expire\_date    ※加上用户账号停止日期。日期格式为MM/DD/YY（chage -E）
 
--g initial\_group	※更新用户新的起始登入用户组。用户组名须已存在。用户组ID必须参照既有的用户组。用户组ID预设值为1
+-g initial\_group    ※更新用户新的起始登入用户组。用户组名须已存在。用户组ID必须参照既有的用户组。用户组ID预设值为1
 
--s shell	指定新登入shell。如此栏留白，系统将选用系统预设shell。这个-s参数功能也可以使用chsh命令来修改。当然也可以手工修改/etc/passwd 文件来实现
+-s shell    指定新登入shell。如此栏留白，系统将选用系统预设shell。这个-s参数功能也可以使用chsh命令来修改。当然也可以手工修改/etc/passwd 文件来实现
 
--u uid	指定用户UID值。除非接-o参数（如：usermod -u 505 -o oldboy），否则ID值
+-u uid    指定用户UID值。除非接-o参数（如：usermod -u 505 -o oldboy），否则ID值
 
 必须是唯一的数字（不能为负数）
 
-\[root@oldboyedu-35 ~\]\# grep oldboy /etc/sudoers 
+\[root@oldboyedu-35 ~\]\# grep oldboy /etc/sudoers
 
 %oldboy ALL=\(ALL\)       /bin/touch, /bin/mkdir, /bin/ls
 
-\[root@oldboyedu-35 ~\]\# usermod -G oldboy oldgirl 
+\[root@oldboyedu-35 ~\]\# usermod -G oldboy oldgirl
 
-\[oldgirl@oldboyedu-35 ~\]$ whoami 
+\[oldgirl@oldboyedu-35 ~\]$ whoami
 
 oldgirl
 
@@ -548,25 +518,27 @@ oldgirl
 
 Matching Defaults entries for oldgirl on this host:
 
-    !visiblepw, always\_set\_home, env\_reset, env\_keep="COLORS DISPLAY HOSTNAME HISTSIZE INPUTRC KDEDIR LS\_COLORS",
+```
+!visiblepw, always\_set\_home, env\_reset, env\_keep="COLORS DISPLAY HOSTNAME HISTSIZE INPUTRC KDEDIR LS\_COLORS",
 
-    env\_keep+="MAIL PS1 PS2 QTDIR USERNAME LANG LC\_ADDRESS LC\_CTYPE", env\_keep+="LC\_COLLATE LC\_IDENTIFICATION
+env\_keep+="MAIL PS1 PS2 QTDIR USERNAME LANG LC\_ADDRESS LC\_CTYPE", env\_keep+="LC\_COLLATE LC\_IDENTIFICATION
 
-    LC\_MEASUREMENT LC\_MESSAGES", env\_keep+="LC\_MONETARY LC\_NAME LC\_NUMERIC LC\_PAPER LC\_TELEPHONE", env\_keep+="LC\_TIME
+LC\_MEASUREMENT LC\_MESSAGES", env\_keep+="LC\_MONETARY LC\_NAME LC\_NUMERIC LC\_PAPER LC\_TELEPHONE", env\_keep+="LC\_TIME
 
-    LC\_ALL LANGUAGE LINGUAS \_XKB\_CHARSET XAUTHORITY", secure\_path=/sbin\:/bin\:/usr/sbin\:/usr/bin
-
-
+LC\_ALL LANGUAGE LINGUAS \_XKB\_CHARSET XAUTHORITY", secure\_path=/sbin\:/bin\:/usr/sbin\:/usr/bin
+```
 
 User oldgirl may run the following commands on this host:
 
-    \(ALL\) /bin/touch, \(ALL\) /bin/mkdir, \(ALL\) /bin/ls
+```
+\(ALL\) /bin/touch, \(ALL\) /bin/mkdir, \(ALL\) /bin/ls
+```
 
 1.2.12 groupadd 添加用户组的命令
 
-groupadd	注释说明
+groupadd    注释说明
 
--g gid	指定用户组GID值。除非接-o 参数（groupadd -g 1234 -o oldboy），否则ID值必须是唯一的数字（不能为负数）。如果不指定-g参数，则预设值会从500开始
+-g gid    指定用户组GID值。除非接-o 参数（groupadd -g 1234 -o oldboy），否则ID值必须是唯一的数字（不能为负数）。如果不指定-g参数，则预设值会从500开始
 
 \[root@oldboyedu35-nb ~\]\# groupadd -g 1000 jason007
 
@@ -589,8 +561,6 @@ uid=1000\(jason007\) gid=1000\(jason007\) groups=1000\(jason007\)
 \[root@oldboyedu35-nb ~\]\# id oldboy888
 
 uid=2000\(oldboy888\) gid=2000\(oldboy888\) groups=2000\(oldboy888\)
-
-
 
 1.2.13 企业场景删除用户处理方法：
 
@@ -616,8 +586,6 @@ useradd
 
 /etc/login.defs 文件作用
 
- 
-
 1.2.15 档案
 
 /etc/passwd 使用者账号资讯
@@ -626,7 +594,7 @@ useradd
 
 /etc/group 用户组资讯
 
-/etc/gshadow 
+/etc/gshadow
 
 /etc/default/useradd 定义资讯
 
@@ -636,27 +604,27 @@ useradd
 
 1.2.16 passwd 用户密码相关 修改用户密码
 
-passwd	注释说明
+passwd    注释说明
 
--k	保留即将过期的用户在期满后仍能使用
+-k    保留即将过期的用户在期满后仍能使用
 
--d，--delete	删除用户密码，仅能以root权限操作
+-d，--delete    删除用户密码，仅能以root权限操作
 
--l（小写字母），--lock	锁住用户无权更改其密码，仅能通过root权限操作
+-l（小写字母），--lock    锁住用户无权更改其密码，仅能通过root权限操作
 
--u，--unlock	解锁锁定
+-u，--unlock    解锁锁定
 
--f，--force	强制操作，仅root权限才能操作
+-f，--force    强制操作，仅root权限才能操作
 
--x，--maximum=days	两次密码修改的最大天数，后面接数字；仅能root权限操作
+-x，--maximum=days    两次密码修改的最大天数，后面接数字；仅能root权限操作
 
--n，--minimum=days	两次密码修改的最小天数，后面接数字，仅能root权限操作
+-n，--minimum=days    两次密码修改的最小天数，后面接数字，仅能root权限操作
 
--w，-warning=days	在距多少天提醒用户修改密码，仅能root权限操作
+-w，-warning=days    在距多少天提醒用户修改密码，仅能root权限操作
 
--i，--inactive=days	在密码过期后多少天，用户被禁掉，仅能root操作
+-i，--inactive=days    在密码过期后多少天，用户被禁掉，仅能root操作
 
---stdin 	※read new tokens from stdin \(root only\)
+--stdin     ※read new tokens from stdin \(root only\)
 
 从标准输入（管道）读入密码
 
@@ -670,17 +638,13 @@ passwd: all authentication tokens updated successfully.
 
 \#\#\#添加一个用户 oldboy666  指定他的uid是666  设置密码为123456
 
-\[root@oldboyedu-35 ~\]\# useradd -u 666 oldboy666 
+\[root@oldboyedu-35 ~\]\# useradd -u 666 oldboy666
 
 \[root@oldboyedu-35 ~\]\# echo 123456\|passwd --stdin oldboy666
 
 Changing password for user oldboy666.
 
 passwd: all authentication tokens updated successfully.
-
-
-
-
 
 \[root@oldboyedu35-nb ~\]\# useradd -u 666 oldboy666
 
@@ -698,107 +662,93 @@ passwd: all authentication tokens updated successfully.
 
 \[oldboy@oldboyedu35-nb ~\]$ su - oldboy666
 
-Password: 
+Password:
 
-\[oldboy666@oldboyedu35-nb ~\]$ whoami 
+\[oldboy666@oldboyedu35-nb ~\]$ whoami
 
 oldboy666
 
 \[oldboy666@oldboyedu35-nb ~\]$
 
-
-
-
-
 1.2.17 chage 修改用户密码有效期限change age\(密码年纪  密码相关的时间）
 
-chage参数选项	注释（带※表示很重要）
+chage参数选项    注释（带※表示很重要）
 
--d，--lastday最近日期	讲最近一次密码设置时间设为“最近日期”
+-d，--lastday最近日期    讲最近一次密码设置时间设为“最近日期”
 
--E，--expiredate过期时间	※将账户过期时间设为“过期日期”，日期写法：MM/DD/YY
+-E，--expiredate过期时间    ※将账户过期时间设为“过期日期”，日期写法：MM/DD/YY
 
--h，--help	显示此帮助信息并退出
+-h，--help    显示此帮助信息并退出
 
--L（大写字母L）--inactive失效密码	在密码过期后多少天，用户被禁止掉，仅能以root操作
+-L（大写字母L）--inactive失效密码    在密码过期后多少天，用户被禁止掉，仅能以root操作
 
--l（小写字母L），--list	※显示账户年龄信息
+-l（小写字母L），--list    ※显示账户年龄信息
 
--m，--mindays 最小天数	将两次改变密码之间距离的最小天数设为“最小天数”
+-m，--mindays 最小天数    将两次改变密码之间距离的最小天数设为“最小天数”
 
--M，--maxdays 最大天数	将两次改变密码之间距离的最大天数设为“最大天数”
+-M，--maxdays 最大天数    将两次改变密码之间距离的最大天数设为“最大天数”
 
--W，--warndays 警告天数	将过期警告天数设为“警告天数”
-
-
+-W，--warndays 警告天数    将过期警告天数设为“警告天数”
 
 \[root@oldboyedu35-nb ~\]\# chage -l oldboy666
 
-Last password change	 : Apr 06, 2017
+Last password change     : Apr 06, 2017
 
-Password expires	 : never
+Password expires     : never
 
-Password inactive	 : never
+Password inactive     : never
 
-Account expires	 : never
+Account expires     : never
 
-Minimum number of days between password change	 : 0
+Minimum number of days between password change     : 0
 
-Maximum number of days between password change	 : 99999
+Maximum number of days between password change     : 99999
 
-Number of days of warning before password expires	: 7
-
-
-
-
+Number of days of warning before password expires    : 7
 
 \[root@oldboyedu35-nb ~\]\# chage -E "2017-04-14" oldboy666
 
 \[root@oldboyedu35-nb ~\]\# chage -l oldboy666
 
-Last password change	 : Apr 06, 2017
+Last password change     : Apr 06, 2017
 
-Password expires	 : Jun 05, 2017
+Password expires     : Jun 05, 2017
 
-Password inactive	 : Jul 05, 2017
+Password inactive     : Jul 05, 2017
 
-Account expires	 : Apr 14, 2017
+Account expires     : Apr 14, 2017
 
-Minimum number of days between password change	 : 7
+Minimum number of days between password change     : 7
 
-Maximum number of days between password change	 : 60
+Maximum number of days between password change     : 60
 
-Number of days of warning before password expires	: 10
+Number of days of warning before password expires    : 10
 
 \[root@oldboyedu35-nb ~\]\# date -s "10 day"
 
 Sun Apr 16 10:06:33 CST 2017
 
-
-
 \[root@oldboyedu35-nb ~\]\# chage -E "30 day" oldboy666
 
 \[root@oldboyedu35-nb ~\]\# chage -l oldboy666
 
-Last password change	 : Apr 16, 2017
+Last password change     : Apr 16, 2017
 
-Password expires	 : Jun 15, 2017
+Password expires     : Jun 15, 2017
 
-Password inactive	 : Jul 15, 2017
+Password inactive     : Jul 15, 2017
 
-Account expires	 : May 16, 2017
+Account expires     : May 16, 2017
 
-Minimum number of days between password change	 : 7
+Minimum number of days between password change     : 7
 
-Maximum number of days between password change	 : 60
+Maximum number of days between password change     : 60
 
-Number of days of warning before password expires	: 10
+Number of days of warning before password expires    : 10
 
-\[root@oldboyedu35-nb ~\]\# date 
+\[root@oldboyedu35-nb ~\]\# date
 
 Sun Apr 16 10:09:12 CST 2017
-
-
 
 \[root@oldboyedu-35 ~\]\# passwd --minimum=7 --maximum=60 --warning=10 --inactive=30 oldboy
 
@@ -808,39 +758,37 @@ passwd: Success
 
 \[root@oldboyedu-35 ~\]\# chage -l oldboy
 
-Last password change					: Apr 07, 2017
+Last password change                    : Apr 07, 2017
 
-Password expires					: Jun 06, 2017
+Password expires                    : Jun 06, 2017
 
-Password inactive					: Jul 06, 2017
+Password inactive                    : Jul 06, 2017
 
-Account expires						: never
+Account expires                        : never
 
-Minimum number of days between password change		: 7
+Minimum number of days between password change        : 7
 
-Maximum number of days between password change		: 60
+Maximum number of days between password change        : 60
 
-Number of days of warning before password expires	: 10
+Number of days of warning before password expires    : 10
 
 \[root@oldboyedu-35 ~\]\#
 
 1.2.18 企业场景：用户密码管理
 
-1、	密码要复杂8/12位以上字母数字页数字符-keepass（软件，密码存放在本地）lastpass（在线版本）
+1、    密码要复杂8/12位以上字母数字页数字符-keepass（软件，密码存放在本地）lastpass（在线版本）
 
-2、	大的企业用户和密码统一管理（相当于活动目录（AD）,openldap）
+2、    大的企业用户和密码统一管理（相当于活动目录（AD）,openldap）
 
-3、	动态密码：动态口令，第三方提供自己开发也很简单
+3、    动态密码：动态口令，第三方提供自己开发也很简单
 
-4、	/var/log/secure
+4、    /var/log/secure
 
-5、	指纹（find+md5sum+定时任务）
+5、    指纹（find+md5sum+定时任务）
 
-6、	锁头chattr+i +a lsattr
+6、    锁头chattr+i +a lsattr
 
 1.2.19 示例 下面要求oldboy666用户7天内不能更改密码，60天以后必须修改密码，过期前10天通知oldboy666用户，过期后30天后禁止用户登陆。
-
-
 
 \[root@oldboyedu35-nb ~\]\# passwd --minimum=7 --maximum=60 --warning=10 --inactive=30 oldboy666
 
@@ -874,19 +822,13 @@ Adjusting aging data for user oldboy666.
 
 passwd: Success
 
-
-
-
-
 1.2.20 用户查询命令小结
 
 需要知道：id w who list lastlog
 
 了解：users groups newgrp
 
-
-
-1.2.21 	查看用户信息
+1.2.21     查看用户信息
 
 \[root@oldboyedu35-nb ~\]\# id
 
@@ -894,7 +836,7 @@ uid=0\(root\) gid=0\(root\) groups=0\(root\)
 
 \[root@oldboyedu35-nb ~\]\# w
 
- 10:31:44 up 1 day, 22:19,  2 users,  load average: 0.00, 0.01, 0.05
+10:31:44 up 1 day, 22:19,  2 users,  load average: 0.00, 0.01, 0.05
 
 USER     TTY      FROM              LOGIN@   IDLE   JCPU   PCPU WHAT
 
@@ -902,11 +844,11 @@ root     pts/0    192.168.56.1     05Apr17  0.00s  1.12s  0.05s w
 
 root     pts/1    192.168.56.1     06Apr17 10days  0.09s  0.09s -bash
 
-\[root@oldboyedu35-nb ~\]\# uptime 
+\[root@oldboyedu35-nb ~\]\# uptime
 
- 10:34:02 up 1 day, 22:22,  2 users,  load average: 0.00, 0.01, 0.05
+10:34:02 up 1 day, 22:22,  2 users,  load average: 0.00, 0.01, 0.05
 
-\[root@oldboyedu35-nb ~\]\# 
+\[root@oldboyedu35-nb ~\]\#
 
 \[root@oldboyedu35-nb ~\]\# who
 
@@ -914,9 +856,7 @@ root     pts/0        2017-04-05 12:15 \(192.168.56.1\)
 
 root     pts/1        2017-04-06 08:52 \(192.168.56.1\)
 
-
-
-\[root@oldboyedu35-nb ~\]\# lastlog 
+\[root@oldboyedu35-nb ~\]\# lastlog
 
 Username         Port     From             Latest
 
@@ -1004,9 +944,9 @@ oldboy666                                  \*\*Never logged in\*\*
 
 su \[选项参数\] \[用户\]
 
-su参数选项	注释说明
+su参数选项    注释说明
 
--，-l（小写字母L），--login	make the shell a login shell
+-，-l（小写字母L），--login    make the shell a login shell
 
 \#---&gt; 使一个shell成为登录的shell，如执行su - oldboy 时，表示该用户想改变身份为oldboy，并且使用oldboy用户的环境变量配置，如：
 
@@ -1016,7 +956,7 @@ initializes HOME，SHELL，USER，LOGNAME and PATH
 
 切换用户的时候会更新这些环境变量
 
--c，--command=COMMAND	pass a single COMMAND to the shell with -c
+-c，--command=COMMAND    pass a single COMMAND to the shell with -c
 
 临时切换到某一个用户，执行一个命令，执行完，自动返回到当前用户。
 
@@ -1030,15 +970,9 @@ initializes HOME，SHELL，USER，LOGNAME and PATH
 
 3）如果仅希望以某用户的角色执行命令，而不直接切换到该用户下操作，可以使用su - 用户名 -c “命令”的方式.
 
-
-
 su 和su - 的区别 谈学习linux运维方法
 
 oldboy.blog.51cto.com/2561410/1053606
-
-
-
-
 
 1.3.3 su 命令的优缺点
 
@@ -1060,15 +994,9 @@ oldboy.blog.51cto.com/2561410/1053606
 
 4，安全，最小化
 
-
-
-
-
 1.3.4 课后作业：linux root用户密码忘记了，如何找回来？
 
 进入单用户，把/etc/passwd 删除清空，然后在进入命令行模式
-
-
 
 1.3.5 实例：
 
@@ -1082,35 +1010,33 @@ oldboy.blog.51cto.com/2561410/1053606
 
 \[oldboy@oldboyedu35-nb ~\]$ su - oldboy666
 
-Password: 
+Password:
 
 su: incorrect password
 
 \[oldboy@oldboyedu35-nb ~\]$ su - oldboy666
 
-Password: 
+Password:
 
 su: incorrect password
 
 \[oldboy@oldboyedu35-nb ~\]$ logout
 
-\[root@oldboyedu35-nb ~\]\# usermod -U oldboy666 
+\[root@oldboyedu35-nb ~\]\# usermod -U oldboy666
 
 \[root@oldboyedu35-nb ~\]\# su - oldboy
 
 \[oldboy@oldboyedu35-nb ~\]$ su - oldboy666
 
-Password: 
+Password:
 
 \[oldboy666@oldboyedu35-nb ~\]$ logout
 
 \[oldboy@oldboyedu35-nb ~\]$ logout
 
-\[root@oldboyedu35-nb ~\]\# \#\#\#如果一个用户被锁定了，不要用root给它修改密码  
+\[root@oldboyedu35-nb ~\]\# \#\#\#如果一个用户被锁定了，不要用root给它修改密码
 
 \[root@oldboyedu35-nb ~\]\# \#\#\#修改密码之后锁头自动打开
-
-
 
 \[root@oldboyedu35-nb ~\]\# echo $PATH
 
@@ -1126,7 +1052,7 @@ Password:
 
 /root
 
-\[oldboy@oldboyedu35-nb root\]$ ls 
+\[oldboy@oldboyedu35-nb root\]$ ls
 
 ls: cannot open directory .: Permission denied
 
@@ -1144,15 +1070,11 @@ ls: cannot open directory .: Permission denied
 
 /usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/oldboy/bin
 
-
-
-
-
 \[root@oldboyedu35-nb ~\]\# \#我想临时切换到oldboy用户下面 执行命令whoami
 
 \[root@oldboyedu35-nb ~\]\# su - oldboy
 
-\[oldboy@oldboyedu35-nb ~\]$ whoami 
+\[oldboy@oldboyedu35-nb ~\]$ whoami
 
 oldboy
 
@@ -1162,45 +1084,31 @@ oldboy
 
 oldboy
 
-
-
-
-
 \[root@oldboyedu35-nb ~\]\# su - oldboy --session-command='echo $PATH'
 
 /usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/oldboy/bin
 
-
-
-
-
 1.3.6 sudo的执行过程
-
-
 
 1.3.7 sudo 命令
 
 sudo \[参数选项\] 命令
 
+sudo参数选项    选项说明
 
+-l（小写L）    列出用户在主机上可用的和被禁止的命令：当配置好sudo权限规则后，可用这个参数来查看授权情况
 
-sudo参数选项	选项说明
+-v    验证用户的时间戳，当用户运行sudo，输入用户的密码后，在短时间内可以不用输入口令直接进行sudo操作；用-v可以跟踪最新的时间戳
 
--l（小写L）	列出用户在主机上可用的和被禁止的命令：当配置好sudo权限规则后，可用这个参数来查看授权情况
+-u    指定以某个用户身份执行特定的命令操作，chensiqi ALL=（ALL） /bin/cp
 
--v	验证用户的时间戳，当用户运行sudo，输入用户的密码后，在短时间内可以不用输入口令直接进行sudo操作；用-v可以跟踪最新的时间戳
-
--u	指定以某个用户身份执行特定的命令操作，chensiqi ALL=（ALL） /bin/cp
-
--k	同-K，删除时间戳，下一个sudo命令要求提供密码，前提是该用户授权中不能有NOPASSWD参数。时间戳默认5分钟也会时效。
-
-
+-k    同-K，删除时间戳，下一个sudo命令要求提供密码，前提是该用户授权中不能有NOPASSWD参数。时间戳默认5分钟也会时效。
 
 1.3.8 更改授权/etc/sudoers 文件的几个方法
 
-1）	方法一：执行visudo 命令自动编辑/etc/sudoers 文件（推荐）
+1）    方法一：执行visudo 命令自动编辑/etc/sudoers 文件（推荐）
 
- 检查
+检查
 
 \[root@oldboyedu-35 ~\]\# ll /etc/sudoers
 
@@ -1214,11 +1122,9 @@ sudo参数选项	选项说明
 
 3\)使用用户组的方式实现sudo授权
 
-%sa 		ALL=\(ALL\)			 ALL
+%sa         ALL=\(ALL\)             ALL
 
 \#--&gt; 注意用户组授权普通用户的区别，开头为“%”百分号。sa组同用户一样必须是已经存在的，是系统的用户组
-
-
 
 1.3.9 /etc/sudoers 的规则大致可分为两类
 
@@ -1238,27 +1144,23 @@ sudo参数选项	选项说明
 
 4、Cmnd\_Alias 命令别名
 
-
-
 1.3.10 回顾下别名和具体授权配置的关系，sudo授权
 
-用户或组	主机（可以执行sudo的机器）	可以切换的用户角色（runas）	命令
+用户或组    主机（可以执行sudo的机器）    可以切换的用户角色（runas）    命令
 
-root	ALL=	\(ALL\)	ALL
+root    ALL=    \(ALL\)    ALL
 
-User\_Alias ADMINS = jsmith,mikem,%groupname	Host\_Alias 
+User\_Alias ADMINS = jsmith,mikem,%groupname    Host\_Alias
 
-FILESERVERS = fs1,fs2	Runas\_Alias op=root	Cmnd\_Alias SERVICES=/sbin/service
+FILESERVERS = fs1,fs2    Runas\_Alias op=root    Cmnd\_Alias SERVICES=/sbin/service
 
 /sbin/chkconfig
 
-用户别名的位置	主机别名位置（可以在哪个主机上执行sudo）	Runas别名的位置（以谁的身份执行sudo授权的命令）	命令别名的位置
-
-
+用户别名的位置    主机别名位置（可以在哪个主机上执行sudo）    Runas别名的位置（以谁的身份执行sudo授权的命令）    命令别名的位置
 
 1.3.11 sudo 小结 但以上直接修改sudoers的配置文件方法有以下需要注意的几点：
 
-1.	如何修改sudoers
+1. 如何修改sudoers
 
 visudo
 
@@ -1266,13 +1168,11 @@ echo命令是追加“&gt;&gt;”,不是重定向“&gt;”，除了echo外，�
 
 修改操作完成一定要执行visudo -c进行语法检查，这弥补了直接修改没有语法检查的不足。
 
-2.	权限：确保/etc/sudoers权限是正确的（-r--r----）,权限不对会导致sudo功能异常（Centos6权限不对也可以登录，但是/etc/sudoers是440是最安全的）
+1. 权限：确保/etc/sudoers权限是正确的（-r--r----）,权限不对会导致sudo功能异常（Centos6权限不对也可以登录，但是/etc/sudoers是440是最安全的）
 
-3.	权限：及时对授权的操作进行测试，验证是否正确（最好不要退出当权授权窗口，以便发现问题及时恢复）。
+2. 权限：及时对授权的操作进行测试，验证是否正确（最好不要退出当权授权窗口，以便发现问题及时恢复）。
 
-4.	留后路：确保知道正确的root用户密码，以便在sudo出现问题时可以通过普通用户等执行su - 命令切换到root进行恢复
-
-
+3. 留后路：确保知道正确的root用户密码，以便在sudo出现问题时可以通过普通用户等执行su - 命令切换到root进行恢复
 
 1.3.12 实例（尚方宝剑）
 
@@ -1280,69 +1180,65 @@ echo命令是追加“&gt;&gt;”,不是重定向“&gt;”，除了echo外，�
 
 \[root@oldboyedu35-nb ~\]\# \#1.编辑配置文件
 
-\[root@oldboyedu35-nb ~\]\# \#crontab -e   ------ visudo 
+\[root@oldboyedu35-nb ~\]\# \#crontab -e   ------ visudo
 
-\[root@oldboyedu35-nb ~\]\# visudo 
+\[root@oldboyedu35-nb ~\]\# visudo
 
-91行后面添加 
+91行后面添加
 
 oldboy  ALL=\(ALL\)       /usr/sbin/useradd
 
-
-
 \[root@oldboyedu35-nb ~\]\# \#2.查看
 
-\[root@oldboyedu35-nb ~\]\# grep oldboy /etc/sudoers 
+\[root@oldboyedu35-nb ~\]\# grep oldboy /etc/sudoers
 
-oldboy	ALL=\(ALL\) 	/usr/sbin/useradd
+oldboy    ALL=\(ALL\)     /usr/sbin/useradd
 
-\[root@oldboyedu35-nb ~\]\# \#3.测试 
+\[root@oldboyedu35-nb ~\]\# \#3.测试
 
-\[root@oldboyedu35-nb ~\]\# su - oldboy 
+\[root@oldboyedu35-nb ~\]\# su - oldboy
 
 \[oldboy@oldboyedu35-nb ~\]$ useradd alex999
 
 -bash: /usr/sbin/useradd: Permission denied
 
-\[oldboy@oldboyedu35-nb ~\]$ 
+\[oldboy@oldboyedu35-nb ~\]$
 
-\[oldboy@oldboyedu35-nb ~\]$ \#4.查看一下当前用户有什么尚方宝剑 
+\[oldboy@oldboyedu35-nb ~\]$ \#4.查看一下当前用户有什么尚方宝剑
 
 \[oldboy@oldboyedu35-nb ~\]$ sudo -l
-
-
 
 We trust you have received the usual lecture from the local System
 
 Administrator. It usually boils down to these three things:
 
+```
+\#1\) Respect the privacy of others.
 
+\#2\) Think before you type.
 
-    \#1\) Respect the privacy of others.
+\#3\) With great power comes great responsibility.
+```
 
-    \#2\) Think before you type.
-
-    \#3\) With great power comes great responsibility.
-
-
-
-\[sudo\] password for oldboy: 
+\[sudo\] password for oldboy:
 
 Matching Defaults entries for oldboy on this host:
 
-    !visiblepw, always\_set\_home, env\_reset, env\_keep="COLORS DISPLAY HOSTNAME HISTSIZE INPUTRC KDEDIR LS\_COLORS",
+```
+!visiblepw, always\_set\_home, env\_reset, env\_keep="COLORS DISPLAY HOSTNAME HISTSIZE INPUTRC KDEDIR LS\_COLORS",
 
-    env\_keep+="MAIL PS1 PS2 QTDIR USERNAME LANG LC\_ADDRESS LC\_CTYPE", env\_keep+="LC\_COLLATE LC\_IDENTIFICATION
+env\_keep+="MAIL PS1 PS2 QTDIR USERNAME LANG LC\_ADDRESS LC\_CTYPE", env\_keep+="LC\_COLLATE LC\_IDENTIFICATION
 
-    LC\_MEASUREMENT LC\_MESSAGES", env\_keep+="LC\_MONETARY LC\_NAME LC\_NUMERIC LC\_PAPER LC\_TELEPHONE", env\_keep+="LC\_TIME
+LC\_MEASUREMENT LC\_MESSAGES", env\_keep+="LC\_MONETARY LC\_NAME LC\_NUMERIC LC\_PAPER LC\_TELEPHONE", env\_keep+="LC\_TIME
 
-    LC\_ALL LANGUAGE LINGUAS \_XKB\_CHARSET XAUTHORITY", secure\_path=/sbin\:/bin\:/usr/sbin\:/usr/bin
-
-
+LC\_ALL LANGUAGE LINGUAS \_XKB\_CHARSET XAUTHORITY", secure\_path=/sbin\:/bin\:/usr/sbin\:/usr/bin
+```
 
 User oldboy may run the following commands on this host:
 
-    \(ALL\) /usr/sbin/useradd
+```
+\(ALL\) /usr/sbin/useradd
+```
 
 \[oldboy@oldboyedu35-nb ~\]$ sudo useradd alex12306
 
@@ -1354,19 +1250,21 @@ uid=2001\(alex12306\) gid=2001\(alex12306\) groups=2001\(alex12306\)
 
 Matching Defaults entries for oldboy on this host:
 
-    !visiblepw, always\_set\_home, env\_reset, env\_keep="COLORS DISPLAY HOSTNAME HISTSIZE INPUTRC KDEDIR LS\_COLORS",
+```
+!visiblepw, always\_set\_home, env\_reset, env\_keep="COLORS DISPLAY HOSTNAME HISTSIZE INPUTRC KDEDIR LS\_COLORS",
 
-    env\_keep+="MAIL PS1 PS2 QTDIR USERNAME LANG LC\_ADDRESS LC\_CTYPE", env\_keep+="LC\_COLLATE LC\_IDENTIFICATION
+env\_keep+="MAIL PS1 PS2 QTDIR USERNAME LANG LC\_ADDRESS LC\_CTYPE", env\_keep+="LC\_COLLATE LC\_IDENTIFICATION
 
-    LC\_MEASUREMENT LC\_MESSAGES", env\_keep+="LC\_MONETARY LC\_NAME LC\_NUMERIC LC\_PAPER LC\_TELEPHONE", env\_keep+="LC\_TIME
+LC\_MEASUREMENT LC\_MESSAGES", env\_keep+="LC\_MONETARY LC\_NAME LC\_NUMERIC LC\_PAPER LC\_TELEPHONE", env\_keep+="LC\_TIME
 
-    LC\_ALL LANGUAGE LINGUAS \_XKB\_CHARSET XAUTHORITY", secure\_path=/sbin\:/bin\:/usr/sbin\:/usr/bin
-
-
+LC\_ALL LANGUAGE LINGUAS \_XKB\_CHARSET XAUTHORITY", secure\_path=/sbin\:/bin\:/usr/sbin\:/usr/bin
+```
 
 User oldboy may run the following commands on this host:
 
-    \(ALL\) /usr/sbin/useradd
+```
+\(ALL\) /usr/sbin/useradd
+```
 
 \[oldboy@oldboyedu35-nb ~\]$ sudo rm -f /root/\*
 
@@ -1374,91 +1272,63 @@ Sorry, user oldboy is not allowed to execute '/bin/rm -f /root/\*' as root on ol
 
 \[oldboy@oldboyedu35-nb ~\]$ \#\#抱歉，用户oldboy不能以root用户的身份执行 rm命令
 
-
-
 1.3.13 案例  如何快速的查找某个目录下存在着大量的inode
 
 1.目录的大小比较大
 
 2.目录下面的文件比较多
 
+find /oldboy
 
-
-find /oldboy 
-
-
-
-/oldboy/1 
+/oldboy/1
 
 /oldboy/2
 
-/oldboy/3 
+/oldboy/3
 
-/oldboy/4 
+/oldboy/4
 
-/oldboy/5 
+/oldboy/5
 
-/oldboy/6 
+/oldboy/6
 
-/oldboy/7 
+/oldboy/7
 
-/oldboy/8 
+/oldboy/8
 
-/oldboy/9 
+/oldboy/9
 
 /oldboy/10
 
-
-
-oldboy目录出现的次数  ?????    目录下面的文件数量  
-
-
-
-
+oldboy目录出现的次数  ?????    目录下面的文件数量
 
 1.3.14 回顾下别名和具体授权配置的关系
 
-用户或组	主机（可以执行sudo的机器）	可以切换的用户角色	
+用户或组    主机（可以执行sudo的机器）    可以切换的用户角色
 
-root	ALL=	\(ALL\)	ALL
+root    ALL=    \(ALL\)    ALL
 
-User\_Alias	Host\_Alias	Runas\_Alias	Cmd\_Alias
+User\_Alias    Host\_Alias    Runas\_Alias    Cmd\_Alias
 
-用户别名的位置	主机别名的位置（可以在哪个主机上执行sudo）	Runas别名的位置（以谁的身份执行sudo授权命令）	命令别名的位置
-
-
+用户别名的位置    主机别名的位置（可以在哪个主机上执行sudo）    Runas别名的位置（以谁的身份执行sudo授权命令）    命令别名的位置
 
 1.3.15 工作中一个软件tomcat,以oldboy的身份运行中。
 
 重启服务器的时候，我想让tomcat继续以oldboy的身份运行。
 
-
-
 让一个软件开机自启动
 
-1\)chkconfig 
+1\)chkconfig
 
-2\)/etc/rc.local 
-
-
+2\)/etc/rc.local
 
 让tomcat开机启动的时候 以oldboy的身份运行
 
+su - oldboy -c 启动tomcat
 
+放在 /etc/rc.local
 
-su - oldboy -c 启动tomcat 
-
-
-
-放在 /etc/rc.local 
-
-su - oldboy -c 启动tomcat 
-
-
-
-
-
-
+su - oldboy -c 启动tomcat
 
 \[tddoc@td-2-1 ~\]$ ps -ef\|grep tddoc  \#→查看包含tddoc用户的服务进程。
 
@@ -1472,111 +1342,81 @@ tddoc    9042     1  0 Jan16 ?        00:00:02 java -server -Xmn125M -Xms512M -X
 
 \#\#\#\#\#\#\#\#分用户方案启动服务命令\#\#\#\#\#\#\#\#
 
-su - tddoc  -c '/bin/sh /home/tddoc/bin/deploy.sh' 
-
-
+su - tddoc  -c '/bin/sh /home/tddoc/bin/deploy.sh'
 
 1.3.16 别名的修改例子
 
 例子：
 
-创建一个用户别名ADMINS = oldboy,oldgirl,alex  
-
-
+创建一个用户别名ADMINS = oldboy,oldgirl,alex
 
 创建命令别名
 
 授权NETWORKING,SERIVCES命令
 
-
-
 Cmnd\_Alias NETWORKING = /sbin/route, /sbin/ifconfig, /bin/ping
 
 Cmnd\_Alias SERVICES = /sbin/service, /sbin/chkconfig
 
+放在/etc/sudoers（visudo\) 最后一行
 
+su - alex
 
-放在/etc/sudoers（visudo\) 最后一行 
+sudo -l
 
+\#\#\#第一个里程碑-添加用户并统一密码
 
+useradd oldboy
 
-su - alex  
+useradd oldgirl
 
-sudo -l 
+useradd alex
 
+echo 123456 \|passwd --stdin oldboy
 
+echo 123456 \|passwd --stdin oldgirl
 
-\#\#\#第一个里程碑-添加用户并统一密码 
+echo 123456 \|passwd --stdin alex
 
-useradd oldboy 
+\#\#\#第二个里程碑-修改配置文件
 
-useradd oldgirl 
-
-useradd alex 
-
-
-
-echo 123456 \|passwd --stdin oldboy 
-
-echo 123456 \|passwd --stdin oldgirl 
-
-echo 123456 \|passwd --stdin alex 
-
-
-
-\#\#\#第二个里程碑-修改配置文件 
-
-\#1.创建用户别名 
+\#1.创建用户别名
 
 User\_Alias ADMINS = oldboy, oldgirl, alex
 
-\#2.创建命令别名 
+\#2.创建命令别名
 
 Cmnd\_Alias NETWORKING = /sbin/route, /sbin/ifconfig, /bin/ping
 
 Cmnd\_Alias SERVICES = /sbin/service, /sbin/chkconfig
 
-\#3.授予尚方宝剑 黄马褂 
+\#3.授予尚方宝剑 黄马褂
 
 \#root ALL=\(ALL\)  ALL
 
 ADMINS  ALL=\(ALL\) NETWORKING, SERVICES
 
-
-
 \#4.\*\*\*\*\*\*把原来 oldboy  oldgirl 授权 注释
-
-
 
 配置文件的内容：
 
-
-
 User\_Alias ADMINS = oldboy, oldgirl, alex
-
-
 
 Cmnd\_Alias NETWORKING = /sbin/route, /sbin/ifconfig, /bin/ping
 
 Cmnd\_Alias SERVICES = /sbin/service, /sbin/chkconfig
 
-
-
 ADMINS  ALL=\(ALL\) NETWORKING, SERVICES
-
-
 
 \#\#\#第三个里程碑-测试检查
 
-su - alex  
+su - alex
 
-sudo -l 
+sudo -l
 
 oldboy            ALL=\(ALL\)                                                       ALL
 
 用户（用户别名）  可以在哪一台机器上面执行sudo=\(你可以以谁的身份执行sudo命令\)   命令（命令别名）
-
-
 
 1.3.17 总结：
 
@@ -1594,25 +1434,21 @@ oldboy            ALL=\(ALL\)                                                   
 
 useradd -u -g -G -s -M -e -c -d
 
- 初始化用户对应的几个文件/etc/skel,/etc/default/useradd,/etc/login.defs
+初始化用户对应的几个文件/etc/skel,/etc/default/useradd,/etc/login.defs
 
 userdel -r
 
-usermod -u -g -G -s -M -e -c -d -L -U -l 
+usermod -u -g -G -s -M -e -c -d -L -U -l
 
 chage -l（小写字母l） -E -M -W -m -I\(大写字母i\)
 
 passwd --stdin -n -i -w -x  \(suid位重点\)   =====&gt;setuid passwd  setgid locate   粘滞位 /tmp
-
-
 
 su
 
 sudo
 
 visudo
-
-
 
 3、组管理命令
 
@@ -1622,11 +1458,7 @@ groupdel
 
 groupmod
 
-
-
 id w last
-
-
 
 1.4 sudo日志审计
 
@@ -1634,15 +1466,15 @@ echo "Defaults        logfile=/var/log/sudo.log"&gt;&gt;/etc/sudoers
 
 visudo -c
 
-
-
 测试：root用户下
 
 \[root@oldboyedu-35 tmp\]\# tailf /var/log/sudo.log
 
 Apr  7 23:54:10 : oldboy : TTY=pts/1 ; PWD=/home/oldboy ; USER=root ;
 
-    COMMAND=list
+```
+COMMAND=list
+```
 
 Apr  8 00:24:36 : oldboy : command not allowed ; TTY=pts/1 ; PWD=/home/oldboy ;
 
@@ -1652,11 +1484,9 @@ USER=root ; COMMAND=/usr/bin/passwd root
 
 \[oldboy@oldboyedu-35 ~\]$ sudo passwd root
 
-\[sudo\] password for oldboy: 
+\[sudo\] password for oldboy:
 
 Sorry, user oldboy is not allowed to execute '/usr/bin/passwd root' as root on oldboyedu-35.
-
-
 
 1.4.1 sudo授权最小化 例题：给oldboy用户授权passwd命令，安全不能把皇帝推翻
 
@@ -1666,31 +1496,27 @@ oldboy  ALL=\(ALL\)       /usr/bin/passwd, ! /usr/bin/passwd root
 
 oldboy用户:sudo passwd root   XXXXX
 
-oldboy：   sudo passwd        如何限制？   
+oldboy：   sudo passwd        如何限制？
 
-解决方法：用户修改密码的时候 必须加上用户名 
+解决方法：用户修改密码的时候 必须加上用户名
 
-第二个里程碑-不让修改root  sudo passwd 
+第二个里程碑-不让修改root  sudo passwd
 
-\#\#限制的方法 --用户修改密码的时候 必须加上用户名 
+\#\#限制的方法 --用户修改密码的时候 必须加上用户名
 
 oldboy  ALL=\(ALL\)       /usr/bin/passwd \[a-zA-Z0-9\]\*
 
-第三个里程碑-彻底不让修改root密码 
+第三个里程碑-彻底不让修改root密码
 
 oldboy  ALL=\(ALL\)       /usr/bin/passwd \[a-zA-Z0-9\]\*, ! /usr/bin/passwd root
 
-\[oldboy@oldboyedu-35 ~\]$ sudo passwd 
+\[oldboy@oldboyedu-35 ~\]$ sudo passwd
 
 Sorry, user oldboy is not allowed to execute '/usr/bin/passwd' as root on oldboyedu-35.
 
 \[oldboy@oldboyedu-35 ~\]$ sudo passwd root
 
 Sorry, user oldboy is not allowed to execute '/usr/bin/passwd root' as root on oldboyedu-35.
-
-
-
-
 
 1.4.2 .sudo权限集中管理项目
 
@@ -1706,11 +1532,11 @@ root泛滥。
 
 \#\# 根据部门把用户分类---------用户别名
 
-\#\# 
+\#\#
 
 \#\#\#\#把公司人员（需要使用服务器）分类
 
-\#\#\#\#sa ----- system admin 系统管理员 
+\#\#\#\#sa ----- system admin 系统管理员
 
 User\_Alias KAIFA\_ADMINS = kaifa01, kaifa02
 
@@ -1740,31 +1566,35 @@ Cmnd\_Alias   LOOKCMD = /bin/grep, /usr/bin/tail, /bin/cat, /usr/bin/less
 
 开发人员：  User\_Alias KAIFA\_ADMINS = kaifa01, kaifa02
 
-            命令权限：LOOKCMD
+```
+        命令权限：LOOKCMD
 
-		    身份权限：root
+        身份权限：root
+```
 
 运维人员：  User\_Alias OLD\_ADMINS = oldboy, oldgirl, %sa
 
-            命令权限：USERCMD, DISKCMD, NETMAGCMD, CTRLCMD, LOOKCMD
+```
+        命令权限：USERCMD, DISKCMD, NETMAGCMD, CTRLCMD, LOOKCMD
 
-            身份权限：root
+        身份权限：root
+```
 
 网络工程师：User\_Alias NETADMINS = leo,maya
 
-            命令权限：NETMAGCMD
+```
+        命令权限：NETMAGCMD
 
-            身份权限：root
+        身份权限：root
+```
 
 \#\#\#\#第四个里程碑-拍片
 
-\#授权： 什么用户执行什么命令 
+\#授权： 什么用户执行什么命令
 
 \#root    ALL=\(ALL\)       ALL
 
 \#用户     机器 角色       命令
-
-
 
 KAIFA\_ADMINS ALL=\(root\)    LOOKCMD
 
@@ -1776,11 +1606,9 @@ NETADMINS    ALL=\(root\)    NETMAGCMD
 
 \#\#\#快速命令
 
+\#\#\#useradd
 
-
-\#\#\#useradd 
-
-groupadd sa 
+groupadd sa
 
 useradd leo     && echo 123\|passwd --stdin leo
 
@@ -1794,7 +1622,7 @@ useradd kaifa01 && echo 123\|passwd --stdin kaifa01
 
 useradd kaifa02 && echo 123\|passwd --stdin kaifa02
 
-\#\#\#user alias 
+\#\#\#user alias
 
 User\_Alias KAIFA\_ADMINS = kaifa01, kaifa02
 
@@ -1816,7 +1644,7 @@ Cmnd\_Alias   CTRLCMD = /usr/sbin/reboot, /usr/sbin/halt
 
 Cmnd\_Alias   LOOKCMD = /bin/grep, /usr/bin/tail, /bin/cat, /usr/bin/less
 
-\#\#rules 
+\#\#rules
 
 KAIFA\_ADMINS ALL=\(root\)    LOOKCMD
 
@@ -1830,25 +1658,19 @@ NETADMINS ALL=\(root\)   NETMAGCMD
 
 2. 大象放冰箱-一步一步来
 
-
-
 1.4.3 sudo 配置文件/etc/sudoers 授权规则注意事项总结：
 
-1）	授权规则中的所有ALL字符串必须为大写字母
+1）    授权规则中的所有ALL字符串必须为大写字母
 
-2）	允许执行的命令是有顺序的。前面的为允许，后面的为禁止，执行命令的顺序是从后往前执行的
+2）    允许执行的命令是有顺序的。前面的为允许，后面的为禁止，执行命令的顺序是从后往前执行的
 
-/usr/sbin/\*，/sbin/\*，！/usr/sbin/visudo,!/sbin/fdisk 
+/usr/sbin/\*，/sbin/\*，！/usr/sbin/visudo,!/sbin/fdisk
 
 再次强调，禁止的命令尽量放在后面
 
-3）	一行内容超长可以用“\”反斜线换行
+3）    一行内容超长可以用“\”反斜线换行
 
-4）	！叹号表示非，就是命令取反的意思，即禁止执行的命令
+4）    ！叹号表示非，就是命令取反的意思，即禁止执行的命令
 
-5）	根据实际情况，来分类制作命令别名，用什么就给什么权限
-
-
-
-
+5）    根据实际情况，来分类制作命令别名，用什么就给什么权限
 

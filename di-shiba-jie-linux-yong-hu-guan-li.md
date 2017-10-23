@@ -5,7 +5,9 @@
 * 超级用户：UID为0代表root，皇帝linux管理员：root
 * 普通用户：UID为500-655
 
-                 由超级用户或具备超级用户权限的用户创建的用户
+  ```
+             由超级用户或具备超级用户权限的用户创建的用户
+  ```
 
 * 虚拟用户：UID为1-499，存在满足文件或服务启动的需要。一般不能登录，只是傀儡
 
@@ -1178,33 +1180,37 @@ We trust you have received the usual lecture from the local System
 
 Administrator. It usually boils down to these three things:
 
-```
-\#1\) Respect the privacy of others.
+\\#1\\) Respect the privacy of others.
 
-\#2\) Think before you type.
 
-\#3\) With great power comes great responsibility.
-```
+
+\\#2\\) Think before you type.
+
+
+
+\\#3\\) With great power comes great responsibility.
 
 \[sudo\] password for oldboy:
 
 Matching Defaults entries for oldboy on this host:
 
-```
-!visiblepw, always\_set\_home, env\_reset, env\_keep="COLORS DISPLAY HOSTNAME HISTSIZE INPUTRC KDEDIR LS\_COLORS",
+!visiblepw, always\\_set\\_home, env\\_reset, env\\_keep="COLORS DISPLAY HOSTNAME HISTSIZE INPUTRC KDEDIR LS\\_COLORS",
 
-env\_keep+="MAIL PS1 PS2 QTDIR USERNAME LANG LC\_ADDRESS LC\_CTYPE", env\_keep+="LC\_COLLATE LC\_IDENTIFICATION
 
-LC\_MEASUREMENT LC\_MESSAGES", env\_keep+="LC\_MONETARY LC\_NAME LC\_NUMERIC LC\_PAPER LC\_TELEPHONE", env\_keep+="LC\_TIME
 
-LC\_ALL LANGUAGE LINGUAS \_XKB\_CHARSET XAUTHORITY", secure\_path=/sbin\:/bin\:/usr/sbin\:/usr/bin
-```
+env\\_keep+="MAIL PS1 PS2 QTDIR USERNAME LANG LC\\_ADDRESS LC\\_CTYPE", env\\_keep+="LC\\_COLLATE LC\\_IDENTIFICATION
+
+
+
+LC\\_MEASUREMENT LC\\_MESSAGES", env\\_keep+="LC\\_MONETARY LC\\_NAME LC\\_NUMERIC LC\\_PAPER LC\\_TELEPHONE", env\\_keep+="LC\\_TIME
+
+
+
+LC\\_ALL LANGUAGE LINGUAS \\_XKB\\_CHARSET XAUTHORITY", secure\\_path=/sbin\:/bin\:/usr/sbin\:/usr/bin
 
 User oldboy may run the following commands on this host:
 
-```
-\(ALL\) /usr/sbin/useradd
-```
+\\(ALL\\) /usr/sbin/useradd
 
 \[oldboy@oldboyedu35-nb ~\]$ sudo useradd alex12306
 
@@ -1216,15 +1222,19 @@ uid=2001\(alex12306\) gid=2001\(alex12306\) groups=2001\(alex12306\)
 
 Matching Defaults entries for oldboy on this host:
 
-```
-!visiblepw, always\_set\_home, env\_reset, env\_keep="COLORS DISPLAY HOSTNAME HISTSIZE INPUTRC KDEDIR LS\_COLORS",
+!visiblepw, always\\_set\\_home, env\\_reset, env\\_keep="COLORS DISPLAY HOSTNAME HISTSIZE INPUTRC KDEDIR LS\\_COLORS",
 
-env\_keep+="MAIL PS1 PS2 QTDIR USERNAME LANG LC\_ADDRESS LC\_CTYPE", env\_keep+="LC\_COLLATE LC\_IDENTIFICATION
 
-LC\_MEASUREMENT LC\_MESSAGES", env\_keep+="LC\_MONETARY LC\_NAME LC\_NUMERIC LC\_PAPER LC\_TELEPHONE", env\_keep+="LC\_TIME
 
-LC\_ALL LANGUAGE LINGUAS \_XKB\_CHARSET XAUTHORITY", secure\_path=/sbin\:/bin\:/usr/sbin\:/usr/bin
-```
+env\\_keep+="MAIL PS1 PS2 QTDIR USERNAME LANG LC\\_ADDRESS LC\\_CTYPE", env\\_keep+="LC\\_COLLATE LC\\_IDENTIFICATION
+
+
+
+LC\\_MEASUREMENT LC\\_MESSAGES", env\\_keep+="LC\\_MONETARY LC\\_NAME LC\\_NUMERIC LC\\_PAPER LC\\_TELEPHONE", env\\_keep+="LC\\_TIME
+
+
+
+LC\\_ALL LANGUAGE LINGUAS \\_XKB\\_CHARSET XAUTHORITY", secure\\_path=/sbin\:/bin\:/usr/sbin\:/usr/bin
 
 User oldboy may run the following commands on this host:
 

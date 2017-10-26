@@ -5,7 +5,7 @@
 * 超级用户：UID为0代表root，皇帝linux管理员：root
 * 普通用户：UID为500-655
 
-     由超级用户或具备超级用户权限的用户创建的用户
+  由超级用户或具备超级用户权限的用户创建的用户
 
 * 虚拟用户：UID为1-499，存在满足文件或服务启动的需要。一般不能登录，只是傀儡
 
@@ -446,7 +446,7 @@ drwx------ 2 alex666 alex666 4096 Apr  5 11:39 /alex666/
 
 /etc/gshadow 用户组密码资讯文件
 
-1.2.11 usermod用户信息修改相关命令
+### 1.2.11 usermod用户信息修改相关命令
 
 与usermod有关的文件有：
 
@@ -484,23 +484,19 @@ oldgirl
 
 Matching Defaults entries for oldgirl on this host:
 
-```
-!visiblepw, always\_set\_home, env\_reset, env\_keep="COLORS DISPLAY HOSTNAME HISTSIZE INPUTRC KDEDIR LS\_COLORS",
+!visiblepw, always\\_set\\_home, env\\_reset, env\\_keep="COLORS DISPLAY HOSTNAME HISTSIZE INPUTRC KDEDIR LS\\_COLORS",
 
-env\_keep+="MAIL PS1 PS2 QTDIR USERNAME LANG LC\_ADDRESS LC\_CTYPE", env\_keep+="LC\_COLLATE LC\_IDENTIFICATION
+env\\_keep+="MAIL PS1 PS2 QTDIR USERNAME LANG LC\\_ADDRESS LC\\_CTYPE", env\\_keep+="LC\\_COLLATE LC\\_IDENTIFICATION
 
-LC\_MEASUREMENT LC\_MESSAGES", env\_keep+="LC\_MONETARY LC\_NAME LC\_NUMERIC LC\_PAPER LC\_TELEPHONE", env\_keep+="LC\_TIME
+LC\\_MEASUREMENT LC\\_MESSAGES", env\\_keep+="LC\\_MONETARY LC\\_NAME LC\\_NUMERIC LC\\_PAPER LC\\_TELEPHONE", env\\_keep+="LC\\_TIME
 
-LC\_ALL LANGUAGE LINGUAS \_XKB\_CHARSET XAUTHORITY", secure\_path=/sbin\:/bin\:/usr/sbin\:/usr/bin
-```
+LC\\_ALL LANGUAGE LINGUAS \\_XKB\\_CHARSET XAUTHORITY", secure\\_path=/sbin\:/bin\:/usr/sbin\:/usr/bin
 
 User oldgirl may run the following commands on this host:
 
-```
-\(ALL\) /bin/touch, \(ALL\) /bin/mkdir, \(ALL\) /bin/ls
-```
+\\(ALL\\) /bin/touch, \\(ALL\\) /bin/mkdir, \\(ALL\\) /bin/ls
 
-1.2.12 groupadd 添加用户组的命令
+### 1.2.12 groupadd 添加用户组的命令
 
 groupadd    注释说明
 
@@ -528,7 +524,7 @@ uid=1000\(jason007\) gid=1000\(jason007\) groups=1000\(jason007\)
 
 uid=2000\(oldboy888\) gid=2000\(oldboy888\) groups=2000\(oldboy888\)
 
-1.2.13 企业场景删除用户处理方法：
+### 1.2.13 企业场景删除用户处理方法
 
 一般不能确认用户相关目录有没有重要数据就不能用-r
 
@@ -542,7 +538,7 @@ uid=2000\(oldboy888\) gid=2000\(oldboy888\) groups=2000\(oldboy888\)
 
 提示：只要删除和修改都要小心谨慎，不需要的请注释
 
-1.2.14 内容小结
+### 1.2.14 内容小结
 
 useradd
 
@@ -552,7 +548,7 @@ useradd
 
 /etc/login.defs 文件作用
 
-1.2.15 档案
+### 1.2.15 档案
 
 /etc/passwd 使用者账号资讯
 
@@ -568,7 +564,7 @@ useradd
 
 /etc/login.defs 系统广义设定
 
-1.2.16 passwd 用户密码相关 修改用户密码
+### 1.2.16 passwd 用户密码相关 修改用户密码
 
 passwd    注释说明
 
@@ -636,7 +632,7 @@ oldboy666
 
 \[oldboy666@oldboyedu35-nb ~\]$
 
-1.2.17 chage 修改用户密码有效期限change age\(密码年纪  密码相关的时间）
+### 1.2.17 chage 修改用户密码有效期限change age\(密码年纪  密码相关的时间）
 
 chage参数选项    注释（带※表示很重要）
 
@@ -740,7 +736,7 @@ Number of days of warning before password expires    : 10
 
 \[root@oldboyedu-35 ~\]\#
 
-1.2.18 企业场景：用户密码管理
+### 1.2.18 企业场景：用户密码管理
 
 1、    密码要复杂8/12位以上字母数字页数字符-keepass（软件，密码存放在本地）lastpass（在线版本）
 
@@ -754,7 +750,7 @@ Number of days of warning before password expires    : 10
 
 6、    锁头chattr+i +a lsattr
 
-1.2.19 示例 下面要求oldboy666用户7天内不能更改密码，60天以后必须修改密码，过期前10天通知oldboy666用户，过期后30天后禁止用户登陆。
+### 1.2.19 示例 下面要求oldboy666用户7天内不能更改密码，60天以后必须修改密码，过期前10天通知oldboy666用户，过期后30天后禁止用户登陆。
 
 \[root@oldboyedu35-nb ~\]\# passwd --minimum=7 --maximum=60 --warning=10 --inactive=30 oldboy666
 
@@ -788,13 +784,13 @@ Adjusting aging data for user oldboy666.
 
 passwd: Success
 
-1.2.20 用户查询命令小结
+### 1.2.20 用户查询命令小结
 
 需要知道：id w who list lastlog
 
 了解：users groups newgrp
 
-1.2.21     查看用户信息
+### 1.2.21     查看用户信息
 
 \[root@oldboyedu35-nb ~\]\# id
 
@@ -902,11 +898,11 @@ oldboy666                                  \*\*Never logged in\*\*
 
 \[root@oldboyedu35-nb ~\]\# \#\#\#\#登录----本地登录（输入用户名密码）或者远程登录  （xshell crt putty\)
 
-1.3 linux用户身份切换命令
+## 1.3 linux用户身份切换命令
 
 在linux系统中，每个文件、目录和进程，都是归属于某一个用户的，没有其他用户的许可，其他的普通用户是无法操作的，除外。root用户的特权还表现在root可以超越任何用户和用户组来对文件或目录进行读取、修改或删除（在系统正常的许可范围内）；对可执行程序的执行，终止；对硬件设备的添加、创建和移除等；也可以对文件和目录进行属主和权限进行修改。
 
-1.3.1 su 命令
+### 1.3.1 su 命令
 
 su \[选项参数\] \[用户\]
 
@@ -928,7 +924,7 @@ initializes HOME，SHELL，USER，LOGNAME and PATH
 
 \#---&gt;切换到一个shell下，执行一个命令，然后退出所切换的用户环境
 
-1.3.2 su 命令的总结
+### 1.3.2 su 命令的总结
 
 1）普通用户切换到root用户，可使用su -或su - root.必须输入root的密码才能完成切换。
 
@@ -940,7 +936,7 @@ su 和su - 的区别 谈学习linux运维方法
 
 oldboy.blog.51cto.com/2561410/1053606
 
-1.3.3 su 命令的优缺点
+### 1.3.3 su 命令的优缺点
 
 毫无疑问，切换用户身份的su命令为我们管理linux系统带来了很多方便，通过切换到root下，可以完成各种系统管理工作，只要任何一个普通用户知道了root用户的密码，都可以以普通用户的身份切换到root来完成本来无法完成的系统管理工作。
 

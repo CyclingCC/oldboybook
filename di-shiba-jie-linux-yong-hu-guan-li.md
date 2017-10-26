@@ -1050,11 +1050,9 @@ oldboy
 
 /usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/oldboy/bin
 
-1.3.6 sudo的执行过程
+### 1.3.6 sudo的执行过程
 
-
-
-1.3.7 sudo 命令
+### 1.3.7 sudo 命令
 
 sudo \[参数选项\] 命令
 
@@ -1068,7 +1066,7 @@ sudo参数选项    选项说明
 
 -k    同-K，删除时间戳，下一个sudo命令要求提供密码，前提是该用户授权中不能有NOPASSWD参数。时间戳默认5分钟也会时效。
 
-1.3.8 更改授权/etc/sudoers 文件的几个方法
+### 1.3.8 更改授权/etc/sudoers 文件的几个方法
 
 1）    方法一：执行visudo 命令自动编辑/etc/sudoers 文件（推荐）
 
@@ -1090,7 +1088,7 @@ sudo参数选项    选项说明
 
 \#--&gt; 注意用户组授权普通用户的区别，开头为“%”百分号。sa组同用户一样必须是已经存在的，是系统的用户组
 
-1.3.9 /etc/sudoers 的规则大致可分为两类
+### 1.3.9 /etc/sudoers 的规则大致可分为两类
 
 一类是别名定义
 
@@ -1108,7 +1106,7 @@ sudo参数选项    选项说明
 
 4、Cmnd\_Alias 命令别名
 
-1.3.10 回顾下别名和具体授权配置的关系，sudo授权
+### 1.3.10 回顾下别名和具体授权配置的关系，sudo授权
 
 用户或组    主机（可以执行sudo的机器）    可以切换的用户角色（runas）    命令
 
@@ -1122,7 +1120,7 @@ FILESERVERS = fs1,fs2    Runas\_Alias op=root    Cmnd\_Alias SERVICES=/sbin/serv
 
 用户别名的位置    主机别名位置（可以在哪个主机上执行sudo）    Runas别名的位置（以谁的身份执行sudo授权的命令）    命令别名的位置
 
-1.3.11 sudo 小结 但以上直接修改sudoers的配置文件方法有以下需要注意的几点：
+### 1.3.11 sudo 小结 但以上直接修改sudoers的配置文件方法有以下需要注意的几点：
 
 1. 如何修改sudoers
 
@@ -1138,7 +1136,7 @@ echo命令是追加“&gt;&gt;”,不是重定向“&gt;”，除了echo外，�
 
 3. 留后路：确保知道正确的root用户密码，以便在sudo出现问题时可以通过普通用户等执行su - 命令切换到root进行恢复
 
-1.3.12 实例（尚方宝剑）
+### 1.3.12 实例（尚方宝剑）
 
 \[root@oldboyedu35-nb ~\]\# \#\#\#给 oldboy  尚方宝剑   useradd
 
@@ -1228,7 +1226,7 @@ Sorry, user oldboy is not allowed to execute '/bin/rm -f /root/\*' as root on ol
 
 \[oldboy@oldboyedu35-nb ~\]$ \#\#抱歉，用户oldboy不能以root用户的身份执行 rm命令
 
-1.3.13 案例  如何快速的查找某个目录下存在着大量的inode
+### 1.3.13 案例  如何快速的查找某个目录下存在着大量的inode
 
 1.目录的大小比较大
 
@@ -1258,7 +1256,7 @@ find /oldboy
 
 oldboy目录出现的次数  ?????    目录下面的文件数量
 
-1.3.14 回顾下别名和具体授权配置的关系
+### 1.3.14 回顾下别名和具体授权配置的关系
 
 用户或组    主机（可以执行sudo的机器）    可以切换的用户角色
 
@@ -1268,7 +1266,7 @@ User\_Alias    Host\_Alias    Runas\_Alias    Cmd\_Alias
 
 用户别名的位置    主机别名的位置（可以在哪个主机上执行sudo）    Runas别名的位置（以谁的身份执行sudo授权命令）    命令别名的位置
 
-1.3.15 工作中一个软件tomcat,以oldboy的身份运行中。
+### 1.3.15 工作中一个软件tomcat,以oldboy的身份运行中
 
 重启服务器的时候，我想让tomcat继续以oldboy的身份运行。
 
@@ -1300,7 +1298,7 @@ tddoc    9042     1  0 Jan16 ?        00:00:02 java -server -Xmn125M -Xms512M -X
 
 su - tddoc  -c '/bin/sh /home/tddoc/bin/deploy.sh'
 
-1.3.16 别名的修改例子
+### 1.3.16 别名的修改例子
 
 例子：
 
@@ -1374,7 +1372,7 @@ oldboy            ALL=\(ALL\)                                                   
 
 用户（用户别名）  可以在哪一台机器上面执行sudo=\(你可以以谁的身份执行sudo命令\)   命令（命令别名）
 
-1.3.17 总结：
+### 1.3.17 总结
 
 1、和用户相关的配置文件知识点：
 
@@ -1416,7 +1414,7 @@ groupmod
 
 id w last
 
-1.4 sudo日志审计
+## 1.4 sudo日志审计
 
 echo "Defaults        logfile=/var/log/sudo.log"&gt;&gt;/etc/sudoers
 
@@ -1444,7 +1442,7 @@ USER=root ; COMMAND=/usr/bin/passwd root
 
 Sorry, user oldboy is not allowed to execute '/usr/bin/passwd root' as root on oldboyedu-35.
 
-1.4.1 sudo授权最小化 例题：给oldboy用户授权passwd命令，安全不能把皇帝推翻
+### 1.4.1 sudo授权最小化 例题：给oldboy用户授权passwd命令，安全不能把皇帝推翻
 
 第一个里程碑-不让修改root密码
 
@@ -1474,11 +1472,9 @@ Sorry, user oldboy is not allowed to execute '/usr/bin/passwd' as root on oldboy
 
 Sorry, user oldboy is not allowed to execute '/usr/bin/passwd root' as root on oldboyedu-35.
 
-1.4.2 .sudo权限集中管理项目
+### 1.4.2 .sudo权限集中管理项目
 
-背景：
-
-root泛滥。
+背景：root泛滥
 
 \#第一个里程碑-演员--用户：
 
@@ -1614,7 +1610,7 @@ NETADMINS ALL=\(root\)   NETMAGCMD
 
 2. 大象放冰箱-一步一步来
 
-1.4.3 sudo 配置文件/etc/sudoers 授权规则注意事项总结：
+### 1.4.3 sudo 配置文件/etc/sudoers 授权规则注意事项总结：
 
 1）    授权规则中的所有ALL字符串必须为大写字母
 

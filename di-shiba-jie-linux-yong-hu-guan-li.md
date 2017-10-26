@@ -956,11 +956,11 @@ oldboy.blog.51cto.com/2561410/1053606
 
 4，安全，最小化
 
-1.3.4 课后作业：linux root用户密码忘记了，如何找回来？
+### 1.3.4 课后作业：linux root用户密码忘记了，如何找回来？
 
 进入单用户，把/etc/passwd 删除清空，然后在进入命令行模式
 
-1.3.5 实例：
+### 1.3.5 实例：
 
 \[root@oldboyedu35-nb ~\]\# usermod -L oldboy666
 
@@ -1051,6 +1051,8 @@ oldboy
 /usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/oldboy/bin
 
 1.3.6 sudo的执行过程
+
+
 
 1.3.7 sudo 命令
 

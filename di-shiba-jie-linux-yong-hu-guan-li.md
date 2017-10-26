@@ -400,7 +400,7 @@ su: warning: cannot change directory to /home/mysql: No such file or directory
 
 This account is currently not available.
 
-### 2.9 useradd小结
+### 1.2.9 useradd小结
 
 添加用户alex666，UID指定为999，归属为用户组 root、oldboy、sa成员，并设置其用户注释信息为HandsomeBoy，设置家目录为/alex666，其shell类型为/bin/sh
 

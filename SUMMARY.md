@@ -26,5 +26,5 @@
 * [21-oldboy-linux-raid分类](21-oldboy-linux-raidfen-lei.md)
 * [21-oldboy-linux-三剑客之sed命令](21-oldboy-linuxsan-jian-ke-zhi-sed-ming-ling.md)
 * [22-oldboy-linux-三剑客之awk命令](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling.md)
-* [23-oldboy-linux-Shell编程基础](23-oldboy-linux-shellbian-cheng-ji-chu.md)
+* [24-oldboy-linux-Shell编程基础](23-oldboy-linux-shellbian-cheng-ji-chu.md)
 

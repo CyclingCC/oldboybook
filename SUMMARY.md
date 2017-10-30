@@ -23,9 +23,8 @@
 * [18-oldboy-linux-系统权限](18-oldboy-linuxxi-tong-quan-xian.md)
 * [19-oldboy-linux-用户管理](di-shiba-jie-linux-yong-hu-guan-li.md)
 * [20-oldboy-linux-磁盘与文件系统](20-oldboy-linuxci-pan-yu-wen-jian-xi-tong.md)
+* [21-oldboy-linux-raid分类](21-oldboy-linux-raidfen-lei.md)
 * [21-oldboy-linux-三剑客之sed命令](21-oldboy-linuxsan-jian-ke-zhi-sed-ming-ling.md)
 * [22-oldboy-linux-三剑客之awk命令](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling.md)
 * [23-oldboy-linux-Shell编程基础](23-oldboy-linux-shellbian-cheng-ji-chu.md)
-
-
 

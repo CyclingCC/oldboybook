@@ -46,15 +46,15 @@ drwxr-xr-x 2 root root 4096 May  2 12:10 /data/
 
 ### 1.2.5  相对路径和绝对路径
 
-绝对路径：从/\(根\)开始的路径
+##### 绝对路径：从/\(根\)开始的路径
 
 cat /etc/sysconfig/network-scripts/ifcfg-eth0
 
-相对路径:不从/\(根\)开始
+##### 相对路径:不从/\(根\)开始
 
 etc/sysconfig/network-scripts/
 
-例子：
+##### 例子：
 
 \[root@oldboy /\]\# cd /etc &lt;==绝对路径
 

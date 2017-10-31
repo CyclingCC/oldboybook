@@ -243,7 +243,3 @@ getenforce查看selinux的状态
 
 5.再次用cat查看，更改后的状态
 
-###### 
-
-
-

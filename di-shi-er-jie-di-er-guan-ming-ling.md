@@ -176,17 +176,7 @@ man 命令
 
 help  命令  （linux内置命令）
 
-网上搜索
-
-[http://linux.51yip.com](http://linux.51yip.com)
-
-[http://man.linuxde.net](http://man.linuxde.net)
-
-[https://www.linux.org/docs/](https://www.linux.org/docs/)
-
-[https://www.gnu.org/software/coreutils/manual/coreutils.html](https://www.gnu.org/software/coreutils/manual/coreutils.html)
-
-# 第3章 ls
+# 第3章 ls命令的集合
 
 -F   给不同文件加不同符号标示
 
@@ -230,7 +220,7 @@ xiaofan
 
 xingfujie
 
-3.2  find
+### 3.2  find
 
 \[root@oldboy oldboy\]\# find /oldboy/ -maxdepth 1 -type d ! -name "oldboy"
 

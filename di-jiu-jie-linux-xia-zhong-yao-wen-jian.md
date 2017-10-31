@@ -272,8 +272,6 @@ dmseg 命令可以查看系统故障信息（/var/log/dmesg） 依赖于rsyslog�
 
 轮询日志由 /etc/logrotate.conf  和  /etc/logrotate.d/syslog 控制
 
-
-
 | /var/log/secure | 记录登入系统存取信息的文件，按周自动轮询，例如pop3,ssh,telnet,ftp等都会记录在此。系统安全的日志文件，依赖于rsyslog服务 |
 | :--- | :--- |
 | /var/log/messages | 系统默认的日志文件每周自动切割一次 |
@@ -328,6 +326,4 @@ dmseg 命令可以查看系统故障信息（/var/log/dmesg） 依赖于rsyslog�
 /proc/loadavg
 
 /proc/mounts
-
-[http://yangrong.blog.51cto.com/6945369/1288072](http://yangrong.blog.51cto.com/6945369/1288072)
 

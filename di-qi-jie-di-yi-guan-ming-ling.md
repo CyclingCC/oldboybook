@@ -313,7 +313,7 @@ stu11       stu13  stu15  stu17  stu19
 
 10  3  5  7  9  stu11       stu13  stu15  stu17  stu19
 
-### 5.3 操作习惯：
+### 5.3 操作习惯
 
 目录下的内容，不包括目录data本身
 
@@ -521,7 +521,7 @@ find /data -type f -name "oldboy.txt"\|xargs -i cp {} /tmp/
 
 # 第9章 xargs命令
 
-#### xargs 又称管道命令，构造参数等。是给命令传递参数的一个过滤器,也是组合多个命令的一个工具 它把一个数据流分割为一些足够小的块,以方便过滤器和命令进行处理 。简单的说 就是把 其他命令的给它的数据 传递给它后面的命令作为参数
+##### xargs 又称管道命令，构造参数等。是给命令传递参数的一个过滤器,也是组合多个命令的一个工具 它把一个数据流分割为一些足够小的块,以方便过滤器和命令进行处理 。简单的说 就是把 其他命令的给它的数据 传递给它后面的命令作为参数
 
 ### 9.1  xargs  从标准输入获取内容创建和执行命令
 
@@ -829,7 +829,7 @@ source /etc/profile 全局生效
 
 ~/.bashrc    当前用户生效
 
-# 第16章 sed命令 
+# 第16章 sed命令
 
 sed \*\*\*\*\* 擅长取行，替换，linux三剑客老二
 
@@ -837,7 +837,7 @@ sed  \[选项\]  \[sed命令\]  \[输入文件\]
 
 -n 取消默认输出，功能p\(print\)打印
 
-   例：取行：sed -n '20,30p' ett.txt 
+例：取行：sed -n '20,30p' ett.txt
 
 g与s联合使用时，表示对当前行全局匹配替换，s常说的查找并替换，用一个字符串替换成另一个
 
@@ -849,7 +849,7 @@ g与s联合使用时，表示对当前行全局匹配替换，s常说的查找�
 
 sed -n '/oldboy/p' test.txt
 
-\[root@oldboy ~\]\# sed -n '20,30p' a.txt 
+\[root@oldboy ~\]\# sed -n '20,30p' a.txt
 
 20
 
@@ -875,9 +875,9 @@ sed -n '/oldboy/p' test.txt
 
 #### 16.2  sed替换
 
-\[root@oldboy ~\]\# sed 's\#oldgirl\#gongli\#' a.txt 
+\[root@oldboy ~\]\# sed 's\#oldgirl\#gongli\#' a.txt
 
-oldboy gongli 
+oldboy gongli
 
 gongli
 
@@ -885,7 +885,7 @@ gongli
 
 #### 16.3  sed删除
 
-\[root@oldboy data\]\# cat test.txt 
+\[root@oldboy data\]\# cat test.txt
 
 test
 
@@ -893,7 +893,7 @@ liyao
 
 oldboy
 
-\[root@oldboy36 ~\]\# sed -n '/oldboy/!p' oldboy.txt 
+\[root@oldboy36 ~\]\# sed -n '/oldboy/!p' oldboy.txt
 
 test
 
@@ -907,17 +907,17 @@ liyao
 
 #### 16.4  sed修改文件内容
 
-\[root@oldboy ~\]\# sed -i 's\#oldgirl\#gongli\#g' a.txt 
+\[root@oldboy ~\]\# sed -i 's\#oldgirl\#gongli\#g' a.txt
 
-\[root@oldboy ~\]\# cat a.txt 
+\[root@oldboy ~\]\# cat a.txt
 
-oldboy gongli 
+oldboy gongli
 
 gongli
 
 # 第17章 awk命令
 
-#### 17.1 awk   linux三剑客老大  
+#### 17.1 awk   linux三剑客老大
 
 NR  行号
 
@@ -925,7 +925,7 @@ NR  行号
 
 $0  整行
 
-\[root@oldboy ~\]\# awk 'NR&gt;19&&NR&lt;31' a.txt 
+\[root@oldboy ~\]\# awk 'NR&gt;19&&NR&lt;31' a.txt
 
 20
 
@@ -951,7 +951,7 @@ $0  整行
 
 seq 50 \|awk 'NR==20,NR==30 {print}'
 
-\[root@oldboy36 ~\]\# awk '!/oldboy/' oldboy.txt 
+\[root@oldboy36 ~\]\# awk '!/oldboy/' oldboy.txt
 
 test
 
@@ -963,13 +963,11 @@ liyao
 
 \[root@oldboy oldboy\]\# ifconfig eth0\|sed -nr 's\#^.\*dr:\(.\*\) B.\*$\#\1\#gp'
 
-192.168.33.128 
+192.168.33.128
 
 \[root@oldboy oldboy\]\# ifconfig eth0\|awk -F "\[ :\]+" 'NR==2 {print $4}'
 
 192.168.33.128
-
-
 
 # 第18章  实战题目
 
@@ -995,7 +993,7 @@ touch alex.txt
 
 \[root@oldboyedu36 oldboy\]\# \#找到你要处理的东西
 
-\[root@oldboyedu36 oldboy\]\# find /oldboy/ -type f 
+\[root@oldboyedu36 oldboy\]\# find /oldboy/ -type f
 
 /oldboy/alex.txt
 
@@ -1019,17 +1017,17 @@ touch alex.txt
 
 sed 's\#找谁\#替换成啥\#g'
 
-\[root@oldboyedu36 oldboy\]\# sed 's\#oldboy\#oldgirl\#g' /oldboy/test.sh 
+\[root@oldboyedu36 oldboy\]\# sed 's\#oldboy\#oldgirl\#g' /oldboy/test.sh
 
 oldgirl
 
-\[root@oldboyedu36 oldboy\]\# cat /oldboy/test.sh 
+\[root@oldboyedu36 oldboy\]\# cat /oldboy/test.sh
 
 oldboy
 
-\[root@oldboyedu36 oldboy\]\# sed -i 's\#oldboy\#oldgirl\#g' /oldboy/test.sh 
+\[root@oldboyedu36 oldboy\]\# sed -i 's\#oldboy\#oldgirl\#g' /oldboy/test.sh
 
-\[root@oldboyedu36 oldboy\]\# cat /oldboy/test.sh 
+\[root@oldboyedu36 oldboy\]\# cat /oldboy/test.sh
 
 oldgirl
 
@@ -1061,13 +1059,13 @@ oldgirl
 
 \[root@oldboyedu36 oldboy\]\# \#\#结果对了 -i
 
- \[root@oldboyedu36 oldboy\]\# find /oldboy/ -type f -name "\*.sh"\|xargs sed -i 's\#oldboy\#oldgirl\#g' /oldboy/test.sh
+\[root@oldboyedu36 oldboy\]\# find /oldboy/ -type f -name "\*.sh"\|xargs sed -i 's\#oldboy\#oldgirl\#g' /oldboy/test.sh
 
-\[root@oldboyedu36 oldboy\]\# cat /oldboy/test.sh 
+\[root@oldboyedu36 oldboy\]\# cat /oldboy/test.sh
 
 oldgirl
 
-\[root@oldboyedu36 oldboy\]\# cat /oldboy/test/del.sh 
+\[root@oldboyedu36 oldboy\]\# cat /oldboy/test/del.sh
 
 oldgirl
 
@@ -1075,7 +1073,7 @@ oldgirl
 
 方法二
 
-\[root@oldboyedu36 ~\]\# \#\#\# 
+\[root@oldboyedu36 ~\]\# \#\#\#
 
 \[root@oldboyedu36 ~\]\# which mkdir
 
@@ -1085,13 +1083,13 @@ oldgirl
 
 -rwxr-xr-x. 1 root root 50056 Mar 23 02:52 /bin/mkdir
 
-\[root@oldboyedu36 ~\]\# 
+\[root@oldboyedu36 ~\]\#
 
 \[root@oldboyedu36 ~\]\# \#\#\#把上面两条命令合起来
 
- \[root@oldboyedu36 ~\]\# \#\#\#ls -l 此处放置的是which mkdir命令的结果
+\[root@oldboyedu36 ~\]\# \#\#\#ls -l 此处放置的是which mkdir命令的结果
 
-\[root@oldboyedu36 ~\]\# ls -l which mkdir 
+\[root@oldboyedu36 ~\]\# ls -l which mkdir
 
 ls: cannot access which: No such file or directory
 
@@ -1103,11 +1101,11 @@ ls: cannot access mkdir: No such file or directory
 
 \[root@oldboyedu36 ~\]\# \#\#$\(\)  表示 先执行里面的"命令",然后把命令结果留下来
 
-\[root@oldboyedu36 ~\]\# \#\#$\(\)  =====  \`\` 
+\[root@oldboyedu36 ~\]\# \#\#$\(\)  =====  \`\`
 
 $\(\)  &lt;==&gt;  \`\`    在一个命令中包含另一个命令
 
-\[root@oldboyedu36 ~\]\# \#sed 's\#oldboy\#oldgirl\#g'  文件名字 文件 文件 文件 
+\[root@oldboyedu36 ~\]\# \#sed 's\#oldboy\#oldgirl\#g'  文件名字 文件 文件 文件
 
 \[root@oldboyedu36 ~\]\# \#sed 's\#oldboy\#oldgirl\#g'   这些文件怎么得到的？
 
@@ -1125,7 +1123,7 @@ oldgirl
 
 方法三
 
-\[root@oldboyedu36 ~\]\# \#\#\# 
+\[root@oldboyedu36 ~\]\# \#\#\#
 
 \[root@oldboyedu36 ~\]\# find /oldboy/ -type f -name "\*.sh"
 
@@ -1167,13 +1165,11 @@ info  命令
 
 搜索  linux  ls  命令
 
-http://man.linuxde.net/
+[http://man.linuxde.net/](http://man.linuxde.net/)
 
-http://linux.51yip.com/
+[http://linux.51yip.com/](http://linux.51yip.com/)
 
-http://www.shouce.ren/api/linux/\#
-
-
+[http://www.shouce.ren/api/linux/\#](http://www.shouce.ren/api/linux/#)
 
 # 第20章  常用快捷键
 
@@ -1194,6 +1190,4 @@ ctrl+u  命令行删除光标到行首的内容
 ctrl+k  命令行删除光标到行尾的内容
 
 ctrl+r  命令行搜索
-
-
 

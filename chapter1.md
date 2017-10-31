@@ -12,7 +12,7 @@ Linux系统分为：内核+shell+扩展软件
 
 ![](/assets/import.png)
 
-              图1-1     操作系统与计算机软硬件关系示意图
+图1-1     操作系统与计算机软硬件关系示意图
 
 目前PC\(Intel x86系列\)计算机上比较常见的操作系统有Windows、Linux、DOS、Unix等。
 

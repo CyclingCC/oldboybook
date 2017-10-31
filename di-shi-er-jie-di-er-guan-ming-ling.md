@@ -390,9 +390,9 @@ drwxr-xr-x  2 root root  4096 May  7 21:26 test
 
 操作完毕后，希望快速返回上一次进入的目录，即/oldboy 目录，该如何做呢？（提示：不能用 cd /oldboy 命令呦）
 
-cd  -
+cd  -    返回到上一次的工作目录
 
-cd  .
+cd  .    当前目录
 
 cd  ..   切换到上级目录
 

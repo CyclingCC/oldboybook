@@ -644,8 +644,6 @@ tmpfs           931M     0  931M   0% /dev/shm
 
 ### 6.4  inode满案例2：因inode节点导致执行passwd命令报错处理记录
 
-[http://blog.sina.com.cn/s/blog\_506ed9e6010106kj.html](http://blog.sina.com.cn/s/blog_506ed9e6010106kj.html)
-
 # 第7章   用户和组
 
 ### 7.1  linux多用户多任务介绍

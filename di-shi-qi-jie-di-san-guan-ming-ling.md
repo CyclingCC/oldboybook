@@ -94,9 +94,7 @@ ifconfig eth0 \|grep -Po '\(?&lt;=addr:\)\S+'
 
 curl     -s  不显示错误信息
 
-```
-       -I   取协议（http/ftp等）头
-```
+            -I   取协议（http/ftp等）头
 
 \[root@oldboy ~\]\# curl -I www.baidu.com 2&gt;/dev/null \|sed -n '1p'
 

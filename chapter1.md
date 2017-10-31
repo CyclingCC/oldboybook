@@ -121,9 +121,7 @@ Linux的标志和吉祥物为一只名字叫作Tux的企鹅——Torvalds' Unix�
 
 ![](/assets/图1-3.png)
 
-```
 图1-3     Linux发展历程中相关人物
-```
 
 # 第2章 Linux核心概念
 

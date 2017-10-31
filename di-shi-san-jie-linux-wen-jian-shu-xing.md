@@ -640,7 +640,7 @@ tmpfs           931M     0  931M   0% /dev/shm
 
 ### 6.3  文件删除原理，进程调用文件，但是文件硬链接数为0，文件没有被释放 ，磁盘满故障
 
-[http://oldboy.blog.51cto.com/2561410/612351](http://oldboy.blog.51cto.com/2561410/612351)
+##### [http://oldboy.blog.51cto.com/2561410/612351](http://oldboy.blog.51cto.com/2561410/612351)
 
 ### 6.4  inode满案例2：因inode节点导致执行passwd命令报错处理记录
 
@@ -684,9 +684,9 @@ uid=500\(oldboy\) gid=500\(oldboy\) 组=500\(oldboy\)
 
 /etc/passwd
 
-| root        :x                 :0    :0       :root        :/root          :/bin/bash |
+| root          :x                      :0           :0       :root               :/root                                 :/bin/bash |
 | :--- |
-| 用户名 :密码占位符 :UID :GID :用户说明 :用户家目录 :shell解释器 |
+| 用户名      :密码占位符     :UID      :GID    :用户说明       :用户家目录                       :shell解释器 |
 
 /etc/shadow
 

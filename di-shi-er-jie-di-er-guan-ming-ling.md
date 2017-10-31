@@ -980,7 +980,7 @@ stu20
 
 19 stu19
 
-# 20 stu20
+20 stu20
 
 # 第13章  打印轻量级 web 服务的配置文件 nginx.conf 内容的行号及内容，该如何做？
 
@@ -1002,8 +1002,6 @@ sed = oldboy.log\| sed 'N;s/\n/ /'
 
 :help G
 
-[http://vimdoc.sourceforge.net/htmldoc/usr\_toc.html](http://vimdoc.sourceforge.net/htmldoc/usr_toc.html)
-
 # 第15章  linux系统启动
 
 ### 15.1  linux 系统运行级别一般为 0-6，请分别写出每个级别的含义
@@ -1024,19 +1022,19 @@ sed = oldboy.log\| sed 'N;s/\n/ /'
 
 6 - 重新启动
 
-15.1.2  系统运行级别配置文件
+#### 15.1.2  系统运行级别配置文件
 
 /etc/inittab
 
 id:3:initdefault:
 
-15.1.3  查看运行级别
+#### 15.1.3  查看运行级别
 
 \[root@oldboy36 oldboy\]\# runlevel
 
 N 3
 
-15.1.4  切换运行级别
+#### 15.1.4  切换运行级别
 
 \[root@oldboy36 oldboy\]\# init 2
 
@@ -1076,7 +1074,7 @@ LANG="en\_US.UTF-8"
 
 SYSFONT="latarcyrheb-sun16"
 
-查看系统支持的字符集
+##### 查看系统支持的字符集
 
 \[root@iZ2570yi9c2Z ~\]\# locale -a
 
@@ -1178,7 +1176,7 @@ tar xf etc.tar.gz -C /tmp/
 
 # 第19章 练习题
 
-已知如下命令及结果：
+##### 已知如下命令及结果：
 
 \[oldboy@test ~\]$ echo "I am oldboy,myqq is 31333741"&gt;&gt;oldboy.txt
 
@@ -1186,9 +1184,9 @@ tar xf etc.tar.gz -C /tmp/
 
 I am oldboy,myqq is 31333741
 
-现在需要从文件中过滤出“oldboy”和“31333741”字符串，请给出命令
+##### 现在需要从文件中过滤出“oldboy”和“31333741”字符串，请给出命令
 
-创建环境
+##### 创建环境
 
 mkdir /oldboy
 
@@ -1200,13 +1198,13 @@ echo "I am oldboy,myqq is 31333741"&gt;/oldboy/oldboy.txt
 
 I am oldboy,myqq is 31333741
 
-19.1 方法1  sed+sed
+##### 19.1 方法1  sed+sed
 
 \[root@oldboy36 oldboy\]\# sed 's\#I am \#\#' oldboy.txt \|sed 's\#,myqq is\#\#'
 
 oldboy 31333741
 
-19.2  方法2  cut+sed
+##### 19.2  方法2  cut+sed
 
 \[root@oldboy36 oldboy\]\# cut -d " " -f3,5 oldboy.txt \|sed 's\#,myqq\#\#'
 
@@ -1216,7 +1214,7 @@ oldboy 31333741
 
 oldboy 31333741
 
-19.3  方法3  awk+sed
+##### 19.3  方法3  awk+sed
 
 \[root@oldboy36 oldboy\]\# awk '{print $3,$5}' oldboy.txt \|sed 's\#,myqq\#\#'
 
@@ -1226,7 +1224,7 @@ oldboy 31333741
 
 oldboy 31333741
 
-19.4  方法4  awk
+##### 19.4  方法4  awk
 
 \[root@oldboy36 oldboy\]\# awk -F "\[, \]" '{print $3,$6}' oldboy.txt
 
@@ -1240,7 +1238,7 @@ oldboy 31333741
 
 oldboy,31333741
 
-19.5  方法5  cut
+##### 19.5  方法5  cut
 
 \[root@oldboy36 oldboy\]\# cut -c6-11,20- oldboy.txt
 

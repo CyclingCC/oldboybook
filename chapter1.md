@@ -151,8 +151,6 @@ GNU的全称为：GNU's not unix，意思是“GNU不是Unix”，GNU计划，�
 
 ![](/assets/图1-4.png)
 
-
-
 ## 2.4 GPL知识
 
 概念：GPL\\(General Public Licese\\)叫作：GNU通用公共许可证。
@@ -209,9 +207,7 @@ Linux的发行商包括Slackware、Redhat、Debian、Fedora、TurboLinux、Mandr
 * Fedora: 为Redhat的一个分支，仍遵循GPL协议，可以认为是Redhat预发布版。\(就像是游戏的公测版\)
 * CentOS\(community Enterprise Operating System\)：与Redhat做到二进制级别的一模一样，Redhat的另一个重要分支，以Redhat所发布的源代码重建符合GPL许可协议的Linux系统，即将Redhat Linux源代码的商标Logo以及非自由软件部分去除在编译而成的版本，目前CentOS已被Redhat公司收购，但仍开源免费，CentOS Linux是国内互联网公司使用最多的Linux系统版本，也是本书的"主人公"，本书后面所有的内容讲解都是基于CentOS这个操作系统的，绝大部分内容几乎无需任何修改同样适合其他操作系统版本。
 
-```
-提示：有关Linux操作系统，记住Redhat、CentOS、Ubuntu、Fedora、SUSE、Debian等即可。
-```
+##### 提示：有关Linux操作系统，记住Redhat、CentOS、Ubuntu、Fedora、SUSE、Debian等即可。
 
 ## 4.2 选择适合的Linux系统学习
 
@@ -243,11 +239,11 @@ Fedora=稳定之后=&gt;Redhat=去Logo去除收费=&gt;CentOS
 2. CentOS 6系列：占45%左右，主流版本有CentOS 6.2、CentOS 6.4、CentOS 6.6、CentOS 6.8，推介新手学习。=&gt;Linux kernrl 2.6
 3. CentOS 7系列：最新的系统，目前正式使用的企业不多，因此不建议去玩它，最好学习目前企业使用较多的6系列，等过2年企业都上了CentOS7的系统，就可以轻松转过去了，不要盲目选择较高的版本。
 
-`小面试题：你们公司服务器使用的版本系统是什么？`
+##### 小面试题：你们公司服务器使用的版本系统是什么？
 
-`CentOS 6.8 X86_64 内核版本3.6.32`
+##### CentOS 6.8 X86\_64 内核版本3.6.32
 
-`面试技巧：大家被面试官问及使用什么样操作系统时，一定要一次性说出来(系统版本、内核版本、32位和64位)，例如：我们工作中使用的是CentOS 6.7 x86_64位Linux系统，内核版本为2.6.32-573，这才是一个合格的Linux运维人员的表现。`
+##### 面试技巧：大家被面试官问及使用什么样操作系统时，一定要一次性说出来\(系统版本、内核版本、32位和64位\)，例如：我们工作中使用的是CentOS 6.7 x86\_64位Linux系统，内核版本为2.6.32-573，这才是一个合格的Linux运维人员的表现。
 
 # 第5章 总结
 
@@ -272,8 +268,4 @@ Fedora=稳定之后=&gt;Redhat=去Logo去除收费=&gt;CentOS
 10. 学会搭建学习Linux的环境
 
 注意：最好口述表达出上述了解的内容
-
-# 
-
-
 

@@ -4,7 +4,7 @@
 
 * [介绍](README.md)
 * [01-oldboy-linux-硬件基础](di-yi-jie-linux-ying-jian-ji-chu.md)
-* [02-oldboy-linux-系统发展及系统版本介绍](chapter1.md)
+* [02-oldboy-linux-系统发展及版本介绍](chapter1.md)
 * [03-oldboy-linux-系统安装](di-san-jie.md)
 * [04-oldboy-linux-Xshell优化](di-wu-jie-xshell-you-hua.md)
 * [05-oldboy-linux-远程连接故障排查](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha.md)
@@ -27,6 +27,4 @@
 * [22-oldboy-linux-三剑客之sed命令](21-oldboy-linuxsan-jian-ke-zhi-sed-ming-ling.md)
 * [23-oldboy-linux-三剑客之awk命令](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling.md)
 * [24-oldboy-linux-Shell编程基础](23-oldboy-linux-shellbian-cheng-ji-chu.md)
-
-
 

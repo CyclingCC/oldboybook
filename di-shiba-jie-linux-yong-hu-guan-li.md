@@ -126,7 +126,6 @@ This account is currently not available.
 | su | \#--&gt;※用户角色切换工具。su - |
 | sudo | \#--&gt;※sudo是通过另一个用户来执行命令（execute a command as another user）,su是用来切换用户，然后通过切换到的用户来完成相应的任务，但sudo能在命令后面直接跟命令执行，比如sudo ls /root，不需要root密码就可以执行只有root才能执行相应的命令。或具备的目录权限；这个权限需要通过visudo命令或直接编辑/etc/sudoers来实现 |
 | visudo | \#--&gt;※visudo配置sudo权限的编辑命令；也可以不用这个命令，直接用vi来编辑/etc/sudoers实现。但推荐用visudo来操作（会自动检查语法） |
-|  |  |
 
 #### 1.2.2 管理用户组命令汇总
 

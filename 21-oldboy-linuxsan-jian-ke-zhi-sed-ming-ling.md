@@ -1,30 +1,18 @@
-第1章 基础
+# 第1章 基础
 
-1.1  sed简介
+## 1.1  sed简介
 
+   sed是stream editor（字符流编辑器）的缩写，简称流编辑器。什么是流呢？大家可以想象一下流水线，sed就像一个车间一样，文件中的每行字符都是原料，运到sed车间，然后经过一系列的加工处理，最后从流水线下来就变成货物了
 
+![](/assets/20-1.png)
 
-       sed是stream editor（字符流编辑器）的缩写，简称流编辑器。什么是流呢？
+## 1.2  sed功能
 
-   大家可以想象一下流水线，sed就像一个车间一样，文件中的每行字符都是原料，
+  sed命令是操作、过滤和转换文本内容的强大工具。常用功能有增删改查（增加、删除、修改、查询），其中查询的功能中最常用的两大功能是过滤（过滤指定字符串），取行（取出指定行）
 
-   运到sed车间，然后经过一系列的加工处理，最后从流水线下来就变成货物了
+   我们现在准备学习的sed版本是GNU开源版本的，我的实验环境是Centos6.7系统，内核版本是  2.6.32-573.el6.x86\_64
 
-
-
-1.2  sed功能
-
-      sed命令是操作、过滤和转换文本内容的强大工具。常用功能有增删改查
-
-  （增加、删除、修改、查询），其中查询的功能中最常用的两大功能是过滤（过滤指定字符串），
-
-   取行（取出指定行）
-
-       我们现在准备学习的sed版本是GNU开源版本的，我的实验环境是
-
-   Centos6.7系统，内核版本是  2.6.32-573.el6.x86\_64
-
-\[root@oldboy ~\]\# cat /etc/redhat-release 
+\[root@oldboy ~\]\# cat /etc/redhat-release
 
 CentOS release 6.7 \(Final\)
 
@@ -36,37 +24,15 @@ CentOS release 6.7 \(Final\)
 
 GNU sed version 4.2.1
 
-   
-
-
-
-1.3  语法格式
+## 1.3  语法格式
 
 sed  \[option\]  '\[sed-commands\]'  \[input-file\]
 
 sed  \[选项\]   '\[sed命令\]'       \[输入文件\]
 
+## 1.4  选项
 
-
-
-
-1.4  选项
-
-options\[选项\]	解释说明
-
--n	取消默认输出，常与sed软件的p命令连用
-
--e	一行命令语句可以执行多条sed命令
-
--f	选项后面可以接sed脚本的文件名
-
--r	支持扩展正则表达式，默认只支持基本正则表达式
-
--i	修改文件内容（修改磁盘上的数据），sed软件默认只修改内存中的数据
-
--s	把后面的多个文件看成一个一个的单独文件 ，sed默认会把多个文件看成一个文件
-
-
+![](/assets/tab20-4.png)
 
 说明：
 
@@ -78,127 +44,39 @@ options\[选项\]	解释说明
 
 4、input-file（输入文件）是可选的，sed还能够从标准输入如管道获取输入
 
+## 1.5  命令执行流程
 
+sed软件从文件或管道中读取一行，处理一行，输出一行；再读取一行，再处理一行，再输出一行 ......
 
-1.5  命令执行流程
+ 小知识：一次一行的设计使得sed软件性能很高，sed在读取非常庞大的文件时不会出现卡顿的现象。大家都用过vi命令，用vi命令打开几十M或更大的文件，会发现卡顿现象，这是因为vi命令打开文件是一次性将文件加载到内存，然后在打开，因此卡顿的时间长短就取决于从磁盘到内存的读取速度。而且如果文件过大的话还会造成内存溢出现象。sed软件就很好的避免了这种情况，打开速度非常快，执行速度也很快
 
-    sed软件从文件或管道中读取一行，处理一行，输出一行；再读取一行，
+![](/assets/20-2.png)
 
- 再处理一行，再输出一行 ......
+## 1.6  sed命令
 
+![](/assets/tab20-5.png)
 
+## 1.7  sed特殊符号
 
-     小知识：一次一行的设计使得sed软件性能很高，sed在读取非常庞大的文件
+![](/assets/tab20-6.png)
 
-时不会出现卡顿的现象。大家都用过vi命令，用vi命令打开几十M或更大的文件，
+## 1.8  引号的区别
 
-会发现卡顿现象，这是因为vi命令打开文件是一次性将文件加载到内存，然后在打开，
-
-因此卡顿的时间长短就取决于从磁盘到内存的读取速度。而且如果文件过大的话还会造成内存溢出现象。sed软件就很好的避免了这种情况，打开速度非常快，执行速度也很快
-
-
-
-
-
-1.6  sed命令
-
-sed命令	命令含义
-
-a	追加，在指定行后添加一行或多行文本
-
-c	取代指定的行
-
-d	删除指定的行
-
-D	删除模式空间的部分内容，直到遇到换行符\n结束操作，与多行模式相关
-
-i	插入，在指定行前添加一行或多行文本
-
-h	把模式空间的内容复制到保持空间
-
-H	把模式空间的内容追加到保持空间
-
-g	把保持空间的内容复制到模式空间
-
-G	把保持空间的内容追加到模式空间
-
-x	交换模式空间和保持空间的内容
-
-l	打印不可见的字符
-
-n	清空模式空间的内容并读入下一行
-
-N	不清空模式空间，并读取下一行数据并追加到模式空间
-
-p	打印模式空间的内容，通常p与选项 -n 一起使用
-
-P	打印模式空间的内容，直到遇到换行符 \n 结束操作
-
-q	退出sed
-
-r	从指定文件读取数据
-
-s	替换，s\#old\#new\#g   这里g是s命令的替换标志
-
-w	另存，把模式空间的内容保存到文件中
-
-y	根据对应位置转换字符
-
-:label	定义一个标签
-
-b  label	执行该标签后面的命令
-
-t	如果前面的命令执行成功，那么就跳转到t指定的标签处，继续往下执行后续命令，否则，仍然继续正常的执行流程
-
-
-
-1.7  sed特殊符号
-
-特殊符号	解释说明
-
-!	取反
-
-=	打印当前行行号
-
-~	first~step   表示从first行开始，以步长step递增
-
-&	在  s命令中 后向引用表示被替换的所有内容
-
-;	顺序连接多条sed命令
-
-{}	对单个地址或地址范围执行批量操作
-
-+	地址范围中用到的符号，做加法运算
-
-
-
-1.8  引号的区别
-
-" " 双引号   把双引号内的内容输出出来；如果内容中有命令、变量等，会先把命令、变量解析出结果，然后再输出最终的内容。双引号内命令或变量的写法  \`命令或变量\`  或  $\(命令或变量\)，对于这些字符使用 \ 可以去除它们的特殊含义
-
-
+" " 双引号   把双引号内的内容输出出来；如果内容中有命令、变量等，会先把命令、变量解析出结果，然后再输出最终的内容。双引号内命令或变量的写法  \`命令或变量\`  或  $\(命令或变量\)，对于这些字符使用  可以去除它们的特殊含义
 
 ' ' 单引号    单引号内的内容原样输出
 
-
-
 不加引号    不会将含有空格的字符串视为一个整体输出，如果内容中有命令、变量等，会先把命令、变量解析出结果，然后再输出最终内容，如果字符串含有空格等特殊字符，则需加双引号
-
-
 
 \` \` 反引号  在反引号中的shell命令会被执行，执行的输出代替此处
 
+##### 引号从左到右找到它的另一半
 
+##### 引号可以一层一层包围，但是不能交错出现
 
-引号从左到右找到它的另一半
+# 第2章  sed命令详解
 
-引号可以一层一层包围，但是不能交错出现
-
-
-
-第2章  sed命令详解
-
-2.1  创建环境
+## 2.1  创建环境
 
 cat &gt;person.txt&lt;&lt;EOF
 
@@ -214,17 +92,13 @@ cat &gt;person.txt&lt;&lt;EOF
 
 EOF
 
-
-
 2.2  增
 
 a  追加文本到指定行后；  apend  追加
 
 i  插入文本到指定行前；   insert  插入
 
-
-
-\[root@oldboy ~\]\# cat person.txt 
+\[root@oldboy ~\]\# cat person.txt
 
 101,oldboy,CEO
 
@@ -250,9 +124,7 @@ i  插入文本到指定行前；   insert  插入
 
 105,feixue,CIO
 
-
-
-\[root@oldboy ~\]\# sed '2i 106,dandan,CSO' person.txt 
+\[root@oldboy ~\]\# sed '2i 106,dandan,CSO' person.txt
 
 101,oldboy,CEO
 
@@ -265,8 +137,6 @@ i  插入文本到指定行前；   insert  插入
 104,yy,CFO
 
 105,feixue,CIO
-
-
 
 \[root@oldboy ~\]\# sed '2a 106,dandan,CSO\n107,bingbing,CCO' person.txt
 
@@ -284,19 +154,15 @@ i  插入文本到指定行前；   insert  插入
 
 105,feixue,CIO
 
-
-
 sed '2a 106,dandan,CSO \
 
 107,bingbing,CCO' person.txt
-
-
 
 101,oldboy,CEO
 
 102,zhangyao,CTO
 
-106,dandan,CSO 
+106,dandan,CSO
 
 107,bingbing,CCO
 
@@ -306,10 +172,6 @@ sed '2a 106,dandan,CSO \
 
 105,feixue,CIO
 
-
-
-
-
 2.3  多行增
 
 \[root@oldboy ~\]\# echo -e "oldboy\noldboy"
@@ -317,8 +179,6 @@ sed '2a 106,dandan,CSO \
 oldboy
 
 oldboy
-
-
 
 企业案例1：优化SSH配置（一键完成增加若干参数）
 
@@ -340,29 +200,17 @@ GSSAPIAuthentication no
 
 sed -i '13i Port 52113\nPermitRootLogin no\nPermitEmptyPasswords no\nUseDNS no\nGSSAPIAuthentication no' sshd\_config
 
-
-
-
-
 \[root@oldboy ~\]\# echo A{,.ori}
 
 A A.ori
 
-
-
-
-
 2.4  { } 作用
-
-
 
 2.5  调试工具sedsed命令
 
 安装sedsed命令
 
-wget http://sedsed.sourceforge.net/sedsed-1.0 -O /bin/sedsed
-
-
+wget [http://sedsed.sourceforge.net/sedsed-1.0](http://sedsed.sourceforge.net/sedsed-1.0) -O /bin/sedsed
 
 PATT是pattern模式的缩写，即模式空间
 
@@ -370,21 +218,13 @@ HOLD是保持空间
 
 COMM是command的缩写，即sed命令
 
-
-
-
-
 sedsed -d --hide=hold "2i 106,dandan,CSO" person.txt
-
-
 
 2.6  删
 
 d  删除行  delete
 
-
-
-\[root@oldboy ~\]\# sed '3d' person.txt 
+\[root@oldboy ~\]\# sed '3d' person.txt
 
 101,oldboy,CEO
 
@@ -394,19 +234,17 @@ d  删除行  delete
 
 105,feixue,CIO
 
-\[root@oldboy ~\]\# sed '1,3d' person.txt 
+\[root@oldboy ~\]\# sed '1,3d' person.txt
 
 104,yy,CFO
 
 105,feixue,CIO
 
-
-
-\[root@oldboy ~\]\# sed '1,+3d' person.txt 
+\[root@oldboy ~\]\# sed '1,+3d' person.txt
 
 105,feixue,CIO
 
-\[root@oldboy ~\]\# sed '1~3d' person.txt 
+\[root@oldboy ~\]\# sed '1~3d' person.txt
 
 102,zhangyao,CTO
 
@@ -414,21 +252,13 @@ d  删除行  delete
 
 105,feixue,CIO
 
-
-
-
-
-\[root@oldboy ~\]\# sed '3,$d' person.txt 
+\[root@oldboy ~\]\# sed '3,$d' person.txt
 
 101,oldboy,CEO
 
 102,zhangyao,CTO
 
-
-
-
-
-\[root@oldboy ~\]\# sed '/oldboy/d' person.txt 
+\[root@oldboy ~\]\# sed '/oldboy/d' person.txt
 
 102,zhangyao,CTO
 
@@ -437,54 +267,46 @@ d  删除行  delete
 104,yy,CFO
 
 105,feixue,CIO
-
-
 
 2.7  地址范围
 
-    sed软件可以对单行或多行文本进行处理。如果在sed命令前面不指定地址范围，那么默认会匹配所有行
-
-
+```
+sed软件可以对单行或多行文本进行处理。如果在sed命令前面不指定地址范围，那么默认会匹配所有行
+```
 
 用法：  n1\[,n2\]{sed-commands}
 
 地址用逗号分隔，n1,n2 可以用数字、正则表达式、或者二者的组合表示
 
+地址范围    含义
 
+10{sed-commands}    第10行
 
-地址范围	含义
+10,20{sed-commands}    第10到20行
 
-10{sed-commands}	第10行
+10,+20{sed-commands}    第10到30\(10+20\)行
 
-10,20{sed-commands}	第10到20行
+1~2{sed-commands}    第1,3,5,7...行
 
-10,+20{sed-commands}	第10到30\(10+20\)行
+10,${sed-commands}    第10到最后一行
 
-1~2{sed-commands}	第1,3,5,7...行
+/oldboy/{sed-commands}    匹配oldboy的行
 
-10,${sed-commands}	第10到最后一行
+/oldboy/,/Alex/{sed-commands}    匹配oldboy的行到匹配Alex的行
 
-/oldboy/{sed-commands}	匹配oldboy的行
+/oldboy/,${sed-commands}    匹配oldboy的行到最后一行
 
-/oldboy/,/Alex/{sed-commands}	匹配oldboy的行到匹配Alex的行
+/oldboy/,10{sed-commands}    匹配oldboy的行到第10行
 
-/oldboy/,${sed-commands}	匹配oldboy的行到最后一行
+1,/Alex/{sed-commands}    第1行到匹配Alex的行
 
-/oldboy/,10{sed-commands}	匹配oldboy的行到第10行
-
-1,/Alex/{sed-commands}	第1行到匹配Alex的行
-
-/oldboy/,+2{sed-commands}	匹配oldboy的行到其后的2行
-
-
+/oldboy/,+2{sed-commands}    匹配oldboy的行到其后的2行
 
 2.8  改
 
 2.8.1  按行替换
 
-   c 用新行取代旧行   c  change
-
-
+c 用新行取代旧行   c  change
 
 \[root@oldboy ~\]\# sed '2c 106,dandan,CSO' person.txt
 
@@ -498,25 +320,19 @@ d  删除行  delete
 
 105,feixue,CIO
 
-
-
 2.8.2  字符串替换
 
-s：单独使用→将每一行中第一处匹配的字符串进行替换 ==&gt;sed命令 
+s：单独使用→将每一行中第一处匹配的字符串进行替换 ==&gt;sed命令
 
-g：每一行进行全部替换 ==&gt;sed命令s的替换标志之一，非sed命令 
+g：每一行进行全部替换 ==&gt;sed命令s的替换标志之一，非sed命令
 
 -i：修改文件内容 ==&gt;sed软件的选项
 
 sed软件替换模型\(方框▇被替换成三角▲\)
 
-sed  's/▇/▲/g' oldboy.log 
+sed  's/▇/▲/g' oldboy.log
 
 sed  's\#▇\#▲\#g' oldboy.log
-
-
-
-
 
 观察特点
 
@@ -528,17 +344,15 @@ sed  's\#▇\#▲\#g' oldboy.log
 
 4、默认sed软件是对模式空间\(内存中的数据\)操作，而-i选项会更改磁盘上的文件内容。
 
-
-
 \[root@oldboy ~\]\# sed '2s@^\#@@' /var/spool/cron/root       开头的\#去掉
 
 \#print my name
 
 \* \* \* \* \* /bin/echo dongzhi &gt;&gt;/server/log/dongzhi
 
-\[root@oldboy ~\]\# sed -i '2s@^\#@@' /var/spool/cron/root 
+\[root@oldboy ~\]\# sed -i '2s@^\#@@' /var/spool/cron/root
 
-\[root@oldboy ~\]\# cat /var/spool/cron/root 
+\[root@oldboy ~\]\# cat /var/spool/cron/root
 
 \#print my name
 
@@ -550,17 +364,15 @@ sed  's\#▇\#▲\#g' oldboy.log
 
 \#\* \* \* \* \* /bin/echo dongzhi &gt;&gt;/server/log/dongzhi
 
-\[root@oldboy ~\]\# sed -i 's@^@\#@' /var/spool/cron/root 
+\[root@oldboy ~\]\# sed -i 's@^@\#@' /var/spool/cron/root
 
-\[root@oldboy ~\]\# cat /var/spool/cron/root             
+\[root@oldboy ~\]\# cat /var/spool/cron/root
 
 \#\#print my name
 
 \#\* \* \* \* \* /bin/echo dongzhi &gt;&gt;/server/log/dongzhi
 
-
-
-\[root@oldboy ~\]\# sed '3s\#0\#9\#' person.txt 
+\[root@oldboy ~\]\# sed '3s\#0\#9\#' person.txt
 
 101,oldboy,CEO
 
@@ -572,15 +384,13 @@ sed  's\#▇\#▲\#g' oldboy.log
 
 105,feixue,CIO
 
-
-
 2.8.3  使用s命令替换为空
 
 \[root@iZ25hfz3698Z ~\]\# stat /etc/hosts
 
-  File: \`/etc/hosts'
+File: \`/etc/hosts'
 
-  Size: 125             Blocks: 8          IO Block: 4096   regular file
+Size: 125             Blocks: 8          IO Block: 4096   regular file
 
 Device: ca01h/51713d    Inode: 918496      Links: 1
 
@@ -596,11 +406,9 @@ Change: 2015-03-30 09:10:50.982117786 +0800
 
 2015-03-30
 
-
-
 2.8.4  变量替换
 
-\[root@oldboy ~\]\# cat test.txt 
+\[root@oldboy ~\]\# cat test.txt
 
 a
 
@@ -610,7 +418,7 @@ a
 
 \[root@oldboy ~\]\# x=a;y=b
 
-\[root@oldboy ~\]\# sed "s\#$y\#$x\#" test.txt 
+\[root@oldboy ~\]\# sed "s\#$y\#$x\#" test.txt
 
 a
 
@@ -620,7 +428,7 @@ a
 
 2.8.5  特殊命令 eval
 
-\[root@oldboy ~\]\# eval sed 's\#$y\#$x\#' test.txt   
+\[root@oldboy ~\]\# eval sed 's\#$y\#$x\#' test.txt
 
 a
 
@@ -628,41 +436,25 @@ a
 
 a
 
+2.8.6  分组替换
 
+sed软件的\\(\\)的功能可以记住正则表达式的一部分，其中， \1为第一个记住的模式
 
-2.8.6  分组替换  
+即第一个小括号中匹配的内容， \2为第二个记住的模式，即第二个小括号中匹配的内容，
 
-
-
-  sed软件的\\(\\)的功能可以记住正则表达式的一部分，其中， \1为第一个记住的模式
-
-  即第一个小括号中匹配的内容， \2为第二个记住的模式，即第二个小括号中匹配的内容，
-
-  sed最多可以记住9个
-
-
+sed最多可以记住9个
 
 关闭开机自启动的服务
 
 chkconfig --list \|grep "3:on"\|egrep -v "sshd\|crond\|network\|rsyslog\|sysstat"\|awk '{print $1}'\|sed -r 's\#\(^.\*\)\#chkconfig \1 off\#g'\|bash
 
-
-
-
-
 2.8.7  sed软件s命令中的特殊符号&
 
-
-
 &代表s\#\#\#g 中前两个\# 之间的全部内容
-
-
 
 2.8.8  批量修改文件名
 
 touch stu\_102999\_{1..5}\_finished.jpg
-
-
 
 \[root@oldboy test\]\# ls\|xargs -n1 \|sed -r 's\#\(^.\*\)\_finished\(.\*\)\#mv & \1\2\#g'
 
@@ -676,8 +468,6 @@ mv stu\_102999\_4\_finished.jpg stu\_102999\_4.jpg
 
 mv stu\_102999\_5\_finished.jpg stu\_102999\_5.jpg
 
-
-
 \[root@oldboy36 test\]\# ls \|sed -r 's\#\(^.\*\_\[0-9\]\)\(\_.\*d\)\(.\*$\)\#mv & \1\3\#'
 
 mv stu\_102999\_1\_finished.jpg stu\_102999\_1.jpg
@@ -690,13 +480,9 @@ mv stu\_102999\_4\_finished.jpg stu\_102999\_4.jpg
 
 mv stu\_102999\_5\_finished.jpg stu\_102999\_5.jpg
 
-
-
 在linux中有专门重命名的命令  rename
 
 rename  被替换的内容  替换的内容  替换的文件（可以使用通配符）
-
-
 
 \[root@oldboy tmp\]\# rename  "\_finished"  ""  \*
 
@@ -705,8 +491,6 @@ rename  被替换的内容  替换的内容  替换的文件（可以使用通�
 stu\_102999\_1.jpg  stu\_102999\_3.jpg  stu\_102999\_5.jpg
 
 stu\_102999\_2.jpg  stu\_102999\_4.jpg
-
-
 
 \[root@oldboy test\]\# ll
 
@@ -721,8 +505,6 @@ total 0
 -rw-r--r-- 1 root root 0 Sep  2 16:05 stu\_102999\_4.jpg
 
 -rw-r--r-- 1 root root 0 Sep  2 16:05 stu\_102999\_5.jpg
-
-
 
 \[root@oldboy test\]\# rename jpg JPG \*
 
@@ -756,47 +538,39 @@ total 0
 
 -rw-r--r-- 1 root root 0 Sep  2 16:05 oldboy\_102999\_5.JPG
 
-
-
 2.8.9  大小写字母相互转换
 
-\[root@iZ25hfz3698Z ~\]\# cat a.txt 
+\[root@iZ25hfz3698Z ~\]\# cat a.txt
 
 a1233\#%bcdefghijklmnopqrstuvwxyz
 
-\[root@iZ25hfz3698Z ~\]\# sed 's\#\[a-z\]\#\u&\#g' a.txt  
+\[root@iZ25hfz3698Z ~\]\# sed 's\#\[a-z\]\#\u&\#g' a.txt
 
 A1233\#%BCDEFGHIJKLMNOPQRSTUVWXYZ
 
-\[root@iZ25hfz3698Z ~\]\# sed -i 's\#\[a-z\]\#\u&\#g' a.txt  
+\[root@iZ25hfz3698Z ~\]\# sed -i 's\#\[a-z\]\#\u&\#g' a.txt
 
-\[root@iZ25hfz3698Z ~\]\# cat a.txt 
+\[root@iZ25hfz3698Z ~\]\# cat a.txt
 
 A1233\#%BCDEFGHIJKLMNOPQRSTUVWXYZ
 
-\[root@iZ25hfz3698Z ~\]\# sed 's\#\[A-Z\]\#\l&\#g' a.txt         
+\[root@iZ25hfz3698Z ~\]\# sed 's\#\[A-Z\]\#\l&\#g' a.txt
 
 a1233\#%bcdefghijklmnopqrstuvwxyz
 
-\[root@oldboy36 ~\]\# tr '\[a-z\]' '\[A-Z\]' &lt; a.txt 
+\[root@oldboy36 ~\]\# tr '\[a-z\]' '\[A-Z\]' &lt; a.txt
 
 A1233\#%BCDEFGHIJKLMNOPQRSTUVWXYZ
-
-
 
 echo abcASD \|sed  's\#.\#\u&\#g'
 
 ABCASD
 
-
-
 2.8.10  一对一字符替换
 
 sed  y\#\#\#
 
-
-
-cat person.txt 
+cat person.txt
 
 101,oldboy,CEO
 
@@ -808,9 +582,7 @@ cat person.txt
 
 105,feixue,CIO
 
-
-
-sed 'y\#123\#789\#' person.txt 
+sed 'y\#123\#789\#' person.txt
 
 707,oldboy,CEO
 
@@ -822,17 +594,9 @@ sed 'y\#123\#789\#' person.txt
 
 705,feixue,CIO
 
+2.9  查
 
-
-
-
-
-
-2.9  查 
-
-   p命令
-
-
+p命令
 
 \[root@oldboy ~\]\# cat person.txt
 
@@ -854,15 +618,11 @@ sed 'y\#123\#789\#' person.txt
 
 103,Alex,COO
 
-
-
 2.10  修改文件
 
-   -i   修改文件内容
+-i   修改文件内容
 
-   -i\[备份文件后缀\]
-
-
+-i\[备份文件后缀\]
 
 第3章  sed进阶
 
@@ -876,13 +636,11 @@ Ng   从第N处开始处理到结尾
 
 Ms 、 Ng  合用   表示  只对第M行从第N处开始处理到结尾
 
-
-
 3.2  数字标志
 
- s \# \# \# N  这种表示替换每行中第N次出现的内容，属于一种精确匹配。
+s \# \# \# N  这种表示替换每行中第N次出现的内容，属于一种精确匹配。
 
- N的取值范围： 1&lt;N&lt;512
+N的取值范围： 1&lt;N&lt;512
 
 cat &gt;num.txt &lt;&lt;EOF
 
@@ -896,9 +654,7 @@ cat &gt;num.txt &lt;&lt;EOF
 
 EOF
 
-
-
-\[root@oldboy ~\]\# cat num.txt             
+\[root@oldboy ~\]\# cat num.txt
 
 1 1 1 1 1
 
@@ -908,7 +664,7 @@ EOF
 
 1 1 1 1 1
 
-\[root@oldboy ~\]\# sed '1s\#1\#0\#1' num.txt  
+\[root@oldboy ~\]\# sed '1s\#1\#0\#1' num.txt
 
 0 1 1 1 1
 
@@ -918,7 +674,7 @@ EOF
 
 1 1 1 1 1
 
-\[root@oldboy ~\]\# sed '1s\#1\#0\#2' num.txt  
+\[root@oldboy ~\]\# sed '1s\#1\#0\#2' num.txt
 
 1 0 1 1 1
 
@@ -928,7 +684,7 @@ EOF
 
 1 1 1 1 1
 
-\[root@oldboy ~\]\# sed '1s\#1\#0\#2g' num.txt 
+\[root@oldboy ~\]\# sed '1s\#1\#0\#2g' num.txt
 
 1 0 0 0 0
 
@@ -938,37 +694,27 @@ EOF
 
 1 1 1 1 1
 
-
-
-
-
 3.3  顺序执行多个命令
 
-
-
-\[root@oldboy ~\]\# sed -n '3p;5p;10p' /etc/inittab 
+\[root@oldboy ~\]\# sed -n '3p;5p;10p' /etc/inittab
 
 \# ADDING OTHER CONFIGURATION HERE WILL HAVE NO EFFECT ON YOUR SYSTEM.
 
 \# System initialization is started by /etc/init/rcS.conf
-
-
 
 3.4  选项 -e
 
 每个 -e  选项后可接一个命令
 
-\[root@oldboy ~\]\# sed -n -e '3p' -e '5p' /etc/inittab        
+\[root@oldboy ~\]\# sed -n -e '3p' -e '5p' /etc/inittab
 
 \# ADDING OTHER CONFIGURATION HERE WILL HAVE NO EFFECT ON YOUR SYSTEM.
 
 \# System initialization is started by /etc/init/rcS.conf
 
-
-
 3.5  选项 -f
 
-\[root@oldboyedu37-nb ~\]\# cat linux36sed.sed 
+\[root@oldboyedu37-nb ~\]\# cat linux36sed.sed
 
 5p
 
@@ -976,15 +722,11 @@ EOF
 
 70p
 
-
-
 sed -n -f linux36sed.sed  linux36sed.txt
-
-
 
 3.6   =  打印行号
 
-\[root@oldboy36 ~\]\# sed -n '$=' person.txt 
+\[root@oldboy36 ~\]\# sed -n '$=' person.txt
 
 5
 
@@ -1010,11 +752,9 @@ sed -n -f linux36sed.sed  linux36sed.txt
 
 10 stu10
 
-
-
 3.7  { }  里面可以写多个命令
 
-\[root@oldboy ~\]\# sed -n '2,4{=;p}' person.txt  
+\[root@oldboy ~\]\# sed -n '2,4{=;p}' person.txt
 
 2
 
@@ -1027,8 +767,6 @@ sed -n -f linux36sed.sed  linux36sed.txt
 4
 
 104,yy,CFO
-
-
 
 3.8  模式空间  N
 
@@ -1064,11 +802,7 @@ sed -n -f linux36sed.sed  linux36sed.txt
 
 5 105,feixue,CIO
 
-
-
 3.9  企业案例7：SVN帐号密码案例
-
-
 
 很久以前，由于一些未知的原因，我们的SVN服务器的生成帐号密码的脚本生成的帐号密码如下：
 
@@ -1100,8 +834,6 @@ stu10327
 
 11ea966b
 
- 
-
 但是SVN服务器识别的帐号密码格式为：
 
 stu10309=7f753cc3
@@ -1118,9 +850,7 @@ stu10324=28d5860d
 
 stu10327=11ea966b
 
-
-
-\[root@oldboy ~\]\# cat svn.txt 
+\[root@oldboy ~\]\# cat svn.txt
 
 stu10309
 
@@ -1150,7 +880,7 @@ stu10327
 
 11ea966b
 
-\[root@oldboy ~\]\# sed 'N;s\#\n\#=\#g' svn.txt 
+\[root@oldboy ~\]\# sed 'N;s\#\n\#=\#g' svn.txt
 
 stu10309=7f753cc3
 
@@ -1165,6 +895,4 @@ stu10321=c441a16e
 stu10324=28d5860d
 
 stu10327=11ea966b
-
-
 

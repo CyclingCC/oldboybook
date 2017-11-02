@@ -375,8 +375,6 @@ SATA磁盘做线下不提供服务的数据存储或者并发业务访问不是�
 
 一般在出厂时就设定好了
 
-
-
 ## 1.21 相关命令
 
 sync   把内存中的数据刷到磁盘
@@ -395,7 +393,9 @@ sync   把内存中的数据刷到磁盘
 
 ##### \[root@oldboy ~\]\# free -m
 
-         total       used       free     shared    buffers     cached
+```
+     total       used       free     shared    buffers     cached
+```
 
 Mem:           988        140        848          0         24         36
 
@@ -485,39 +485,27 @@ Disk identifier: 0x00044026
 
 # 第2章 分区
 
+![](/assets/23-23.png)
+
 ## 2.1  MBR
 
 mbr是磁盘上的一小段扇区, 用来存放代码的空间
 
 grub是一段引导程序
 
-2.2   16B分区表
+![](/assets/23-24.png)
 
-字节数    说明
+## 2.2   16B分区表
 
-1B    State   ：分区状态，0=未激活， 0x80=激活
+![](/assets/tab23-29.png)
 
-1B    StartHead ： 分区起始磁头号
-
-2B    StartSC ： 分区起始扇区和柱面号。低字节的低6位为扇区号，高2位为柱面号的第9，10位；高字节为柱面号的低8位
-
-1B    Type  ： 分区类型，如0x0B=FAT32,0x83=linux等，00表示此项未使用
-
-1B    EndHead  ： 分区结束磁头号
-
-2B    EndSC ：分区结束扇区和柱面号，定义同前
-
-4B    Relative ： 线性寻址方式下分区相对扇区地址（对于基本分区即为绝对地址）
-
-4B    Sectors  ： 分区大小（总扇区数）
-
-2.3  分区类型
+## 2.3  分区类型
 
 msdos
 
 gpt
 
-2.4  导出磁盘MBR信息
+## 2.4  导出磁盘MBR信息
 
 dd if=/dev/sda of=mbr.bin bs=512 count=1
 
@@ -525,93 +513,65 @@ dd if=/dev/sda of=mbr.bin bs=512 count=1
 
 0000000    4658    4253    0000    0010    0000    0000    0100    002c
 
-```
       X   F   S   B nul nul dle nul nul nul nul nul nul soh   , nul
-```
 
 0000020    0000    0000    0000    0000    0000    0000    0000    0000
 
-```
     nul nul nul nul nul nul nul nul nul nul nul nul nul nul nul nul
-```
 
 0000040    3fb1    c2f7    777a    0f4b    1eaf    c0ea    ce8e    fb96
 
-```
       1   ?   w   B   z   w   K  si   /  rs   j   @  so   N syn   {
-```
 
 0000060    0000    0000    0100    0400    0000    0000    0000    8000
 
-```
     nul nul nul nul nul soh nul eot nul nul nul nul nul nul nul nul
-```
 
 0000100    0000    0000    0000    8100    0000    0000    0000    8200
 
-```
     nul nul nul nul nul nul nul soh nul nul nul nul nul nul nul stx
-```
 
 0000120    0000    0100    0000    004b    0000    0400    0000    0000
 
-```
     nul nul nul soh nul nul   K nul nul nul nul eot nul nul nul nul
-```
 
 0000140    0000    5503    b4b4    0002    0001    1000    0000    0000
 
-```
     nul nul etx   U   4   4 stx nul soh nul nul dle nul nul nul nul
-```
 
 0000160    0000    0000    0000    0000    090c    0408    000f    1900
 
-```
     nul nul nul nul nul nul nul nul  ff  ht  bs eot  si nul nul  em
-```
 
 0000200    0000    0000    0000    0002    0000    0000    0000    b700
 
-```
     nul nul nul nul nul nul stx nul nul nul nul nul nul nul nul   7
-```
 
 0000220    0000    0000    0000    00cc    0000    0000    0000    0000
 
-```
     nul nul nul nul nul nul   L nul nul nul nul nul nul nul nul nul
-```
 
 0000240    ffff    ffff    ffff    ffff    ffff    ffff    ffff    ffff
 
-```
     del del del del del del del del del del del del del del del del
-```
 
 0000260    0000    0000    0000    0200    0000    0000    0000    0000
 
-```
     nul nul nul nul nul nul nul stx nul nul nul nul nul nul nul nul
-```
 
 0000300    0000    0000    0000    0100    0000    8a00    0000    8a00
 
-```
     nul nul nul nul nul nul nul soh nul nul nul  nl nul nul nul  nl
-```
 
 0000320    0000    0000    0000    0000    0000    0000    0000    0000
 
-```
     nul nul nul nul nul nul nul nul nul nul nul nul nul nul nul nul
-```
 
 \*
 
 0001000
 
-2.5  磁盘分区重点：
+## 2.5  磁盘分区重点：
 
 1、给磁盘分区的实质就是针对0磁头0磁道1扇区的前446B后面接下来的64B的分区表进行设置
 
@@ -621,7 +581,7 @@ dd if=/dev/sda of=mbr.bin bs=512 count=1
 
 可以对小于2T的磁盘分区），首选fdisk，只有大于2T 时才去选parted
 
-企业面试题： 一台服务器6块600G的磁盘，raid5后，总大小3T，此时无法装系统，为什么？
+##### 企业面试题： 一台服务器6块600G的磁盘，raid5后，总大小3T，此时无法装系统，为什么？
 
 解决：
 
@@ -651,7 +611,7 @@ dd if=/dev/sda of=mbr.bin bs=512 count=1
 
 在这个扩展分区内可以划分多个逻辑分区
 
-2.6  主分区 primary
+## 2.6  主分区 primary
 
 一般来说，主分区是磁盘上必须存在的分区，一般为磁盘的第一个分区，我们可以在这个分区
 
@@ -663,7 +623,7 @@ swap  主分区
 
 /      主分区
 
-2.7  扩展分区 extended
+## 2.7  扩展分区 extended
 
 扩展分区不能算一个正常的分区，而是一个链接，起到一个指向的作用，我们可以再扩展分区内
 
@@ -671,7 +631,7 @@ swap  主分区
 
 一块硬盘只能存在一个扩展分区，并且扩展分区不能直接存放数据
 
-2.8  逻辑分区 logical
+## 2.8  逻辑分区 logical
 
 逻辑分区必须存在于扩展分区内，在扩展分区可以划分多个逻辑分区，逻辑分区的编号从
 
@@ -679,7 +639,7 @@ swap  主分区
 
 实际应用：主分区和逻辑分区，都可以使用，一般系统安装用主分区，存放数据都可以
 
-2.9   磁盘分区的几个问题范例
+## 2.9   磁盘分区的几个问题范例
 
 1、如果我要将我的一块大磁盘暂时分成四个分区，同时，还希望有其他的空间可以让我
 
@@ -707,7 +667,7 @@ swap  主分区
 
 [http://oldboy.blog.51cto.com/2561410/629558](http://oldboy.blog.51cto.com/2561410/629558)
 
-2.10  磁盘分区的设备名称
+## 2.10  磁盘分区的设备名称
 
 设备名称的定义规则如下，其他的分区可以依次类推：
 
@@ -731,17 +691,15 @@ SATA  SAS 都是 sd开头
 
 第二块SCSI接口磁盘的第5个分区   /dev/sdb5
 
-2.11  fdisk分区
+## 2.11  fdisk分区
 
 \[root@oldboy ~\]\# fdisk /dev/sdc
 
 WARNING: DOS-compatible mode is deprecated. It's strongly recommended to
 
-```
-     switch off the mode \(command 'c'\) and change display units to
+     switch off the mode \\(command 'c'\\) and change display units to
 
-     sectors \(command 'u'\).
-```
+     sectors \\(command 'u'\\).
 
 Command \(m for help\): m
 
@@ -1017,9 +975,9 @@ Calling ioctl\(\) to re-read partition table.
 
 Syncing disks.
 
-fdisk -cu /dev/sdb
+##### fdisk -cu /dev/sdb
 
-2.12 查看磁盘分区
+## 2.12 查看磁盘分区
 
 \[root@oldboy ~\]\# fdisk -l
 
@@ -1085,7 +1043,7 @@ Device Boot      Start         End      Blocks   Id  System
 
 /dev/sdc6              45         102       59376   83  Linux
 
-2.13  查看磁盘分区UUID
+## 2.13  查看磁盘分区UUID
 
 \[root@oldboy36 ~\]\# blkid
 
@@ -1095,7 +1053,7 @@ Device Boot      Start         End      Blocks   Id  System
 
 /dev/sda3: UUID="70c86ea3-354e-45e3-a2d8-186ecbbc7292" TYPE="ext4"
 
-2.14 格式化
+## 2.14 格式化
 
 \[root@oldboy ~\]\# partprobe /dev/sdc   强制内核重新查找一次分区表 （分区完成后执行此命令）
 
@@ -1129,9 +1087,7 @@ Maximum filesystem blocks=11534336
 
 Superblock backups stored on blocks:
 
-```
     8193
-```
 
 正在写入inode表: 完成
 
@@ -1149,7 +1105,7 @@ tune2fs 1.41.12 \(17-May-2010\)
 
 Setting maximal mount count to -1
 
-2.15   partprobe /dev/sdc 报错
+## 2.15   partprobe /dev/sdc 报错
 
 Warning: WARNING: the kernel failed to re-read the partition table on /dev/sdb \(Device or resource busy\).  As a result, it may not reflect all of your changes until after reboot
 
@@ -1171,13 +1127,13 @@ Block size:               4096
 
 Inode size:               256
 
-2.16 xfs分区格式：
+## 2.16 xfs分区格式：
 
 yum install xfsprogs kmod-xfs xorg-x11-xfs xfsdump -y
 
 mkfs.xfs -f /dev/sdb1
 
-2.17 挂载
+## 2.17 挂载
 
 \[root@oldboy ~\]\# mount /dev/sdc1 /mnt/
 
@@ -1193,7 +1149,7 @@ tmpfs           495M     0  495M   0% /dev/shm
 
 /dev/sdc1       9.7M  100K  9.0M   2% /mnt
 
-2.18  硬盘被分区后格式化过程
+## 2.18  硬盘被分区后格式化过程
 
 硬盘被分区后，真正的格式化过程：
 
@@ -1255,7 +1211,7 @@ UUID=4bc27c91-8cae-44fb-ba19-4213d1d47326  /mnt  ext4   defaults        0 0
 
 /dev/sdb2               /opt                    ext3    defaults        0 0
 
-2.19  对损坏的磁盘做手动检查
+## 2.19  对损坏的磁盘做手动检查
 
 方法1：
 
@@ -1271,17 +1227,17 @@ Checking for bad blocks \(read-only test\): done
 
 Pass completed, 0 bad blocks found.
 
-2.20  如何检查并修复/dev/hda5
+## 2.20  如何检查并修复/dev/hda5
 
 fsck -C -t msdos -a /dev/hda5
 
 e2fsck -p /dev/hda5
 
-作业：fstab被破坏了，导致系统无法启动，如何修复？
+## 作业：fstab被破坏了，导致系统无法启动，如何修复？
 
 使用光盘引导进入救援模式，或者在单用户模式下，使用mount / -o remount 重新挂载提权，然后修改/etc/fstab文件，修改正确后重启即可
 
-2.21 parted  分区
+## 2.21 parted  分区
 
 不写单位默认为MB
 
@@ -1311,9 +1267,7 @@ p           primary分区
 
 1           分区编号
 
-```
         起始扇区（可以不写）
-```
 
 +100M        结束扇区 （可以直接写大小）
 
@@ -1349,7 +1303,7 @@ parted /dev/sdb mkpart logical ext4 22 32 Ignore
 
 parted /dev/sdb p
 
-2.22  fdisk  parted  ext4  xfs
+## 2.22  fdisk  parted  ext4  xfs
 
 传统的fdisk分区不支持2T以上的磁盘分区，而parted分区可以支持，而ext4格式不支持16T以上的磁盘空间分区，必须使用xfs分区
 

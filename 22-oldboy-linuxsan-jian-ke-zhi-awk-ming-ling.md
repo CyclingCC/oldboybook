@@ -1,12 +1,8 @@
-第1章 awk
+# 第1章 awk
 
-1.1  awk简介
+## 1.1  awk简介
 
-```
-awk不仅是linux系统中的一个命令，而且是一种编程语言，可以用来处理数据和生成报告（excel）。
-```
-
-处理的数据可以是一个或多个文件，可以是来自标准输入，也可以通过管道获取输入，awk可以在命令行上直接编辑命令进行操作，也可以编写成awk程序来进行更为复杂的运用
+awk不仅是linux系统中的一个命令，而且是一种编程语言，可以用来处理数据和生成报告（excel）。处理的数据可以是一个或多个文件，可以是来自标准输入，也可以通过管道获取输入，awk可以在命令行上直接编辑命令进行操作，也可以编写成awk程序来进行更为复杂的运用
 
 1.2  awk工作原理
 
@@ -1168,43 +1164,37 @@ oldboooooooooooooooooooy
 
 4.1  awk支持的关系运算符
 
-运算符	含义	示例
+运算符    含义    示例
 
-&lt;	小于	x&lt;y
+&lt;    小于    x&lt;y
 
-&lt;=	小于或等于	x&lt;=y
+&lt;=    小于或等于    x&lt;=y
 
-==	等于	x==y
+==    等于    x==y
 
-!=	不等于	x!=y
+!=    不等于    x!=y
 
-&gt;=	大于或等于	x&gt;=y
+&gt;=    大于或等于    x&gt;=y
 
-&gt;	大于	x&gt;y
+&gt;    大于    x&gt;y
 
 以上的运算符均是针对数字，下面两个运算符针对字符串
 
-~	与正则表达式匹配	x~/y/
+~    与正则表达式匹配    x~/y/
 
-!~	与正则表达式不匹配	x!~y
+!~    与正则表达式不匹配    x!~y
 
 awk把字符串认为是变量
 
-
-
-\[root@db02 ~\]\# awk -F : '$5=="root"' passwd 
+\[root@db02 ~\]\# awk -F : '$5=="root"' passwd
 
 root:x:0:0:root:/root:/bin/bash
-
-
 
 4.2   企业案例：取出常用服务端口号
 
 ftp，http，https，mysql， ssh端口号
 
-
-
-\[root@nfsserver files\]\# awk -F "\[ /\]+" 'NR&gt;100&&NR&lt;120{print $2,$0}' /etc/services 
+\[root@nfsserver files\]\# awk -F "\[ /\]+" 'NR&gt;100&&NR&lt;120{print $2,$0}' /etc/services
 
 unfortunately \# unfortunately the poppassd \(Eudora\) uses a port which has already
 
@@ -1244,7 +1234,7 @@ alias \# alias here. This should work for programs asking for this service.
 
 117 uucp-path       117/tcp
 
-\[root@nfsserver files\]\# awk -F "\[ /\]+" '$1~/^\(ftp\|http\|https\|mysql\|ssh\)$/{print $2,$0}' /etc/services 
+\[root@nfsserver files\]\# awk -F "\[ /\]+" '$1~/^\(ftp\|http\|https\|mysql\|ssh\)$/{print $2,$0}' /etc/services
 
 21 ftp             21/tcp
 
@@ -1274,8 +1264,6 @@ alias \# alias here. This should work for programs asking for this service.
 
 22 ssh             22/sctp                 \# SSH
 
-
-
 \[root@db02 ~\]\# awk -F "\[ /\]+" '$1~/^\(ftp\|http\|https\|mysql\|ssh\)$/{print $1,$2}' /etc/services \|uniq
 
 ftp 21
@@ -1292,8 +1280,6 @@ ftp 21
 
 ssh 22
 
-
-
 4.3   范围模式
 
 awk '/start pos/,/end pos/{pint $0}' passwd
@@ -1301,10 +1287,6 @@ awk '/start pos/,/end pos/{pint $0}' passwd
 awk '/start pos/,NR==xxx{print $0}' passwd
 
 范围模式的时候，范围条件的时候，表达式必须能匹配一行
-
-
-
-
 
 \[root@nfsserver files\]\# sed -n '2,5p' count.txt
 
@@ -1326,9 +1308,7 @@ lp x lp var spool lpd sbin nologin
 
 5 lp x lp var spool lpd sbin nologin
 
-
-
-\[root@nfsserver files\]\# sed -n '/^bin/,/^lp/p' count.txt 
+\[root@nfsserver files\]\# sed -n '/^bin/,/^lp/p' count.txt
 
 bin x bin bin sbin nologin
 
@@ -1338,7 +1318,7 @@ adm x adm var adm sbin nologin
 
 lp x lp var spool lpd sbin nologin
 
-\[root@nfsserver files\]\# awk '/^bin/,/^lp/{print NR,$0}' count.txt 
+\[root@nfsserver files\]\# awk '/^bin/,/^lp/{print NR,$0}' count.txt
 
 2 bin x bin bin sbin nologin
 
@@ -1358,7 +1338,7 @@ lp x lp var spool lpd sbin nologin
 
 4、范围表达式 \( NR==2，NR==5    /正则表达式-开始/，/正则结束/  \)
 
-7、$1~/正则表达式-开始/,$3~/正则结束/ 
+7、$1~/正则表达式-开始/,$3~/正则结束/
 
 8、列，区域：FS 刀分隔符，FS区域分隔符
 
@@ -1368,8 +1348,6 @@ lp x lp var spool lpd sbin nologin
 
 11、 RS====&gt;  NR  记录号，随着记录的增加 NR 自动+1
 
-
-
 第5章  awk  BEGIN模块
 
 BEGIN模块在awk读取文件之前就执行，一般用来定义我们的内置变量（FS,RS等）
@@ -1378,21 +1356,15 @@ BEGIN模块在awk读取文件之前就执行，一般用来定义我们的内置
 
 BEGIN模块可以做一些测试，如算术运算
 
-
-
 \[root@oldboy files\]\# awk 'BEGIN{print 10/3}'
 
 3.33333
-
-
 
 第6章  awk  END模块
 
 END在awk读取完所有文件的时候，再执行END模块，一般用来输出一个结果（累加，数组结果），
 
 也可以是和BEGIN模块类似的结尾标识信息
-
-
 
 注意 BEGIN或END模块只能有一个
 
@@ -1401,8 +1373,6 @@ END在awk读取完所有文件的时候，再执行END模块，一般用来输�
 'NR==2{print $1}NR==5{print $0}'
 
 awk  -F  ":"  'NR==1{print NR,$0}NR==2{print NR,$NF}'  awkfile.txt
-
-
 
 第7章  awk编程思想
 
@@ -1414,7 +1384,7 @@ awk  -F  ":"  'NR==1{print NR,$0}NR==2{print NR,$NF}'  awkfile.txt
 
 3、END模块用来最后输出，统计信息，awk数组信息  （累加（a++;a+=$0） awk数组）
 
-\[root@oldboy files\]\# cat awkfile.txt 
+\[root@oldboy files\]\# cat awkfile.txt
 
 root:x:0:0:root:/root:/bin/bash
 
@@ -1460,9 +1430,7 @@ mail      8
 
 uucp      10
 
-
-
-awk 'BEGIN{print "hello world!"}{print NR,$0}END{print "end of file"}' count.txt 
+awk 'BEGIN{print "hello world!"}{print NR,$0}END{print "end of file"}' count.txt
 
 hello world!
 
@@ -1490,19 +1458,19 @@ end of file
 
 统计/etc/services文件里面的空行数量
 
-\[root@nfsserver files\]\# awk '$0~/^$/{a++}END{print a}' /etc/services 
+\[root@nfsserver files\]\# awk '$0~/^$/{a++}END{print a}' /etc/services
 
 16
 
-\[root@oldboy files\]\# grep -c "^$" /etc/services 
+\[root@oldboy files\]\# grep -c "^$" /etc/services
 
 16
 
 企业面试题： awkfile2.txt里面以:为分隔符，区域3大于15，一共有多少行？
 
-\[root@nfsserver files\]\# head -20 /etc/passwd &gt; awkfile2.txt 
+\[root@nfsserver files\]\# head -20 /etc/passwd &gt; awkfile2.txt
 
-\[root@nfsserver files\]\# awk -F ":" '$3&gt;15{a+=1;print a}' awkfile2.txt 
+\[root@nfsserver files\]\# awk -F ":" '$3&gt;15{a+=1;print a}' awkfile2.txt
 
 1
 
@@ -1516,7 +1484,7 @@ end of file
 
 6
 
-\[root@nfsserver files\]\# awk -F ":" '$3&gt;15{a+=1}END{print a}' awkfile2.txt  
+\[root@nfsserver files\]\# awk -F ":" '$3&gt;15{a+=1}END{print a}' awkfile2.txt
 
 6
 
@@ -1554,29 +1522,19 @@ the result is:5050
 
 command.txt中，要求一行显示1个，并在文件尾部统计他们的个数
 
-
-
 通配符：用来匹配文件名的  {}字符序列
 
 正则表达：字符串
 
-
-
-\[root@nfsserver ~\]\# find $\(echo $PATH \|tr ":" " "\) -type f -name "???" 2&gt;/dev/null \|awk '{a++}END{print a}' 
+\[root@nfsserver ~\]\# find $\(echo $PATH \|tr ":" " "\) -type f -name "???" 2&gt;/dev/null \|awk '{a++}END{print a}'
 
 69
 
 第8章 awk基本结构
 
-
-
 awk  'BEGIN{}/pattern/{coms}END{coms}'
 
-
-
 awk执行过程
-
-
 
 1、命令行的赋值（-F 或 -v）
 
@@ -1586,53 +1544,47 @@ awk执行过程
 
 4、判断条件（模式）是否成立
 
-   成立则执行对应动作里面的内容
+成立则执行对应动作里面的内容
 
-   读取下一行，循环判断
+读取下一行，循环判断
 
-   直到读取到最后一个文件的结尾
+直到读取到最后一个文件的结尾
 
 5、最后执行END模式里面的内容
 
 6、结束
 
-
-
-
-
-\[root@nfsserver files\]\# awk -F ":" 'NR==1{print NR,$0}NR==2{print NR,$NF"second line"}' awkfile.txt 
+\[root@nfsserver files\]\# awk -F ":" 'NR==1{print NR,$0}NR==2{print NR,$NF"second line"}' awkfile.txt
 
 1 root:x:0:0:root:/root:/bin/bash
 
 2 /sbin/nologinsecond line
 
-
-
 第9章  awk内置变量（预定义变量）
 
-变量名	属性
+变量名    属性
 
-$0	当前记录，一整行
+$0    当前记录，一整行
 
-$1，$2，$3，...$n	当前记录的第n个字段，字段间由FS分隔
+$1，$2，$3，...$n    当前记录的第n个字段，字段间由FS分隔
 
-FS	输入字段分隔符  默认是空格
+FS    输入字段分隔符  默认是空格
 
-NF	当前记录中的字段个数，就是有多少列
+NF    当前记录中的字段个数，就是有多少列
 
-NR	已经读出的记录数，就是行号，从1开始
+NR    已经读出的记录数，就是行号，从1开始
 
-RS	输入的记录分隔符默认为换行符
+RS    输入的记录分隔符默认为换行符
 
-OFS	输出字段分隔符  默认是空格
+OFS    输出字段分隔符  默认是空格
 
-ORS	输出的记录分隔符  默认是换行符
+ORS    输出的记录分隔符  默认是换行符
 
-FNR	当前文件的读入记录号
+FNR    当前文件的读入记录号
 
-FILENAME	当前正在处理的文件的文件名
+FILENAME    当前正在处理的文件的文件名
 
-\[root@nfsserver files\]\# awk '{print FILENAME,NR,FNR}' awkfile.txt  count.txt 
+\[root@nfsserver files\]\# awk '{print FILENAME,NR,FNR}' awkfile.txt  count.txt
 
 awkfile.txt 1 1
 
@@ -1678,17 +1630,19 @@ count.txt 20 10
 
 10.1 数组结构
 
-      数组名\[下标\] =值
+```
+  数组名\[下标\] =值
+```
 
 arrayname\[string\]=value
 
 10.2  awk一些实例
 
-\[root@nfsserver files\]\# awk 'BEGIN{man="woman";print man}'   
+\[root@nfsserver files\]\# awk 'BEGIN{man="woman";print man}'
 
 woman
 
-\[root@nfsserver files\]\# awk 'BEGIN{man="woman woman2 woman3";print man}' 
+\[root@nfsserver files\]\# awk 'BEGIN{man="woman woman2 woman3";print man}'
 
 woman woman2 woman3
 
@@ -1696,15 +1650,13 @@ woman woman2 woman3
 
 woman woman2 woman3
 
-
-
 \[root@oldboy36 ~\]\# awk 'BEGIN{kuang\[a\]="woman";kuang\[b\]="woman2";kuang\[c\]="woman3";print a,kuang\[a\],b,kuang\[b\],c,kuang\[c\]}'
 
- woman3  woman3  woman3
+woman3  woman3  woman3
 
 \[root@oldboy36 ~\]\# awk 'BEGIN{kuang\["a"\]="woman";kuang\["b"\]="woman2";kuang\["c"\]="woman3";print a,kuang\["a"\],b,kuang\["b"\],c,kuang\["c"\]}'
 
- woman  woman2  woman3
+woman  woman2  woman3
 
 10.3  awk数组说明
 
@@ -1712,11 +1664,11 @@ woman woman2 woman3
 
 2、kuang\[a\]  kuang\[b\]  kuang\[c\] 中的a、 b、c 被认为是变量，都没有赋值，默认为空
 
-   所以 kuang\[a\]  kuang\[b\]  kuang\[c\]  是同一个元素，最终结果相同
+所以 kuang\[a\]  kuang\[b\]  kuang\[c\]  是同一个元素，最终结果相同
 
 3、数组元素名为字符串时必须用""  kuang\["a"\]  kuang\["b"\]  kuang\["c"\]
 
-4、awk数组中的元素不一定是连续的，这点不同于其他语言的数组 
+4、awk数组中的元素不一定是连续的，这点不同于其他语言的数组
 
 第11章  awk中的for
 
@@ -1724,13 +1676,15 @@ woman woman2 woman3
 
 for\(key  in  array\)
 
-             关键字
+```
+         关键字
+```
 
 key遍历array数组的下标
 
 11.1  一些实例
 
-\[root@nfsserver files\]\# awk 'BEGIN{kuang\["a"\]="woman";kuang\["b"\]="woman2";kuang\["c"\]="woman3"}END{for\(shou in kuang\) print shou}' awkfile.txt       
+\[root@nfsserver files\]\# awk 'BEGIN{kuang\["a"\]="woman";kuang\["b"\]="woman2";kuang\["c"\]="woman3"}END{for\(shou in kuang\) print shou}' awkfile.txt
 
 a
 
@@ -1738,7 +1692,7 @@ b
 
 c
 
-\[root@nfsserver files\]\# awk 'BEGIN{kuang\["a"\]="woman";kuang\["b"\]="woman2";kuang\["c"\]="woman3"}END{for\(shou in kuang\) print kuang\[shou\]}' awkfile.txt 
+\[root@nfsserver files\]\# awk 'BEGIN{kuang\["a"\]="woman";kuang\["b"\]="woman2";kuang\["c"\]="woman3"}END{for\(shou in kuang\) print kuang\[shou\]}' awkfile.txt
 
 woman
 
@@ -1746,7 +1700,7 @@ woman2
 
 woman3
 
-\[root@nfsserver files\]\# awk 'BEGIN{kuang\["a"\]="woman";kuang\["b"\]="woman2";kuang\["c"\]="woman3"}END{for\(shou in kuang\) print shou,kuang\[shou\]}' awkfile.txt 
+\[root@nfsserver files\]\# awk 'BEGIN{kuang\["a"\]="woman";kuang\["b"\]="woman2";kuang\["c"\]="woman3"}END{for\(shou in kuang\) print shou,kuang\[shou\]}' awkfile.txt
 
 a woman
 
@@ -1758,23 +1712,21 @@ c woman3
 
 处理以下文件内容，将域名取出并根据域名进行计数排序处理（去重）：（百度和sohu面试题）
 
+\[root@nfsserver files\]\# cat mianshi.txt
 
+[http://www.etiantian.org/index.html](http://www.etiantian.org/index.html)
 
-\[root@nfsserver files\]\# cat mianshi.txt 
+[http://www.etiantian.org/1.html](http://www.etiantian.org/1.html)
 
-http://www.etiantian.org/index.html
+[http://post.etiantian.org/index.html](http://post.etiantian.org/index.html)
 
-http://www.etiantian.org/1.html
+[http://mp3.etiantian.org/index.html](http://mp3.etiantian.org/index.html)
 
-http://post.etiantian.org/index.html
+[http://www.etiantian.org/3.html](http://www.etiantian.org/3.html)
 
-http://mp3.etiantian.org/index.html
+[http://post.etiantian.org/2.html](http://post.etiantian.org/2.html)
 
-http://www.etiantian.org/3.html
-
-http://post.etiantian.org/2.html
-
-\[root@nfsserver files\]\# awk -F "/+" '{kuang\[$2\]++;print NR,$2,kuang\["www.etiantian.org"\]}' mianshi.txt 
+\[root@nfsserver files\]\# awk -F "/+" '{kuang\[$2\]++;print NR,$2,kuang\["www.etiantian.org"\]}' mianshi.txt
 
 1 www.etiantian.org 1
 
@@ -1788,9 +1740,7 @@ http://post.etiantian.org/2.html
 
 6 post.etiantian.org 3
 
-
-
-\[root@nfsserver files\]\# awk -F "/+" '{kuang\[$2\]++}END{for\(shou in kuang\) print shou,kuang\[shou\]}' mianshi.txt 
+\[root@nfsserver files\]\# awk -F "/+" '{kuang\[$2\]++}END{for\(shou in kuang\) print shou,kuang\[shou\]}' mianshi.txt
 
 mp3.etiantian.org 1
 
@@ -1798,23 +1748,21 @@ post.etiantian.org 2
 
 www.etiantian.org 3
 
+\[root@db02 ~\]\# cat sort.txt
 
+[http://www.etiantian.org/index.html](http://www.etiantian.org/index.html)
 
-\[root@db02 ~\]\# cat sort.txt 
+[http://www.etiantian.org/1.html](http://www.etiantian.org/1.html)
 
-http://www.etiantian.org/index.html
+[http://post.etiantian.org/index.html](http://post.etiantian.org/index.html)
 
-http://www.etiantian.org/1.html
+[http://mp3.etiantian.org/index.html](http://mp3.etiantian.org/index.html)
 
-http://post.etiantian.org/index.html
+[http://www.etiantian.org/3.html](http://www.etiantian.org/3.html)
 
-http://mp3.etiantian.org/index.html
+[http://post.etiantian.org/2.html](http://post.etiantian.org/2.html)
 
-http://www.etiantian.org/3.html
-
-http://post.etiantian.org/2.html
-
-\[root@db02 ~\]\# awk -F "\[/.\]+" '{hotel\[$2\]++}END{for\(police in hotel\)print police,hotel\[police\]}' sort.txt 
+\[root@db02 ~\]\# awk -F "\[/.\]+" '{hotel\[$2\]++}END{for\(police in hotel\)print police,hotel\[police\]}' sort.txt
 
 www 3
 
@@ -1822,27 +1770,23 @@ mp3 1
 
 post 2
 
+\[root@oldboy files\]\# cat mianshi.txt
 
+[http://www.etiantian.org/index.html](http://www.etiantian.org/index.html)
 
-\[root@oldboy files\]\# cat mianshi.txt 
+[http://www.etiantian.org/1.html](http://www.etiantian.org/1.html)
 
-http://www.etiantian.org/index.html
+[http://post.etiantian.org/index.html](http://post.etiantian.org/index.html)
 
-http://www.etiantian.org/1.html
+[http://mp3.etiantian.org/index.html](http://mp3.etiantian.org/index.html)
 
-http://post.etiantian.org/index.html
+[http://www.etiantian.org/3.html](http://www.etiantian.org/3.html)
 
-http://mp3.etiantian.org/index.html
-
-http://www.etiantian.org/3.html
-
-http://post.etiantian.org/2.html
-
-
+[http://post.etiantian.org/2.html](http://post.etiantian.org/2.html)
 
 先处理，再输出
 
-\[root@oldboy files\]\# awk -F '\[:/\]+' '{a\[$2\]++}END{for\(i in a\) print a\[i\],i }' mianshi.txt\|sort -r 
+\[root@oldboy files\]\# awk -F '\[:/\]+' '{a\[$2\]++}END{for\(i in a\) print a\[i\],i }' mianshi.txt\|sort -r
 
 3 www.etiantian.org
 
@@ -1850,23 +1794,21 @@ http://post.etiantian.org/2.html
 
 1 mp3.etiantian.org
 
+\[root@oldboy36 files\]\# cat url.txt
 
+[http://www.etiantian.org/index.html](http://www.etiantian.org/index.html)
 
-\[root@oldboy36 files\]\# cat url.txt 
+[http://www.etiantian.org/1.html](http://www.etiantian.org/1.html)
 
-http://www.etiantian.org/index.html
+[http://post.etiantian.org/index.html](http://post.etiantian.org/index.html)
 
-http://www.etiantian.org/1.html
+[http://mp3.etiantian.org/index.html](http://mp3.etiantian.org/index.html)
 
-http://post.etiantian.org/index.html
+[http://www.etiantian.org/3.html](http://www.etiantian.org/3.html)
 
-http://mp3.etiantian.org/index.html
+[http://post.etiantian.org/2.html](http://post.etiantian.org/2.html)
 
-http://www.etiantian.org/3.html
-
-http://post.etiantian.org/2.html
-
-\[root@oldboy36 files\]\# awk -F "\[/.\]+" '{print $2}' url.txt 
+\[root@oldboy36 files\]\# awk -F "\[/.\]+" '{print $2}' url.txt
 
 www
 
@@ -1880,27 +1822,25 @@ www
 
 post
 
-\[root@oldboy36 files\]\# awk -F "\[/.\]+" '{h\[$2\]++}END{print h\["www"\],"www"}' url.txt 
+\[root@oldboy36 files\]\# awk -F "\[/.\]+" '{h\[$2\]++}END{print h\["www"\],"www"}' url.txt
 
 3 www
 
-\[root@oldboy36 files\]\# awk -F "\[/.\]+" '{h\[$2\]++}END{print h\["post"\],"post"}' url.txt 
+\[root@oldboy36 files\]\# awk -F "\[/.\]+" '{h\[$2\]++}END{print h\["post"\],"post"}' url.txt
 
 2 post
 
-\[root@oldboy36 files\]\# awk -F "\[/.\]+" '{h\[$2\]++}END{print h\["mp3"\],"mp3"}' url.txt 
+\[root@oldboy36 files\]\# awk -F "\[/.\]+" '{h\[$2\]++}END{print h\["mp3"\],"mp3"}' url.txt
 
 1 mp3
 
-\[root@oldboy36 files\]\# awk -F "\[/.\]+" '{h\[$2\]++}END{for\(i in h\)print h\[i\],i}' url.txt 
+\[root@oldboy36 files\]\# awk -F "\[/.\]+" '{h\[$2\]++}END{for\(i in h\)print h\[i\],i}' url.txt
 
 3 www
 
 1 mp3
 
 2 post
-
-
 
 \[root@db02 files\]\# awk -F "\[\(\)&lt;&gt;\]" '/^2016/{qi\[$\(NF-1\)\]++}END{for\(key in qi\) print key,qi\[key\]}' 31\_group.txt \|sort -rn -k2
 
@@ -1954,15 +1894,13 @@ a1046186419@qq.com 121
 
 632528468 30
 
-
-
 \[root@db02 files\]\# seq 100 \|awk '{sum+=$1}END{print sum}'
 
 5050
 
 11.3  【统计文件中单词个数】\*\*\*\*\*\*\*\*\*
 
-\[root@oldboy files\]\# cat awkfile.txt 
+\[root@oldboy files\]\# cat awkfile.txt
 
 root:x:0:0:root:/root:/bin/bash
 
@@ -2028,43 +1966,37 @@ uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
 
 3、选好处理的区域，print $1,$3,$2
 
-4、kuang\[$2\]++  =====&gt; a++ 
+4、kuang\[$2\]++  =====&gt; a++
 
 5、awk数组的一个处理思想，先处理，最后END模块输出
 
 6、输出awk数组使用for\(shou in kuang\)  \#自动摸索
 
-
-
 11.5   awk相关英语总结
 
-field	域，区域，字段
+field    域，区域，字段
 
-record	记录，默认一整行
+record    记录，默认一整行
 
-field separator	FS：区域分隔符，表示一个区域的结束，字段，域
+field separator    FS：区域分隔符，表示一个区域的结束，字段，域
 
-number of record	NR: 记录号
+number of record    NR: 记录号
 
-number of field	NF：每一个记录中区域的数量
+number of field    NF：每一个记录中区域的数量
 
-record separator	RS：记录分隔符，标识每个记录的结束
+record separator    RS：记录分隔符，标识每个记录的结束
 
-output field separator	OFS
+output field separator    OFS
 
-output record separator	ORS
+output record separator    ORS
 
-file number of record	FNR  awk当前处理的文件的记录号
+file number of record    FNR  awk当前处理的文件的记录号
 
-
-
-awk '{h\[$1,$7\]++}END{for\(key in h\) print key,h\[key\]}' filename 
+awk '{h\[$1,$7\]++}END{for\(key in h\) print key,h\[key\]}' filename
 
 深入浅出linux三剑客之awk必杀技一例
 
-http://oldboy.blog.51cto.com/2561410/950730
-
-
+[http://oldboy.blog.51cto.com/2561410/950730](http://oldboy.blog.51cto.com/2561410/950730)
 
 第12章 awk内置函数
 
@@ -2072,11 +2004,9 @@ http://oldboy.blog.51cto.com/2561410/950730
 
 gsub\(/正则匹配/,"替换后的内容",字段\)
 
-\[root@oldboy files\]\# awk '$2~/^Xiaoyu$/{gsub\(/:/,"$",$NF\);print $NF}' reg.txt 
+\[root@oldboy files\]\# awk '$2~/^Xiaoyu$/{gsub\(/:/,"$",$NF\);print $NF}' reg.txt
 
 $155$90$201
-
-
 
 12.2  substr
 
@@ -2085,8 +2015,6 @@ substr\(某一列,从第几个符号,几个字母\)
 echo abcdefghi \|awk '{print substr\($1,6,2\)}'
 
 fg
-
-
 
 12.3  split
 
@@ -2100,39 +2028,29 @@ split\(某一列,数组名字,/正则表达式/\)
 
 \#注意:数组元素是从1开始
 
-
-
 echo GET /mobile/theme/oldboy/common/images/arrow-down2.png
 
 GET /mobile/theme/oldboy/common/images/arrow-down2.png
 
-
-
-echo GET /mobile/theme/oldboy/common/images/arrow-down2.png \|awk '{split\($2,arr,/\./\);print arr\[1\]}'
+echo GET /mobile/theme/oldboy/common/images/arrow-down2.png \|awk '{split\($2,arr,/./\);print arr\[1\]}'
 
 /mobile/theme/oldboy/common/images/arrow-down2
 
-
-
-echo GET /mobile/theme/oldboy/common/images/arrow-down2.png \|awk '{split\($2,arr,/\./\);print arr\[2\]}'
+echo GET /mobile/theme/oldboy/common/images/arrow-down2.png \|awk '{split\($2,arr,/./\);print arr\[2\]}'
 
 png
 
-
-
-echo GET /mobile/theme/oldboy/common/images/arrow-down2.png \|awk '{split\($2,arr,/\./\);print arr\[1\],arr\[2\]}'
+echo GET /mobile/theme/oldboy/common/images/arrow-down2.png \|awk '{split\($2,arr,/./\);print arr\[1\],arr\[2\]}'
 
 /mobile/theme/oldboy/common/images/arrow-down2 png
 
-
-
-echo GET /mobile/theme/oldboy/common/images/arrow-down2.png \|awk '{split\($2,arr,/\./\);for\(i in arr\) print i}'
+echo GET /mobile/theme/oldboy/common/images/arrow-down2.png \|awk '{split\($2,arr,/./\);for\(i in arr\) print i}'
 
 1
 
 2
 
-echo GET /mobile/theme/oldboy/common/images/arrow-down2.png \|awk '{split\($2,arr,/\./\);for\(i in arr\) print i,arr\[i\]}'
+echo GET /mobile/theme/oldboy/common/images/arrow-down2.png \|awk '{split\($2,arr,/./\);for\(i in arr\) print i,arr\[i\]}'
 
 1 /mobile/theme/oldboy/common/images/arrow-down2
 
@@ -2198,11 +2116,11 @@ NR==2，NR==5   ====&gt;   2,5p
 
 显示所有手机号码最后数字是1或5的人名
 
-显示Chet的捐款.每个值时都有以$开头.如$520$200$135 
+显示Chet的捐款.每个值时都有以$开头.如$520$200$135
 
 显示姓,其后跟一个逗号和名,如Jody,Savage
 
-\[root@db02 files\]\# cat reg.txt 
+\[root@db02 files\]\# cat reg.txt
 
 Mike Harrington:     13716352255 :250:100:175
 
@@ -2228,15 +2146,15 @@ Guy Quigley:         13520321021 :250:100:175
 
 Dan Savage:          13716375331 :450:300:275
 
-\[root@db02 files\]\# awk -F "\[ :\]+" '$1~/Dan/{print $\(NF-1\)}' reg.txt  
+\[root@db02 files\]\# awk -F "\[ :\]+" '$1~/Dan/{print $\(NF-1\)}' reg.txt
 
 300
 
-\[root@db02 files\]\# awk -F "\[ :\]+" '$1~/Tom/{print $1,$3}' reg.txt 
+\[root@db02 files\]\# awk -F "\[ :\]+" '$1~/Tom/{print $1,$3}' reg.txt
 
 Tom 13716052112
 
-\[root@db02 files\]\# awk -F "\[ :\]+" '$3~/^138/{print $1,$2,$3}' reg.txt     
+\[root@db02 files\]\# awk -F "\[ :\]+" '$3~/^138/{print $1,$2,$3}' reg.txt
 
 Susan Dalsass 13810756741
 
@@ -2244,7 +2162,7 @@ Nancy McNeil 13810862484
 
 Chet Main 13810733714
 
-\[root@db02 files\]\# awk  '$1~/^\(C\|E\)/{print $1}' reg.txt 
+\[root@db02 files\]\# awk  '$1~/^\(C\|E\)/{print $1}' reg.txt
 
 Christian
 
@@ -2252,11 +2170,11 @@ Chet
 
 Elizabeth
 
-\[root@db02 files\]\# awk -F "\[ :\]+" '$1~/Chet/{print $1,"$"$4,"$"$5,"$"$6}' reg.txt 
+\[root@db02 files\]\# awk -F "\[ :\]+" '$1~/Chet/{print $1,"$"$4,"$"$5,"$"$6}' reg.txt
 
 Chet $50 $95 $135
 
-\[root@db02 files\]\# awk -F "\[ :\]+" '{print $2","$1}' reg.txt  
+\[root@db02 files\]\# awk -F "\[ :\]+" '{print $2","$1}' reg.txt
 
 Harrington,Mike
 
@@ -2282,13 +2200,11 @@ Quigley,Guy
 
 Savage,Dan
 
-
-
 13.5  轻松精通awk数组企业问题案例
 
-http://oldboy.blog.51cto.com/2561410/1687026
+[http://oldboy.blog.51cto.com/2561410/1687026](http://oldboy.blog.51cto.com/2561410/1687026)
 
-\[root@show test\_2016-05-11\]\# cat pro1.txt 
+\[root@show test\_2016-05-11\]\# cat pro1.txt
 
 a 1
 
@@ -2306,7 +2222,7 @@ c 9
 
 d 1
 
-awk '{kuang\[$1\]+=$2}END{for\(shou in kuang\)print shou,kuang\[shou\]}'  pro1.txt 
+awk '{kuang\[$1\]+=$2}END{for\(shou in kuang\)print shou,kuang\[shou\]}'  pro1.txt
 
 a 4
 
@@ -2316,7 +2232,7 @@ c 16
 
 d 6
 
-\[root@db02 files\]\# cat add.txt 
+\[root@db02 files\]\# cat add.txt
 
 a  1
 
@@ -2328,7 +2244,7 @@ d  7
 
 b  5
 
-a  3 
+a  3
 
 g  2
 
@@ -2336,7 +2252,7 @@ f  6
 
 d  9
 
-\[root@db02 files\]\# awk '{a\[$1\]+=$2}END{for\(i in a\)print i,a\[i\]}' add.txt 
+\[root@db02 files\]\# awk '{a\[$1\]+=$2}END{for\(i in a\)print i,a\[i\]}' add.txt
 
 a 4
 
@@ -2350,7 +2266,7 @@ f 6
 
 g 2
 
-\[root@show test\_2016-05-11\]\# awk 'BEGIN{RS="\[ \n\]"}{print $0}'  pro3.txt 
+\[root@show test\_2016-05-11\]\# awk 'BEGIN{RS="\[ \n\]"}{print $0}'  pro3.txt
 
 root
 
@@ -2486,7 +2402,7 @@ sbin
 
 nologin
 
-\[root@show test\_2016-05-11\]\# awk 'BEGIN{RS="\[ \n\]"}{kuang\[$1\]++;print $1,kuang\[$1\]}'  pro3.txt 
+\[root@show test\_2016-05-11\]\# awk 'BEGIN{RS="\[ \n\]"}{kuang\[$1\]++;print $1,kuang\[$1\]}'  pro3.txt
 
 root 1
 
@@ -2622,143 +2538,143 @@ sbin 12
 
 nologin 6
 
-\[root@show test\_2016-05-11\]\# awk 'BEGIN{RS="\[ \n\]"}{kuang\[$1\]++;print $1"\t"kuang\[$1\]}'  pro3.txt 
+\[root@show test\_2016-05-11\]\# awk 'BEGIN{RS="\[ \n\]"}{kuang\[$1\]++;print $1"\t"kuang\[$1\]}'  pro3.txt
 
-root	1
+root    1
 
-x	1
+x    1
 
-root	2
+root    2
 
-root	3
+root    3
 
-bin	1
+bin    1
 
-bash	1
+bash    1
 
-bin	2
+bin    2
 
-x	2
+x    2
 
-bin	3
+bin    3
 
-bin	4
+bin    4
 
-sbin	1
+sbin    1
 
-nologin	1
+nologin    1
 
-daemon	1
+daemon    1
 
-x	3
+x    3
 
-daemon	2
+daemon    2
 
-sbin	2
+sbin    2
 
-sbin	3
+sbin    3
 
-nologin	2
+nologin    2
 
-adm	1
+adm    1
 
-x	4
+x    4
 
-adm	2
+adm    2
 
-var	1
+var    1
 
-adm	3
+adm    3
 
-sbin	4
+sbin    4
 
-nologin	3
+nologin    3
 
-lp	1
+lp    1
 
-x	5
+x    5
 
-lp	2
+lp    2
 
-var	2
+var    2
 
-spool	1
+spool    1
 
-lpd	1
+lpd    1
 
-sbin	5
+sbin    5
 
-nologin	4
+nologin    4
 
-sync	1
+sync    1
 
-x	6
+x    6
 
-sync	2
+sync    2
 
-sbin	6
+sbin    6
 
-bin	5
+bin    5
 
-sync	3
+sync    3
 
-shutdown	1
+shutdown    1
 
-x	7
+x    7
 
-shutdown	2
+shutdown    2
 
-sbin	7
+sbin    7
 
-sbin	8
+sbin    8
 
-shutdown	3
+shutdown    3
 
-halt	1
+halt    1
 
-x	8
+x    8
 
-halt	2
+halt    2
 
-sbin	9
+sbin    9
 
-sbin	10
+sbin    10
 
-halt	3
+halt    3
 
-mail	1
+mail    1
 
-x	9
+x    9
 
-mail	2
+mail    2
 
-var	3
+var    3
 
-spool	2
+spool    2
 
-mail	3
+mail    3
 
-sbin	11
+sbin    11
 
-nologin	5
+nologin    5
 
-uucp	1
+uucp    1
 
-x	10
+x    10
 
-uucp	2
+uucp    2
 
-var	4
+var    4
 
-spool	3
+spool    3
 
-uucp	3
+uucp    3
 
-sbin	12
+sbin    12
 
-nologin	6
+nologin    6
 
-\[root@show test\_2016-05-11\]\# awk 'BEGIN{RS="\[ \n\]"}{kuang\[$1\]++}END{for\(shou in kuang\)print shou,kuang\[shou\]}'  pro3.txt 
+\[root@show test\_2016-05-11\]\# awk 'BEGIN{RS="\[ \n\]"}{kuang\[$1\]++}END{for\(shou in kuang\)print shou,kuang\[shou\]}'  pro3.txt
 
 nologin 6
 
@@ -2794,7 +2710,7 @@ lp 2
 
 sbin 12
 
-\[root@show test\_2016-05-11\]\# awk 'BEGIN{RS="\[ \n\]"}{kuang\[$1\]++}END{for\(shou in kuang\)print shou,kuang\[shou\]}'  pro3.txt  \| sort -rnk2 
+\[root@show test\_2016-05-11\]\# awk 'BEGIN{RS="\[ \n\]"}{kuang\[$1\]++}END{for\(shou in kuang\)print shou,kuang\[shou\]}'  pro3.txt  \| sort -rnk2
 
 sbin 12
 
@@ -2829,26 +2745,10 @@ daemon 2
 lpd 1
 
 bash 1
-
-
-
-
 
 13.6  awk 二维数组
 
 awk '{s\_num\[$1,$7\]++;s\_size\[$1,$7\]+=$10}{for\( i in s\_num\)split\(i,idx,SUBSEP\);{print s\_num\[idx\[1\],idx\[2\]\],idx\[1\],idx\[2\],s\_size\[idx\[1\],idx\[2\]\]}}' access1.log
-
-
-
-
-
-
-
-
-
-
-
-
 
 第14章  附
 
@@ -2866,10 +2766,6 @@ id=bb&cc&type&name=bb
 
 aa&id=bb&name=bb&type
 
-
-
-
-
 整理并去重,得到效果：
 
 id=aa&bb&name=cc&type
@@ -2882,45 +2778,25 @@ id=bb&cc&name=bb&type
 
 id=bb&aa&name=bb&type
 
-
-
-
-
 awk --posix 'BEGIN{OFS=FS="&"}
 
 {
 
-  for\(i=1;i&lt;=NF;i++\)
+for\(i=1;i&lt;=NF;i++\)
 
-    {if\($i~/^id=.\*$/\){a=$i};
+```
+{if\($i~/^id=.\*$/\){a=$i};
 
-     if\($i~/^\[a-z\]{2}$/\){b=$i};
+ if\($i~/^\[a-z\]{2}$/\){b=$i};
 
-    if\($i~/^\[a-z\]{4}$/\){c=$i};
+if\($i~/^\[a-z\]{4}$/\){c=$i};
 
-    if\($i~/^name=.\*$/\){d=$i}};
+if\($i~/^name=.\*$/\){d=$i}};
 
-    print a,b,d,c}'
+print a,b,d,c}'
+```
 
- file.txt \|sort\|uniq
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+file.txt \|sort\|uniq
 
 awk打印99乘法表
 
@@ -2944,21 +2820,13 @@ awk打印99乘法表
 
 1x9=9  2x9=18  3x9=27  4x9=36  5x9=45  6x9=54  7x9=63  8x9=72  9x9=81
 
-
-
-
-
 学习正则表达式，一定要通过
 
-grep或egrep学习  配合 egrep -o  
+grep或egrep学习  配合 egrep -o
 
 alias grep='grep --color=auto'
 
 alias egrep='egrep --color=auto'
-
-
-
-
 
 awk调试工具  pgawk
 

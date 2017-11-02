@@ -1003,6 +1003,14 @@ sudo \[参数选项\] 命令
 
 1）    方法一：执行visudo 命令自动编辑/etc/sudoers 文件（推荐）
 
+root  ALL=\(ALL\)  ALL
+
+oldboy ALL=\(ALL\)  ALL
+
+\#---&gt;前面sudo实例2的权限，同样可以这样设置。当然，位置未必非要在原有的配置文件root权限的先
+
+特别说明：在没有特殊的需要的前提下，请大家一定要使用这个方法，这也是老南京建议读者使用的方法，这个方法是最安全的授权方法，缺点就是必须和系统交互才能完成授权
+
 检查
 
 \[root@oldboyedu-35 ~\]\# ll /etc/sudoers
@@ -1041,19 +1049,11 @@ sudo \[参数选项\] 命令
 
 ### 1.3.10 回顾下别名和具体授权配置的关系，sudo授权
 
-用户或组    主机（可以执行sudo的机器）    可以切换的用户角色（runas）    命令
+![](/assets/tab19-17.png)
 
-root    ALL=    \(ALL\)    ALL
+### 1.3.11 sudo 小结 
 
-User\_Alias ADMINS = jsmith,mikem,%groupname    Host\_Alias
-
-FILESERVERS = fs1,fs2    Runas\_Alias op=root    Cmnd\_Alias SERVICES=/sbin/service
-
-/sbin/chkconfig
-
-用户别名的位置    主机别名位置（可以在哪个主机上执行sudo）    Runas别名的位置（以谁的身份执行sudo授权的命令）    命令别名的位置
-
-### 1.3.11 sudo 小结 但以上直接修改sudoers的配置文件方法有以下需要注意的几点：
+### 但以上直接修改sudoers的配置文件方法有以下需要注意的几点：
 
 1. 如何修改sudoers
 
@@ -1063,11 +1063,23 @@ echo命令是追加“&gt;&gt;”,不是重定向“&gt;”，除了echo外，�
 
 修改操作完成一定要执行visudo -c进行语法检查，这弥补了直接修改没有语法检查的不足。
 
-1. 权限：确保/etc/sudoers权限是正确的（-r--r----）,权限不对会导致sudo功能异常（Centos6权限不对也可以登录，但是/etc/sudoers是440是最安全的）
+  2.权限：确保/etc/sudoers权限是正确的（-r--r----）,权限不对会导致sudo功能异常（Centos6权限不对也可以登录，但是/etc/sudoers是440是最安全的）
 
-2. 权限：及时对授权的操作进行测试，验证是否正确（最好不要退出当权授权窗口，以便发现问题及时恢复）。
+  3.权限：及时对授权的操作进行测试，验证是否正确（最好不要退出当权授权窗口，以便发现问题及时恢复）。
 
-3. 留后路：确保知道正确的root用户密码，以便在sudo出现问题时可以通过普通用户等执行su - 命令切换到root进行恢复
+  4.留后路：确保知道正确的root用户密码，以便在sudo出现问题时可以通过普通用户等执行su - 命令切换到root进行恢复
+
+
+
+看到了吧，有这么多需要注意的问题，如果不注意，很可能会带来灾难性后果（聘请老男孩做技术顾问
+
+的一个公司的下属曾经就因为不按规范修改sudoer文件，导致所以普通用户无法执行sudo权限，而又恰
+
+巧忘记了root密码（平时不需要root密码管理了），因此只能跑机房通过破解root密码登陆来恢复sudoer
+
+文件配置，影响业务不说，这个遭罪啊！），因此，没有特殊紧急批量增加sudoers文件内容的时候，建
+
+议通过visudo来编辑修改，毕竟系统安全是相当重要的
 
 ### 1.3.12 实例（尚方宝剑）
 
@@ -1079,9 +1091,9 @@ echo命令是追加“&gt;&gt;”,不是重定向“&gt;”，除了echo外，�
 
 \[root@oldboyedu35-nb ~\]\# visudo
 
-91行后面添加
+### 91行后面添加
 
-oldboy  ALL=\(ALL\)       /usr/sbin/useradd
+### oldboy  ALL=\(ALL\)       /usr/sbin/useradd
 
 \[root@oldboyedu35-nb ~\]\# \#2.查看
 
@@ -1191,13 +1203,7 @@ oldboy目录出现的次数  ?????    目录下面的文件数量
 
 ### 1.3.14 回顾下别名和具体授权配置的关系
 
-用户或组    主机（可以执行sudo的机器）    可以切换的用户角色
-
-root    ALL=    \(ALL\)    ALL
-
-User\_Alias    Host\_Alias    Runas\_Alias    Cmd\_Alias
-
-用户别名的位置    主机别名的位置（可以在哪个主机上执行sudo）    Runas别名的位置（以谁的身份执行sudo授权命令）    命令别名的位置
+![](/assets/tab19-18.png)
 
 ### 1.3.15 工作中一个软件tomcat,以oldboy的身份运行中
 

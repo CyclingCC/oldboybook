@@ -220,8 +220,6 @@ alex888
 
 #### 1.2.5 /etc/default/useradd 文件
 
-
-
 useradd
 
 /etc/defalut/useradd 文件时在使用useradd添加用户事放入一个需要调用的一个默认的配置文件，可以使用“useradd -D-\* 参数 ”，这样的命令格式来修改文件里面的内容
@@ -435,7 +433,7 @@ drwx------ 2 alex666 alex666 4096 Apr  5 11:39 /alex666/
 
 ### 1.2.10 userdel 删除用户相关命令
 
--r 连窝端了
+##### -r 连窝端了
 
 删除用户及用户相关的信息，与这个命令有关的文件有：
 
@@ -459,15 +457,7 @@ drwx------ 2 alex666 alex666 4096 Apr  5 11:39 /alex666/
 
 /etc/gshadow 用户组密码资讯文件
 
-usermod    注释说明
-
--e expire\_date    ※加上用户账号停止日期。日期格式为MM/DD/YY（chage -E）
-
--g initial\_group    ※更新用户新的起始登入用户组。用户组名须已存在。用户组ID必须参照既有的用户组。用户组ID预设值为1
-
--s shell    指定新登入shell。如此栏留白，系统将选用系统预设shell。这个-s参数功能也可以使用chsh命令来修改。当然也可以手工修改/etc/passwd 文件来实现
-
--u uid    指定用户UID值。除非接-o参数（如：usermod -u 505 -o oldboy），否则ID值
+![](/assets/tab19-11.png)
 
 必须是唯一的数字（不能为负数）
 

@@ -2,9 +2,7 @@
 
 #### 1.1 什么是shell
 
-```
 shell 是命令解释器，它在操作系统的最外层，负责直接与用户对话，把用户的输入解释给操作系统，并处理各种各样的操作系统的输出结果，输出屏幕返回给用户。
-```
 
 #### 1.1.1 交互方式
 
@@ -606,6 +604,8 @@ fi
 
 #### 10.1.1
 
+![](/assets/22-18.png)
+
 \[root@oldboyedu scripts\]\# cat compare.sh
 
 \#!/bin/bash
@@ -672,9 +672,9 @@ exit
 
 fi
 
-10.2 if双分支条件语句
+### 10.2 if双分支条件语句
 
-语法：
+![](/assets/22-19.png)
 
 \[root@oldboyedu scripts\]\# cat compare.sh
 
@@ -734,9 +734,11 @@ fi
 
 fi
 
-10.3 多分支if语句
+### 10.3 多分支if语句
 
 语法：
+
+![](/assets/22-20.png)
 
 \[root@oldboyedu scripts\]\# cat compare.sh
 
@@ -790,11 +792,15 @@ echo "$x &lt; $y"
 
 fi
 
-第11章 case结构条件语句
+### 第11章 case结构条件语句
 
-11.1 case结构条件句语法
+### 11.1 case结构条件句语法
 
-11.2 给指定文本加颜色
+![](/assets/22-21.png)
+
+![](/assets/22-22.png)
+
+### 11.2 给指定文本加颜色
 
 echo -e "\033\[30m 黑色字oldboy trainning \033\[0m"
 
@@ -812,9 +818,9 @@ echo -e "\033\[36m 天蓝字oldboy trainning \033\[0m"
 
 echo -e "\033\[37m 白色字oldboy trainning \033\[0m"
 
-11.3 echo给字符串加不同颜色
+### 11.3 echo给字符串加不同颜色
 
-11.3.1 直接加颜色
+#### 11.3.1 直接加颜色
 
 echo -e "\033\[40;37m 黑底白字 welcome to old1boy\033\[0m"
 
@@ -832,23 +838,29 @@ echo -e "\033\[46;37m 天蓝白字 welcome to old7boy\033\[0m"
 
 echo -e "\033\[47;30m 白底黑字 welcome to old8boy\033\[0m"
 
-第12章 循环语句（while/for）
+### 第12章 循环语句（while/for）
 
-12.1 循环语句语法
+### 12.1 循环语句语法
 
-12.1.1 while条件句
+#### 12.1.1 while条件句
 
-12.1.2 for循环结构语法
+![](/assets/22-23.png)
 
-12.2 while语句
+#### 12.1.2 for循环结构语法
 
-12.2.1 守护进程
+### 12.2 while语句
 
-12.2.2 从1加到100
+#### 12.2.1 守护进程
 
-12.2.3 倒计时
+#### 12.2.2 从1加到100
 
-12.3 防止脚本执行终端的方法
+![](/assets/22-24.png)
+
+#### 12.2.3 倒计时
+
+### 12.3 防止脚本执行终端的方法
+
+![](/assets/22-28.png)
 
 12.4 for循环语句
 

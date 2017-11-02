@@ -539,6 +539,8 @@ useradd
 
 /etc/login.defs 文件作用
 
+![](/assets/19-2.png)
+
 ### 1.2.15 档案
 
 /etc/passwd 使用者账号资讯

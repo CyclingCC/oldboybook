@@ -78,7 +78,7 @@ GNU bash, version 4.1.2\(1\)-release \(x86\_64-redhat-linux-gnu\)
 
 Copyright \(C\) 2009 Free Software Foundation, Inc.
 
-License GPLv3+: GNU GPL version 3 or later &lt;[http://gnu.org/licenses/gpl.html&gt](http://gnu.org/licenses/gpl.html&gt);
+License GPLv3+: GNU GPL version 3 or later &lt;[http://gnu.org/licenses/gpl.html&gt;](http://gnu.org/licenses/gpl.html&gt);
 
 This is free software; you are free to change and redistribute it.
 
@@ -586,7 +586,9 @@ if \[ 条件 \]
 
 then
 
-    指令
+```
+指令
+```
 
 fi
 
@@ -600,7 +602,7 @@ fi
 
 提示：分号相当于命令换行，上面两种语句等同。
 
-特殊写法
+特殊写法if \[ -f "$file1" \];then echo 1;fi 相当于 \[ -f "$file1" \] && echo 1
 
 #### 10.1.1
 
@@ -653,7 +655,7 @@ then
 ```
 echo "$x = $y"
 
-exit 
+exit
 ```
 
 fi

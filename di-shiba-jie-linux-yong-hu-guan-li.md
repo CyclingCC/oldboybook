@@ -1051,7 +1051,7 @@ oldboy ALL=\(ALL\)  ALL
 
 ![](/assets/tab19-17.png)
 
-### 1.3.11 sudo 小结 
+### 1.3.11 sudo 小结
 
 ### 但以上直接修改sudoers的配置文件方法有以下需要注意的几点：
 
@@ -1063,13 +1063,11 @@ echo命令是追加“&gt;&gt;”,不是重定向“&gt;”，除了echo外，�
 
 修改操作完成一定要执行visudo -c进行语法检查，这弥补了直接修改没有语法检查的不足。
 
-  2.权限：确保/etc/sudoers权限是正确的（-r--r----）,权限不对会导致sudo功能异常（Centos6权限不对也可以登录，但是/etc/sudoers是440是最安全的）
+2.权限：确保/etc/sudoers权限是正确的（-r--r----）,权限不对会导致sudo功能异常（Centos6权限不对也可以登录，但是/etc/sudoers是440是最安全的）
 
-  3.权限：及时对授权的操作进行测试，验证是否正确（最好不要退出当权授权窗口，以便发现问题及时恢复）。
+3.权限：及时对授权的操作进行测试，验证是否正确（最好不要退出当权授权窗口，以便发现问题及时恢复）。
 
-  4.留后路：确保知道正确的root用户密码，以便在sudo出现问题时可以通过普通用户等执行su - 命令切换到root进行恢复
-
-
+4.留后路：确保知道正确的root用户密码，以便在sudo出现问题时可以通过普通用户等执行su - 命令切换到root进行恢复
 
 看到了吧，有这么多需要注意的问题，如果不注意，很可能会带来灾难性后果（聘请老男孩做技术顾问
 
@@ -1355,6 +1353,8 @@ id w last
 
 ## 1.4 sudo日志审计
 
+![](/assets/19-5.png)
+
 echo "Defaults        logfile=/var/log/sudo.log"&gt;&gt;/etc/sudoers
 
 visudo -c
@@ -1365,9 +1365,7 @@ visudo -c
 
 Apr  7 23:54:10 : oldboy : TTY=pts/1 ; PWD=/home/oldboy ; USER=root ;
 
-```
 COMMAND=list
-```
 
 Apr  8 00:24:36 : oldboy : command not allowed ; TTY=pts/1 ; PWD=/home/oldboy ;
 

@@ -1,10 +1,3 @@
-
----
-
----
-
----
-
 # 第1章 linux用户管理
 
 ### 1.1 linux系统用户分类
@@ -868,23 +861,7 @@ oldboy666                                  \*\*Never logged in\*\*
 
 su \[选项参数\] \[用户\]
 
-su参数选项    注释说明
-
--，-l（小写字母L），--login    make the shell a login shell
-
-\#---&gt; 使一个shell成为登录的shell，如执行su - oldboy 时，表示该用户想改变身份为oldboy，并且使用oldboy用户的环境变量配置，如：
-
-/home/oldboy/.bash\_profile等
-
-initializes HOME，SHELL，USER，LOGNAME and PATH
-
-切换用户的时候会更新这些环境变量
-
--c，--command=COMMAND    pass a single COMMAND to the shell with -c
-
-临时切换到某一个用户，执行一个命令，执行完，自动返回到当前用户。
-
-\#---&gt;切换到一个shell下，执行一个命令，然后退出所切换的用户环境
+![](/assets/tab19-15.png)
 
 ### 1.3.2 su 命令的总结
 

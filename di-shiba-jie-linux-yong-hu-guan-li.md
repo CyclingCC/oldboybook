@@ -559,29 +559,7 @@ useradd
 
 ### 1.2.16 passwd 用户密码相关 修改用户密码
 
-passwd    注释说明
-
--k    保留即将过期的用户在期满后仍能使用
-
--d，--delete    删除用户密码，仅能以root权限操作
-
--l（小写字母），--lock    锁住用户无权更改其密码，仅能通过root权限操作
-
--u，--unlock    解锁锁定
-
--f，--force    强制操作，仅root权限才能操作
-
--x，--maximum=days    两次密码修改的最大天数，后面接数字；仅能root权限操作
-
--n，--minimum=days    两次密码修改的最小天数，后面接数字，仅能root权限操作
-
--w，-warning=days    在距多少天提醒用户修改密码，仅能root权限操作
-
--i，--inactive=days    在密码过期后多少天，用户被禁掉，仅能root操作
-
---stdin     ※read new tokens from stdin \(root only\)
-
-从标准输入（管道）读入密码
+![](/assets/tab19-13.png)
 
 \[root@oldboyedu35-nb ~\]\# echo 123456 \|passwd --stdin oldboy
 

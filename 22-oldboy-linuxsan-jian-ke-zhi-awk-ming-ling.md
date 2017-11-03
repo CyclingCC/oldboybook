@@ -1,10 +1,10 @@
 # 第1章 awk
 
-## 1.1  awk简介
+### 1.1  awk简介
 
 awk不仅是linux系统中的一个命令，而且是一种编程语言，可以用来处理数据和生成报告（excel）。处理的数据可以是一个或多个文件，可以是来自标准输入，也可以通过管道获取输入，awk可以在命令行上直接编辑命令进行操作，也可以编写成awk程序来进行更为复杂的运用
 
-1.2  awk工作原理
+### 1.2  awk工作原理
 
 awk  'BEGIN{ commands } pattern{ commands } END{ commands }'
 

@@ -6,7 +6,9 @@ awk不仅是linux系统中的一个命令，而且是一种编程语言，可以
 
 ### 1.2  awk工作原理
 
-awk  'BEGIN{ commands } pattern{ commands } END{ commands }'
+![](/assets/21-1.png)
+
+##### awk  'BEGIN{ commands } pattern{ commands } END{ commands }'
 
 第一步：执行BEGIN{ commands }语句块中的语句；
 
@@ -46,7 +48,7 @@ v1=v2=v3
 
 { }类似一个循环体，会对文件中的每一行进行迭代，通常变量初始化语句（如：i=0）以及打印文件头部的语句放入BEGIN语句块中，将打印的结果等语句放在END语句块中。
 
-1.3   awk版本
+### 1.3   awk版本
 
 \[root@nfsserver ~\]\# cat /etc/redhat-release
 
@@ -64,13 +66,15 @@ lrwxrwxrwx. 1 root root 4 3月   6 16:24 /bin/awk -&gt; gawk
 
 GNU Awk 3.1.7
 
-1.4   awk 格式
+### 1.4   awk 格式
 
 awk指令是由模式，动作，或者模式和动作的组合组成。
 
 模式（pattern）,可以由表达式组成，也可以是两个 / 之间的正则表达式   比如 NR==1，这就是模式，可以把它理解为一个条件
 
 动作（action）， 是由在大括号里面的一条或多条语句组成，语句之间使用  ;  隔开，格式如下
+
+![](/assets/21-2.png)
 
 awk处理的内容可以来自标准输入 、管道、 文件
 
@@ -88,7 +92,7 @@ awk -F ":"  'NR&gt;=2 && NR&lt;=6{print NR,$1}'  /etc/passwd
 
 6 sync
 
-1.5   创建环境
+### 1.5   创建环境
 
 mkdir /server/files/ -p
 
@@ -118,11 +122,11 @@ mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
 
 uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
 
-1.6   awk执行过程
+### 1.6   awk执行过程
 
-awk是通过一行一行的处理文件，这条命令中包含模式部分（条件）和动作部分（动作），
+![](/assets/21-3.png)
 
-awk将处理模式（条件）指定的行
+awk是通过一行一行的处理文件，这条命令中包含模式部分（条件）和动作部分（动作），awk将处理模式（条件）指定的行
 
 1、awk读入第一行内容
 
@@ -138,7 +142,7 @@ b、如果不匹配条件，继续读取下一行
 
 4、重复1-3，直到读取到最后一行
 
-第2章  字段（列）和记录（行）
+# 第2章  字段（列）和记录（行）
 
 名称    含义
 

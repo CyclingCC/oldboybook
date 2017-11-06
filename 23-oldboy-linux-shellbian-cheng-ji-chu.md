@@ -934,9 +934,7 @@ do$
 
 if \[ $i -eq 3 \] ;then$
 
-```
-exit;                                                                                                                $
-```
+exit;$
 
 fi$
 

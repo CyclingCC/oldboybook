@@ -1165,12 +1165,6 @@ info  命令
 
 搜索  linux  ls  命令
 
-[http://man.linuxde.net/](http://man.linuxde.net/)
-
-[http://linux.51yip.com/](http://linux.51yip.com/)
-
-[http://www.shouce.ren/api/linux/\#](http://www.shouce.ren/api/linux/#)
-
 # 第20章  常用快捷键
 
 tab键   命令或路径补全功能

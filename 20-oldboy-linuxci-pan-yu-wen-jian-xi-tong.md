@@ -1,6 +1,3 @@
-
----
-
 # 第1章 磁盘管理
 
 ## 1.1 磁盘知识体系结构
@@ -513,59 +510,87 @@ dd if=/dev/sda of=mbr.bin bs=512 count=1
 
 0000000    4658    4253    0000    0010    0000    0000    0100    002c
 
-      X   F   S   B nul nul dle nul nul nul nul nul nul soh   , nul
+```
+  X   F   S   B nul nul dle nul nul nul nul nul nul soh   , nul
+```
 
 0000020    0000    0000    0000    0000    0000    0000    0000    0000
 
-    nul nul nul nul nul nul nul nul nul nul nul nul nul nul nul nul
+```
+nul nul nul nul nul nul nul nul nul nul nul nul nul nul nul nul
+```
 
 0000040    3fb1    c2f7    777a    0f4b    1eaf    c0ea    ce8e    fb96
 
-      1   ?   w   B   z   w   K  si   /  rs   j   @  so   N syn   {
+```
+  1   ?   w   B   z   w   K  si   /  rs   j   @  so   N syn   {
+```
 
 0000060    0000    0000    0100    0400    0000    0000    0000    8000
 
-    nul nul nul nul nul soh nul eot nul nul nul nul nul nul nul nul
+```
+nul nul nul nul nul soh nul eot nul nul nul nul nul nul nul nul
+```
 
 0000100    0000    0000    0000    8100    0000    0000    0000    8200
 
-    nul nul nul nul nul nul nul soh nul nul nul nul nul nul nul stx
+```
+nul nul nul nul nul nul nul soh nul nul nul nul nul nul nul stx
+```
 
 0000120    0000    0100    0000    004b    0000    0400    0000    0000
 
-    nul nul nul soh nul nul   K nul nul nul nul eot nul nul nul nul
+```
+nul nul nul soh nul nul   K nul nul nul nul eot nul nul nul nul
+```
 
 0000140    0000    5503    b4b4    0002    0001    1000    0000    0000
 
-    nul nul etx   U   4   4 stx nul soh nul nul dle nul nul nul nul
+```
+nul nul etx   U   4   4 stx nul soh nul nul dle nul nul nul nul
+```
 
 0000160    0000    0000    0000    0000    090c    0408    000f    1900
 
-    nul nul nul nul nul nul nul nul  ff  ht  bs eot  si nul nul  em
+```
+nul nul nul nul nul nul nul nul  ff  ht  bs eot  si nul nul  em
+```
 
 0000200    0000    0000    0000    0002    0000    0000    0000    b700
 
-    nul nul nul nul nul nul stx nul nul nul nul nul nul nul nul   7
+```
+nul nul nul nul nul nul stx nul nul nul nul nul nul nul nul   7
+```
 
 0000220    0000    0000    0000    00cc    0000    0000    0000    0000
 
-    nul nul nul nul nul nul   L nul nul nul nul nul nul nul nul nul
+```
+nul nul nul nul nul nul   L nul nul nul nul nul nul nul nul nul
+```
 
 0000240    ffff    ffff    ffff    ffff    ffff    ffff    ffff    ffff
 
-    del del del del del del del del del del del del del del del del
+```
+del del del del del del del del del del del del del del del del
+```
 
 0000260    0000    0000    0000    0200    0000    0000    0000    0000
 
-    nul nul nul nul nul nul nul stx nul nul nul nul nul nul nul nul
+```
+nul nul nul nul nul nul nul stx nul nul nul nul nul nul nul nul
+```
 
 0000300    0000    0000    0000    0100    0000    8a00    0000    8a00
 
-    nul nul nul nul nul nul nul soh nul nul nul  nl nul nul nul  nl
+```
+nul nul nul nul nul nul nul soh nul nul nul  nl nul nul nul  nl
+```
 
 0000320    0000    0000    0000    0000    0000    0000    0000    0000
 
-    nul nul nul nul nul nul nul nul nul nul nul nul nul nul nul nul
+```
+nul nul nul nul nul nul nul nul nul nul nul nul nul nul nul nul
+```
 
 \*
 
@@ -697,9 +722,11 @@ SATA  SAS 都是 sd开头
 
 WARNING: DOS-compatible mode is deprecated. It's strongly recommended to
 
-     switch off the mode \\(command 'c'\\) and change display units to
+```
+ switch off the mode \\(command 'c'\\) and change display units to
 
-     sectors \\(command 'u'\\).
+ sectors \\(command 'u'\\).
+```
 
 Command \(m for help\): m
 
@@ -1087,7 +1114,9 @@ Maximum filesystem blocks=11534336
 
 Superblock backups stored on blocks:
 
-    8193
+```
+8193
+```
 
 正在写入inode表: 完成
 
@@ -1267,7 +1296,9 @@ p           primary分区
 
 1           分区编号
 
-        起始扇区（可以不写）
+```
+    起始扇区（可以不写）
+```
 
 +100M        结束扇区 （可以直接写大小）
 

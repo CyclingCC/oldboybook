@@ -10,7 +10,7 @@
 * [第2章 Linux系统发展及版本介绍](chapter1.md)
   * [2.1 什么是操作系统](chapter1/21.md)
   * [2.2 什么是Linux](chapter1/22-shi-yao-shi-linux.md)
-  * 2.3 
+  * [2.3 Linux起源](chapter1/23-linuxqi-yuan.md)
 * [03-oldboy-linux-系统安装](di-san-jie.md)
 * [04-oldboy-linux-Xshell优化](di-wu-jie-xshell-you-hua.md)
 * [05-oldboy-linux-远程连接故障排查](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha.md)

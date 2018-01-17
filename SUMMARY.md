@@ -40,6 +40,7 @@
   * [6.3 关闭selinux](di-liu-jie-linux-ji-chu-you-hua/63.md)
 * [第7章 Linux第一关命令](di-qi-jie-di-yi-guan-ming-ling.md)
   * [7.1 Linux中命令的使用](di-qi-jie-di-yi-guan-ming-ling/71-linuxzhong-ming-ling-de-shi-yong.md)
+  * [7.2 vi/vim 文本编辑器](di-qi-jie-di-yi-guan-ming-ling/72-vivim-wen-ben-bian-ji-qi.md)
 * [08-oldboy-linux-目录结构](di-ba-jie.md)
 * [09-oldboy-linux-重要目录](di-shijie-linux-xia-zhong-yao-mu-lu.md)
 * [10-oldboy-linux-重要文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian.md)

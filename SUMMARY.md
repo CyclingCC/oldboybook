@@ -70,7 +70,7 @@
   * [9.4 /dev目录](di-shijie-linux-xia-zhong-yao-mu-lu/94-dev-mu-lu.md)
   * [9.5 /etc目录](di-shijie-linux-xia-zhong-yao-mu-lu/95.md)
   * [9.6  /home目录](di-shijie-linux-xia-zhong-yao-mu-lu/96-homemu-lu.md)
-  * 9.7
+  * [9.7 /lib 目录](di-shijie-linux-xia-zhong-yao-mu-lu/97.md)
   * 9.8
   * 9.9
   * 9.10

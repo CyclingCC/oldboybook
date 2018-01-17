@@ -102,9 +102,9 @@
 * [第11章 Linux第二关命令](di-shi-er-jie-di-er-guan-ming-ling.md)
   * [11.1 环境变量](di-shi-er-jie-di-er-guan-ming-ling/111.md)
   * [11.2 ls命令](di-shi-er-jie-di-er-guan-ming-ling/112.md)
-  * 11.3
-  * 11.4
-  * 11.5
+  * [11.3 cd命令](di-shi-er-jie-di-er-guan-ming-ling/113-cdming-ling.md)
+  * [11.4 find命令](di-shi-er-jie-di-er-guan-ming-ling/114.md)
+  * [11.5 tree命令](di-shi-er-jie-di-er-guan-ming-ling/115.md)
   * 11.6
   * 11.7
   * 11.8

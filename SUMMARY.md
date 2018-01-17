@@ -36,6 +36,8 @@
   * [5.9 总结](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha/59-zong-jie.md)
 * [第6章 Linux基础优化](di-liu-jie-linux-ji-chu-you-hua.md)
   * [6.1 如何关闭一个软件/服务（iptables）](di-liu-jie-linux-ji-chu-you-hua/61-ru-he-guan-biyi-ge-ruan-4ef6-fu-wu-ff08-iptables.md)
+  * [6.2 修改字符集](di-liu-jie-linux-ji-chu-you-hua/62.md)
+  * 6.3 
 * [07-oldboy-linux-第一关命令](di-qi-jie-di-yi-guan-ming-ling.md)
 * [08-oldboy-linux-目录结构](di-ba-jie.md)
 * [09-oldboy-linux-重要目录](di-shijie-linux-xia-zhong-yao-mu-lu.md)

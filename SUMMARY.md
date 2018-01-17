@@ -101,7 +101,7 @@
   * [10.11 总结](di-jiu-jie-linux-xia-zhong-yao-wen-jian/1011-zong-jie.md)
 * [第11章 Linux第二关命令](di-shi-er-jie-di-er-guan-ming-ling.md)
   * [11.1 环境变量](di-shi-er-jie-di-er-guan-ming-ling/111.md)
-  * 11.2
+  * [11.2 ls命令](di-shi-er-jie-di-er-guan-ming-ling/112.md)
   * 11.3
   * 11.4
   * 11.5

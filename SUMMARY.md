@@ -105,8 +105,8 @@
   * [11.3 cd命令](di-shi-er-jie-di-er-guan-ming-ling/113-cdming-ling.md)
   * [11.4 find命令](di-shi-er-jie-di-er-guan-ming-ling/114.md)
   * [11.5 tree命令](di-shi-er-jie-di-er-guan-ming-ling/115.md)
-  * 11.6
-  * 11.7
+  * [11.6 grep命令](di-shi-er-jie-di-er-guan-ming-ling/116-grepming-ling.md)
+  * [11.7 nl命令](di-shi-er-jie-di-er-guan-ming-ling/117-nlming-ling.md)
   * 11.8
   * 11.9
   * 11.10

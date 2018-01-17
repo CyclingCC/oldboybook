@@ -207,4 +207,5 @@
   * [23.3 shell环境变量](23-oldboy-linux-shellbian-cheng-ji-chu/233-shellhuan-jing-bian-liang.md)
   * [23.4 shell局部变量](23-oldboy-linux-shellbian-cheng-ji-chu/234-shellju-bu-bian-liang.md)
   * [23.5 shell特殊变量](23-oldboy-linux-shellbian-cheng-ji-chu/235-shellte-shu-bian-liang.md)
+  * [23.6 变量的数值计算](23-oldboy-linux-shellbian-cheng-ji-chu/236-bian-liang-de-shu-zhi-ji-suan.md)
 

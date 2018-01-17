@@ -68,7 +68,7 @@
   * [9.2 /bin目录 ](di-shijie-linux-xia-zhong-yao-mu-lu/92.md)
   * [9.3 /boot目录](di-shijie-linux-xia-zhong-yao-mu-lu/93.md)
   * [9.4 /dev目录](di-shijie-linux-xia-zhong-yao-mu-lu/94-dev-mu-lu.md)
-  * 9.5
+  * [9.5 /etc目录](di-shijie-linux-xia-zhong-yao-mu-lu/95.md)
   * 9.6
   * 9.7
   * 9.8

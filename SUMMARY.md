@@ -83,7 +83,26 @@
   * [9.17 /usr目录](di-shijie-linux-xia-zhong-yao-mu-lu/917.md)
   * [9.18 /var目录](di-shijie-linux-xia-zhong-yao-mu-lu/918-varmu-lu.md)
   * [9.19 目录层次标准FHS](di-shijie-linux-xia-zhong-yao-mu-lu/919-mu-lu-ceng-ci-biao-zhun-fhs.md)
-* [10-oldboy-linux-重要文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian.md)
+* [第10章 Linux重要文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian.md)
+  * [10.1 查看路由](di-jiu-jie-linux-xia-zhong-yao-wen-jian/101.md)
+  * [10.2 DNS配置文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian/102-dnspei-zhi-wen-jian.md)
+  * [10.3 网卡配置文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian/103.md)
+  * [10.4 hosts文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian/104.md)
+  * [10.5 ](di-jiu-jie-linux-xia-zhong-yao-wen-jian/105.md)
+  * [10.6  主机名配置](di-jiu-jie-linux-xia-zhong-yao-wen-jian/106.md)
+  * 10.7
+  * 10.8
+  * 10.9
+  * 10.10
+  * 10.11
+  * 10.12
+  * 10.13
+  * 10.14
+  * 10.15
+  * 10.16
+  * 10.17
+  * 10.18
+  * 10.19
 * [11-oldboy-linux-目录详解](di-shi-yi-jie-linux-mu-lu-xiang-jie.md)
 * [12-oldboy-linux-第二关命令](di-shi-er-jie-di-er-guan-ming-ling.md)
 * [13-oldboy-linux-文件属性](di-shi-san-jie-linux-wen-jian-shu-xing.md)

@@ -10,5 +10,27 @@
 | /proc/loadavg | 系统负载平均值信息uptime ,w |
 | /proc/mounts | 设备挂载信息，df -h |
 
+#### /proc/cpuinfo
 
+关于处理器的信息，如类似、厂家、型号和性能等。比如cat /proc/cpuinfo
+
+#### /proc/devices
+
+当前运行内核所配置的所有设备清单。
+
+#### /proc/filesystems
+
+当前运行内核所配置的文件系统。
+
+#### /proc/dma
+
+当前正在使用的DMA通道。
+
+#### /proc/interrupts
+
+正在使用的中断和曾经有多少个中断。
+
+#### /proc/ioports
+
+当前正在使用的I/O端口。
 

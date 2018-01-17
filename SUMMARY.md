@@ -118,7 +118,15 @@
   * [11.16 文件归档](di-shi-er-jie-di-er-guan-ming-ling/1116-wen-jian-gui-dang.md)
   * [11.17 练习题](di-shi-er-jie-di-er-guan-ming-ling/1117-lian-xi-ti.md)
   * [11.18 特殊符号](di-shi-er-jie-di-er-guan-ming-ling/1118-te-shu-fu-hao.md)
-* [13-oldboy-linux-文件属性](di-shi-san-jie-linux-wen-jian-shu-xing.md)
+* [第12章 Linux文件属性](di-shi-san-jie-linux-wen-jian-shu-xing.md)
+  * 12.1
+  * 12.2
+  * 12.3
+  * 12.4
+  * 12.5
+  * 12.6
+  * 12.7
+  * [12.8 文件时间](di-shi-san-jie-linux-wen-jian-shu-xing/128-wen-jian-shi-jian.md)
 * [14-oldboy-linux-通配符](di-shi-si-jie-tong-pei-fu.md)
 * [15-oldboy-linux-正则表达式](di-shi-wu-jie-zheng-ze-biao-da-shi.md)
 * [16-oldboy-linux-定时任务](di-shi-liu-jie-ding-shi-ren-wu.md)

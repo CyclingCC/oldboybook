@@ -119,7 +119,7 @@
   * [11.17 练习题](di-shi-er-jie-di-er-guan-ming-ling/1117-lian-xi-ti.md)
   * [11.18 特殊符号](di-shi-er-jie-di-er-guan-ming-ling/1118-te-shu-fu-hao.md)
 * [第12章 Linux文件属性](di-shi-san-jie-linux-wen-jian-shu-xing.md)
-  * 12.1
+  * [12.1 文件属性概况](di-shi-san-jie-linux-wen-jian-shu-xing/121-wen-jian-shu-xing-gai-kuang.md)
   * [12.2 inode 和 block](di-shi-san-jie-linux-wen-jian-shu-xing/122.md)
   * [12.3 文件类型](di-shi-san-jie-linux-wen-jian-shu-xing/123.md)
   * [12.4 文件权限](di-shi-san-jie-linux-wen-jian-shu-xing/124-wen-jian-quan-xian.md)

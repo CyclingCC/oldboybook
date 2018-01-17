@@ -120,8 +120,8 @@
   * [11.18 特殊符号](di-shi-er-jie-di-er-guan-ming-ling/1118-te-shu-fu-hao.md)
 * [第12章 Linux文件属性](di-shi-san-jie-linux-wen-jian-shu-xing.md)
   * 12.1
-  * 12.2
-  * [12.3](di-shi-san-jie-linux-wen-jian-shu-xing/123.md)
+  * [12.2 inode 和 block](di-shi-san-jie-linux-wen-jian-shu-xing/122.md)
+  * [12.3 文件类型](di-shi-san-jie-linux-wen-jian-shu-xing/123.md)
   * [12.4 文件权限](di-shi-san-jie-linux-wen-jian-shu-xing/124-wen-jian-quan-xian.md)
   * [12.5 硬链接和软链接](di-shi-san-jie-linux-wen-jian-shu-xing/125.md)
   * [12.6 文件删除原理](di-shi-san-jie-linux-wen-jian-shu-xing/126.md)

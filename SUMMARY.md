@@ -131,7 +131,7 @@
   * [13.1 常见特殊符号](di-shi-si-jie-tong-pei-fu/131.md)
   * [13.2 单引号、双引号、不加引号的区别](di-shi-si-jie-tong-pei-fu/132-dan-yin-hao-3001-shuang-yin-hao-3001-bu-jia-yin-hao-de-qu-bie.md)
 * [第14章 Linux正则表达式](di-shi-wu-jie-zheng-ze-biao-da-shi.md)
-  * 14.1
+  * [14.1 grep 命令](di-shi-wu-jie-zheng-ze-biao-da-shi/141.md)
 * [16-oldboy-linux-定时任务](di-shi-liu-jie-ding-shi-ren-wu.md)
 * [17-oldboy-linux-第三关命令](di-shi-qi-jie-di-san-guan-ming-ling.md)
 * [18-oldboy-linux-系统权限](18-oldboy-linuxxi-tong-quan-xian.md)

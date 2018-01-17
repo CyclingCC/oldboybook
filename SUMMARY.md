@@ -89,7 +89,7 @@
   * [10.3 网卡配置文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian/103.md)
   * [10.4 hosts文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian/104.md)
   * [10.5 主机名配置](di-jiu-jie-linux-xia-zhong-yao-wen-jian/105.md)
-  * [10.6  主机名配置](di-jiu-jie-linux-xia-zhong-yao-wen-jian/106.md)
+  * [10.6  开机自动挂载](di-jiu-jie-linux-xia-zhong-yao-wen-jian/106.md)
   * 10.7
   * 10.8
   * 10.9

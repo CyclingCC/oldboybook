@@ -123,8 +123,8 @@
   * 12.2
   * 12.3
   * 12.4
-  * 12.5
-  * 12.6
+  * [12.5 硬链接和软链接](di-shi-san-jie-linux-wen-jian-shu-xing/125.md)
+  * [12.6 文件删除原理](di-shi-san-jie-linux-wen-jian-shu-xing/126.md)
   * [12.7 用户和组](di-shi-san-jie-linux-wen-jian-shu-xing/127-yong-hu-he-zu.md)
   * [12.8 文件时间](di-shi-san-jie-linux-wen-jian-shu-xing/128-wen-jian-shi-jian.md)
 * [14-oldboy-linux-通配符](di-shi-si-jie-tong-pei-fu.md)

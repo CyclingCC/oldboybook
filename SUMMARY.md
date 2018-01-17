@@ -205,4 +205,5 @@
   * [23.1 什么是shell](23-oldboy-linux-shellbian-cheng-ji-chu/231-shi-yao-shi-shell.md)
   * [23.2 shell脚本建立和执行](23-oldboy-linux-shellbian-cheng-ji-chu/232.md)
   * [23.3 shell环境变量](23-oldboy-linux-shellbian-cheng-ji-chu/233-shellhuan-jing-bian-liang.md)
+  * [23.4 shell局部变量](23-oldboy-linux-shellbian-cheng-ji-chu/234-shellju-bu-bian-liang.md)
 

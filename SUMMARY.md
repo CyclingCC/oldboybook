@@ -77,7 +77,7 @@
   * [9.11 /lost+found 目录](di-shijie-linux-xia-zhong-yao-mu-lu/911-lost+found-mu-lu.md)
   * [9.12 /opt 目录](di-shijie-linux-xia-zhong-yao-mu-lu/912-opt-mu-lu.md)
   * [9.13 /proc目录](di-shijie-linux-xia-zhong-yao-mu-lu/913-procmu-lu.md)
-  * 9.14
+  * [9.14 /root目录](di-shijie-linux-xia-zhong-yao-mu-lu/914.md)
   * 9.15
   * 9.16
   * 9.17

@@ -93,7 +93,7 @@
   * [10.7 系统运行级别](di-jiu-jie-linux-xia-zhong-yao-wen-jian/107-xi-tong-yun-xing-ji-bie.md)
   * [10.8 环境变量配置文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian/108.md)
   * [10.9 系统登录提示信息](di-jiu-jie-linux-xia-zhong-yao-wen-jian/109-xi-tong-deng-lu-ti-shi-xin-xi.md)
-  * 10.10
+  * [10.10 系统日志文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian/1010-xi-tong-ri-zhi-wen-jian.md)
   * 10.11
   * 10.12
   * 10.13

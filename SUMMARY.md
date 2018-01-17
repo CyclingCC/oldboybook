@@ -33,6 +33,7 @@
   * [5.6 检查防火墙的状态](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha/56-jian-cha-fang-huo-qiang-de-zhuang-tai.md)
   * [5.7 端口号是否更改](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha/57-duan-kou-hao-shi-fou-geng-gai.md)
   * [5.8 是否禁止root用户访问](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha/58-shi-fou-jin-zhi-root-yong-hu-fang-wen.md)
+  * [5.9 总结](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha/59-zong-jie.md)
 * [06-oldboy-linux-基础优化](di-liu-jie-linux-ji-chu-you-hua.md)
 * [07-oldboy-linux-第一关命令](di-qi-jie-di-yi-guan-ming-ling.md)
 * [08-oldboy-linux-目录结构](di-ba-jie.md)

@@ -66,8 +66,8 @@
 * [第9章 Linux重要目录](di-shijie-linux-xia-zhong-yao-mu-lu.md)
   * [9.1 根目录 /](di-shijie-linux-xia-zhong-yao-mu-lu/91.md)
   * [9.2 /bin目录 ](di-shijie-linux-xia-zhong-yao-mu-lu/92.md)
-  * 9.3
-  * 9.4
+  * [9.3 /boot目录](di-shijie-linux-xia-zhong-yao-mu-lu/93.md)
+  * [9.4 /dev目录](di-shijie-linux-xia-zhong-yao-mu-lu/94-dev-mu-lu.md)
   * 9.5
   * 9.6
   * 9.7

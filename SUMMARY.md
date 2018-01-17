@@ -134,7 +134,9 @@
   * [14.1 grep 命令](di-shi-wu-jie-zheng-ze-biao-da-shi/141.md)
   * [14.2 基础正则与扩展正则](di-shi-wu-jie-zheng-ze-biao-da-shi/142-ji-chu-zheng-ze-yu-kuo-zhan-zheng-ze.md)
   * [14.3 基础正则](di-shi-wu-jie-zheng-ze-biao-da-shi/143-ji-chu-zheng-ze.md)
-  * 14.4 扩展正则
+  * [14.4 扩展正则](di-shi-wu-jie-zheng-ze-biao-da-shi/144-kuo-zhan-zheng-ze.md)
+  * [14.5 正则表达式的特殊符号](di-shi-wu-jie-zheng-ze-biao-da-shi/145-zheng-ze-biao-da-shi-de-te-shu-fu-hao.md)
+  * [14.6 企业案例](di-shi-wu-jie-zheng-ze-biao-da-shi/146-qi-ye-an-li.md)
 * [16-oldboy-linux-定时任务](di-shi-liu-jie-ding-shi-ren-wu.md)
 * [17-oldboy-linux-第三关命令](di-shi-qi-jie-di-san-guan-ming-ling.md)
 * [18-oldboy-linux-系统权限](18-oldboy-linuxxi-tong-quan-xian.md)

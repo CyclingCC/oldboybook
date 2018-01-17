@@ -81,7 +81,7 @@
   * [9.15 /sbin 目录](di-shijie-linux-xia-zhong-yao-mu-lu/915.md)
   * [9.16 /tmp 目录](di-shijie-linux-xia-zhong-yao-mu-lu/916.md)
   * [9.17 /usr目录](di-shijie-linux-xia-zhong-yao-mu-lu/917.md)
-  * 9.18
+  * [9.18 /var目录](di-shijie-linux-xia-zhong-yao-mu-lu/918-varmu-lu.md)
   * 9.19
 * [10-oldboy-linux-重要文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian.md)
 * [11-oldboy-linux-目录详解](di-shi-yi-jie-linux-mu-lu-xiang-jie.md)

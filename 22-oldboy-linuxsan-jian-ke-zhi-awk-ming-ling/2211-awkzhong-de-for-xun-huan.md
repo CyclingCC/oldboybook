@@ -2,7 +2,7 @@
 
 for\(key in array\)
 
-     关键字
+ 关键字
 
 key遍历array数组的下标
 

@@ -3,7 +3,8 @@
 ## linux基础知识点汇总
 
 * [介绍](README.md)
-* [01-oldboy-linux-硬件基础](di-yi-jie-linux-ying-jian-ji-chu.md)
+* [第1章 Linux硬件基础](di-yi-jie-linux-ying-jian-ji-chu.md)
+  * [1.1 工作场景](di-yi-jie-linux-ying-jian-ji-chu/11.md)
 * [02-oldboy-linux-系统发展及版本介绍](chapter1.md)
 * [03-oldboy-linux-系统安装](di-san-jie.md)
 * [04-oldboy-linux-Xshell优化](di-wu-jie-xshell-you-hua.md)

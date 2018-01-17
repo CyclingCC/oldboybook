@@ -56,6 +56,9 @@
   * [7.15 alias命令](di-qi-jie-di-yi-guan-ming-ling/715-aliasming-ling.md)
   * [7.16 sed命令](di-qi-jie-di-yi-guan-ming-ling/716.md)
   * [7.17 awk命令](di-qi-jie-di-yi-guan-ming-ling/717-awkming-ling.md)
+  * [7.18 实战题目](di-qi-jie-di-yi-guan-ming-ling/718-shi-zhan-ti-mu.md)
+  * 7.19 
+  * 7.20 
 * [08-oldboy-linux-目录结构](di-ba-jie.md)
 * [09-oldboy-linux-重要目录](di-shijie-linux-xia-zhong-yao-mu-lu.md)
 * [10-oldboy-linux-重要文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian.md)

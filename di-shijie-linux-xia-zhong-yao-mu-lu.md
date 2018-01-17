@@ -66,6 +66,8 @@
 
 ## 1.2 /bin目录
 
+
+
 bin目录为常用二进制命令所在目录，比如ls、cp、mkdir、rm、cut等命令：/bin目录和/usr/bin类似。
 
 ## 1.3 /boot目录

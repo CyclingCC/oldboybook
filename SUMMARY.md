@@ -208,4 +208,6 @@
   * [23.4 shell局部变量](23-oldboy-linux-shellbian-cheng-ji-chu/234-shellju-bu-bian-liang.md)
   * [23.5 shell特殊变量](23-oldboy-linux-shellbian-cheng-ji-chu/235-shellte-shu-bian-liang.md)
   * [23.6 变量的数值计算](23-oldboy-linux-shellbian-cheng-ji-chu/236-bian-liang-de-shu-zhi-ji-suan.md)
+  * [23.7 如何定义变量](23-oldboy-linux-shellbian-cheng-ji-chu/237-ru-he-ding-yi-bian-liang.md)
+  * [23.8 条件测试](23-oldboy-linux-shellbian-cheng-ji-chu/238-tiao-jian-ce-shi.md)
 

@@ -71,10 +71,10 @@
   * [9.5 /etc目录](di-shijie-linux-xia-zhong-yao-mu-lu/95.md)
   * [9.6  /home目录](di-shijie-linux-xia-zhong-yao-mu-lu/96-homemu-lu.md)
   * [9.7 /lib 目录](di-shijie-linux-xia-zhong-yao-mu-lu/97.md)
-  * 9.8
-  * 9.9
-  * 9.10
-  * 9.11
+  * [9.8 /lib64 目录](di-shijie-linux-xia-zhong-yao-mu-lu/98-lib64-mu-lu.md)
+  * [9.9 /mnt 目录](di-shijie-linux-xia-zhong-yao-mu-lu/99-mnt-mu-lu.md)
+  * [9.10 /media 目录](di-shijie-linux-xia-zhong-yao-mu-lu/910.md)
+  * [9.11 /lost+found 目录](di-shijie-linux-xia-zhong-yao-mu-lu/911-lost+found-mu-lu.md)
   * 9.12
   * 9.13
   * 9.14

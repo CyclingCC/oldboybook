@@ -203,4 +203,5 @@
   * [22.13  awk总结](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/2213-awk-zong-jie.md)
 * [第23章 Shell编程基础](23-oldboy-linux-shellbian-cheng-ji-chu.md)
   * [23.1 什么是shell](23-oldboy-linux-shellbian-cheng-ji-chu/231-shi-yao-shi-shell.md)
+  * [23.2 shell脚本建立和执行](23-oldboy-linux-shellbian-cheng-ji-chu/232.md)
 

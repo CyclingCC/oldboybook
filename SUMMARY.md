@@ -49,7 +49,7 @@
   * 7.8 管道 \| 
   * 7.9 xargs命令
   * 7.10 grep命令
-  * 7.11 head命令
+  * [7.11 head命令](di-qi-jie-di-yi-guan-ming-ling/711-headming-ling.md)
   * [7.12 tail命令](di-qi-jie-di-yi-guan-ming-ling/712-tailming-ling.md)
 * [08-oldboy-linux-目录结构](di-ba-jie.md)
 * [09-oldboy-linux-重要目录](di-shijie-linux-xia-zhong-yao-mu-lu.md)

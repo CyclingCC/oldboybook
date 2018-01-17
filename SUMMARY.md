@@ -189,6 +189,6 @@
   * [21.3 sed进阶](21-oldboy-linuxsan-jian-ke-zhi-sed-ming-ling/213.md)
 * [第22章 Linux三剑客之awk命令](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling.md)
   * [22.1 awk介绍](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/221.md)
-  * [22.2 ](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/222.md)
+  * [22.2 awk 字段和记录](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/222.md)
 * [第23章 Shell编程基础](23-oldboy-linux-shellbian-cheng-ji-chu.md)
 

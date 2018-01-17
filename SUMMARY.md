@@ -82,7 +82,7 @@
   * [9.16 /tmp 目录](di-shijie-linux-xia-zhong-yao-mu-lu/916.md)
   * [9.17 /usr目录](di-shijie-linux-xia-zhong-yao-mu-lu/917.md)
   * [9.18 /var目录](di-shijie-linux-xia-zhong-yao-mu-lu/918-varmu-lu.md)
-  * 9.19
+  * [9.19 目录层次标准FHS](di-shijie-linux-xia-zhong-yao-mu-lu/919-mu-lu-ceng-ci-biao-zhun-fhs.md)
 * [10-oldboy-linux-重要文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian.md)
 * [11-oldboy-linux-目录详解](di-shi-yi-jie-linux-mu-lu-xiang-jie.md)
 * [12-oldboy-linux-第二关命令](di-shi-er-jie-di-er-guan-ming-ling.md)

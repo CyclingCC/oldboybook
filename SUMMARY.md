@@ -145,7 +145,7 @@
   * [15.5 linux定时任务](di-shi-liu-jie-ding-shi-ren-wu/155-linuxding-shi-ren-wu.md)
   * [15.6 查看是否有定时任务](di-shi-liu-jie-ding-shi-ren-wu/156-cha-kan-shi-fou-you-ding-shi-ren-wu.md)
   * [15.7 定时任务的使用说明](di-shi-liu-jie-ding-shi-ren-wu/157.md)
-  * 15.8
+  * [15.8 定时任务书写要领](di-shi-liu-jie-ding-shi-ren-wu/158-ding-shi-ren-wu-shu-xie-yao-ling.md)
   * 15.9
   * 15.10
 * [17-oldboy-linux-第三关命令](di-shi-qi-jie-di-san-guan-ming-ling.md)

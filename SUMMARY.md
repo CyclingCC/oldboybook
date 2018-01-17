@@ -198,5 +198,6 @@
   * [22.8 awk基本结构](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/228-awkji-ben-jie-gou.md)
   * [22.9  awk内置变量](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/229-awk-nei-zhi-bian-liang.md)
   * [22.10 awk数组](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/2210-awkshu-zu.md)
+  * [22.11 awk中的for循环](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/2211-awkzhong-de-for-xun-huan.md)
 * [第23章 Shell编程基础](23-oldboy-linux-shellbian-cheng-ji-chu.md)
 

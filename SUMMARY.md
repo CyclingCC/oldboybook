@@ -169,7 +169,7 @@
   * [17.5 文件锁定](18-oldboy-linuxxi-tong-quan-xian/175-wen-jian-suo-ding.md)
   * [17.6 总结](18-oldboy-linuxxi-tong-quan-xian/176-zong-jie.md)
 * [第18章Linux用户管理](di-shiba-jie-linux-yong-hu-guan-li.md)
-  * 18.1
+  * [18.1 linux系统用户分类](di-shiba-jie-linux-yong-hu-guan-li/181-linuxxi-tong-yong-hu-fen-lei.md)
 * [20-oldboy-linux-磁盘与文件系统](20-oldboy-linuxci-pan-yu-wen-jian-xi-tong.md)
 * [21-oldboy-linux-raid分类](21-oldboy-linux-raidfen-lei.md)
 * [22-oldboy-linux-三剑客之sed命令](21-oldboy-linuxsan-jian-ke-zhi-sed-ming-ling.md)

@@ -12,5 +12,15 @@
 | /usr/src | 源码程序存放目录1.rpm –ivh包名.rpm2.yum install包名3.源码\(./configure,make,make install\)定制 |
 | /usr/include | 存放C/C++头文件的目录 |
 
+#### /var/adm
 
+比如软件包安装信息、日志、管理信息等就存放在该目录下，在Slackware操作系统中是有这个目录的。在Fedora中好象没有。
+
+#### /var/log
+
+该目录用于存放系统日志。
+
+#### /var/spool
+
+打印机、邮件、代理服务器等假脱机目录存放在该目录下。
 

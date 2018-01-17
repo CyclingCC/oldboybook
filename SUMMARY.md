@@ -191,5 +191,6 @@
   * [22.1 awk介绍](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/221.md)
   * [22.2 awk 字段和记录](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/222.md)
   * [22.3 awk正则匹配](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/223-awkzheng-ze-pi-pei.md)
+  * [22.4 模式匹配](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/224.md)
 * [第23章 Shell编程基础](23-oldboy-linux-shellbian-cheng-ji-chu.md)
 

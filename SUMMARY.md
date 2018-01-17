@@ -127,7 +127,11 @@
   * [12.6 文件删除原理](di-shi-san-jie-linux-wen-jian-shu-xing/126.md)
   * [12.7 用户和组](di-shi-san-jie-linux-wen-jian-shu-xing/127-yong-hu-he-zu.md)
   * [12.8 文件时间](di-shi-san-jie-linux-wen-jian-shu-xing/128-wen-jian-shi-jian.md)
-* [14-oldboy-linux-通配符](di-shi-si-jie-tong-pei-fu.md)
+* [第13章 Linux通配符](di-shi-si-jie-tong-pei-fu.md)
+  * [13.1 常见特殊符号](di-shi-si-jie-tong-pei-fu/131.md)
+  * 13.2
+  * 13.3
+  * 13.4
 * [15-oldboy-linux-正则表达式](di-shi-wu-jie-zheng-ze-biao-da-shi.md)
 * [16-oldboy-linux-定时任务](di-shi-liu-jie-ding-shi-ren-wu.md)
 * [17-oldboy-linux-第三关命令](di-shi-qi-jie-di-san-guan-ming-ling.md)

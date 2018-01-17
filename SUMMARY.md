@@ -85,6 +85,8 @@
   * [9.19 /selinux ](di-shijie-linux-xia-zhong-yao-mu-lu/919-selinux.md)
   * [9.19 目录层次标准FHS](di-shijie-linux-xia-zhong-yao-mu-lu/919-mu-lu-ceng-ci-biao-zhun-fhs.md)
   * [9.20 /sys](di-shijie-linux-xia-zhong-yao-mu-lu/920-sys-mu-lu.md)
+  * [9.21 /misc](di-shijie-linux-xia-zhong-yao-mu-lu/921-misc.md)
+  * [9.22 /srv](di-shijie-linux-xia-zhong-yao-mu-lu/srv.md)
 * [第10章 Linux重要文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian.md)
   * [10.1 查看路由](di-jiu-jie-linux-xia-zhong-yao-wen-jian/101.md)
   * [10.2 DNS配置文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian/102-dnspei-zhi-wen-jian.md)

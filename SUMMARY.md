@@ -19,6 +19,8 @@
   * [2.9 总结](chapter1/29-zong-jie.md)
 * [第3章 Linux系统安装](di-san-jie.md)
   * [3.1 Vmware安装](di-san-jie/31.md)
+  * [3.2 安装错误解决方法](di-san-jie/32-an-zhuang-cuo-wu-jie-jue-fang-fa.md)
+  * [3.3 安装CentOS](di-san-jie/33-an-zhuang-centos.md)
 * [04-oldboy-linux-Xshell优化](di-wu-jie-xshell-you-hua.md)
 * [05-oldboy-linux-远程连接故障排查](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha.md)
 * [06-oldboy-linux-基础优化](di-liu-jie-linux-ji-chu-you-hua.md)

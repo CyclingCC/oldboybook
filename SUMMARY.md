@@ -63,7 +63,26 @@
   * [8.1 windows目录结构](di-ba-jie/81-windowsmu-lu-jie-gou.md)
   * [8.2 Unix目录发展](di-ba-jie/82-unixmu-lu-fa-zhan.md)
   * [8.3 linux目录结构](di-ba-jie/83-linuxmu-lu-jie-gou.md)
-* [09-oldboy-linux-重要目录](di-shijie-linux-xia-zhong-yao-mu-lu.md)
+* [第9章 Linux重要目录](di-shijie-linux-xia-zhong-yao-mu-lu.md)
+  * [9.1 根目录 /](di-shijie-linux-xia-zhong-yao-mu-lu/91.md)
+  * [9.2 /bin目录 ](di-shijie-linux-xia-zhong-yao-mu-lu/92.md)
+  * 9.3
+  * 9.4
+  * 9.5
+  * 9.6
+  * 9.7
+  * 9.8
+  * 9.9
+  * 9.10
+  * 9.11
+  * 9.12
+  * 9.13
+  * 9.14
+  * 9.15
+  * 9.16
+  * 9.17
+  * 9.18
+  * 9.19
 * [10-oldboy-linux-重要文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian.md)
 * [11-oldboy-linux-目录详解](di-shi-yi-jie-linux-mu-lu-xiang-jie.md)
 * [12-oldboy-linux-第二关命令](di-shi-er-jie-di-er-guan-ming-ling.md)

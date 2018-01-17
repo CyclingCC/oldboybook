@@ -7,8 +7,10 @@
   * [1.1 工作场景](di-yi-jie-linux-ying-jian-ji-chu/11.md)
   * [1.2 服务器的主要构成](di-yi-jie-linux-ying-jian-ji-chu/12-dian-nao-he-fu-wu-qi-de-zhu-yao-gou-cheng.md)
   * [1.3 总结](di-yi-jie-linux-ying-jian-ji-chu/13-zong-jie.md)
-* [第2章 linux系统发展及版本介绍](chapter1.md)
-  * 2.1
+* [第2章 Linux系统发展及版本介绍](chapter1.md)
+  * [2.1 什么是操作系统](chapter1/21.md)
+  * [2.2 什么是Linux](chapter1/22-shi-yao-shi-linux.md)
+  * 2.3 
 * [03-oldboy-linux-系统安装](di-san-jie.md)
 * [04-oldboy-linux-Xshell优化](di-wu-jie-xshell-you-hua.md)
 * [05-oldboy-linux-远程连接故障排查](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha.md)

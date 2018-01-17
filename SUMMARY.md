@@ -94,7 +94,7 @@
   * [10.8 环境变量配置文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian/108.md)
   * [10.9 系统登录提示信息](di-jiu-jie-linux-xia-zhong-yao-wen-jian/109-xi-tong-deng-lu-ti-shi-xin-xi.md)
   * [10.10 系统日志文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian/1010-xi-tong-ri-zhi-wen-jian.md)
-  * 10.11
+  * [10.11 总结](di-jiu-jie-linux-xia-zhong-yao-wen-jian/1011-zong-jie.md)
   * 10.12
   * 10.13
   * 10.14

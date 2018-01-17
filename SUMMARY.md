@@ -91,8 +91,8 @@
   * [10.5 主机名配置](di-jiu-jie-linux-xia-zhong-yao-wen-jian/105.md)
   * [10.6  开机自动挂载](di-jiu-jie-linux-xia-zhong-yao-wen-jian/106.md)
   * [10.7 系统运行级别](di-jiu-jie-linux-xia-zhong-yao-wen-jian/107-xi-tong-yun-xing-ji-bie.md)
-  * 10.8
-  * 10.9
+  * [10.8 环境变量配置文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian/108.md)
+  * [10.9 系统登录提示信息](di-jiu-jie-linux-xia-zhong-yao-wen-jian/109-xi-tong-deng-lu-ti-shi-xin-xi.md)
   * 10.10
   * 10.11
   * 10.12

@@ -212,4 +212,6 @@
   * [23.8 条件测试](23-oldboy-linux-shellbian-cheng-ji-chu/238-tiao-jian-ce-shi.md)
   * [23.9 if条件语句](23-oldboy-linux-shellbian-cheng-ji-chu/239-tiao-jian-ce-shi.md)
   * [23.10 case条件语句](23-oldboy-linux-shellbian-cheng-ji-chu/2310-casetiao-jian-yu-ju.md)
+  * [23.11 循环语句](23-oldboy-linux-shellbian-cheng-ji-chu/2311-xun-huan-yu-ju.md)
+  * [23.12 shell脚本的调试](23-oldboy-linux-shellbian-cheng-ji-chu/2312.md)
 

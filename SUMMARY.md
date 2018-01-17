@@ -90,7 +90,7 @@
   * [10.4 hosts文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian/104.md)
   * [10.5 主机名配置](di-jiu-jie-linux-xia-zhong-yao-wen-jian/105.md)
   * [10.6  开机自动挂载](di-jiu-jie-linux-xia-zhong-yao-wen-jian/106.md)
-  * 10.7
+  * [10.7 系统运行级别](di-jiu-jie-linux-xia-zhong-yao-wen-jian/107-xi-tong-yun-xing-ji-bie.md)
   * 10.8
   * 10.9
   * 10.10

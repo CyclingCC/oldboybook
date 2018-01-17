@@ -6,7 +6,7 @@
 * [第1章 Linux硬件基础](di-yi-jie-linux-ying-jian-ji-chu.md)
   * [1.1 工作场景](di-yi-jie-linux-ying-jian-ji-chu/11.md)
   * [1.2 服务器的主要构成](di-yi-jie-linux-ying-jian-ji-chu/12-dian-nao-he-fu-wu-qi-de-zhu-yao-gou-cheng.md)
-  * 1.3 总结
+  * [1.3 总结](di-yi-jie-linux-ying-jian-ji-chu/13-zong-jie.md)
 * [02-oldboy-linux-系统发展及版本介绍](chapter1.md)
 * [03-oldboy-linux-系统安装](di-san-jie.md)
 * [04-oldboy-linux-Xshell优化](di-wu-jie-xshell-you-hua.md)

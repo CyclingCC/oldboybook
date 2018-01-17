@@ -61,8 +61,8 @@
   * [7.20 常用快捷键](di-qi-jie-di-yi-guan-ming-ling/720-chang-yong-kuai-jie-jian.md)
 * [第8章 Linux目录结构](di-ba-jie.md)
   * [8.1 windows目录结构](di-ba-jie/81-windowsmu-lu-jie-gou.md)
-  * 8.2 Unix目录发展
-  * 8.3 linux目录结构
+  * [8.2 Unix目录发展](di-ba-jie/82-unixmu-lu-fa-zhan.md)
+  * [8.3 linux目录结构](di-ba-jie/83-linuxmu-lu-jie-gou.md)
 * [09-oldboy-linux-重要目录](di-shijie-linux-xia-zhong-yao-mu-lu.md)
 * [10-oldboy-linux-重要文件](di-jiu-jie-linux-xia-zhong-yao-wen-jian.md)
 * [11-oldboy-linux-目录详解](di-shi-yi-jie-linux-mu-lu-xiang-jie.md)

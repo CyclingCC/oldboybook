@@ -1,0 +1,57 @@
+{
+  "title": "Python全栈开发之路",
+  "description": "为什么啊。",
+  "keywords":"测试一下，看能出来不",
+  "author":"测试",
+  "language": "zh-hans",
+  "links" : {
+    "sidebar" : {
+        "路飞学城" : "http://luffycity.com"
+    }
+  },
+  "theme-default": {
+      "showLevel": true
+  },
+ 
+  "styles": {
+        "website": "styles/website.css"
+  },
+  
+  "plugins": [
+    "-highlight",
+    "toggle-chapters",
+    "codeblock-filename",
+    "sectionx",
+    "splitter",
+    "-search",
+    "-lunr",
+    "search-pro",
+    "prism",
+    "prism-themes",
+    "theme-comscore"
+  ],
+  "pluginsConfig": {
+    "search-pro": {
+        "cutWordLib": "nodejieba",
+        "defineWord" : ["Gitbook Use"]
+    },
+  "sharing": {
+      "weibo": true,
+      "facebook": true,
+      "twitter": true,
+      "google": false,
+      "instapaper": false,
+      "vk": false,
+      "all": [
+          "facebook", "google", "twitter",
+              "weibo", "instapaper"
+      ]
+    },
+    "prism": {
+        "css": [
+            "prism-themes/themes/prism-base16-ateliersulphurpool.light.css"
+        ]
+    }
+  }
+}
+

@@ -215,7 +215,7 @@
   * [23.11 循环语句](23-oldboy-linux-shellbian-cheng-ji-chu/2311-xun-huan-yu-ju.md)
   * [23.12 shell脚本的调试](23-oldboy-linux-shellbian-cheng-ji-chu/2312.md)
 * [第1章 服务器核心知识-linux发展过程](di-1-zhang-fu-wuqi-he-xin-zhi-8bc6-linux-fa-zhan-guo-cheng.md)
-  * 1.1 服务器、服务器分类、运维职责
+  * [1.1 服务器、服务器分类、运维职责](di-1-zhang-fu-wuqi-he-xin-zhi-8bc6-linux-fa-zhan-guo-cheng/11-fu-wu-qi-3001-fu-wu-qi-fen-lei-3001-yun-wei-zhi-ze.md)
   * 1.2 计算机重要组成部分与处理流程
   * 1.3 服务器核心知识-互联网公司服务器品牌与型号
   * 1.4 服务器核心概念-电源-CPU-内存-硬盘-RAID卡-远程控制卡

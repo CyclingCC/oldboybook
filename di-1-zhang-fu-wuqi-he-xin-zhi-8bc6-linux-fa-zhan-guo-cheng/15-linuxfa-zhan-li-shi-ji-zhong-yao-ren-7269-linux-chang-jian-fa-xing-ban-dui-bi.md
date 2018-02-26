@@ -70,9 +70,10 @@ Linux的发行商包括Slackware、Redhat、Debian、Fedora、TurboLinux、Mandr
 
 ### 三、linux发行版本应用场景
 
-|  | **Linux发行版本选择** |
-| :--- | :--- |
+Linux发行版本选择
+
 | **Linux桌面系统** | Ubuntu（乌班图）\(开发人员开发平台\) |
+| :--- | :--- |
 | **服务器端Linux系统** | 首选Redhat（免费下载和使用更新升级）\(有钱任性\)或者CentOS这两者当中选CentOS（与redhat一模一样） |
 | **如果对安全要求很高** | Debian或FreeBSD |
 | **使用数据库高级服务或电子邮件网路哦用户** | SUSE FreeSUSE（德国多） |

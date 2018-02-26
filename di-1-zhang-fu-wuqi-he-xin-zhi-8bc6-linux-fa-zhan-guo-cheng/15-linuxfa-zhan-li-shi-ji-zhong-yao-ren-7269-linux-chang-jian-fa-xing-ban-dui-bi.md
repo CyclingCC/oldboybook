@@ -10,7 +10,7 @@
 
 4. 1991年，Linus Torvalds开始在Minix上编写各种驱动程序等操作系统内核组件。
 
-5. 1991年底，Linus Torvalds公开了Linux内核源码0.02版\([http://www.kernel.org\)，注意这里公开的](http://www.kernel.org%29，注意这里公开的)       linux内核源码并不是我们现在使用的Linux系统的全部，而仅仅是Linux内核kernel部分的代码。
+5. 1991年底，Linus Torvalds公开了Linux内核源码0.02版\([http://www.kernel.org\)，注意这里公开](http://www.kernel.org%29，注意这里公开的)的linux内核源码并不是我们现在使用的Linux系统的全部，而仅仅是Linux内核kernel部分的代码。
 
 6. 1993年，Linux 1.0版发型，Linux转向GPL版权协议。
 

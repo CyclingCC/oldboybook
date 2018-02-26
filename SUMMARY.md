@@ -214,7 +214,7 @@
   * [2.2 Xshell远程连接工具优化](di-2-zhang-xu-ni-ji-da-5efa-centos-xi-tong-an-88c5-xshell-you-hua/22-xshellyuan-cheng-lian-jie-gong-ju-you-hua.md)
 * [第3章 CentOS系统安装补充-远程连接拍错方法](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa.md)
   * [3.1 远程连接拍错讲解](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa/31-yuan-cheng-lian-jie-pai-cuo-jiang-jie.md)
-  * 3.2 Vmware网络多种连接模式讲解
+  * [3.2 Vmware网络多种连接模式讲解](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa/32-vmwarewang-luo-duo-zhong-lian-jie-mo-shi-jiang-jie.md)
   * 3.3 网站服务器多种分区方案说明
   * 3.4 Linux命令行结构与命令特点讲解
 

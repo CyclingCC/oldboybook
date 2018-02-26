@@ -13,9 +13,6 @@
   * [2.7 Linux特点](chapter1/27-linuxte-dian.md)
   * [2.8 如何选择Linux发行版](chapter1/28-ru-he-xuan-ze-linux-fa-xing-ban.md)
   * [2.9 总结](chapter1/29-zong-jie.md)
-* [第4章 Xshell安装及优化](di-wu-jie-xshell-you-hua.md)
-  * [4.1 Xshell安装](di-wu-jie-xshell-you-hua/41-xshellan-zhuang.md)
-  * [4.2 Xshell优化](di-wu-jie-xshell-you-hua/42-xshellyou-hua.md)
 * [第5章 ssh远程连接排查过程](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha.md)
   * [5.1 为什么要远程连接Linux系统](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha/51-wei-shi-yao-yao-yuan-cheng-lian-jie-linux-xi-tong.md)
   * [5.2 ip地址](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha/52-ipdi-zhi.md)
@@ -215,4 +212,9 @@
 * [第2章 虚拟机搭建-centos系统安装-xshell优化](di-2-zhang-xu-ni-ji-da-5efa-centos-xi-tong-an-88c5-xshell-you-hua.md)
   * [2.1 虚拟机环境搭建与系统部署](di-2-zhang-xu-ni-ji-da-5efa-centos-xi-tong-an-88c5-xshell-you-hua/21-xu-ni-ji-huan-jing-da-jian-yu-xi-tong-bu-shu.md)
   * [2.2 Xshell远程连接工具优化](di-2-zhang-xu-ni-ji-da-5efa-centos-xi-tong-an-88c5-xshell-you-hua/22-xshellyuan-cheng-lian-jie-gong-ju-you-hua.md)
+* [第3章 CentOS系统安装补充-远程连接拍错方法](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa.md)
+  * [3.1 远程连接拍错讲解](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa/31-yuan-cheng-lian-jie-pai-cuo-jiang-jie.md)
+  * 3.2 Vmware网络多种连接模式讲解
+  * 3.3 网站服务器多种分区方案说明
+  * 3.4 Linux命令行结构与命令特点讲解
 

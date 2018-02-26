@@ -218,4 +218,16 @@
   * 1.1 服务器、服务器分类、运维职责
   * 1.2 计算机重要组成部分与处理流程
   * 1.3 服务器核心知识-互联网公司服务器品牌与型号
+  * 1.4 服务器核心概念-电源-CPU-内存-硬盘-RAID卡-远程控制卡
+  * 1.5 Linux发展历史及重要人物-Linux常见发行版对比
+* [第2章 虚拟机搭建-centos系统安装-xshell优化](di-2-zhang-xu-ni-ji-da-5efa-centos-xi-tong-an-88c5-xshell-you-hua.md)
+  * [2.1 虚拟机环境搭建与系统部署](di-2-zhang-xu-ni-ji-da-5efa-centos-xi-tong-an-88c5-xshell-you-hua/21-xu-ni-ji-huan-jing-da-jian-yu-xi-tong-bu-shu.md)
+  * [2.2 Xshell远程连接工具优化](di-2-zhang-xu-ni-ji-da-5efa-centos-xi-tong-an-88c5-xshell-you-hua/22-xshellyuan-cheng-lian-jie-gong-ju-you-hua.md)
+* [第3章 centos系统安装补充-远程连接拍错方法](di-3-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa.md)
+  * 3.1 远程连接拍错讲解
+  * 3.2 Vmware网络多种连接模式讲解
+  * 3.3 网站服务器多种分区方案说明
+  * 3.4 Linux命令行结构与命令特点讲解
+* [第4章 第一关练习题讲解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie.md)
+  * [4.1 基础命令讲解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/41-ji-chu-ming-ling-jiang-jie.md)
 

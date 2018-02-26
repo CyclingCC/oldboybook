@@ -214,6 +214,7 @@
   * [23.10 case条件语句](23-oldboy-linux-shellbian-cheng-ji-chu/2310-casetiao-jian-yu-ju.md)
   * [23.11 循环语句](23-oldboy-linux-shellbian-cheng-ji-chu/2311-xun-huan-yu-ju.md)
   * [23.12 shell脚本的调试](23-oldboy-linux-shellbian-cheng-ji-chu/2312.md)
-
-
+* [第1章 服务器核心知识-linux发展过程](di-1-zhang-fu-wuqi-he-xin-zhi-8bc6-linux-fa-zhan-guo-cheng.md)
+  * 1.1 服务器、服务器分类、运维职责
+  * 1.2 计算机重要组成部分与处理流程
 

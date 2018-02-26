@@ -3,11 +3,7 @@
 ## linux基础知识点汇总
 
 * [介绍](README.md)
-* [第1章 Linux硬件基础](di-yi-jie-linux-ying-jian-ji-chu.md)
-  * [1.1 工作场景](di-yi-jie-linux-ying-jian-ji-chu/11.md)
-  * [1.2 服务器的主要构成](di-yi-jie-linux-ying-jian-ji-chu/12-dian-nao-he-fu-wu-qi-de-zhu-yao-gou-cheng.md)
-  * [1.3 总结](di-yi-jie-linux-ying-jian-ji-chu/13-zong-jie.md)
-* [第2章 Linux系统发展及版本介绍](chapter1.md)
+* [第2-章 Linux系统发展及版本介绍](chapter1.md)
   * [2.1 什么是操作系统](chapter1/21.md)
   * [2.2 什么是Linux](chapter1/22-shi-yao-shi-linux.md)
   * [2.3 Linux起源](chapter1/23-linuxqi-yuan.md)
@@ -17,10 +13,6 @@
   * [2.7 Linux特点](chapter1/27-linuxte-dian.md)
   * [2.8 如何选择Linux发行版](chapter1/28-ru-he-xuan-ze-linux-fa-xing-ban.md)
   * [2.9 总结](chapter1/29-zong-jie.md)
-* [第3章 Linux系统安装](di-san-jie.md)
-  * [3.1 Vmware安装](di-san-jie/31.md)
-  * [3.2 安装错误解决方法](di-san-jie/32-an-zhuang-cuo-wu-jie-jue-fang-fa.md)
-  * [3.3 安装CentOS](di-san-jie/33-an-zhuang-centos.md)
 * [第4章 Xshell安装及优化](di-wu-jie-xshell-you-hua.md)
   * [4.1 Xshell安装](di-wu-jie-xshell-you-hua/41-xshellan-zhuang.md)
   * [4.2 Xshell优化](di-wu-jie-xshell-you-hua/42-xshellyou-hua.md)
@@ -220,4 +212,7 @@
   * [1.3 服务器核心知识-互联网公司服务器品牌与型号](di-1-zhang-fu-wuqi-he-xin-zhi-8bc6-linux-fa-zhan-guo-cheng/13-fu-wu-qi-he-xin-zhi-8bc6-hu-lian-wang-gong-si-fu-wu-qi-pin-pai-yu-xing-hao.md)
   * [1.4 服务器核心概念-电源-CPU-内存-硬盘-RAID卡-远程控制卡](di-1-zhang-fu-wuqi-he-xin-zhi-8bc6-linux-fa-zhan-guo-cheng/14-fu-wu-qi-he-xin-gai-5ff5-dian-6e90-cpu-nei-5b58-ying-76d8-raid-5361-yuan-cheng-kong-zhi-qia.md)
   * [1.5 Linux发展历史及重要人物-Linux常见发行版对比](di-1-zhang-fu-wuqi-he-xin-zhi-8bc6-linux-fa-zhan-guo-cheng/15-linuxfa-zhan-li-shi-ji-zhong-yao-ren-7269-linux-chang-jian-fa-xing-ban-dui-bi.md)
+* [第2章 虚拟机搭建-centos系统安装-xshell优化](di-2-zhang-xu-ni-ji-da-5efa-centos-xi-tong-an-88c5-xshell-you-hua.md)
+  * [2.1 虚拟机环境搭建与系统部署](di-2-zhang-xu-ni-ji-da-5efa-centos-xi-tong-an-88c5-xshell-you-hua/21-xu-ni-ji-huan-jing-da-jian-yu-xi-tong-bu-shu.md)
+  * [2.2 Xshell远程连接工具优化](di-2-zhang-xu-ni-ji-da-5efa-centos-xi-tong-an-88c5-xshell-you-hua/22-xshellyuan-cheng-lian-jie-gong-ju-you-hua.md)
 

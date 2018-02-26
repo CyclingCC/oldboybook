@@ -215,6 +215,6 @@
 * [第3章 CentOS系统安装补充-远程连接拍错方法](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa.md)
   * [3.1 远程连接拍错讲解](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa/31-yuan-cheng-lian-jie-pai-cuo-jiang-jie.md)
   * [3.2 Vmware网络多种连接模式讲解](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa/32-vmwarewang-luo-duo-zhong-lian-jie-mo-shi-jiang-jie.md)
-  * 3.3 网站服务器多种分区方案说明
-  * 3.4 Linux命令行结构与命令特点讲解
+  * [3.3 网站服务器多种分区方案说明](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa/33-wang-zhan-fu-wu-qi-duo-zhong-fen-qu-fang-an-shuo-ming.md)
+  * [3.4 Linux命令行结构与命令特点讲解](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa/34-linuxming-ling-xing-jie-gou-yu-ming-ling-te-dian-jiang-jie.md)
 

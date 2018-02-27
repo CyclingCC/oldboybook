@@ -166,5 +166,5 @@
   * [8.2 查看端口是否开启的命令](di-8-zhang-di-yi-jie-duan-ke-cheng-kuo-zhan-yu-hui-gu/82-cha-kan-duan-kou-shi-fou-kai-qi-de-ming-ling.md)
   * [8.3 Linux与Windows上传下载文件](di-8-zhang-di-yi-jie-duan-ke-cheng-kuo-zhan-yu-hui-gu/83-linuxyu-windows-shang-chuan-xia-zai-wen-jian.md)
   * [8.4 设置Linux主机名流程](di-8-zhang-di-yi-jie-duan-ke-cheng-kuo-zhan-yu-hui-gu/84-she-zhi-linux-zhu-ji-ming-liu-cheng.md)
-  * 8.5 Linux无法上网排查流程
+  * [8.5 Linux无法上网排查流程](di-8-zhang-di-yi-jie-duan-ke-cheng-kuo-zhan-yu-hui-gu/85-linuxwu-fa-shang-wang-pai-cha-liu-cheng.md)
 

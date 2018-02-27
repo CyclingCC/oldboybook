@@ -624,5 +624,43 @@ dmseg 命令可以查看系统故障信息（/var/log/dmesg） 依赖于rsyslog�
 | /proc/loadavg | 系统负载平均值信息（系统的繁忙情况，比较准确，但是不够细致系统性能指标），uptime的结果负载值不要超过CPU的核数看负载top uptime |
 | /proc/mounts | 设备的挂载信息， df -h类似 |
 
+#### 11、总结：必须要掌握的重要目录文件
 
+/etc/sysconfig/network-scripts/ifcfg-eth0
+
+/etc/resolv.conf
+
+/etc/hosts
+
+/etc/sysconfig/network
+
+/etc/fstab
+
+/etc/rc.local
+
+/etc/inittab
+
+/etc/init.d
+
+/etc/profile 全局（所有用户）
+
+/etc/bashrc 全局（所有用户）
+
+~/.bashrc 局部（当前用户）
+
+/usr/local
+
+/usr/src
+
+/var/log/messages
+
+/var/log/secure
+
+/proc/cpuinfo
+
+/proc/meminfo
+
+/proc/loadavg
+
+/proc/mounts
 

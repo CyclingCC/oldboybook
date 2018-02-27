@@ -199,4 +199,8 @@
   * [3.4 Linux命令行结构与命令特点讲解](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa/34-linuxming-ling-xing-jie-gou-yu-ming-ling-te-dian-jiang-jie.md)
 * [第4章 第一关练习题讲解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie.md)
   * [4.1基础命令讲解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/41ji-chu-ming-ling-jiang-jie.md)
+  * 4.2 三剑客初次接触
+  * 4.3 特殊符号与重定向符号详解
+  * [4.4 Linux别名详解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/44-linuxbie-ming-xiang-jie.md)
+  * 4.5 Linux三剑客与find命令实战
 

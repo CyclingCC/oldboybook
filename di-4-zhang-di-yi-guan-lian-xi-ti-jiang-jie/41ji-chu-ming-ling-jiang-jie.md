@@ -308,9 +308,175 @@ find /oldboy/ -type f -name "\*.log" -mtime +7 -exec mv {} /tmp/ \;
 
 [http://oldboy.blog.51cto.com/2561410/1750481](http://oldboy.blog.51cto.com/2561410/1750481)
 
-13、
+##### i、管道：前面的输出结果给后面的命令管道后面不支持命令别名
 
-14、
+##### 命令的输出结果经过管道后变成了字符串（数据流），是一个整体 {#命令的输出结果经过管道后变成了字符串（数据流），是一个整体}
 
-15、
+\[root@oldboy data\]\# touch {1..10}.txt
+
+\[root@oldboy data\]\# find /data -type f -name "\*.txt"
+
+/data/10.txt
+
+/data/4.txt
+
+/data/8.txt
+
+/data/2.txt
+
+/data/5.txt
+
+/data/6.txt
+
+/data/1.txt
+
+/data/3.txt
+
+/data/9.txt
+
+/data/7.txt
+
+\[root@oldboy data\]\# find /data -type f -name "\*.txt" \|xargs ls -l
+
+-rw-r--r-- 1 root root 0 Mar 13 11:45 /data/10.txt
+
+-rw-r--r-- 1 root root 0 Mar 13 11:45 /data/1.txt
+
+-rw-r--r-- 1 root root 0 Mar 13 11:45 /data/2.txt
+
+-rw-r--r-- 1 root root 0 Mar 13 11:45 /data/3.txt
+
+-rw-r--r-- 1 root root 0 Mar 13 11:45 /data/4.txt
+
+-rw-r--r-- 1 root root 0 Mar 13 11:45 /data/5.txt
+
+-rw-r--r-- 1 root root 0 Mar 13 11:45 /data/6.txt
+
+-rw-r--r-- 1 root root 0 Mar 13 11:45 /data/7.txt
+
+-rw-r--r-- 1 root root 0 Mar 13 11:45 /data/8.txt
+
+-rw-r--r-- 1 root root 0 Mar 13 11:45 /data/9.txt
+
+find /data -type f -name "\*.txt" \|xargs -i mv {} /tmp/
+
+#### 3种方法： {#3种方法：}
+
+cp \`find /data -type f -name "oldboy.txt" -mtime +7\` /tmp/
+
+find /data -type f -name "oldboy.txt" -mtime +7 -exec cp {} /tmp/ \;
+
+find /data -type f -name "oldboy.txt"\|xargs -i cp {} /tmp/
+
+##### ii、xargs 又称管道命令，构造参数等。是给命令传递参数的一个过滤器,也是组合多个命令的一个工具 它把一个数据流分割为一些足够小的块,以方便过滤器和命令进行处理 。简单的说 就是把 其他命令的给它的数据 传递给它后面的命令作为参数
+
+##### xargs 从标准输入获取内容创建和执行命令
+
+-n 数字 做分组，几个一组 -i {}
+
+\[root@oldboy ~\]\# echo 1 2 3 4 &gt;a.txt
+
+\[root@oldboy ~\]\# cat a.txt
+
+1 2 3 4
+
+\[root@oldboy ~\]\# xargs -n 2 &lt; a.txt
+
+1 2
+
+3 4
+
+\[root@oldboy ~\]\# find /data/ -type d -name "\*.txt"
+
+/data/10.txt
+
+/data/4.txt
+
+/data/8.txt
+
+/data/2.txt
+
+/data/5.txt
+
+/data/6.txt
+
+/data/1.txt
+
+/data/3.txt
+
+/data/9.txt
+
+/data/7.txt
+
+\[root@oldboy ~\]\# find /data/ -type d -name "\*.txt" \|xargs -n 2
+
+/data/10.txt /data/4.txt
+
+/data/8.txt /data/2.txt
+
+/data/5.txt /data/6.txt
+
+/data/1.txt /data/3.txt
+
+/data/9.txt /data/7.txt
+
+#### 13、head命令
+
+##### 显示文件前面的内容 默认前10行
+
+\[root@oldboy data\]\# head -2 test.txt
+
+test
+
+liyao
+
+#### 14、tail命令
+
+##### 显示文件的尾部内容，默认后10行
+
+\[root@oldboy data\]\# tail -2 test.txt
+
+liyao
+
+oldboy
+
+#### 15、seq命令
+
+##### Linux 中一个预设的外部命令，一般用作一堆数字的简化写法
+
+\[root@oldboy data\]\# seq 1 2 9 \|xargs
+
+1 3 5 7 9
+
+\[root@oldboy data\]\# seq -s " " 5
+
+1 2 3 4 5
+
+\[root@oldboy data\]\# seq -s "-" 5
+
+1-2-3-4-5
+
+#### 16、tree命令
+
+##### 显示目录结构
+
+tree /root/
+
+/root/
+
+├── anaconda-ks.cfg
+
+├── init.sh
+
+├── install.log
+
+├── install.log.syslog
+
+└── sersync.tar.gz
+
+0 directories, 5 files
+
+#### 17、alias命令
+
+
 

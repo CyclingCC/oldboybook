@@ -172,7 +172,7 @@
   * [9.2 文件类型 ](di-9-zhang-linux-wen-jian-shu-xing/92-wen-jian-lei-xing.md)
   * [9.3 用户和用户组 ](di-9-zhang-linux-wen-jian-shu-xing/93-yong-hu-he-yong-hu-zu.md)
   * [9.4 初识linux权限 ](di-9-zhang-linux-wen-jian-shu-xing/94-chu-shi-linux-quan-xian.md)
-  * 9.5 软硬链接 
+  * [9.5 软硬链接 ](di-9-zhang-linux-wen-jian-shu-xing/95-ruan-ying-lian-jie.md)
   * [9.6 文件删除原理 ](di-9-zhang-linux-wen-jian-shu-xing/96-wen-jian-shan-chu-yuan-li.md)
   * [9.7 linux中的三种时间戳 ](di-9-zhang-linux-wen-jian-shu-xing/97-linuxzhong-de-san-zhong-shi-jian-chuo.md)
 

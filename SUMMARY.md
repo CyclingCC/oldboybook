@@ -202,8 +202,8 @@
 * [第5章 linux系统基础优化](di-5-zhang-linux-xi-tong-ji-chu-you-hua.md)
   * [5.1 你是用的linux什么版本？](di-liu-jie-linux-ji-chu-you-hua/51-ni-shiyong-de-linux-shi-yao-ban-ben-ff1f.md)
   * [5.2 添加用户切换用户](di-liu-jie-linux-ji-chu-you-hua/52-tian-jia-yong-hu-qie-huan-yong-hu.md)
-  * [5.2 修改Linux系统字符集](di-liu-jie-linux-ji-chu-you-hua/62.md)
   * [5.3 selinux关闭](di-liu-jie-linux-ji-chu-you-hua/63.md)
-  * [5.1 iptables防火墙](di-liu-jie-linux-ji-chu-you-hua/61-ru-he-guan-biyi-ge-ruan-4ef6-fu-wu-ff08-iptables.md)
+  * [5.4 iptables防火墙](di-liu-jie-linux-ji-chu-you-hua/61-ru-he-guan-biyi-ge-ruan-4ef6-fu-wu-ff08-iptables.md)
+  * [5.5 修改Linux系统字符集](di-liu-jie-linux-ji-chu-you-hua/62.md)
   * [5.4 显示中文乱码解决过程](di-liu-jie-linux-ji-chu-you-hua/54-xian-shi-zhong-wen-luan-ma-jie-jue-guo-cheng.md)
 

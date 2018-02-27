@@ -200,7 +200,7 @@
 * [第4章 第一关练习题讲解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie.md)
   * [4.1基础命令讲解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/41ji-chu-ming-ling-jiang-jie.md)
   * 4.2 三剑客初次接触
-  * 4.3 特殊符号与重定向符号详解
+  * [4.3 特殊符号与重定向符号详解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/43-te-shu-fu-hao-yu-zhong-ding-xiang-fu-hao-xiang-jie.md)
   * [4.4 Linux别名详解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/44-linuxbie-ming-xiang-jie.md)
   * 4.5 Linux三剑客与find命令实战
 

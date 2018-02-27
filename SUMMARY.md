@@ -208,5 +208,8 @@
   * [5.4 显示中文乱码解决过程](di-liu-jie-linux-ji-chu-you-hua/54-xian-shi-zhong-wen-luan-ma-jie-jue-guo-cheng.md)
 * [第6章 目录结构-上部](di-6-zhang-mu-lu-jie-6784-shang-bu.md)
   * [6.1 目录结构的特点](di-6-zhang-mu-lu-jie-6784-shang-bu/61-mu-lu-jie-gou-de-te-dian.md)
+  * 6.2 网卡配置文件
+  * 6.3 DNS的配置文件
+  * 6.4 Linux无法上网排查流程
 * [第7章 目录结构-下部](di-7-zhang-mu-lu-jie-6784-xia-bu.md)
 

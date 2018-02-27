@@ -476,7 +476,19 @@ tree /root/
 
 0 directories, 5 files
 
-#### 17、alias命令
+#### 17、cat命令
 
+\[root@oldboy data\]\# cat &gt;a.txt
 
+oldboy
+
+\[root@oldboy data\]\# cat a.txt
+
+oldboy
+
+\[root@oldboy data\]\# cat &gt;&gt;/data/oldboy.txt &lt;&lt;EOF
+
+&gt; I am studying linux.
+
+&gt; EOF
 

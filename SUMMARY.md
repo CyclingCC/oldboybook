@@ -3,16 +3,6 @@
 ## linux基础知识点汇总
 
 * [介绍](README.md)
-* [第2-章 Linux系统发展及版本介绍](chapter1.md)
-  * [2.1 什么是操作系统](chapter1/21.md)
-  * [2.2 什么是Linux](chapter1/22-shi-yao-shi-linux.md)
-  * [2.3 Linux起源](chapter1/23-linuxqi-yuan.md)
-  * [2.4 linux诞生](chapter1/24-linuxdan-sheng.md)
-  * [2.5 Linux的发展过程](chapter1/25-linuxde-fa-zhan-guo-cheng.md)
-  * [2.6 Linux核心概念](chapter1/26-linuxhe-xin-gai-nian.md)
-  * [2.7 Linux特点](chapter1/27-linuxte-dian.md)
-  * [2.8 如何选择Linux发行版](chapter1/28-ru-he-xuan-ze-linux-fa-xing-ban.md)
-  * [2.9 总结](chapter1/29-zong-jie.md)
 * [第5章 ssh远程连接排查过程](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha.md)
   * [5.1 为什么要远程连接Linux系统](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha/51-wei-shi-yao-yao-yuan-cheng-lian-jie-linux-xi-tong.md)
   * [5.2 ip地址](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha/52-ipdi-zhi.md)

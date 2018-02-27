@@ -480,9 +480,9 @@ my god ,i am not oldbey,but OLDBOY!
 
 ### 二、扩展正则
 
-1、 + 前一个字符连续出现1次或多次
+#### 1、 + 前一个字符连续出现1次或多次
 
-\[root@oldboyedu42-lnb oldboy\]\# egrep '0+'  re.txt 
+\[root@oldboyedu42-lnb oldboy\]\# egrep '0+'  re.txt
 
 my qq is 49000448
 
@@ -522,8 +522,6 @@ not 4900000448.
 
 \[root@oldboyedu42-lnb oldboy\]\# \#连续出现
 
-
-
 取出文件中连续出现的小写字母
 
 \[root@oldboyedu42-lnb oldboy\]\# \#取出文件中连续出现的小写字母
@@ -538,9 +536,9 @@ I teach linux.
 
 I like badminton ball ,billiard ball and chinese chess!
 
-my blog is http://oldboy.blog.51cto.com
+my blog is [http://oldboy.blog.51cto.com](http://oldboy.blog.51cto.com)
 
-our size is http://blog.oldboyedu.com
+our size is [http://blog.oldboyedu.com](http://blog.oldboyedu.com)
 
 my qq is 49000448
 
@@ -628,17 +626,13 @@ oldbey
 
 but
 
-
-
 小结:
 
 1.+连续出现 1次及多次
 
-2. 可以把连续的字符变为一个整体，一次取出来\(-o\)
+1. 可以把连续的字符变为一个整体，一次取出来\(-o\)
 
-3. +一般与\[\]配合
-
-
+2. +一般与\[\]配合
 
 \#1.找出规律
 
@@ -646,7 +640,7 @@ but
 
 \#3.区分大小写
 
-\[root@oldboyedu42-lnb oldboy\]\# egrep '^\[0-9\]+$' id.txt 
+\[root@oldboyedu42-lnb oldboy\]\# egrep '^\[0-9\]+$' id.txt
 
 440304199604012792
 
@@ -660,11 +654,11 @@ but
 
 131127197105115662
 
-\[root@oldboyedu42-lnb oldboy\]\# egrep '^\[0-9\]+X$' id.txt 
+\[root@oldboyedu42-lnb oldboy\]\# egrep '^\[0-9\]+X$' id.txt
 
 61242619860416291X
 
-\[root@oldboyedu42-lnb oldboy\]\# egrep '^\[0-9\]+\[0-9X\]$' id.txt 
+\[root@oldboyedu42-lnb oldboy\]\# egrep '^\[0-9\]+\[0-9X\]$' id.txt
 
 440304199604012792
 
@@ -680,7 +674,7 @@ but
 
 131127197105115662
 
-2、  \| 或者
+#### 2、  \| 或者
 
 \[root@oldboyedu42-lnb oldboy\]\# egrep 'linux或oldboy' re.txt
 
@@ -690,49 +684,41 @@ I am oldboy teacher!
 
 I teach linux.
 
-my blog is http://oldboy.blog.51cto.com
+my blog is [http://oldboy.blog.51cto.com](http://oldboy.blog.51cto.com)
 
-our size is http://blog.oldboyedu.com
+our size is [http://blog.oldboyedu.com](http://blog.oldboyedu.com)
 
-
-
-3、  \(\)  变成一个整体     反向引用 后向引用
+#### 3、  \(\)  变成一个整体     反向引用 后向引用
 
 \#先乘除后加减，有括号的先算括号里面的
 
-\[root@oldboyedu42-lnb oldboy\]\# egrep 'oldbo\|ey' re.txt 
+\[root@oldboyedu42-lnb oldboy\]\# egrep 'oldbo\|ey' re.txt
 
 I am oldboy teacher!
 
-my blog is http://oldboy.blog.51cto.com
+my blog is [http://oldboy.blog.51cto.com](http://oldboy.blog.51cto.com)
 
-our size is http://blog.oldboyedu.com
+our size is [http://blog.oldboyedu.com](http://blog.oldboyedu.com)
 
 my god ,i am not oldbey,but OLDBOY!
 
-\[root@oldboyedu42-lnb oldboy\]\# egrep 'oldb\(o\|e\)y' re.txt 
+\[root@oldboyedu42-lnb oldboy\]\# egrep 'oldb\(o\|e\)y' re.txt
 
 I am oldboy teacher!
 
-my blog is http://oldboy.blog.51cto.com
+my blog is [http://oldboy.blog.51cto.com](http://oldboy.blog.51cto.com)
 
-our size is http://blog.oldboyedu.com
+our size is [http://blog.oldboyedu.com](http://blog.oldboyedu.com)
 
 my god ,i am not oldbey,but OLDBOY!
 
-
-
-\#反向引用 后向引用 sed 
+\#反向引用 后向引用 sed
 
 \#\#先通过\(\)把你想要的内容保护起来，然后再使用
-
-
 
 echo 123456\|xxxxxxx
 
 &lt;123456&gt;
-
-
 
 \[root@oldboyedu42-lnb oldboy\]\# echo 123456
 
@@ -746,9 +732,7 @@ echo 123456\|xxxxxxx
 
 &lt;123456&gt;
 
-
-
-echo 123456 
+echo 123456
 
 34
 
@@ -768,31 +752,23 @@ echo 123456
 
 34
 
-
-
 小结:
 
-1.\(\)小括号  \[\]中括号  {}大括号 花括号 
+1.\(\)小括号  \[\]中括号  {}大括号 花括号
 
 2.后向引用（sed）
 
-
-
-4、 {} 花括号
-
-
+#### 4、 {} 花括号
 
 0{n,m}   前一个字符连续出现至少n次，最多m次    &gt;=n && &lt;=m
 
-0{n}     前一个字符连续出现n次                 ==n     
+0{n}     前一个字符连续出现n次                 ==n
 
-0{n,}    前一个字符连续出现至少n次             &gt;=n 
+0{n,}    前一个字符连续出现至少n次             &gt;=n
 
 0{,m}    前一个字符连续出现最多m次             &lt;=m
 
-
-
-\[root@oldboyedu42-lnb oldboy\]\# egrep '0{1,4}' re.txt 
+\[root@oldboyedu42-lnb oldboy\]\# egrep '0{1,4}' re.txt
 
 my qq is 49000448
 
@@ -806,7 +782,7 @@ not 4900000448.
 
 0
 
-\[root@oldboyedu42-lnb oldboy\]\# egrep '0{2,4}' re.txt 
+\[root@oldboyedu42-lnb oldboy\]\# egrep '0{2,4}' re.txt
 
 my qq is 49000448
 
@@ -818,23 +794,17 @@ not 4900000448.
 
 0000
 
-
-
 \#取出文件中连续出现8次到10次的数字
-
-
 
 \[root@oldboyedu42-lnb oldboy\]\# \#取出文件中连续出现8次到10次的数字
 
-\[root@oldboyedu42-lnb oldboy\]\# egrep '\[0-9\]{8,10}' re.txt 
+\[root@oldboyedu42-lnb oldboy\]\# egrep '\[0-9\]{8,10}' re.txt
 
 my qq is 49000448
 
 not 4900000448.
 
-
-
-\[root@oldboyedu42-lnb oldboy\]\# egrep '^\[0-9\]{17}\[0-9X\]$' id.txt 
+\[root@oldboyedu42-lnb oldboy\]\# egrep '^\[0-9\]{17}\[0-9X\]$' id.txt
 
 440304199604012792
 

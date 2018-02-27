@@ -822,11 +822,121 @@ not 4900000448.
 
 ### 三、取出ip地址\(ifconfig ip）
 
+#### 方法1-sed
 
+\[root@oldboyedu42-lnb oldboy\]\# ifconfig eth0\|sed -n '2p'
+
+          inet addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+
+\[root@oldboyedu42-lnb oldboy\]\# ifconfig eth0\|sed -n '2p'\|sed 's\#^.\*:\#\#g'
+
+255.255.255.0
+
+\[root@oldboyedu42-lnb oldboy\]\# ifconfig eth0\|sed -n '2p'\|sed 's\#^.\*addr:\#\#g'
+
+10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+
+\[root@oldboyedu42-lnb oldboy\]\# ifconfig eth0\|sed -n '2p'\|sed 's\#^.\*addr:\#\#g'\|sed 's\#  Bc.\*$\#\#g'
+
+10.0.0.200
+
+#### \#方法2-sed-后向引用 
+
+\[root@oldboyedu42-lnb oldboy\]\# ifconfig eth0\|sed -n '2p'
+
+          inet addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+
+\[root@oldboyedu42-lnb oldboy\]\# ifconfig eth0\|sed -n '2p'\|sed -r 's\#^.\*dr:\(.\*\)  Bc.\*$\#\1\#g'
+
+10.0.0.200
+
+#### \#方法3-awk-指定多个分隔符
+
+\[root@oldboyedu42-lnb oldboy\]\# ifconfig eth0\|awk 'NR==2'
+
+          inet addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+
+\[root@oldboyedu42-lnb oldboy\]\# ifconfig eth0\|awk 'NR==2'\|awk -F "\[ :\]+"  '{print $4}'
+
+10.0.0.200
+
+\[root@oldboyedu42-lnb oldboy\]\# ifconfig eth0\|awk 'NR==2'\|egrep '\[ :\]'
+
+          inet addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+
+\[root@oldboyedu42-lnb oldboy\]\# ifconfig eth0\|awk 'NR==2'\|egrep '\[ :\]+'
+
+          inet addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+
+#### \#方法4-awk-'条件{命令}' 
+
+\[root@oldboyedu42-lnb ~\]\# ifconfig eth0\|awk 'NR==2'
+
+          inet addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+
+\[root@oldboyedu42-lnb ~\]\# ifconfig eth0\|awk 'NR==2'\|awk '{print $2}'
+
+addr:10.0.0.200
+
+\[root@oldboyedu42-lnb ~\]\# \#awk '找谁{干啥}'
+
+\[root@oldboyedu42-lnb ~\]\# \#awk '条件{命令}'
+
+\[root@oldboyedu42-lnb ~\]\# ifconfig eth0\|awk 'NR==2{print $2}'
+
+addr:10.0.0.200
+
+\[root@oldboyedu42-lnb ~\]\# \#错误 ifconfig eth0\|awk -F"\[ :\]+" 'NR==2{print $2}'
+
+\[root@oldboyedu42-lnb ~\]\# ifconfig eth0\|awk -F "\[ :\]+"      'NR==2{print $4}'  
+
+10.0.0.200
+
+#### \#方法5-sed
+
+sed -nr '2s\#^.\*dr:\(.\*\)  Bc.\*$\#\1\#gp'   
+
+sed -n '2s\#inet\#oldboy\#gp'
+
+\[root@oldboyedu42-lnb ~\]\# ifconfig eth0\|sed -n '2s\#inet\#oldboy\#gp'
+
+          oldboy addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+
+
+
+老男孩IT教育出品-sed命令反向引用取出网卡ip地址详解
+
+https://www.processon.com/view/link/59fa9baae4b0f84f8975eefe
+
+![](/assets/15-5.png)
+
+#### \#方法6 
+
+\[root@oldboyedu42-lnb ~\]\# ip a s eth0 \|awk 'NR==3'
+
+    inet 10.0.0.200/24 brd 10.0.0.255 scope global eth0
+
+\[root@oldboyedu42-lnb ~\]\# ip a s eth0 \|awk 'NR==3'\|awk -F"\[ /\]+" '{print $3}'
+
+10.0.0.200
+
+#### \#方法7 
+
+\[root@oldboyedu42-lnb ~\]\# ip a s eth0 \|sed -n '3p'
+
+    inet 10.0.0.200/24 brd 10.0.0.255 scope global eth0
+
+\[root@oldboyedu42-lnb ~\]\# ip a s eth0 \|sed -n '3p'\|sed -r 's\#^.\* \(.\*\)/\#\#g'
+
+24 brd 10.0.0.255 scope global eth0
+
+\[root@oldboyedu42-lnb ~\]\# ip a s eth0 \|sed -n '3p'\|sed -r 's\#^.\* \(\[0-9.\]+\)/.\*$\#\1\#g'
+
+10.0.0.200
 
 ### 四、取出文件权限
 
-#### \#方法1 
+#### \#方法1
 
 \[root@oldboyedu42-lnb ~\]\# stat /etc/hosts \|awk -F "\[\(/\]"   'NR==4'
 
@@ -844,7 +954,9 @@ Access: \(0644/-rw-r--r--\)  Uid: \(    0/    root\)   Gid: \(    0/    root\)
 
 \[root@oldboyedu42-lnb ~\]\# stat /etc/hosts \|sed -n '4p'\|sed -r 's\#^.\*\\(0.\*/\#\#g'
 
-    root\)
+```
+root\)
+```
 
 \[root@oldboyedu42-lnb ~\]\# stat /etc/hosts \|sed -n '4p'\|sed -r 's\#^.\*\\(0\(.\*\)/-\#\#g'
 
@@ -856,9 +968,9 @@ rw-r--r--\)  Uid: \(    0/    root\)   Gid: \(    0/    root\)
 
 644
 
-https://www.processon.com/view/link/59fbc9c0e4b0f84f89765231
+[https://www.processon.com/view/link/59fbc9c0e4b0f84f89765231](https://www.processon.com/view/link/59fbc9c0e4b0f84f89765231)
 
-#### \#方法3 
+#### \#方法3
 
 \[root@oldboyedu42-lnb ~\]\# stat /etc/hosts \|awk 'NR==4'\|sed -r 's\#^.\*\\(0\|/.\*$\#\#g'
 
@@ -866,7 +978,7 @@ https://www.processon.com/view/link/59fbc9c0e4b0f84f89765231
 
 #### \#方法4-stat
 
-\[root@oldboyedu42-lnb ~\]\# stat -c%a /etc/hosts 
+\[root@oldboyedu42-lnb ~\]\# stat -c%a /etc/hosts
 
 644
 

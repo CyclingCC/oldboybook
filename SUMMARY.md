@@ -4,7 +4,6 @@
 
 * [介绍](README.md)
 * [第6章 Linux基础优化](di-liu-jie-linux-ji-chu-you-hua.md)
-  * [6.3 关闭selinux](di-liu-jie-linux-ji-chu-you-hua/63.md)
 * [第7章 Linux第一关命令](di-qi-jie-di-yi-guan-ming-ling.md)
   * [7.1 Linux中命令的使用](di-qi-jie-di-yi-guan-ming-ling/71-linuxzhong-ming-ling-de-shi-yong.md)
   * [7.2 vi/vim 文本编辑器](di-qi-jie-di-yi-guan-ming-ling/72-vivim-wen-ben-bian-ji-qi.md)
@@ -204,4 +203,5 @@
 * [第5章 linux系统基础优化](di-5-zhang-linux-xi-tong-ji-chu-you-hua.md)
   * [5.1 iptables防火墙](di-liu-jie-linux-ji-chu-you-hua/61-ru-he-guan-biyi-ge-ruan-4ef6-fu-wu-ff08-iptables.md)
   * [5.2 修改Linux系统字符集](di-liu-jie-linux-ji-chu-you-hua/62.md)
+  * [6.3 关闭selinux](di-liu-jie-linux-ji-chu-you-hua/63.md)
 

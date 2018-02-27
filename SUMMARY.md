@@ -161,4 +161,10 @@
   * [7.4 打包压缩命令详解](di-7-zhang-mu-lu-jie-6784-xia-bu/74-da-bao-ya-suo-ming-ling-xiang-jie.md)
   * [7.5 三剑客之awk取列](di-7-zhang-mu-lu-jie-6784-xia-bu/75-san-jian-ke-zhi-awk-qu-lie.md)
   * [7.6 单引号双引号不加引号](di-7-zhang-mu-lu-jie-6784-xia-bu/76-dan-yin-hao-shuang-yin-hao-bu-jia-yin-hao.md)
+* [第8章 第一阶段课程扩展与回顾](di-8-zhang-di-yi-jie-duan-ke-cheng-kuo-zhan-yu-hui-gu.md)
+  * [8.1 无法远程连接服务器常见原因](di-8-zhang-di-yi-jie-duan-ke-cheng-kuo-zhan-yu-hui-gu/81-wu-fa-yuan-cheng-lian-jie-fu-wu-qi-chang-jian-yuan-yin.md)
+  * 8.2 查看端口是否开启的命令
+  * 8.3 Linux与Windows上传下载文件
+  * 8.4 设置Linux主机名流程
+  * 8.5 Linux无法上网排查流程
 

@@ -1,8 +1,22 @@
-#### 1、单引号：所见即所得，吃啥吐啥
+#### 1、单引号： 所见即所得，原封不动显示出来
 
-#### 2、双引号：解析特殊符号,输出解析后的结果：例如:$LANG
+\[root@oldboyedu42-lnb oldboy\]\# echo '$LANG $\(hostname\) \`whoami\` {1..5}'
 
-#### 3、不加引号：和双引号类似，但是支持通配符 \*
+$LANG $\(hostname\) \`whoami\` {1..5}
+
+#### 2、双引号： 对特殊符号进行解析运行
+
+\[root@oldboyedu42-lnb oldboy\]\# echo "$LANG $\(hostname\) \`whoami\` {1..5}"
+
+en\_US.UTF-8 oldboyedu42-lnb root {1..5}
+
+#### 3、不加引号：和双引号类似，支持通配符 
+
+\[root@oldboyedu42-lnb oldboy\]\# echo $LANG $\(hostname\) \`whoami\` {1..5}
+
+en\_US.UTF-8 oldboyedu42-lnb root 1 2 3 4 5
+
+
 
 #### 4、三者的区别
 

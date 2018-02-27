@@ -3,31 +3,6 @@
 ## linux基础知识点汇总
 
 * [介绍](README.md)
-* [第7章 Linux第一关命令](di-qi-jie-di-yi-guan-ming-ling.md)
-  * [7.1 Linux中命令的使用](di-qi-jie-di-yi-guan-ming-ling/71-linuxzhong-ming-ling-de-shi-yong.md)
-  * [7.2 vi/vim 文本编辑器](di-qi-jie-di-yi-guan-ming-ling/72-vivim-wen-ben-bian-ji-qi.md)
-  * [7.3 输入输出重定向](di-qi-jie-di-yi-guan-ming-ling/73-shu-ru-shu-chu-zhong-ding-xiang.md)
-  * [7.4 cp命令](di-qi-jie-di-yi-guan-ming-ling/74-cpming-ling.md)
-  * [7.5 mv命令](di-qi-jie-di-yi-guan-ming-ling/75-mvming-ling.md)
-  * [7.6 rm命令](di-qi-jie-di-yi-guan-ming-ling/76-rmming-ling.md)
-  * [7.7 find命令](di-qi-jie-di-yi-guan-ming-ling/77-findming-ling.md)
-  * [7.8 管道 \| ](di-qi-jie-di-yi-guan-ming-ling/78-guan-dao.md)
-  * [7.9 xargs命令](di-qi-jie-di-yi-guan-ming-ling/79-xargsming-ling.md)
-  * [7.10 grep命令](di-qi-jie-di-yi-guan-ming-ling/710-grepming-ling.md)
-  * [7.11 head命令](di-qi-jie-di-yi-guan-ming-ling/711-headming-ling.md)
-  * [7.12 tail命令](di-qi-jie-di-yi-guan-ming-ling/712-tailming-ling.md)
-  * [7.13 seq 命令](di-qi-jie-di-yi-guan-ming-ling/713-seq-ming-ling.md)
-  * [7.14 tree命令](di-qi-jie-di-yi-guan-ming-ling/714-treeming-ling.md)
-  * [7.15 alias命令](di-qi-jie-di-yi-guan-ming-ling/715-aliasming-ling.md)
-  * [7.16 sed命令](di-qi-jie-di-yi-guan-ming-ling/716.md)
-  * [7.17 awk命令](di-qi-jie-di-yi-guan-ming-ling/717-awkming-ling.md)
-  * [7.18 实战题目](di-qi-jie-di-yi-guan-ming-ling/718-shi-zhan-ti-mu.md)
-  * [7.19 linux命令帮助](di-qi-jie-di-yi-guan-ming-ling/719-linuxming-ling-bang-zhu.md)
-  * [7.20 常用快捷键](di-qi-jie-di-yi-guan-ming-ling/720-chang-yong-kuai-jie-jian.md)
-* [第8章 Linux目录结构](di-ba-jie.md)
-  * [8.1 windows目录结构](di-ba-jie/81-windowsmu-lu-jie-gou.md)
-  * [8.2 Unix目录发展](di-ba-jie/82-unixmu-lu-fa-zhan.md)
-  * [8.3 linux目录结构](di-ba-jie/83-linuxmu-lu-jie-gou.md)
 * [第11章 Linux第二关命令](di-shi-er-jie-di-er-guan-ming-ling.md)
   * [11.1 环境变量](di-shi-er-jie-di-er-guan-ming-ling/111.md)
   * [11.2 ls命令](di-shi-er-jie-di-er-guan-ming-ling/112.md)
@@ -179,5 +154,11 @@
   * [6.6 linux里面安装软件的3方法](di-6-zhang-mu-lu-jie-6784-shang-bu/66-linuxli-mian-an-zhuang-ruan-jian-de-3-fang-fa.md)
   * [6.7 Linux里面必知必会的文件及目录](di-6-zhang-mu-lu-jie-6784-shang-bu/67-linuxli-mian-bi-zhi-bi-hui-de-wen-jian-ji-mu-lu.md)
   * [6.8 VIM命令故障](di-6-zhang-mu-lu-jie-6784-shang-bu/68-vimming-ling-gu-zhang.md)
-* [第7章 目录结构-下部](di-7-zhang-mu-lu-jie-6784-xia-bu.md)
+* [第7章 第二关练习题讲解](di-7-zhang-mu-lu-jie-6784-xia-bu.md)
+  * [7.1 Linux启动流程](di-7-zhang-mu-lu-jie-6784-xia-bu/71-linuxqi-dong-liu-cheng.md)
+  * [7.2 PATH环境变量说明](di-7-zhang-mu-lu-jie-6784-xia-bu/72-pathhuan-jing-bian-liang-shuo-ming.md)
+  * 7.3 过滤目录及多种方法实战1-6题
+  * 7.4 打包压缩命令详解
+  * 7.5 三剑客之awk取列
+  * 7.6 单引号双引号不加引号
 

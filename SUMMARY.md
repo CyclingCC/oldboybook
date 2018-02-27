@@ -206,10 +206,14 @@
   * [5.4 iptables防火墙](di-liu-jie-linux-ji-chu-you-hua/61-ru-he-guan-biyi-ge-ruan-4ef6-fu-wu-ff08-iptables.md)
   * [5.5 修改Linux系统字符集](di-liu-jie-linux-ji-chu-you-hua/62.md)
   * [5.4 显示中文乱码解决过程](di-liu-jie-linux-ji-chu-you-hua/54-xian-shi-zhong-wen-luan-ma-jie-jue-guo-cheng.md)
-* [第6章 目录结构-上部](di-6-zhang-mu-lu-jie-6784-shang-bu.md)
+* [第6章 目录结构](di-6-zhang-mu-lu-jie-6784-shang-bu.md)
   * [6.1 目录结构的特点](di-6-zhang-mu-lu-jie-6784-shang-bu/61-mu-lu-jie-gou-de-te-dian.md)
   * [6.2 网卡配置文件](di-6-zhang-mu-lu-jie-6784-shang-bu/62-wang-qia-pei-zhi-wen-jian.md)
   * [6.3 DNS的配置文件](di-6-zhang-mu-lu-jie-6784-shang-bu/63-dnsde-pei-zhi-wen-jian.md)
   * [6.4 Linux无法上网排查流程](di-6-zhang-mu-lu-jie-6784-shang-bu/64-linuxwu-fa-shang-wang-pai-cha-liu-cheng.md)
+  * [6.5 如何修改主机名](di-6-zhang-mu-lu-jie-6784-shang-bu/65-ru-he-xiu-gai-zhu-ji-ming.md)
+  * 6.6 linux里面安装软件的3方法
+  * 6.7 Linux里面必知必会的文件及目录
+  * 6.8 VIM命令故障
 * [第7章 目录结构-下部](di-7-zhang-mu-lu-jie-6784-xia-bu.md)
 

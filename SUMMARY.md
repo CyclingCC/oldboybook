@@ -157,7 +157,7 @@
 * [第7章 第二关练习题讲解](di-7-zhang-mu-lu-jie-6784-xia-bu.md)
   * [7.1 Linux启动流程](di-7-zhang-mu-lu-jie-6784-xia-bu/71-linuxqi-dong-liu-cheng.md)
   * [7.2 PATH环境变量说明](di-7-zhang-mu-lu-jie-6784-xia-bu/72-pathhuan-jing-bian-liang-shuo-ming.md)
-  * 7.3 过滤目录及多种方法实战1-6题
+  * [7.3 过滤目录及多种方法实战1-6题](di-7-zhang-mu-lu-jie-6784-xia-bu/73-guo-lv-mu-lu-ji-duo-zhong-fang-fa-shi-zhan-1-6-ti.md)
   * 7.4 打包压缩命令详解
   * 7.5 三剑客之awk取列
   * 7.6 单引号双引号不加引号

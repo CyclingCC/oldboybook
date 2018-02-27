@@ -12,6 +12,124 @@
 
 #### ;     分割多条命令。
 
+![](/assets/14-1.png)
+
+![](/assets/14-2.png)
+
+| \* | 代表任意多个任意字符；linux正则中，重复前面一个字符任意次 |
+| :--- | :--- |
+| ? | 代表任意一个字符；linux正则中，重复前面一个字符0次或1次 |
+| + | 重复前面一个字符1次或多次 |
+| \[\] | 同样代表“一定有一个在括号内”的字符（非任意字符）。例如 \[abcd\] 代表“一定有一个字符， 可能是 a, b, c, d 这四个任何一个” |
+| \[-\] | 若有减号在中括号内时，代表“在编码顺序内的所有字符”。例如 \[0-9\] 代表 0 到 9 之间的所有数字，因为数字的语系编码是连续的！ |
+| \[^\] | 若中括号内的第一个字符为指数符号 （^） ，那表示“反向选择”，例如 \[^abc\] 代表 一定有一个字符，只要是非 a, 非b, 非c 的其他字符就接受的意思。 |
+
+\[root@oldboy test\]\# echo "$\(date\)"
+
+2016年 03月 27日 星期日 15:56:11 CST
+
+\[root@oldboy test\]\# cp /etc/sysconfig/network-scripts/ifcfg-eth0{,.bak}
+
+\[root@oldboy test\]\# ll /etc/sysconfig/network-scripts/ifcfg-eth0\*
+
+-rw-r--r--. 3 root root 128 3月 20 08:55 /etc/sysconfig/network-scripts/ifcfg-eth0
+
+-rw-r--r-- 1 root root 128 3月 27 16:12 /etc/sysconfig/network-scripts/ifcfg-eth0.bak
+
+\[root@oldboy test\]\# echo {1..5}
+
+1 2 3 4 5
+
+\[root@oldboy test\]\# seq -s " " 5
+
+1 2 3 4 5
+
+\[root@oldboy test\]\# mkdir {1..5}/{a..f} -p
+
+\[root@oldboy test\]\# tree
+
+.
+
+├── 1
+
+│ ├── a
+
+│ ├── b
+
+│ ├── c
+
+│ ├── d
+
+│ ├── e
+
+│ └── f
+
+├── 2
+
+│ ├── a
+
+│ ├── b
+
+│ ├── c
+
+│ ├── d
+
+│ ├── e
+
+│ └── f
+
+├── 3
+
+│ ├── a
+
+│ ├── b
+
+│ ├── c
+
+│ ├── d
+
+│ ├── e
+
+│ └── f
+
+├── 4
+
+│ ├── a
+
+│ ├── b
+
+│ ├── c
+
+│ ├── d
+
+│ ├── e
+
+│ └── f
+
+├── 5
+
+│ ├── a
+
+│ ├── b
+
+│ ├── c
+
+│ ├── d
+
+│ ├── e
+
+│ └── f
+
+├── gongli
+
+├── oldboy.sh
+
+├── oldboy.txt
+
+├── oldgilr.sh
+
+└── test.sh
+
 ### 二、重定向符号
 
 #### 1、&gt;或 1&gt;输出重定向，会清楚文件里所有的数据，增加新的内容

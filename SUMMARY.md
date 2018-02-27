@@ -3,16 +3,6 @@
 ## linux基础知识点汇总
 
 * [介绍](README.md)
-* [第5章 ssh远程连接排查过程](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha.md)
-  * [5.1 为什么要远程连接Linux系统](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha/51-wei-shi-yao-yao-yuan-cheng-lian-jie-linux-xi-tong.md)
-  * [5.2 ip地址](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha/52-ipdi-zhi.md)
-  * [5.3 网络连接的整体结构](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha/53-wang-luo-zheng-ti.md)
-  * [5.4 服务和进程问题](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha/54-fu-wu-he-jin-cheng-wen-ti.md)
-  * [5.5 NetworkManeger是否运行](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha/55-networkmanegershi-fou-yun-xing.md)
-  * [5.6 检查防火墙的状态](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha/56-jian-cha-fang-huo-qiang-de-zhuang-tai.md)
-  * [5.7 端口号是否更改](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha/57-duan-kou-hao-shi-fou-geng-gai.md)
-  * [5.8 是否禁止root用户访问](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha/58-shi-fou-jin-zhi-root-yong-hu-fang-wen.md)
-  * [5.9 总结](di-liu-jie-ssh-yuan-cheng-lian-jie-gu-zhang-wen-ti-pai-cha/59-zong-jie.md)
 * [第6章 Linux基础优化](di-liu-jie-linux-ji-chu-you-hua.md)
   * [6.1 如何关闭一个软件/服务（iptables）](di-liu-jie-linux-ji-chu-you-hua/61-ru-he-guan-biyi-ge-ruan-4ef6-fu-wu-ff08-iptables.md)
   * [6.2 修改字符集](di-liu-jie-linux-ji-chu-you-hua/62.md)

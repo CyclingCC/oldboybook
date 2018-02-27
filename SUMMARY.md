@@ -167,4 +167,12 @@
   * [8.3 Linux与Windows上传下载文件](di-8-zhang-di-yi-jie-duan-ke-cheng-kuo-zhan-yu-hui-gu/83-linuxyu-windows-shang-chuan-xia-zai-wen-jian.md)
   * [8.4 设置Linux主机名流程](di-8-zhang-di-yi-jie-duan-ke-cheng-kuo-zhan-yu-hui-gu/84-she-zhi-linux-zhu-ji-ming-liu-cheng.md)
   * [8.5 Linux无法上网排查流程](di-8-zhang-di-yi-jie-duan-ke-cheng-kuo-zhan-yu-hui-gu/85-linuxwu-fa-shang-wang-pai-cha-liu-cheng.md)
+* [第9章 Linux文件属性](di-9-zhang-linux-wen-jian-shu-xing.md)
+  * [9.1 inode和block  ](di-9-zhang-linux-wen-jian-shu-xing/91-inodehe-block.md)
+  * 9.2 文件类型 
+  * 9.3 用户和用户组 
+  * 9.4 初识linux权限 
+  * 9.5 软硬链接 
+  * 9.6 文件删除原理 
+  * 9.7 linux中的三种时间戳 
 

@@ -210,6 +210,6 @@
   * [6.1 目录结构的特点](di-6-zhang-mu-lu-jie-6784-shang-bu/61-mu-lu-jie-gou-de-te-dian.md)
   * [6.2 网卡配置文件](di-6-zhang-mu-lu-jie-6784-shang-bu/62-wang-qia-pei-zhi-wen-jian.md)
   * [6.3 DNS的配置文件](di-6-zhang-mu-lu-jie-6784-shang-bu/63-dnsde-pei-zhi-wen-jian.md)
-  * 6.4 Linux无法上网排查流程
+  * [6.4 Linux无法上网排查流程](di-6-zhang-mu-lu-jie-6784-shang-bu/64-linuxwu-fa-shang-wang-pai-cha-liu-cheng.md)
 * [第7章 目录结构-下部](di-7-zhang-mu-lu-jie-6784-xia-bu.md)
 

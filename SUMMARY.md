@@ -217,4 +217,6 @@
   * [3.2 Vmware网络多种连接模式讲解](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa/32-vmwarewang-luo-duo-zhong-lian-jie-mo-shi-jiang-jie.md)
   * [3.3 网站服务器多种分区方案说明](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa/33-wang-zhan-fu-wu-qi-duo-zhong-fen-qu-fang-an-shuo-ming.md)
   * [3.4 Linux命令行结构与命令特点讲解](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa/34-linuxming-ling-xing-jie-gou-yu-ming-ling-te-dian-jiang-jie.md)
+* [第4章 第一关练习题讲解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie.md)
+  * [4.1基础命令讲解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/41ji-chu-ming-ling-jiang-jie.md)
 

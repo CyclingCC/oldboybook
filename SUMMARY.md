@@ -176,4 +176,8 @@
   * [9.6 文件删除原理 ](di-9-zhang-linux-wen-jian-shu-xing/96-wen-jian-shan-chu-yuan-li.md)
   * [9.7 linux中的三种时间戳 ](di-9-zhang-linux-wen-jian-shu-xing/97-linuxzhong-de-san-zhong-shi-jian-chuo.md)
 * [第10章 通配符-特殊符号-正则表达式](di-10-zhang-tong-pei-7b26-te-shu-fu-53f7-zheng-ze-biao-da-shi.md)
+  * 10.1 特殊符号-分类讲解
+  * 10.2 通配符回顾
+  * 10.3 正则表达式详解
+  * [10.4 正则表达式练习题](di-10-zhang-tong-pei-7b26-te-shu-fu-53f7-zheng-ze-biao-da-shi/104-zheng-ze-biao-da-shi-lian-xi-ti.md)
 

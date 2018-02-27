@@ -174,5 +174,5 @@
   * 9.4 初识linux权限 
   * 9.5 软硬链接 
   * 9.6 文件删除原理 
-  * 9.7 linux中的三种时间戳 
+  * [9.7 linux中的三种时间戳 ](di-9-zhang-linux-wen-jian-shu-xing/97-linuxzhong-de-san-zhong-shi-jian-chuo.md)
 

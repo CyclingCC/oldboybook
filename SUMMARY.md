@@ -4,8 +4,6 @@
 
 * [介绍](README.md)
 * [第6章 Linux基础优化](di-liu-jie-linux-ji-chu-you-hua.md)
-  * [6.1 如何关闭一个软件/服务（iptables）](di-liu-jie-linux-ji-chu-you-hua/61-ru-he-guan-biyi-ge-ruan-4ef6-fu-wu-ff08-iptables.md)
-  * [6.2 修改字符集](di-liu-jie-linux-ji-chu-you-hua/62.md)
   * [6.3 关闭selinux](di-liu-jie-linux-ji-chu-you-hua/63.md)
 * [第7章 Linux第一关命令](di-qi-jie-di-yi-guan-ming-ling.md)
   * [7.1 Linux中命令的使用](di-qi-jie-di-yi-guan-ming-ling/71-linuxzhong-ming-ling-de-shi-yong.md)
@@ -203,4 +201,7 @@
   * [4.3 特殊符号与重定向符号详解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/43-te-shu-fu-hao-yu-zhong-ding-xiang-fu-hao-xiang-jie.md)
   * [4.4 Linux别名详解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/44-linuxbie-ming-xiang-jie.md)
   * [4.5 Linux三剑客与find命令实战](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/45-linuxsan-jian-ke-yu-find-ming-ling-shi-zhan.md)
+* [第5章 linux系统基础优化](di-5-zhang-linux-xi-tong-ji-chu-you-hua.md)
+  * [5.1 iptables防火墙](di-liu-jie-linux-ji-chu-you-hua/61-ru-he-guan-biyi-ge-ruan-4ef6-fu-wu-ff08-iptables.md)
+  * [5.2 修改Linux系统字符集](di-liu-jie-linux-ji-chu-you-hua/62.md)
 

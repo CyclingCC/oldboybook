@@ -820,7 +820,55 @@ not 4900000448.
 
 654126197703092303
 
-取出ip地址\(ifconfig ip）
+### 三、取出ip地址\(ifconfig ip）
 
-取出文件权限
+
+
+### 四、取出文件权限
+
+#### \#方法1 
+
+\[root@oldboyedu42-lnb ~\]\# stat /etc/hosts \|awk -F "\[\(/\]"   'NR==4'
+
+Access: \(0644/-rw-r--r--\)  Uid: \(    0/    root\)   Gid: \(    0/    root\)
+
+\[root@oldboyedu42-lnb ~\]\# stat /etc/hosts \|awk -F "\[\(/\]"   'NR==4{print $2}'
+
+0644
+
+#### \#方法2-sed
+
+\[root@oldboyedu42-lnb ~\]\# stat /etc/hosts \|sed -n '4p'
+
+Access: \(0644/-rw-r--r--\)  Uid: \(    0/    root\)   Gid: \(    0/    root\)
+
+\[root@oldboyedu42-lnb ~\]\# stat /etc/hosts \|sed -n '4p'\|sed -r 's\#^.\*\\(0.\*/\#\#g'
+
+    root\)
+
+\[root@oldboyedu42-lnb ~\]\# stat /etc/hosts \|sed -n '4p'\|sed -r 's\#^.\*\\(0\(.\*\)/-\#\#g'
+
+rw-r--r--\)  Uid: \(    0/    root\)   Gid: \(    0/    root\)
+
+\[root@oldboyedu42-lnb ~\]\# stat /etc/hosts \|sed -n '4p'\|sed -r 's\#^.\*\\(0\(.\*\)/-.\*$\#\#g'
+
+\[root@oldboyedu42-lnb ~\]\# stat /etc/hosts \|sed -n '4p'\|sed -r 's\#^.\*\\(0\(.\*\)/-.\*$\#\1\#g'
+
+644
+
+https://www.processon.com/view/link/59fbc9c0e4b0f84f89765231
+
+#### \#方法3 
+
+\[root@oldboyedu42-lnb ~\]\# stat /etc/hosts \|awk 'NR==4'\|sed -r 's\#^.\*\\(0\|/.\*$\#\#g'
+
+644
+
+#### \#方法4-stat
+
+\[root@oldboyedu42-lnb ~\]\# stat -c%a /etc/hosts 
+
+644
+
+\[root@oldboyedu42-lnb ~\]\# \#命令的结果中 有你想要的
 

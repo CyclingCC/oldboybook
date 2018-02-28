@@ -192,6 +192,8 @@
   * [12.7 linux系统默认权限控制命令umask](di-12-zhang-linux-quan-xian/127-linuxxi-tong-mo-ren-quan-xian-kong-zhi-ming-ling-umask.md)
   * [12.9 特殊权限-suid-粘滞位](di-12-zhang-linux-quan-xian/129-te-shu-quan-9650-suid-nian-zhi-wei.md)
 * [第13章 定时任务 ](di-13-zhang-ding-shi-ren-wu.md)
-  * [13.1 定时任务的详解介绍](di-13-zhang-ding-shi-ren-wu/131-shi-yao-shi-ding-shi-ren-wu.md)
+  * [13.1 定时任务的介绍及分类](di-13-zhang-ding-shi-ren-wu/131-shi-yao-shi-ding-shi-ren-wu.md)
   * [13.2 定时任务的使用](di-13-zhang-ding-shi-ren-wu/132-ding-shi-ren-wu-de-shi-yong.md)
+  * [13.3 定时任务书写流程](di-13-zhang-ding-shi-ren-wu/133-ding-shi-ren-wu-shu-xie-liu-cheng.md)
+  * [13.4 总结：9句箴言 （包含3个故障案例）](di-13-zhang-ding-shi-ren-wu/134-zong-jie-ff1a-9-ju-zhen-yan-ff08-bao-han-3-ge-gu-zhang-an-li-ff09.md)
 

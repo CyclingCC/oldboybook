@@ -23,13 +23,9 @@
 | groups | 显示用户所属的用户组 |
 | newgrp | 更改用户所属的有效用户组 |
 
-####  {#123-etcskel目录}
-
-#### 4、 {#124-企业面试案例】：请问如下登录环境故障的原理及解决办法？}
-
 ####  {#126-etclogindefs（了解）}
 
-#### 1.2.8 useradd 添加用户命令 {#128-useradd-添加用户命令}
+#### 3、useradd 添加用户命令 {#128-useradd-添加用户命令}
 
 | **useradd参数选项** | **注释说明** |
 | :--- | :--- |
@@ -42,7 +38,7 @@
 | **-s shell** | \#---&gt;※※用户登入后使用的shell名称。默认值为不填写，这样系统会帮你指定预设的登入shell（根据/etc/default/useradd预设的值）cat /etc/shells系统支持的shell |
 | **-u uid** | \#--&gt;用户的ID值。这个值必须是唯一的，除非用-o选项，数字不可为负值 |
 
-#### 添加一个虚拟用户mysql {#添加一个虚拟用户mysql}
+#### 4、添加一个虚拟用户mysql {#添加一个虚拟用户mysql}
 
 \[root@oldboyedu35-nb ~\]\# \#
 
@@ -58,7 +54,7 @@ su: warning: cannot change directory to /home/mysql: No such file or directory
 
 This account is currently not available.
 
-### 1.2.9 useradd小结 {#129-useradd小结}
+### 5、useradd小结 {#129-useradd小结}
 
 添加用户alex666，UID指定为999，归属为用户组 root、oldboy、sa成员，并设置其用户注释信息为HandsomeBoy，设置家目录为/alex666，其shell类型为/bin/sh
 
@@ -90,31 +86,13 @@ drwx------ 2 alex666 alex666 4096 Apr 5 11:39 /alex666/
 
 ![](https://www.luffycity.com/linux-book/assets/19-1.jpg)
 
-### 1.2.10 userdel 删除用户相关命令 {#1210-userdel-删除用户相关命令}
+### 6、userdel 删除用户相关命令 {#1210-userdel-删除用户相关命令}
 
 ##### -r 连窝端了 {#r-连窝端了}
 
-删除用户及用户相关的信息，与这个命令有关的文件有：
 
-/etc/passwd 用户账号资料文件
 
-/etc/shadow 用户账号资讯加密文件
-
-/etc/group 用户组资讯文件
-
-/etc/gshadow 用户组密码资讯文件
-
-### 1.2.11 usermod用户信息修改相关命令 {#1211-usermod用户信息修改相关命令}
-
-与usermod有关的文件有：
-
-/etc/passwd 用户账号资料文件
-
-/etc/shadow 用户账号资讯加密文件
-
-/etc/group 用户组资讯文件
-
-/etc/gshadow 用户组密码资讯文件
+### 7、usermod用户信息修改相关命令 {#1211-usermod用户信息修改相关命令}
 
 ![](https://www.luffycity.com/linux-book/assets/tab19-11.png)
 

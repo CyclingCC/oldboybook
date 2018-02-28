@@ -150,7 +150,25 @@ USERGROUPS\_ENAB yes 删除用户同时删除用户组
 
 ENCRYPT\_METHOD SHA512
 
-####  {#127-etcdefaultuseradd-文件}
+#### 4、与usermod有关的文件有：
+
+/etc/passwd 用户账号资料文件
+
+/etc/shadow 用户账号资讯加密文件
+
+/etc/group 用户组资讯文件
+
+/etc/gshadow 用户组密码资讯文件
+
+#### 5、删除用户及用户相关的信息，与这个命令有关的文件有：
+
+/etc/passwd 用户账号资料文件
+
+/etc/shadow 用户账号资讯加密文件
+
+/etc/group 用户组资讯文件
+
+/etc/gshadow 用户组密码资讯文件
 
 
 

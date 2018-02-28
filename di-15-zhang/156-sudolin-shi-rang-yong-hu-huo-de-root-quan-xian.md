@@ -1,5 +1,7 @@
 #### 1、测试sudo
 
+![](/assets/19-5.png)
+
 echo "Defaults logfile=/var/log/sudo.log"&gt;&gt;/etc/sudoers
 
 visudo -c

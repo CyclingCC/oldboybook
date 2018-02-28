@@ -188,7 +188,7 @@
 * [第17章 三剑客之sed实战](21-oldboy-linuxsan-jian-ke-zhi-sed-ming-ling.md)
   * [17.1 介绍及增删改查](21-oldboy-linuxsan-jian-ke-zhi-sed-ming-ling/211-sedji-chu.md)
   * [21.2 sed命令详解](21-oldboy-linuxsan-jian-ke-zhi-sed-ming-ling/212-sedming-ling-xiang-jie.md)
-  * [21.3 sed进阶](21-oldboy-linuxsan-jian-ke-zhi-sed-ming-ling/213.md)
+  * [17.2 企业面试题-处理svn密码](21-oldboy-linuxsan-jian-ke-zhi-sed-ming-ling/213.md)
 * [第18章 Shell编程基础](23-oldboy-linux-shellbian-cheng-ji-chu.md)
   * [23.1 什么是shell](23-oldboy-linux-shellbian-cheng-ji-chu/231-shi-yao-shi-shell.md)
   * [23.2 shell脚本建立和执行](23-oldboy-linux-shellbian-cheng-ji-chu/232.md)

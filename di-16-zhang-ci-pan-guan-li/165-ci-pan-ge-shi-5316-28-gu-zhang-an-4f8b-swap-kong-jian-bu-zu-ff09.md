@@ -326,7 +326,7 @@ Information: Don't forget to update /etc/fstab, if necessary.
 
 假设我们的物理内存是32G，swap是4G。如果MySQL本身已经占用了24G物理内存，
 
-而同时其他程序或者系统模块又需要8G内存，这时候操作系统就可能把MySQL所拥有的一部分地址空间映射到swap上去。 
+而同时其他程序或者系统模块又需要8G内存，这时候操作系统就可能把MySQL所拥有的一部分地址空间映射到swap上去。
 
 比如拷贝或压缩一个大文件，或用mysqldump导出一个很大的数据库的时候，文件系统往往会向Linux申请大量的内存作为cache，
 
@@ -348,5 +348,37 @@ Information: Don't forget to update /etc/fstab, if necessary.
 
 进行换入和换出，尽可能地把物理内存留给最需要它的程序。但是这种调度是 按照预先设定的某种规则的，并不能完全符合程序的需要。
 
+##### 手动增加swap空间步骤 ：
 
+首先我们必须增加一个虚拟磁盘，增加虚拟磁盘基本思路：建立swapfile-&gt;格式化swap格式-&gt;启用虚拟磁盘
+
+1）建立swapfile
+
+\# dd if=/dev/zero of=tmp/newdisk bs=1M count=100
+
+（if指定源（一般为 /dev/zero ，它是unix下源源不断产生“0”的特有文件）；of制定目标文件；bs指定块大小；count定义块的数量）
+
+6
+
+2）格式化为swap
+
+\#mkswap -f /tmp/newdisk
+
+3）加载到现有磁盘上（注意留意swap空间大小变化  用命令 free -m查看）
+
+\# swapon /tmp/newdisk          \(把/tmp/newdisk 加载到先用磁盘\)
+
+4）可按提示修改文件的权限
+
+chmod 600 /tmp/newdisk
+
+![](/assets/23-25.png)
+
+5）卸载此磁盘
+
+swapoff /tmp/newdisk 
+
+6）删除虚拟磁盘文件
+
+rm -f /tmp/newdisk
 

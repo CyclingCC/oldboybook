@@ -1,3 +1,5 @@
+#### ![](/assets/18-1.png)
+
 #### 1.1 权限位置说明
 
 ![](https://www.luffycity.com/linux-book/assets/18-7.png)

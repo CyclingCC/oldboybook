@@ -183,4 +183,5 @@
 * 第11章 第三关练习题
   * 11.1 三剑客过滤
 * [第12章 linux权限](di-12-zhang-linux-quan-xian.md)
+  * [12.1 rwx是啥](di-12-zhang-linux-quan-xian/121-rwxshi-sha.md)
 

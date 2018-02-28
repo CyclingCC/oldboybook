@@ -203,4 +203,10 @@
   * [14.3 vi 、vim常见快捷键补充与回顾](di-13-zhang-ding-shi-ren-wu/di-14-zhang-ding-shi-ren-wu-bu-5145-di-si-guan-lian-xi-ti/143-vi-vimchang-jian-kuai-jie-jian-bu-chong-yu-hui-gu.md)
 * [第15章 用户管理](di-15-zhang.md)
   * [15.1 让一个命令或脚本开机自启动有什么方法？ ](di-15-zhang/151-rang-yi-ge-ming-ling-huo-jiao-ben-kai-ji-zi-qi-dong-you-shi-yao-fang-fa-ff1f.md)
+  * [15.2 用户分类](di-15-zhang/152-yong-hu-fen-lei.md)
+  * 15.3 用户相关的配置文件
+  * 15.4 与用户相关的目录（故障案例）
+  * 15.5 用户管理的命令
+  * 15.6 Sudo临时让用户获得root权限
+  * 15.7 记录用户的操作 行为/日志审计 （企业案例）
 

@@ -189,4 +189,5 @@
   * [12.6 网站权限-通过控制权限让网站安全](di-12-zhang-linux-quan-xian/122-linuxru-he-zhi-dao-wo-dui-mou-ge-wen-jian-huo-mu-lu-you-shi-yao-quan-xian-ff1f.md)
   * [12.7 linux系统默认权限控制命令umask](di-12-zhang-linux-quan-xian/127-linuxxi-tong-mo-ren-quan-xian-kong-zhi-ming-ling-umask.md)
   * [12.9 特殊权限-suid-粘滞位](di-12-zhang-linux-quan-xian/129-te-shu-quan-9650-suid-nian-zhi-wei.md)
+  * [12.3 chmod 命令的使用](di-12-zhang-linux-quan-xian/123-chmod-ming-ling-de-shi-yong.md)
 

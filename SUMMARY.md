@@ -180,4 +180,7 @@
   * [10.2 通配符回顾](di-10-zhang-tong-pei-7b26-te-shu-fu-53f7-zheng-ze-biao-da-shi/102-tong-pei-fu-hui-gu.md)
   * [10.3 正则表达式详解](di-10-zhang-tong-pei-7b26-te-shu-fu-53f7-zheng-ze-biao-da-shi/103-zheng-ze-biao-da-shi-xiang-jie.md)
   * [10.4 正则表达式练习题](di-10-zhang-tong-pei-7b26-te-shu-fu-53f7-zheng-ze-biao-da-shi/104-zheng-ze-biao-da-shi-lian-xi-ti.md)
+* 第11章 第三关练习题
+  * 11.1 三剑客过滤
+* [第12章 linux权限](di-12-zhang-linux-quan-xian.md)
 

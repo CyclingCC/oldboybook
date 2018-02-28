@@ -181,7 +181,7 @@
   * [10.3 正则表达式详解](di-10-zhang-tong-pei-7b26-te-shu-fu-53f7-zheng-ze-biao-da-shi/103-zheng-ze-biao-da-shi-xiang-jie.md)
   * [10.4 正则表达式练习题](di-10-zhang-tong-pei-7b26-te-shu-fu-53f7-zheng-ze-biao-da-shi/104-zheng-ze-biao-da-shi-lian-xi-ti.md)
 * [第11章 第三关练习题](di-11-zhang-di-san-guan-lian-xi-ti.md)
-  * 11.1 三剑客过滤
+  * [11.1 三剑客过滤](111-san-jian-ke-guo-lv.md)
   * [11.4 Linux快捷键与vi、vim快捷键](114-linuxkuai-jie-jian-yu-vi-vim-kuai-jie-jian.md)
 * [第12章 linux权限](di-12-zhang-linux-quan-xian.md)
   * [12.1 rwx是啥](di-12-zhang-linux-quan-xian/121-rwxshi-sha.md)

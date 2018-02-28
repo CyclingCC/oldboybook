@@ -91,11 +91,7 @@ drwxr-xr-x. 9 root root 4096 Apr 5 09:22 ..
 
 -rw-r--r-- 1 alex888 alex888 124 May 11 2016 .bashrc
 
-#### 5、与用户组相关的配置文件 {#113-与用户组相关的配置文件}
-
-/etc/group \#--&gt;用户组配置文件
-
-/etc/gshadow \#--&gt;用户组的影子文件
+####  {#113-与用户组相关的配置文件}
 
 #### 6、回顾shell命令解释器 -/sbin/nologin {#114-回顾shell命令解释器--sbinnologin}
 

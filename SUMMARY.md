@@ -185,4 +185,5 @@
 * [第12章 linux权限](di-12-zhang-linux-quan-xian.md)
   * [12.1 rwx是啥](di-12-zhang-linux-quan-xian/121-rwxshi-sha.md)
   * [12.2 linux如何知道我对某个文件或目录有什么权限？](di-12-zhang-linux-quan-xian/122-linuxru-he-zhi-dao-wo-dui-mou-ge-wen-jian-huo-mu-lu-you-shi-yao-quan-xian-ff1f.md)
+  * [12.7 linux系统默认权限控制命令umask](di-12-zhang-linux-quan-xian/127-linuxxi-tong-mo-ren-quan-xian-kong-zhi-ming-ling-umask.md)
 

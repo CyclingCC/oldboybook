@@ -215,5 +215,5 @@
   * [16.3 raid基本及应用场景](di-16-zhang-ci-pan-guan-li/163-raidji-ben-ji-ying-yong-chang-jing.md)
   * [16.4 磁盘分区相关知识](di-16-zhang-ci-pan-guan-li/164-ci-pan-fen-qu-xiang-guan-zhi-shi.md)
   * [16.5 磁盘格式化-\(故障案例-swap空间不足）](di-16-zhang-ci-pan-guan-li/165-ci-pan-ge-shi-5316-28-gu-zhang-an-4f8b-swap-kong-jian-bu-zu-ff09.md)
-  * 16.6 文件系统 
+  * [16.6 文件系统 ](di-16-zhang-ci-pan-guan-li/166-wen-jian-xi-tong.md)
 

@@ -195,5 +195,5 @@
   * [13.1 定时任务的介绍及分类](di-13-zhang-ding-shi-ren-wu/131-shi-yao-shi-ding-shi-ren-wu.md)
   * [13.2 定时任务的使用](di-13-zhang-ding-shi-ren-wu/132-ding-shi-ren-wu-de-shi-yong.md)
   * [13.3 定时任务书写流程](di-13-zhang-ding-shi-ren-wu/133-ding-shi-ren-wu-shu-xie-liu-cheng.md)
-  * [13.4 总结：9句箴言 （包含3个故障案例）](di-13-zhang-ding-shi-ren-wu/134-zong-jie-ff1a-9-ju-zhen-yan-ff08-bao-han-3-ge-gu-zhang-an-li-ff09.md)
+  * [13.4 总结：10句箴言 （包含3个故障案例）](di-13-zhang-ding-shi-ren-wu/134-zong-jie-ff1a-9-ju-zhen-yan-ff08-bao-han-3-ge-gu-zhang-an-li-ff09.md)
 

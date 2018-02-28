@@ -211,7 +211,7 @@
   * [15.7 记录用户的操作 行为/日志审计 （企业案例）](di-15-zhang/157-ji-lu-yong-hu-de-cao-zuo-xing-4e3a-ri-zhi-shen-ji-ff08-qi-ye-an-li-ff09.md)
 * [第16章 磁盘管理](di-16-zhang-ci-pan-guan-li.md)
   * [16.1 磁盘知识体系](di-16-zhang-ci-pan-guan-li/161-ci-pan-zhi-shi-ti-xi.md)
-  * 16.2 磁盘结构-接口-详细组成
+  * [16.2 磁盘结构-接口-详细组成](di-16-zhang-ci-pan-guan-li/162-ci-pan-jie-6784-jie-53e3-xiang-xi-zu-cheng.md)
   * [16.3 raid基本及应用场景](di-16-zhang-ci-pan-guan-li/163-raidji-ben-ji-ying-yong-chang-jing.md)
   * 16.4 磁盘分区相关知识
   * 16.5 磁盘格式化-\(故障案例-swap空间不足）

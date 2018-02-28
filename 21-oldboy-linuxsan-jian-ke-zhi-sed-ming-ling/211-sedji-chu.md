@@ -584,3 +584,181 @@ p命令
 
 -i\[备份文件后缀\]
 
+#### 7、Ms \# \# \# Ng 的使用
+
+语法说明：
+
+Ms 第M行处理，无g标志，只处理第一处，有g标志则处理全部
+
+Ng 从第N处开始处理到结尾
+
+Ms 、 Ng 合用 表示 只对第M行从第N处开始处理到结尾
+
+#### 8、数字标志
+
+s \# \# \# N 这种表示替换每行中第N次出现的内容，属于一种精确匹配。
+
+N的取值范围： 1&lt;N&lt;512
+
+cat &gt;num.txt &lt;&lt;EOF
+
+1 1 1 1 1
+
+1 1 1 1 1
+
+1 1 1 1 1
+
+1 1 1 1 1
+
+EOF
+
+\[root@oldboy ~\]\# cat num.txt
+
+1 1 1 1 1
+
+1 1 1 1 1
+
+1 1 1 1 1
+
+1 1 1 1 1
+
+\[root@oldboy ~\]\# sed '1s\#1\#0\#1' num.txt
+
+0 1 1 1 1
+
+1 1 1 1 1
+
+1 1 1 1 1
+
+1 1 1 1 1
+
+\[root@oldboy ~\]\# sed '1s\#1\#0\#2' num.txt
+
+1 0 1 1 1
+
+1 1 1 1 1
+
+1 1 1 1 1
+
+1 1 1 1 1
+
+\[root@oldboy ~\]\# sed '1s\#1\#0\#2g' num.txt
+
+1 0 0 0 0
+
+1 1 1 1 1
+
+1 1 1 1 1
+
+1 1 1 1 1
+
+#### 9、顺序执行多个命令
+
+\[root@oldboy ~\]\# sed -n '3p;5p;10p' /etc/inittab
+
+\# ADDING OTHER CONFIGURATION HERE WILL HAVE NO EFFECT ON YOUR SYSTEM.
+
+\# System initialization is started by /etc/init/rcS.conf
+
+#### 10、sed参数及符号集合
+
+##### 1）选项 -e
+
+每个 -e 选项后可接一个命令
+
+\[root@oldboy ~\]\# sed -n -e '3p' -e '5p' /etc/inittab
+
+\# ADDING OTHER CONFIGURATION HERE WILL HAVE NO EFFECT ON YOUR SYSTEM.
+
+\# System initialization is started by /etc/init/rcS.conf
+
+##### 2）选项 -f
+
+\[root@oldboyedu37-nb ~\]\# cat linux36sed.sed
+
+5p
+
+35p
+
+70p
+
+sed -n -f linux36sed.sed linux36sed.txt
+
+##### 3）= 打印行号
+
+\[root@oldboy36 ~\]\# sed -n '$=' person.txt
+
+5
+
+\[root@oldboy32-vm1 ~\]\# sed = nginx.conf \|xargs -n2
+
+1 stu1
+
+2 stu2
+
+3 stu3
+
+4 stu4
+
+5 stu5
+
+6 stu6
+
+7 stu7
+
+8 stu8
+
+9 stu9
+
+10 stu10
+
+##### 4）{ } 里面可以写多个命令
+
+\[root@oldboy ~\]\# sed -n '2,4{=;p}' person.txt
+
+2
+
+102,zhangyao,CTO
+
+3
+
+103,Alex,COO
+
+4
+
+104,yy,CFO
+
+#### 11、模式空间 N
+
+\[root@oldboy ~\]\# cat person.txt
+
+101,oldboy,CEO
+
+102,zhangyao,CTO
+
+103,Alex,COO
+
+104,yy,CFO
+
+105,feixue,CIO
+
+\[root@oldboy36 ~\]\# sed 'N;s\#\n\# \#;' person.txt
+
+101,oldboy,CEO 102,zhangyao,CTO
+
+103,Alex,COO 104,yy,CFO
+
+105,feixue,CIO
+
+\[root@oldboy ~\]\# sed "=" person.txt\|sed 'N;s\#\n\# \#g'
+
+1 101,oldboy,CEO
+
+2 102,zhangyao,CTO
+
+3 103,Alex,COO
+
+4 104,yy,CFO
+
+5 105,feixue,CIO
+

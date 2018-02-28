@@ -182,6 +182,7 @@
   * [10.4 正则表达式练习题](di-10-zhang-tong-pei-7b26-te-shu-fu-53f7-zheng-ze-biao-da-shi/104-zheng-ze-biao-da-shi-lian-xi-ti.md)
 * 第11章 第三关练习题
   * 11.1 三剑客过滤
+  * [11.4 Linux快捷键与vi、vim快捷键](114-linuxkuai-jie-jian-yu-vi-vim-kuai-jie-jian.md)
 * [第12章 linux权限](di-12-zhang-linux-quan-xian.md)
   * [12.1 rwx是啥](di-12-zhang-linux-quan-xian/121-rwxshi-sha.md)
   * [12.3 chmod 命令的使用](di-12-zhang-linux-quan-xian/123-chmod-ming-ling-de-shi-yong.md)

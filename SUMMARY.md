@@ -116,4 +116,6 @@
   * [19.4 记录和字段](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/194-ji-lu-he-zi-duan.md)
   * [19.5  awk进阶](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/195-awk-jin-jie.md)
   * [19.6 awk正则表达式练习题](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/196-awkzheng-ze-biao-da-shi-lian-xi-ti.md)
+  * [19.7 范围模式](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/197-fan-wei-mo-shi.md)
+  * [19.8 awk特殊模式-BEGIN模式与END模式](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/198-awkte-shu-mo-5f0f-begin-mo-shi-yu-end-mo-shi.md)
 

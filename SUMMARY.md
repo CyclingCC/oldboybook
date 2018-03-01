@@ -116,10 +116,8 @@
   * [18.8 Shell脚本调试](23-oldboy-linux-shellbian-cheng-ji-chu/188-shelljiao-ben-diao-shi.md)
 * [第19章 三剑客之awk实战](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling.md)
   * [19.1 awk执行过程](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/221.md)
-  * [22.2 awk 字段和记录](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/222.md)
   * [19.2 awk正则匹配](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/223-awkzheng-ze-pi-pei.md)
-  * 19.3 awk数组统计分析
-  * [22.4 模式匹配](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/224.md)
+  * [19.3 awk数组统计分析](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/193-awkshu-zu-tong-ji-fen-xi.md)
   * [22.5 BEGIN模块](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/225.md)
   * [22.6 END模块](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/226.md)
   * [22.7 awk编程思想](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/227-awkbian-cheng-si-xiang.md)

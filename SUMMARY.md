@@ -84,7 +84,6 @@
 * [第14章 定时任务补充-第四关练习题](di-13-zhang-ding-shi-ren-wu/di-14-zhang-ding-shi-ren-wu-bu-5145-di-si-guan-lian-xi-ti.md)
   * [14.1 多种打包备份定时任务题目](di-13-zhang-ding-shi-ren-wu/di-14-zhang-ding-shi-ren-wu-bu-5145-di-si-guan-lian-xi-ti/141-duo-zhong-da-bao-bei-fen-ding-shi-ren-wu-ti-mu.md)
   * [14.2 命令补充\(4\)](di-13-zhang-ding-shi-ren-wu/di-14-zhang-ding-shi-ren-wu-bu-5145-di-si-guan-lian-xi-ti/142-ming-ling-bu-chong.md)
-  * [14.3 vi 、vim常见快捷键补充与回顾](di-13-zhang-ding-shi-ren-wu/di-14-zhang-ding-shi-ren-wu-bu-5145-di-si-guan-lian-xi-ti/143-vi-vimchang-jian-kuai-jie-jian-bu-chong-yu-hui-gu.md)
 * [第15章 用户管理](di-15-zhang.md)
   * [15.1 让一个命令或脚本开机自启动有什么方法？ ](di-15-zhang/151-rang-yi-ge-ming-ling-huo-jiao-ben-kai-ji-zi-qi-dong-you-shi-yao-fang-fa-ff1f.md)
   * [15.2 用户分类](di-15-zhang/152-yong-hu-fen-lei.md)

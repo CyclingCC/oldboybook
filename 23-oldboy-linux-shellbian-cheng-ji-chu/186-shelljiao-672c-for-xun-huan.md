@@ -220,7 +220,7 @@ done
 6 * 1 = 6 6 * 2 = 12 6 * 3 = 18 6 * 4 = 24 6 * 5 = 30 6 * 6 = 36  
 7 * 1 = 7 7 * 2 = 14 7 * 3 = 21 7 * 4 = 28 7 * 5 = 35 7 * 6 = 42 7 * 7 = 49  
 8 * 1 = 8 8 * 2 = 16 8 * 3 = 24 8 * 4 = 32 8 * 5 = 40 8 * 6 = 48 8 * 7 = 56 8 * 8 = 64  
-9 * 1 = 9 9 * 2 = 18 9 * 3 = 27 9 * 4 = 36 9 * 5 = 45 9 * 6 = 54 9 * 7 = 63 9 * 8 = 72 9 * 9 = 81 
+9 * 1 = 9 9 * 2 = 18 9 * 3 = 27 9 * 4 = 36 9 * 5 = 45 9 * 6 = 54 9 * 7 = 63 9 * 8 = 72 9 * 9 = 81
 ```
 
 #### 5、各种语句小结
@@ -299,13 +299,97 @@ c828c209-5b5f-4bc7-917c-678ed4215988
 961dc354-81b2-4564-9b85-6095ed4bc7b5
 ```
 
-#### 7、循环中的三个关键词
-
-##### break continue exit return
+#### 7、循环中的三个关键词 break continue exit return
 
 ##### break continue exit用于循环结构中控制虚幻（for,while,if）的走向
 
+##### ![](/assets/22-40.png)
 
+##### 1）break
+
+```
+[root@oldboy ~]# cat /server/scripts/oldboy.sh
+#!/bin/bash
+
+for ((i=0;i<=5;i++))
+do
+    [ $i -eq 3 ] && break
+    echo $i
+done
+echo "ok"
+[root@oldboy ~]# sh /server/scripts/oldboy.sh
+0
+1
+2
+ok
+```
+
+2）continue
+
+```
+[root@oldboy ~]# cat /server/scripts/oldboy.sh
+#!/bin/bash
+
+for ((i=0;i<=5;i++))
+do
+    [ $i -eq 3 ] && continue
+    echo $i
+done
+echo "ok"
+[root@oldboy ~]# sh /server/scripts/oldboy.sh
+0
+1
+2
+4
+5
+ok
+```
+
+3）exit
+
+```
+[root@oldboy ~]# cat /server/scripts/oldboy.sh
+#!/bin/bash
+
+for ((i=0;i<=5;i++))
+do
+    [ $i -eq 3 ] && exit 2
+    echo $i
+done
+echo "ok"
+[root@oldboy ~]# sh /server/scripts/oldboy.sh
+0
+1
+2
+[root@oldboy ~]# echo $?
+2
+```
+
+4）return
+
+```
+[root@oldboy ~]# cat /server/scripts/oldboy.sh
+#!/bin/bash
+
+function xxxx {
+
+    for ((i=0;i<=5;i++))
+    do
+        [ $i -eq 3 ] && return 7
+        echo $i
+    done
+    echo "ok"
+
+}
+
+xxxx
+echo $?
+[root@oldboy ~]# sh /server/scripts/oldboy.sh
+0
+1
+2
+7
+```
 
 
 

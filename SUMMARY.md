@@ -113,6 +113,7 @@
   * [18.5 Shell脚本-if判断](23-oldboy-linux-shellbian-cheng-ji-chu/185-shelljiao-672c-if-pan-duan.md)
   * [18.6 Shell脚本-循环](23-oldboy-linux-shellbian-cheng-ji-chu/186-shelljiao-672c-for-xun-huan.md)
   * [18.7 Shell脚本-case语句](23-oldboy-linux-shellbian-cheng-ji-chu/187-shelljiao-672c-case-yu-ju.md)
+  * [18.8 Shell脚本调试](23-oldboy-linux-shellbian-cheng-ji-chu/188-shelljiao-ben-diao-shi.md)
 * [第19章 三剑客之awk实战](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling.md)
   * [22.1 awk执行过程](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/221.md)
   * [22.2 awk 字段和记录](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/222.md)

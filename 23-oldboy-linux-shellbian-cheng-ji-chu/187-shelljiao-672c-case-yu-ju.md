@@ -38,3 +38,29 @@ apple|APPLE)
 
 以传参为例，在脚本命令行传2个参数，给指定内容（第一个参数）加指定颜色（第二个参数）
 
+```
+echo -e "\033[30m 黑色字oldboy trainning \033[0m"
+echo -e "\033[31m 红色字oldboy trainning \033[0m"
+echo -e "\033[32m 绿色字oldboy trainning \033[0m"
+echo -e "\033[33m 黄色字oldboy trainning \033[0m"
+echo -e "\033[34m 蓝色字oldboy trainning \033[0m"
+echo -e "\033[35m 紫色字oldboy trainning \033[0m"
+echo -e "\033[36m 天蓝字oldboy trainning \033[0m"
+echo -e "\033[37m 白色字oldboy trainning \033[0m"
+```
+
+#### 3、echo给字符串加不同颜色
+
+```
+echo -e "\033[40;37m 黑底白字 welcome to old1boy\033[0m"
+echo -e "\033[41;37m 红底白字 welcome to old2boy\033[0m"
+echo -e "\033[42;37m 绿底白字 welcome to old3boy\033[0m"
+echo -e "\033[43;37m 黄底白字 welcome to old4boy\033[0m"
+echo -e "\033[44;37m 蓝底白字 welcome to old5boy\033[0m"
+echo -e "\033[45;37m 紫底白字 welcome to old6boy\033[0m"
+echo -e "\033[46;37m 天蓝白字 welcome to old7boy\033[0m"
+echo -e "\033[47;30m 白底黑字 welcome to old8boy\033[0m"
+```
+
+
+

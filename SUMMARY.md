@@ -80,7 +80,6 @@
   * [13.3 定时任务书写流程](di-13-zhang-ding-shi-ren-wu/133-ding-shi-ren-wu-shu-xie-liu-cheng.md)
   * [13.4 总结：10句箴言](di-13-zhang-ding-shi-ren-wu/134-zong-jie-ff1a-9-ju-zhen-yan-ff08-bao-han-3-ge-gu-zhang-an-li-ff09.md)
   * [13.5 定时任务的总结](di-13-zhang-ding-shi-ren-wu/135-ding-shi-ren-wu-de-zong-jie.md)
-  * [13.6 企业案例](di-shi-liu-jie-ding-shi-ren-wu/1510-qi-ye-an-li.md)
 * [第14章 定时任务补充-第四关练习题](di-13-zhang-ding-shi-ren-wu/di-14-zhang-ding-shi-ren-wu-bu-5145-di-si-guan-lian-xi-ti.md)
   * [14.1 多种打包备份定时任务题目](di-13-zhang-ding-shi-ren-wu/di-14-zhang-ding-shi-ren-wu-bu-5145-di-si-guan-lian-xi-ti/141-duo-zhong-da-bao-bei-fen-ding-shi-ren-wu-ti-mu.md)
   * [14.2 命令补充\(4\)](di-13-zhang-ding-shi-ren-wu/di-14-zhang-ding-shi-ren-wu-bu-5145-di-si-guan-lian-xi-ti/142-ming-ling-bu-chong.md)

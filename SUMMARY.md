@@ -110,4 +110,7 @@
   * [18.7 Shell脚本-case语句](23-oldboy-linux-shellbian-cheng-ji-chu/187-shelljiao-672c-case-yu-ju.md)
   * [18.8 Shell脚本调试](23-oldboy-linux-shellbian-cheng-ji-chu/188-shelljiao-ben-diao-shi.md)
 * [第19章 三剑客之awk实战](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling.md)
+  * [19.1 awk基础入门](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/191-awkji-chu-ru-men.md)
+  * [19.2 模式动作](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/192-mo-shi-dong-zuo.md)
+  * [19.3 awk执行过程](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/193-awkzhi-xing-guo-cheng.md)
 

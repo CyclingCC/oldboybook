@@ -1,24 +1,22 @@
-### 环境准备
+### 一、基础正则
 
-\[root@oldboyedu42-lnb oldboy\]\# cat /oldboy/re.txt
+##### 环境准备
 
+```
+[root@oldboyedu42-lnb oldboy]# cat /oldboy/re.txt
 I am oldboy teacher!
-
 I teach linux.
-
 I like badminton ball ,billiard ball and chinese chess!
+my blog is 
+http://oldboy.blog.51cto.com
 
-my blog is [http://oldboy.blog.51cto.com](http://oldboy.blog.51cto.com)
-
-our size is [http://blog.oldboyedu.com](http://blog.oldboyedu.com)
+our size is 
+http://blog.oldboyedu.com
 
 my qq is 49000448
-
 not 4900000448.
-
 my god ,i am not oldbey,but OLDBOY!
-
-### 一、基础正则
+```
 
 #### 1、^ ^m   表示以....开头的行
 
@@ -826,7 +824,9 @@ not 4900000448.
 
 \[root@oldboyedu42-lnb oldboy\]\# ifconfig eth0\|sed -n '2p'
 
-          inet addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+```
+      inet addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+```
 
 \[root@oldboyedu42-lnb oldboy\]\# ifconfig eth0\|sed -n '2p'\|sed 's\#^.\*:\#\#g'
 
@@ -840,11 +840,13 @@ not 4900000448.
 
 10.0.0.200
 
-#### \#方法2-sed-后向引用 
+#### \#方法2-sed-后向引用
 
 \[root@oldboyedu42-lnb oldboy\]\# ifconfig eth0\|sed -n '2p'
 
-          inet addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+```
+      inet addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+```
 
 \[root@oldboyedu42-lnb oldboy\]\# ifconfig eth0\|sed -n '2p'\|sed -r 's\#^.\*dr:\(.\*\)  Bc.\*$\#\1\#g'
 
@@ -854,7 +856,9 @@ not 4900000448.
 
 \[root@oldboyedu42-lnb oldboy\]\# ifconfig eth0\|awk 'NR==2'
 
-          inet addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+```
+      inet addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+```
 
 \[root@oldboyedu42-lnb oldboy\]\# ifconfig eth0\|awk 'NR==2'\|awk -F "\[ :\]+"  '{print $4}'
 
@@ -862,17 +866,23 @@ not 4900000448.
 
 \[root@oldboyedu42-lnb oldboy\]\# ifconfig eth0\|awk 'NR==2'\|egrep '\[ :\]'
 
-          inet addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+```
+      inet addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+```
 
 \[root@oldboyedu42-lnb oldboy\]\# ifconfig eth0\|awk 'NR==2'\|egrep '\[ :\]+'
 
-          inet addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+```
+      inet addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+```
 
-#### \#方法4-awk-'条件{命令}' 
+#### \#方法4-awk-'条件{命令}'
 
 \[root@oldboyedu42-lnb ~\]\# ifconfig eth0\|awk 'NR==2'
 
-          inet addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+```
+      inet addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+```
 
 \[root@oldboyedu42-lnb ~\]\# ifconfig eth0\|awk 'NR==2'\|awk '{print $2}'
 
@@ -888,43 +898,47 @@ addr:10.0.0.200
 
 \[root@oldboyedu42-lnb ~\]\# \#错误 ifconfig eth0\|awk -F"\[ :\]+" 'NR==2{print $2}'
 
-\[root@oldboyedu42-lnb ~\]\# ifconfig eth0\|awk -F "\[ :\]+"      'NR==2{print $4}'  
+\[root@oldboyedu42-lnb ~\]\# ifconfig eth0\|awk -F "\[ :\]+"      'NR==2{print $4}'
 
 10.0.0.200
 
 #### \#方法5-sed
 
-sed -nr '2s\#^.\*dr:\(.\*\)  Bc.\*$\#\1\#gp'   
+sed -nr '2s\#^.\*dr:\(.\*\)  Bc.\*$\#\1\#gp'
 
 sed -n '2s\#inet\#oldboy\#gp'
 
 \[root@oldboyedu42-lnb ~\]\# ifconfig eth0\|sed -n '2s\#inet\#oldboy\#gp'
 
-          oldboy addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
-
-
+```
+      oldboy addr:10.0.0.200  Bcast:10.0.0.255  Mask:255.255.255.0
+```
 
 老男孩IT教育出品-sed命令反向引用取出网卡ip地址详解
 
-https://www.processon.com/view/link/59fa9baae4b0f84f8975eefe
+[https://www.processon.com/view/link/59fa9baae4b0f84f8975eefe](https://www.processon.com/view/link/59fa9baae4b0f84f8975eefe)
 
 ![](/assets/15-5.png)
 
-#### \#方法6 
+#### \#方法6
 
 \[root@oldboyedu42-lnb ~\]\# ip a s eth0 \|awk 'NR==3'
 
-    inet 10.0.0.200/24 brd 10.0.0.255 scope global eth0
+```
+inet 10.0.0.200/24 brd 10.0.0.255 scope global eth0
+```
 
 \[root@oldboyedu42-lnb ~\]\# ip a s eth0 \|awk 'NR==3'\|awk -F"\[ /\]+" '{print $3}'
 
 10.0.0.200
 
-#### \#方法7 
+#### \#方法7
 
 \[root@oldboyedu42-lnb ~\]\# ip a s eth0 \|sed -n '3p'
 
-    inet 10.0.0.200/24 brd 10.0.0.255 scope global eth0
+```
+inet 10.0.0.200/24 brd 10.0.0.255 scope global eth0
+```
 
 \[root@oldboyedu42-lnb ~\]\# ip a s eth0 \|sed -n '3p'\|sed -r 's\#^.\* \(.\*\)/\#\#g'
 

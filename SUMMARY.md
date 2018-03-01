@@ -114,4 +114,6 @@
   * [19.2 模式动作](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/192-mo-shi-dong-zuo.md)
   * [19.3 awk执行过程](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/193-awkzhi-xing-guo-cheng.md)
   * [19.4 记录和字段](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/194-ji-lu-he-zi-duan.md)
+  * [19.5  awk进阶](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/195-awk-jin-jie.md)
+  * [19.6 awk正则表达式练习题](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/196-awkzheng-ze-biao-da-shi-lian-xi-ti.md)
 

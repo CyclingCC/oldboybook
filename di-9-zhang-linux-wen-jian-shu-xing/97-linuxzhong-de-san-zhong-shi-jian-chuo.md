@@ -1,22 +1,22 @@
 #### 1、三种时间对应关系表
 
-#### column    column    column
+column    column    column
 
-#### 访问时间    Access    atime
+访问时间    Access    atime
 
-#### 修改时间    Modify    mtime
+修改时间    Modify    mtime
 
-#### 状态改动时间    Change    ctime
+状态改动时间    Change    ctime
 
 #### 2、如何查看文件文件的三种时间戳
 
-#### stat filename
+stat filename
 
 #### 3、三种时间戳的解释
 
-#### 访问时间：读一次文件的内容，这个时间就会更新。比如more、cat等命令。ls、stat命令不会修改atime
+访问时间：读一次文件的内容，这个时间就会更新。比如more、cat等命令。ls、stat命令不会修改atime
 
-#### 修改时间：修改时间是文件内容最后一次被修改的时间。比如：vim操作后保存文件。ls -l列出的就是这个时间
+修改时间：修改时间是文件内容最后一次被修改的时间。比如：vim操作后保存文件。ls -l列出的就是这个时间
 
 \[root@oldboyedu42-lnb ~\]\# stat oldboy.txt
 
@@ -52,7 +52,7 @@ Modify: 2017-11-11 21:01:21.249962087 +0800
 
 Change: 2017-11-11 21:01:21.249962087 +0800
 
-#### 状态改动时间。是该文件的inode节点最后一次被修改的时间，通过chmod、chown命令修改一次文件属性，这个时间就会更新。
+##### 状态改动时间。是该文件的inode节点最后一次被修改的时间，通过chmod、chown命令修改一次文件属性，这个时间就会更新。
 
 \[root@oldboyedu42-lnb ~\]\# stat oldboy.txt
 
@@ -98,11 +98,11 @@ Modify: 2017-11-11 21:01:21.249962087 +0800
 
 Change: 2017-11-11 21:03:09.906964526 +0800
 
-#### 1、mtime 文件内容的最后修改时间
+##### 1）mtime 文件内容的最后修改时间
 
-#### 2、ctime 文件状态的最后更改时间
+##### 2）ctime 文件状态的最后更改时间
 
-#### 3、atime文件内容最后访问时间
+##### 3）atime文件内容最后访问时间
 
 
 

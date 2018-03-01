@@ -109,12 +109,12 @@
   * [18.1 Shell的介绍](23-oldboy-linux-shellbian-cheng-ji-chu/181-shellde-jie-shao.md)
   * [18.2 创建Shell脚本](23-oldboy-linux-shellbian-cheng-ji-chu/232.md)
   * [18.3 Shell脚本-变量](23-oldboy-linux-shellbian-cheng-ji-chu/183-shelljiao-672c-bian-liang.md)
-  * [18.4 Shell脚本-判断](23-oldboy-linux-shellbian-cheng-ji-chu/184-shelljiao-672c-pan-duan.md)
-  * [23.8 条件测试](23-oldboy-linux-shellbian-cheng-ji-chu/238-tiao-jian-ce-shi.md)
-  * [23.9 if条件语句](23-oldboy-linux-shellbian-cheng-ji-chu/239-tiao-jian-ce-shi.md)
+  * [18.4 Shell脚本-条件测试](23-oldboy-linux-shellbian-cheng-ji-chu/184-shelljiao-672c-pan-duan.md)
+  * [18.5 Shell脚本-if判断](23-oldboy-linux-shellbian-cheng-ji-chu/185-shelljiao-672c-if-pan-duan.md)
+  * 18.6 Shell脚本-for循环
+  * 18.7 Shell脚本-case语句
   * [23.10 case条件语句](23-oldboy-linux-shellbian-cheng-ji-chu/2310-casetiao-jian-yu-ju.md)
-  * 18.3 Shell脚本-变量
-* 18.1 Shell的介绍
+  * [23.9 if条件语句](23-oldboy-linux-shellbian-cheng-ji-chu/239-tiao-jian-ce-shi.md)
 * [第19章 三剑客之awk实战](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling.md)
   * [22.1 awk介绍](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/221.md)
   * [22.2 awk 字段和记录](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/222.md)

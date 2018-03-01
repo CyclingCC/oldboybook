@@ -1,27 +1,21 @@
-### if单分支条件语句 {#101-if单分支条件语句}
-
-if \[ 条件 \]
-
-then
+#### 1、if单分支条件语句
 
 ```
-指令
-
+if [ 条件 ]
+    then
+        指令
+fi
+或
+if [ 条件 ]；then
+    指令
+fi
 ```
-
-fi
-
-或者
-
-if \[ 条件 \];then
-
-指令
-
-fi
 
 提示：分号相当于命令换行，上面两种语句等同。
 
-特殊写法if \[ -f "$file1" \];then echo 1;fi 相当于 \[ -f "$file1" \] && echo 1
+特殊写法if \[ -f "$file1" \];then echo 1;fi 
+
+相当于 \[ -f "$file1" \] && echo 1
 
 #### 10.1.1 {#1011}
 
@@ -51,7 +45,6 @@ exit 1
 echo "ERROR: Maybe one of your input is not int!"
 
 exit 2
-
 ```
 
 }
@@ -68,7 +61,6 @@ echo "$x
 gt; $y"
 
 exit
-
 ```
 
 fi
@@ -81,7 +73,6 @@ then
 echo "$x = $y"
 
 exit
-
 ```
 
 fi
@@ -96,7 +87,6 @@ echo "$x
 lt; $y"
 
 exit
-
 ```
 
 fi
@@ -127,7 +117,6 @@ exit 1
 echo "ERROR: Maybe one of your input is not int!"
 
 exit 2
-
 ```
 
 }
@@ -144,7 +133,6 @@ echo "$x
 gt; $y"
 
 \#exit
-
 ```
 
 else
@@ -165,7 +153,6 @@ else
 lt; $y"
 
 fi
-
 ```
 
 fi
@@ -198,7 +185,6 @@ exit 1
 echo "ERROR: Maybe one of your input is not int!"
 
 exit 2
-
 ```
 
 }
@@ -209,13 +195,11 @@ if \[ $x -gt $y \]
 
 then
 
-echo "$x 
+echo "$x
 
 &
 
 gt; $y"
-
-
 
 elif \[ $x -eq $y \]
 
@@ -223,15 +207,12 @@ then
 
 echo "$x = $y"
 
-
-
 else
 
 ```
 echo "$x 
 &
 lt; $y"
-
 ```
 
 fi

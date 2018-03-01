@@ -68,5 +68,46 @@ if [ ! -f $path/$file ]
 fi
 ```
 
+#### 2、if双分支条件语句
+
+```
+if [ 条件 ]
+    then
+        指令
+    else
+        指令
+fi
+```
+
+特殊写法：if \[ -f "$file1" \];then echo 1;else echo 0;fi
+
+相当于\[ -f "file1" \] && echo 1 \|\|echo 0
+
+##### 例子：
+
+1）如果/server2/scripts下面有if3.sh就输出if3.sh到屏幕，如果没有就自动创建
+
+
+    [root@oldboy scripts]# cat chensiqi.sh 
+    #!/bin/bash
+
+    file=/server2/scripts/if3.sh
+    path=`dirname $file`
+
+    if [ -f $file ];then
+        cat $file
+        exit 0
+    else
+        if [ ! -d $path ];then
+            mkdir -p $path
+            echo "$path is not exist,already created it."
+            echo "1234" >> $file
+        fi
+        if [! -f $file ];then
+            echo "1234" >> $file
+            echo "$file is not exist,already created it."
+        fi
+    fi
+
 
 

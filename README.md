@@ -1,7 +1,8 @@
-# linux基础知识点汇总
+# Summary
 
-[介绍](README.md)
+## linux基础知识点汇总
 
+* [介绍](README.md)
 * [第1章 服务器核心知识-linux发展过程](di-1-zhang-fu-wuqi-he-xin-zhi-8bc6-linux-fa-zhan-guo-cheng.md)
   * [1.1 服务器、服务器分类、运维职责](di-1-zhang-fu-wuqi-he-xin-zhi-8bc6-linux-fa-zhan-guo-cheng/11-fu-wu-qi-3001-fu-wu-qi-fen-lei-3001-yun-wei-zhi-ze.md)
   * [1.2 计算机重要组成部分与处理流程](di-1-zhang-fu-wuqi-he-xin-zhi-8bc6-linux-fa-zhan-guo-cheng/12-ji-suan-ji-zhong-yao-zu-cheng-bu-fen-yu-chu-li-liu-cheng.md)
@@ -17,7 +18,7 @@
   * [3.3 网站服务器多种分区方案说明](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa/33-wang-zhan-fu-wu-qi-duo-zhong-fen-qu-fang-an-shuo-ming.md)
   * [3.4 Linux命令行结构与命令特点讲解](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa/34-linuxming-ling-xing-jie-gou-yu-ming-ling-te-dian-jiang-jie.md)
 * [第4章 第一关练习题讲解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie.md)
-  * [4.1基础命令讲解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/41ji-chu-ming-ling-jiang-jie.md)
+  * [4.1基础命令讲解（1）](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/41ji-chu-ming-ling-jiang-jie.md)
   * [4.2 三剑客初次接触](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/42-san-jian-ke-chu-ci-jie-hong.md)
   * [4.3 特殊符号与重定向符号详解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/43-te-shu-fu-hao-yu-zhong-ding-xiang-fu-hao-xiang-jie.md)
   * [4.4 Linux别名详解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/44-linuxbie-ming-xiang-jie.md)
@@ -42,7 +43,7 @@
   * [7.2 PATH环境变量说明](di-7-zhang-mu-lu-jie-6784-xia-bu/72-pathhuan-jing-bian-liang-shuo-ming.md)
   * [7.3 打包压缩命令详解](di-7-zhang-mu-lu-jie-6784-xia-bu/74-da-bao-ya-suo-ming-ling-xiang-jie.md)
   * [7.4 单引号双引号不加引号](di-7-zhang-mu-lu-jie-6784-xia-bu/76-dan-yin-hao-shuang-yin-hao-bu-jia-yin-hao.md)
-  * 7.5 基础命令（3）
+  * [7.5 基础命令（2）](di-7-zhang-mu-lu-jie-6784-xia-bu/75-ji-chu-ming-ling-ff08-2.md)
 * [第8章 第一阶段课程扩展与回顾](di-8-zhang-di-yi-jie-duan-ke-cheng-kuo-zhan-yu-hui-gu.md)
   * [8.1 无法远程连接服务器常见原因](di-8-zhang-di-yi-jie-duan-ke-cheng-kuo-zhan-yu-hui-gu/81-wu-fa-yuan-cheng-lian-jie-fu-wu-qi-chang-jian-yuan-yin.md)
   * [8.2 查看端口是否开启的命令](di-8-zhang-di-yi-jie-duan-ke-cheng-kuo-zhan-yu-hui-gu/82-cha-kan-duan-kou-shi-fou-kai-qi-de-ming-ling.md)

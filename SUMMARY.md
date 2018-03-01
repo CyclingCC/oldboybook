@@ -118,6 +118,7 @@
   * [19.1 awk执行过程](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/221.md)
   * [22.2 awk 字段和记录](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/222.md)
   * [19.2 awk正则匹配](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/223-awkzheng-ze-pi-pei.md)
+  * 19.3 awk数组统计分析
   * [22.4 模式匹配](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/224.md)
   * [22.5 BEGIN模块](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/225.md)
   * [22.6 END模块](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/226.md)
@@ -127,5 +128,5 @@
   * [22.10 awk数组](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/2210-awkshu-zu.md)
   * [22.11 awk中的for循环](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/2211-awkzhong-de-for-xun-huan.md)
   * [22.12  awk内置函数](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/2212.md)
-  * [22.13  awk总结](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/2213-awk-zong-jie.md)
+  * 19.3 awk数组统计分析
 

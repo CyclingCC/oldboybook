@@ -38,7 +38,6 @@
   * [6.5 如何修改主机名](di-6-zhang-mu-lu-jie-6784-shang-bu/65-ru-he-xiu-gai-zhu-ji-ming.md)
   * [6.6 linux里面安装软件的3方法](di-6-zhang-mu-lu-jie-6784-shang-bu/66-linuxli-mian-an-zhuang-ruan-jian-de-3-fang-fa.md)
   * [6.7 Linux里面必知必会的文件及目录](di-6-zhang-mu-lu-jie-6784-shang-bu/67-linuxli-mian-bi-zhi-bi-hui-de-wen-jian-ji-mu-lu.md)
-  * [6.8 VIM命令故障](di-6-zhang-mu-lu-jie-6784-shang-bu/68-vimming-ling-gu-zhang.md)
 * [第7章 第二关练习题讲解](di-7-zhang-mu-lu-jie-6784-xia-bu.md)
   * [7.1 Linux启动流程](di-7-zhang-mu-lu-jie-6784-xia-bu/71-linuxqi-dong-liu-cheng.md)
   * [7.2 PATH环境变量说明](di-7-zhang-mu-lu-jie-6784-xia-bu/72-pathhuan-jing-bian-liang-shuo-ming.md)

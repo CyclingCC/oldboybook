@@ -1,5 +1,11 @@
 ### 一、服务器
 
+服务器，也称伺服器，是提供计算服务的设备。由于服务器需要响应服务请求，并进行处理，因此一般来说服务器应具备承担服务并且保障服务的能力。
+
+服务器的构成包括[处理器](https://baike.baidu.com/item/%E5%A4%84%E7%90%86%E5%99%A8)、[硬盘](https://baike.baidu.com/item/%E7%A1%AC%E7%9B%98)、[内存](https://baike.baidu.com/item/%E5%86%85%E5%AD%98)、[系统](https://baike.baidu.com/item/%E7%B3%BB%E7%BB%9F)[总线](https://baike.baidu.com/item/%E6%80%BB%E7%BA%BF)等，和通用的计算机架构类似，但是由于需要[提供](https://baike.baidu.com/item/%E6%8F%90%E4%BE%9B)高可靠的服务，因此在处理能力、稳定性、可靠性、安全性、可扩展性、可管理性等方面要求较高。
+
+在网络环境下，根据服务器提供的服务类型不同，分为文件服务器，[数据库服务器](https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9C%8D%E5%8A%A1%E5%99%A8)，应用程序服务器，WEB服务器等。
+
 ### 二、服务器的分类
 
 #### 从外形分类

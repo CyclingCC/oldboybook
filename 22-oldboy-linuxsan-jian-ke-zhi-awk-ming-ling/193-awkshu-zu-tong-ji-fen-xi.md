@@ -113,8 +113,6 @@ hello world!
 end of file
 ```
 
-
-
 案例：统计/etc/services文件里面的空行数量
 
 \[root@nfsserver files\]\# awk '$0~/^$/{a++}END{print a}' /etc/services

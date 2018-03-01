@@ -115,12 +115,4 @@
   * [18.7 Shell脚本-case语句](23-oldboy-linux-shellbian-cheng-ji-chu/187-shelljiao-672c-case-yu-ju.md)
   * [18.8 Shell脚本调试](23-oldboy-linux-shellbian-cheng-ji-chu/188-shelljiao-ben-diao-shi.md)
 * [第19章 三剑客之awk实战](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling.md)
-  * [19.1 awk执行过程](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/221.md)
-  * [19.2 awk正则匹配](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/223-awkzheng-ze-pi-pei.md)
-  * [19.3 awk数组统计分析](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/193-awkshu-zu-tong-ji-fen-xi.md)
-  * [22.9  awk内置变量](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/229-awk-nei-zhi-bian-liang.md)
-  * [22.10 awk数组](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/2210-awkshu-zu.md)
-  * [22.11 awk中的for循环](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/2211-awkzhong-de-for-xun-huan.md)
-  * [22.12  awk内置函数](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/2212.md)
-  * 19.3 awk数组统计分析
 

@@ -91,7 +91,6 @@
   * [15.4 与用户相关的目录（故障案例）](di-15-zhang/154-yu-yong-hu-xiang-guan-de-mu-lu-ff08-gu-zhang-an-li-ff09.md)
   * [15.5 用户管理的命令](di-15-zhang/155-yong-hu-guan-li-de-ming-ling.md)
   * [15.6 Sudo临时让用户获得root权限](di-15-zhang/156-sudolin-shi-rang-yong-hu-huo-de-root-quan-xian.md)
-  * [15.7 记录用户的操作 行为/日志审计 （企业案例）](di-15-zhang/157-ji-lu-yong-hu-de-cao-zuo-xing-4e3a-ri-zhi-shen-ji-ff08-qi-ye-an-li-ff09.md)
 * [第16章 磁盘管理](di-16-zhang-ci-pan-guan-li.md)
   * [16.1 磁盘知识体系](di-16-zhang-ci-pan-guan-li/161-ci-pan-zhi-shi-ti-xi.md)
   * [16.2 磁盘结构-接口-详细组成](di-16-zhang-ci-pan-guan-li/162-ci-pan-jie-6784-jie-53e3-xiang-xi-zu-cheng.md)

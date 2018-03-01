@@ -112,7 +112,7 @@
   * [18.4 Shell脚本-条件测试](23-oldboy-linux-shellbian-cheng-ji-chu/184-shelljiao-672c-pan-duan.md)
   * [18.5 Shell脚本-if判断](23-oldboy-linux-shellbian-cheng-ji-chu/185-shelljiao-672c-if-pan-duan.md)
   * 18.6 Shell脚本-for循环
-  * 18.7 Shell脚本-case语句
+  * [18.7 Shell脚本-case语句](23-oldboy-linux-shellbian-cheng-ji-chu/187-shelljiao-672c-case-yu-ju.md)
   * [23.10 case条件语句](23-oldboy-linux-shellbian-cheng-ji-chu/2310-casetiao-jian-yu-ju.md)
   * [23.9 if条件语句](23-oldboy-linux-shellbian-cheng-ji-chu/239-tiao-jian-ce-shi.md)
 * [第19章 三剑客之awk实战](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling.md)

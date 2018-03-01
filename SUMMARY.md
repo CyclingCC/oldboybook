@@ -118,7 +118,6 @@
   * [19.1 awk执行过程](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/221.md)
   * [19.2 awk正则匹配](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/223-awkzheng-ze-pi-pei.md)
   * [19.3 awk数组统计分析](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/193-awkshu-zu-tong-ji-fen-xi.md)
-  * [22.7 awk编程思想](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/227-awkbian-cheng-si-xiang.md)
   * [22.8 awk基本结构](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/228-awkji-ben-jie-gou.md)
   * [22.9  awk内置变量](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/229-awk-nei-zhi-bian-liang.md)
   * [22.10 awk数组](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/2210-awkshu-zu.md)

@@ -43,6 +43,7 @@
   * [7.2 PATH环境变量说明](di-7-zhang-mu-lu-jie-6784-xia-bu/72-pathhuan-jing-bian-liang-shuo-ming.md)
   * [7.3 打包压缩命令详解](di-7-zhang-mu-lu-jie-6784-xia-bu/74-da-bao-ya-suo-ming-ling-xiang-jie.md)
   * [7.4 单引号双引号不加引号](di-7-zhang-mu-lu-jie-6784-xia-bu/76-dan-yin-hao-shuang-yin-hao-bu-jia-yin-hao.md)
+  * 7.5 基础命令（3）
 * [第8章 第一阶段课程扩展与回顾](di-8-zhang-di-yi-jie-duan-ke-cheng-kuo-zhan-yu-hui-gu.md)
   * [8.1 无法远程连接服务器常见原因](di-8-zhang-di-yi-jie-duan-ke-cheng-kuo-zhan-yu-hui-gu/81-wu-fa-yuan-cheng-lian-jie-fu-wu-qi-chang-jian-yuan-yin.md)
   * [8.2 查看端口是否开启的命令](di-8-zhang-di-yi-jie-duan-ke-cheng-kuo-zhan-yu-hui-gu/82-cha-kan-duan-kou-shi-fou-kai-qi-de-ming-ling.md)
@@ -63,7 +64,8 @@
   * [10.4 正则表达式练习题](di-10-zhang-tong-pei-7b26-te-shu-fu-53f7-zheng-ze-biao-da-shi/104-zheng-ze-biao-da-shi-lian-xi-ti.md)
 * [第11章 第三关练习题](di-11-zhang-di-san-guan-lian-xi-ti.md)
   * [11.1 三剑客过滤](111-san-jian-ke-guo-lv.md)
-  * [11.4 Linux快捷键与vi、vim快捷键](114-linuxkuai-jie-jian-yu-vi-vim-kuai-jie-jian.md)
+  * [11.2 基础命令（3）](112-ji-chu-ming-ling-ff08-3.md)
+  * [11.3 Linux快捷键与vi、vim快捷键](114-linuxkuai-jie-jian-yu-vi-vim-kuai-jie-jian.md)
 * [第12章 linux权限](di-12-zhang-linux-quan-xian.md)
   * [12.1 rwx是啥](di-12-zhang-linux-quan-xian/121-rwxshi-sha.md)
   * [12.3 chmod 命令的使用](di-12-zhang-linux-quan-xian/123-chmod-ming-ling-de-shi-yong.md)

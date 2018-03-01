@@ -1,8 +1,10 @@
-#### f    file       普通文件
+### 一、文件的分类
 
-#### d    directory  目录 
+f    file       普通文件
 
-#### l    symlink  softlink   符号链接/软连接
+d    directory  目录
+
+l    symlink  softlink   符号链接/软连接
 
 #### 1、f    file       普通文件
 
@@ -12,7 +14,7 @@
 
 3\).文本文件
 
-\[root@oldboyedu42-lnb ~\]\# ls -l /etc/hosts  /bin/gawk  /tmp/etc.tar.gz 
+\[root@oldboyedu42-lnb ~\]\# ls -l /etc/hosts  /bin/gawk  /tmp/etc.tar.gz
 
 -rwxr-xr-x. 1 root root  382752 Nov 10  2015 /bin/gawk
 
@@ -26,11 +28,11 @@ ls -l 文件名
 
 扩展名:文件的小尾巴
 
-.txt 
+.txt
 
-.log 
+.log
 
-.conf 
+.conf
 
 .sh    脚本
 

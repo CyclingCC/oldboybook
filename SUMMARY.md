@@ -63,9 +63,8 @@
   * [10.3 正则表达式详解](di-10-zhang-tong-pei-7b26-te-shu-fu-53f7-zheng-ze-biao-da-shi/103-zheng-ze-biao-da-shi-xiang-jie.md)
   * [10.4 正则表达式练习题](di-10-zhang-tong-pei-7b26-te-shu-fu-53f7-zheng-ze-biao-da-shi/104-zheng-ze-biao-da-shi-lian-xi-ti.md)
 * [第11章 第三关练习题](di-11-zhang-di-san-guan-lian-xi-ti.md)
-  * [11.1 三剑客过滤](111-san-jian-ke-guo-lv.md)
-  * [11.2 基础命令（3）](112-ji-chu-ming-ling-ff08-3.md)
-  * [11.3 Linux快捷键与vi、vim快捷键](114-linuxkuai-jie-jian-yu-vi-vim-kuai-jie-jian.md)
+  * [11.1 基础命令（3）](112-ji-chu-ming-ling-ff08-3.md)
+  * [11.2 Linux快捷键与vi、vim快捷键](114-linuxkuai-jie-jian-yu-vi-vim-kuai-jie-jian.md)
 * [第12章 linux权限](di-12-zhang-linux-quan-xian.md)
   * [12.1 rwx是啥](di-12-zhang-linux-quan-xian/121-rwxshi-sha.md)
   * [12.2 chmod 命令的使用](di-12-zhang-linux-quan-xian/123-chmod-ming-ling-de-shi-yong.md)
@@ -120,6 +119,4 @@
   * [19.8 awk特殊模式-BEGIN模式与END模式](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/198-awkte-shu-mo-5f0f-begin-mo-shi-yu-end-mo-shi.md)
   * [19.9 awk中的动作](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/199-awkzhong-de-dong-zuo.md)
   * [19.10 awk数组](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/1910-awkshu-zu.md)
-
-
 

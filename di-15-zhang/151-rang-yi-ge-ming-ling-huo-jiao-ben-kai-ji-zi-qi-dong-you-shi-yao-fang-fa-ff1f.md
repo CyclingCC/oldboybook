@@ -22,3 +22,5 @@ Chkconfig管理一个服务或脚本让他开机自启动有下面几个条件:
 
 注：这里主要写清楚通过/etc/rc.local和chkconfig管理即可。
 
+![](/assets/19-4.jpg)
+

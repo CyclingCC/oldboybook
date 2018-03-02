@@ -407,119 +407,109 @@ wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-
 yum install -y tree
 ```
 
-17、ifconfig 查看网卡ip地址\(位置\)
+#### 17、ifconfig 查看网卡ip地址\(位置\)
 
 例子：
 
-\[root@oldboy35-moban ~\]\# ifconfig
+```
+[root@oldboy35-moban ~]# ifconfig
+eth0      Link encap:Ethernet  HWaddr 00:0C:29:D2:B3:01
+      inet addr:192.168.56.128  Bcast:192.168.56.255  Mask:255.255.255.0
 
-eth0      Link encap:Ethernet  HWaddr 00:0C:29:D2:B3:01  
+      inet6 addr: fe80::20c:29ff:fed2:b301/64 Scope:Link
 
-          inet addr:192.168.56.128  Bcast:192.168.56.255  Mask:255.255.255.0
+      UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
 
-          inet6 addr: fe80::20c:29ff:fed2:b301/64 Scope:Link
+      RX packets:2447 errors:0 dropped:0 overruns:0 frame:0
 
-          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+      TX packets:2147 errors:0 dropped:0 overruns:0 carrier:0
 
-          RX packets:2447 errors:0 dropped:0 overruns:0 frame:0
+      collisions:0 txqueuelen:1000 
 
-          TX packets:2147 errors:0 dropped:0 overruns:0 carrier:0
+      RX bytes:238398 \(232.8 KiB\)  TX bytes:283304 \(276.6 KiB\)
+lo        Link encap:Local Loopback
+      inet addr:127.0.0.1  Mask:255.0.0.0
 
-          collisions:0 txqueuelen:1000 
+      inet6 addr: ::1/128 Scope:Host
 
-          RX bytes:238398 \(232.8 KiB\)  TX bytes:283304 \(276.6 KiB\)
+      UP LOOPBACK RUNNING  MTU:65536  Metric:1
 
+      RX packets:0 errors:0 dropped:0 overruns:0 frame:0
 
+      TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
 
-lo        Link encap:Local Loopback  
+      collisions:0 txqueuelen:0 
 
-          inet addr:127.0.0.1  Mask:255.0.0.0
+      RX bytes:0 \(0.0 b\)  TX bytes:0 \(0.0 b\)
+```
 
-          inet6 addr: ::1/128 Scope:Host
+#### 18、if up    启动某一个块/个网卡
 
-          UP LOOPBACK RUNNING  MTU:65536  Metric:1
-
-          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
-
-          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
-
-          collisions:0 txqueuelen:0 
-
-          RX bytes:0 \(0.0 b\)  TX bytes:0 \(0.0 b\)
-
-
-
-18、if up    启动某一个块/个网卡  
-
-if down 关闭某一个块/个网卡 
+if down 关闭某一个块/个网卡
 
 例子：
 
-/etc/init.d/network restart \#\#\#重启所有网卡 
+```
+/etc/init.d/network restart ###重启所有网卡
+if down eth0 && if up eth0    \#\#重启某一个网卡 \(down 不能单独使用否则跑机房\)
+```
 
-   	if down eth0 && if up eth0    \#\#重启某一个网卡 \(down 不能单独使用否则跑机房\)
+#### 19、w   查看系统谁登陆了 在干啥   可以查看系统负载（繁忙程度）
 
-19、w   查看系统谁登陆了 在干啥   可以查看系统负载（繁忙程度）
-
-\[root@oldboy35-moban ~\]\# w
-
- 22:13:19 up  1:50,  2 users,  load average: 0.00, 0.01, 0.05
-
+```
+[root@oldboy35-moban ~]# w
+22:13:19 up  1:50,  2 users,  load average: 0.00, 0.01, 0.05
 USER     TTY      FROM              LOGIN@   IDLE   JCPU   PCPU WHAT
-
 root     tty1     -                20:24    1:49m  0.15s  0.15s -bash
-
 root     pts/0    192.168.56.1     21:01    1.00s  0.41s  0.24s w
+```
 
-20、free 查看系统内存的使用情况 
+#### 20、free 查看系统内存的使用情况
 
-参数： 
+参数：
 
--h  人类可读 
+-h  人类可读
 
 -m  以MB为单位显示
 
-\[root@oldboy35-moban ~\]\# free -h
-
-             total       used       free     shared    buffers     cached
-
+```
+[root@oldboy35-moban ~]# free -h
+         total       used       free     shared    buffers     cached
 Mem:          1.8G       293M       1.5G       228K        45M        85M
-
 -/+ buffers/cache:       163M       1.7G
-
 Swap:         767M         0B       767M
+```
 
-21、nl  显示文件内容及行号
+#### 21、nl  显示文件内容及行号
 
-\[root@oldboy35-moban data\]\# nl nginx.conf 
+```
+[root@oldboy35-moban data]# nl nginx.conf
+ 1    std1
 
-     1	std1
+ 2    std2
 
-     2	std2
+ 3    std3
 
-     3	std3
+ 4    std4
 
-     4	std4
+ 5    std5
+```
 
-     5	std5
+#### 22、tar 打包压缩的命令
 
+参数：
 
+zcvf 创建一个压缩包
 
-22、tar 打包压缩的命令
+z     以gzip软件进行压缩包
 
-参数：zcvf 创建一个压缩包
+c      create 创建\(压缩\)包
 
-z	 以gzip软件进行压缩包
+v      verbose 显示过程\(打包 压缩 解压过程\)
 
-c 	 create 创建\(压缩\)包
+f      筐 file 指定压缩包名字\(尽量放到参数的最后\)
 
-v 	 verbose 显示过程\(打包 压缩 解压过程\)
-
-f 	 筐 file 指定压缩包名字\(尽量放到参数的最后\)
-
-
-
-ztf 	查看压缩包内容
+ztf     查看压缩包内容
 
 t list 列表 显示压缩包中的内容
 
@@ -527,7 +517,7 @@ zxvf   解压缩
 
 xf
 
-x 	   extract 解压缩 
+x        extract 解压缩
 
 --exclude= 排除 某个文件
 
@@ -535,67 +525,62 @@ x 	   extract 解压缩
 
 -C 解压到指定位置
 
-\[root@oldboy35-moban tmp\]\# tar zcvf /tmp/etc-paichu.tar.gz /etc/  打包压缩
+```
+[root@oldboy35-moban tmp]# tar zcvf /tmp/etc-paichu.tar.gz /etc/  打包压缩
+[root@oldboy35-moban tmp]# tar ztf /tmp/etc.tar.gz 查看压缩
+[root@oldboy35-moban tmp]#cd /tmp/
+[root@oldboy35-moban tmp]#tar zxvf /tmp/etc.tar.gz  解压缩
+[root@oldboy35-moban tmp]# ls
+[root@oldboy35-moban tmp]# pwd
+[root@oldboy35-moban tmp]# tar zcvf /tmp/etc-paichu.tar.gz /etc/  --exclude=etc/services 排除
+[root@oldboy35-moban tmp]# tar tf /tmp/etc-paichu.tar.gz |grep services
+```
 
-\[root@oldboy35-moban tmp\]\# tar ztf /tmp/etc.tar.gz 查看压缩
+#### 23、cut 切割，取出你需要的某列 awk小弟，阉割版
 
-\[root@oldboy35-moban tmp\]\#cd /tmp/
+参数：
 
-\[root@oldboy35-moban tmp\]\#tar zxvf /tmp/etc.tar.gz  解压缩
+-d 指定菜刀
 
-\[root@oldboy35-moban tmp\]\# ls
+-f 取出某一部分
 
-\[root@oldboy35-moban tmp\]\# pwd
+-f5        取出第五列
 
-\[root@oldboy35-moban tmp\]\# tar zcvf /tmp/etc-paichu.tar.gz /etc/  --exclude=etc/services 排除
+-f1,5    取出第一列和第五列        
 
-\[root@oldboy35-moban tmp\]\# tar tf /tmp/etc-paichu.tar.gz \|grep services
+-f1-5     取出第一列到第五列
 
+ -c 取字符\\(文本 字母\\)  
 
+```
+[root@oldboyedu oldboy]# cut  -d  " "    -f3,5  oldboy.txt |sed 's#,myqq #,#g'
+```
 
-23、cut 切割，取出你需要的某列 awk小弟，阉割版
+#### 24、wc 统计文件有多少行
 
-参数：-d 指定菜刀
+-l 统计文件有多少行
 
-			-f 取出某一部分
-
-			-f5		取出第五列
-
-			-f1,5	取出第一列和第五列
-
-			-f1-5 	取出第一列到第五列
-
-			-c 取字符\(文本 字母\)  
-
-\[root@oldboyedu oldboy\]\# cut  -d  " "    -f3,5  oldboy.txt \|sed 's\#,myqq \#,\#g'
-
-24、wc 统计文件有多少行。
-
-	-l 统计文件有多少行
-
-\[root@oldboyedu oldboy\]\# wc -l /etc/services 
-
+```
+[root@oldboyedu oldboy]# wc -l /etc/services
 10774 /etc/services
+```
 
-25、dumpe2fs  显示文件系统（分区）的信息
+#### 25、dumpe2fs  显示文件系统（分区）的信息
 
+```
 inode size
-
 block size
+dumpe2fs /dev/sda3|egrep -i "block size|inode count"
+[root@oldboyedu35-nb ~]# dumpe2fs /dev/sda3 |grep -i "inode size"
+dumpe2fs 1.41.12 (17-May-2010)
+Inode size:              256
+```
 
-dumpe2fs /dev/sda3\|egrep -i "block size\|inode count"
-
-\[root@oldboyedu35-nb ~\]\# dumpe2fs /dev/sda3 \|grep -i "inode size"
-
-dumpe2fs 1.41.12 \(17-May-2010\)
-
-Inode size:	          256
-
-26、last 显示用户登录信息
+#### 26、last 显示用户登录信息
 
 lastlog 显示所有用户的最近一次的登录信息
 
-27、file查看文件的类型
+#### 27、file查看文件的类型
 
 
 

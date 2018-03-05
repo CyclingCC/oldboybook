@@ -90,8 +90,6 @@ drwx------ 2 alex666 alex666 4096 Apr 5 11:39 /alex666/
 
 ##### -r 连窝端了 {#r-连窝端了}
 
-
-
 ### 7、usermod用户信息修改相关命令 {#1211-usermod用户信息修改相关命令}
 
 ![](https://www.luffycity.com/linux-book/assets/tab19-11.png)
@@ -489,4 +487,12 @@ oldboy888 \*\*Never logged in\*\*
 oldboy666 \*\*Never logged in\*\*
 
 \[root@oldboyedu35-nb ~\]\# \#\#\#\#登录----本地登录（输入用户名密码）或者远程登录 （xshell crt putty\)
+
+#### 练习题：
+
+1、说出5个和用户相关的命令
+
+2、下面要求oldboy666用户7天内不能更改密码，60天以后必须修改密码，过期前10天通知oldboy666用户，过期后30天后禁止用户登陆。
+
+3、如何正确删除用户？
 

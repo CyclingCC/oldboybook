@@ -86,7 +86,7 @@ ii、UTF-8：非定长，1-4字节，广泛支持，MYSQL也使用UTF-8，企业
 
 en\_US.UTF-8
 
-\[root@oldboyedu44 ~\]\# cat /etc/sysconfig/i18n 
+\[root@oldboyedu44 ~\]\# cat /etc/sysconfig/i18n
 
 LANG="en\_US.UTF-8"
 
@@ -132,11 +132,15 @@ zh\_CN.UTF-8
 
 ##### 第3个里程碑-永久生效
 
-\[root@oldboyedu42 ~\]\# cat  /etc/sysconfig/i18n 
+\[root@oldboyedu42 ~\]\# cat  /etc/sysconfig/i18n
 
 LANG="en\_US.UTF-8"
 
 SYSFONT="latarcyrheb-sun16"
 
 \[root@oldboyedu42 ~\]\# source   /etc/sysconfig/i18n
+
+#### 练习题：
+
+解决中文乱码的过程
 

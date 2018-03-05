@@ -18,3 +18,7 @@ chmod 没了x权限
 
 2.install -m 755 /bin/chmod /tmp/chmod   \#\#权限回来了，在复制回去即可。
 
+#### 练习题：
+
+如何使用chown这个命令？
+

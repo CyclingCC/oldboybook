@@ -10,13 +10,11 @@ $LANG $\(hostname\) \`whoami\` {1..5}
 
 en\_US.UTF-8 oldboyedu42-lnb root {1..5}
 
-#### 3、不加引号：和双引号类似，支持通配符 
+#### 3、不加引号：和双引号类似，支持通配符
 
 \[root@oldboyedu42-lnb oldboy\]\# echo $LANG $\(hostname\) \`whoami\` {1..5}
 
 en\_US.UTF-8 oldboyedu42-lnb root 1 2 3 4 5
-
-
 
 #### 4、三者的区别
 
@@ -127,4 +125,8 @@ echo "ll /bin/awk "
 ll /bin/awk
 
 \#通配符 {} \* \[\] ?
+
+练习题：
+
+说一下单引号、双引号及不加引号的区别？
 

@@ -130,7 +130,15 @@ tmpfs 931M 0 931M 0% /dev/shm
 
 ##### [http://oldboy.blog.51cto.com/2561410/612351](https://www.gitbook.com/book/cyclingcc/-linux/edit#)
 
-##### ![](/assets/13-7.png)![](/assets/13-8.png)
+#### ![](/assets/13-7.png)![](/assets/13-8.png)
+
+#### 练习题：
+
+1、文件删除的原理
+
+2、磁盘空间满了但是与du -sh 的结果不符---没有被彻底删除排查过程
+
+##### 
 
 
 

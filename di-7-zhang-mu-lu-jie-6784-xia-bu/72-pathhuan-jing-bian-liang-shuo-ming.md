@@ -10,8 +10,6 @@ LANG=新的内容 ---向变量密码放入东西---修改书的内容（升级�
 
 欲练此功，必先自宫，若不自宫，也能成功
 
-
-
 自定义的值，取一个名字去调用
 
 alex=hello
@@ -28,8 +26,6 @@ linux哪里都可以用 大写 PS1 LANG PATH
 
 \# /etc/profile
 
-
-
 \# System wide environment and startup programs, for login setup
 
 \[root@oldboyedu44 ~\]\# \#environment
@@ -43,4 +39,10 @@ linux哪里都可以用 大写 PS1 LANG PATH
 /usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
 
 
+
+练习题：
+
+1、什么是变量？
+
+2、什么是环境变量及作用？
 

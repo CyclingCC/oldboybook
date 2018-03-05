@@ -23,13 +23,13 @@ id: lilaoshi: No such user
 
 Changing password for user oldboy.
 
-New password: 
+New password:
 
 BAD PASSWORD: it is too simplistic/systematic  ===&gt;提示密码太简单了，但可以不理会
 
 BAD PASSWORD: is too simple
 
-Retype new password: 
+Retype new password:
 
 passwd: all authentication tokens updated successfully.
 
@@ -51,13 +51,13 @@ oldboy
 
 \[oldboy@oldboyedu44 ~\]$ su - root     ===&gt;切回到root用户
 
-Password: 
+Password:
 
 \[root@oldboyedu44 ~\]\# su - oldboy
 
 \[oldboy@oldboyedu44 ~\]$ su
 
-Password: 
+Password:
 
 说明：
 
@@ -70,11 +70,19 @@ Password:
 
 \[root@oldboy ~\]\#       "\#" ===&gt;超级管理员root对应的提示符
 
-\[oldboy@oldboy ~\]$     "$" ===&gt;普通用户oldboy对应的提示符 
+\[oldboy@oldboy ~\]$     "$" ===&gt;普通用户oldboy对应的提示符
 
 * 提示符@前面的字符代表当前用户（可用whoami查询），后面的为主机名（可用hostname查询），~所在的位置是窗口当前用户所在的路径。示例如下：
 
 \[oldboy@oldboy ~\]$  ===&gt; oldboy为当前用户，oldboyedu44为主机名，~表示当前目录，即家目录
+
+#### 练习题：
+
+1、如何添加用户
+
+2、如何从root用户切换到普通用户
+
+3、su与su -的区别
 
 
 

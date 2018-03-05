@@ -58,3 +58,11 @@ ifdown eth0 && ifup eth0
 
 ls /alex \\|\\| echo 目录不存在
 
+#### 练习题：
+
+默写所有的特殊符号及含义
+
+
+
+
+

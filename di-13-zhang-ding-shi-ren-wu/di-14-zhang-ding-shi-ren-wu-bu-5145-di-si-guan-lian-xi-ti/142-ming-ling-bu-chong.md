@@ -8,7 +8,7 @@
 
 #### 3、usermod 修改用户信息
 
-   -u -g -G -s -M -e -c -d -L -U -l（小写字母L）
+-u -g -G -s -M -e -c -d -L -U -l（小写字母L）
 
 #### 4、chage 专门修改用户密码信息
 
@@ -16,7 +16,7 @@
 
 -l（小写字母L）
 
--E 
+-E
 
 -M -W -m -I\(大写字母i\)
 
@@ -55,7 +55,7 @@ root
 
 parted /dev/sdc print
 
-parted /dev/sdc mklaber gpt 
+parted /dev/sdc mklaber gpt
 
 parted /dev/sdc mkpart primary 0 100
 
@@ -139,5 +139,7 @@ swapoff  /dev/sdb1
 
 -h 人类可读
 
+#### 练习题：
 
+回忆本章节的重要命令及如何使用
 

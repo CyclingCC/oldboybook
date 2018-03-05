@@ -32,3 +32,7 @@ NETWORKING=yes
 
 HOSTNAME=oldboy36
 
+#### 练习题：
+
+详细说明如何设置linux主机名（临时和永久）
+

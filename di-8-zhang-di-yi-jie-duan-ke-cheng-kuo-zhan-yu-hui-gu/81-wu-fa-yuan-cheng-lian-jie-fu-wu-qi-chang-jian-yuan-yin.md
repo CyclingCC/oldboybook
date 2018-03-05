@@ -38,17 +38,17 @@ nmap -p22 10.0.0.200
 
 #### 4、道路不通常见原因
 
-1\).ip是否正确 
+1\).ip是否正确
 
 2\).网卡是否启动
 
-ip a                == ifconfig 
+ip a                == ifconfig
 
-ip address show eth0   ifconfig eth0 
+ip address show eth0   ifconfig eth0
 
-ip a s eth0 
+ip a s eth0
 
-3\).vmware服务是否启动 
+3\).vmware服务是否启动
 
 win+r ===&gt; services.msc
 
@@ -56,5 +56,9 @@ win+r ===&gt; services.msc
 
 5\).打开我的电脑/此电脑/计算机  输入"网络连接" 查看vmnet8的配置
 
+#### 练习题：
 
+简述无法远程连接服务的原因
+
+如何解决无法远程连接的服务器？
 

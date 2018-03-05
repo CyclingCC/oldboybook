@@ -173,3 +173,11 @@ uid=500\(oldboy\) gid=501\(incahome\) 组=501\(incahome\)
 
 ![](https://www.luffycity.com/linux-book/assets/18-2.png)
 
+#### 练习题：
+
+1、叙述rwx什么含义及在系统中的应用
+
+2、简述文件访问过程
+
+
+

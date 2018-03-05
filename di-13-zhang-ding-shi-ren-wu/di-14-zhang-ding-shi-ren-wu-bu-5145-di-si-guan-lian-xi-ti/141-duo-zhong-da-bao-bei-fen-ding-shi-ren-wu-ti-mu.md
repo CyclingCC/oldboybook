@@ -218,3 +218,9 @@ root用户umask值默认为：0022
 
 uid=0\(root\) gid=0\(root\) groups=0\(root\) context=unconfined\_u:unconfined\_r:unconfined\_t:s0-s0:c0.c1023
 
+#### 练习题：
+
+1、每周1的凌晨 2 点半小时将/etc/services 文件打包备份到/tmp 下（最好每次备份成不同的备份包）。
+
+2、添加一个用户 oldboy，并指定属于 sa 组，要求组 ID 为 999， uid 为 808,并且不建立家目录及禁止其登陆。
+

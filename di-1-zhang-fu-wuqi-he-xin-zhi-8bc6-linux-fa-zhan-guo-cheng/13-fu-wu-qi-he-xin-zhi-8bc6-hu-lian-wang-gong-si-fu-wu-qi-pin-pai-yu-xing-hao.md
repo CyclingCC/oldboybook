@@ -19,7 +19,7 @@
 | R730 | 6核 | 8G\*24 | 1TB\*24 | 2U |
 | R930 | 10核 | 8G\*96 | 1TB\*32 | 4U |
 
-* **Dell服务器的配置官网：http://china.dell.com/cn/business/p/servers**
+* **Dell服务器的配置官网：**[http://china.dell.com/cn/business/p/servers](http://china.dell.com/cn/business/p/servers)
 * **销售**
 
 **代表图片**
@@ -42,4 +42,8 @@
 ### 3、HP品牌
 
 DL380G7/G8（2U）
+
+练习题：
+
+
 

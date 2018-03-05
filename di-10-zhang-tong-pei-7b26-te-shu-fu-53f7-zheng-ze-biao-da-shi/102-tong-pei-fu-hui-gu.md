@@ -12,7 +12,7 @@ find / -type f -name "ls\*"
 
 find / -type f  -name "\*oldboy\*"
 
-#### 2、{}  生成序列 
+#### 2、{}  生成序列
 
 echo {1..10}
 
@@ -68,9 +68,9 @@ oldboy.txt oldboy.txt.bak
 
 cp: overwrite \`oldboy.txt.bak'? y
 
-\[root@oldboyedu42-lnb ~\]\# ls -l oldboy.txt\* 
+\[root@oldboyedu42-lnb ~\]\# ls -l oldboy.txt\*
 
-\[root@oldboyedu42-lnb ~\]\# ls -l oldboy.txt\* 
+\[root@oldboyedu42-lnb ~\]\# ls -l oldboy.txt\*
 
 -rw-r--r--  3 root root 0 Nov 11 23:50 oldboy.txt
 
@@ -78,7 +78,7 @@ cp: overwrite \`oldboy.txt.bak'? y
 
 -rw-r--r--  3 root root 0 Nov 11 23:50 oldboy.txt-hard
 
-\[root@oldboyedu42-lnb ~\]\# 
+\[root@oldboyedu42-lnb ~\]\#
 
 \[root@oldboyedu42-lnb ~\]\# \#cp  oldboy.txt{,.bak}
 
@@ -90,11 +90,15 @@ oldboy.txt oldboy.txt.bak
 
 A AC
 
-#### 3、小结 
+#### 3、小结
 
-1）查找文件 
+1）查找文件
 
-2）\*  {}  
+2）\*  {}
 
 3）？ 任何一个
+
+#### 练习题：
+
+说说都有哪些通配符？
 

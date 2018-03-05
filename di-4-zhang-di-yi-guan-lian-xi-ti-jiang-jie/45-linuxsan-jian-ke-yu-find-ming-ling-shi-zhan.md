@@ -180,3 +180,9 @@ oldgirl
 
 find /etc/ -type f -name "\*eth0" \|xargs sed 's\#IPADDR=.\*\#IPADDR=10.0.0.200\#'
 
+#### 练习题：
+
+1、将文件中的oldboy替换成oldgirl
+
+2、使用find命令修改网卡ip地址
+

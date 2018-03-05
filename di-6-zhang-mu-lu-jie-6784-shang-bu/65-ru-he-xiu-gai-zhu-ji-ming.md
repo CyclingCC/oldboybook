@@ -32,3 +32,7 @@ NETWORKING=yes
 
 HOSTNAME=oldboy36
 
+#### 练习题：
+
+说说如何修改主机名（分临时和永久）
+

@@ -1,6 +1,6 @@
 #### 1、对于目录来说 rwx含义
 
-\#r     read     查看目录里面的内容 ls 
+\#r     read     查看目录里面的内容 ls
 
 \#w     write    可以在目录中 创建 删除  重命名文件
 
@@ -8,11 +8,11 @@
 
 #### 2、测试环境
 
-mkdir -p /oldboy/test 
+mkdir -p /oldboy/test
 
 chown oldboy.oldboy  /oldboy/test
 
-touch  /oldboy/test/stu{01..5}.txt 
+touch  /oldboy/test/stu{01..5}.txt
 
 #### 3、目录的R权限
 
@@ -94,7 +94,7 @@ total 0
 
 dr-xr-xr-x. 2 oldboy oldboy 4096 Nov  3 19:16 test
 
-##### \#\#oldboy查看 
+##### \#\#oldboy查看
 
 \[oldboy@oldboyedu42-lnb oldboy\]$ ls -ld test
 
@@ -120,9 +120,9 @@ total 8
 
 ##### 小结：
 
-1.目录的r权限，查看目录里面内容 
+1.目录的r权限，查看目录里面内容
 
-2.目录来说r权限 需要有x配合 
+2.目录来说r权限 需要有x配合
 
 3.对于目录来说x权限，cd   你是否能查看或修改目录里面文件属性
 
@@ -212,15 +212,19 @@ ls: cannot access test/oldboy.tx: No such file or directory
 
 \[root@oldboyedu42-lnb etc\]\# chmod 777 oldboy.txt
 
-\[oldboy@oldboyedu42-lnb etc\]$ \rm -f oldboy.txt 
+\[oldboy@oldboyedu42-lnb etc\]$ \rm -f oldboy.txt
 
 rm: cannot remove \`oldboy.txt': Permission denied
 
 #### 7、目录权限小结：
 
-1.r  查看目录内容 ，需要x权限配合 
+1.r  查看目录内容 ，需要x权限配合
 
-2.w  在目录里面创建 删除 重命名文件  ，需要x权限配合  
+2.w  在目录里面创建 删除 重命名文件  ，需要x权限配合
 
 3.x  进入到目录     查看目录中文件的属性
+
+#### 练习题：
+
+详细说出rwx在目录中的意义
 

@@ -224,3 +224,5 @@ uid=0\(root\) gid=0\(root\) groups=0\(root\) context=unconfined\_u:unconfined\_r
 
 2、添加一个用户 oldboy，并指定属于 sa 组，要求组 ID 为 999， uid 为 808,并且不建立家目录及禁止其登陆。
 
+3、说说正则使用到的特殊符号？
+

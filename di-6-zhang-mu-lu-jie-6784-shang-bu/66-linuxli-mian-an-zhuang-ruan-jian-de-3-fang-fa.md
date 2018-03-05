@@ -1,8 +1,8 @@
-### 一、linux里面安装软件的3方法  
+### 一、linux里面安装软件的3方法
 
 #### 1、yum 安装
 
-   替你下载软件 替你安装  替你解决依赖关系    点外卖 缺少的东西 外卖解决 
+替你下载软件 替你安装  替你解决依赖关系    点外卖 缺少的东西 外卖解决
 
 * 方便 简单
 * 没有办法深入修改
@@ -11,7 +11,7 @@
 
 yum install  -y  tree
 
-#### 2、 rpm安装    
+#### 2、 rpm安装
 
 自己下载软件包 自己安装 自己解决依赖       半成品 缺少的东西 自己解决
 
@@ -38,7 +38,7 @@ rpm -qa \#显示出系统已经安装了的软件
 
 -a 所有
 
-\[root@oldboyedu42-lnb ~\]\# rpm -qa\|grep tree 
+\[root@oldboyedu42-lnb ~\]\# rpm -qa\|grep tree
 
 tree-1.5.3-3.el6.x86\_64
 
@@ -50,11 +50,11 @@ iptables-ipv6-1.4.7-16.el6.x86\_64
 
 iptables-1.4.7-16.el6.x86\_64
 
-\[root@oldboyedu42-lnb ~\]\# 
+\[root@oldboyedu42-lnb ~\]\#
 
 \#查询软件包里面的内容
 
--l list 
+-l list
 
 \[root@oldboyedu42-lnb ~\]\# rpm -ql tree
 
@@ -74,5 +74,9 @@ iptables-1.4.7-16.el6.x86\_64
 
 #### 5、 Linux里面常用的工具（yum安装的）
 
-tree  lrzsz  nmap nc  dos2unix 
+tree  lrzsz  nmap nc  dos2unix
+
+#### 练习题：
+
+说说linux安装软件的三种方法
 

@@ -80,5 +80,11 @@ Linux发行版本选择
 | **想新技术，新功能是RHEL和CentOS的测试版或预发布版** | FedoraFedora=稳定之后=&gt;Redhat=去Logo去除收费=&gt;CentOS |
 | **中文** | 红旗（Red Flag）Linux，中标麒麟（Kylin）Linux |
 
+#### 练习题：
 
+1、linux发展中都有哪些重要人物以及做出的贡献
+
+2、解释linux发展中涉及到的名词
+
+FSF、GNU、GPL
 

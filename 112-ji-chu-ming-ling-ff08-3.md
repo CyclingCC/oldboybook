@@ -1,6 +1,6 @@
 #### 1、ln 创建链接（创建硬链接）
 
-参数：	
+参数：
 
 -s 创建软链接
 
@@ -31,7 +31,7 @@ date +格式 以指定格式显示系统的时间或日期
 
 %y                 17
 
-%d		       27
+%d               27
 
 %w               （0-6）
 
@@ -47,7 +47,7 @@ date +格式 以指定格式显示系统的时间或日期
 
 参数：
 
--h 关机	-h 时间
+-h 关机    -h 时间
 
 -r 重启   -r时间
 
@@ -61,13 +61,13 @@ halt
 
 poweroff
 
-#### 11、chmod  修改文件的权限 
+#### 11、chmod  修改文件的权限
 
 参数：
 
--R   递归的修改权限   目录及目录的子孙后代 
+-R   递归的修改权限   目录及目录的子孙后代
 
-chmod 755 dir 
+chmod 755 dir
 
 chmod +x test.sh
 
@@ -107,9 +107,9 @@ chown 用户:组 文件或目录 \#&lt;===表示授权用户和组
 
 强调：
 
-1）	其中的冒号“:”可以用点号“.”代替
+1）    其中的冒号“:”可以用点号“.”代替
 
-2）	要授权的用户和组名，必须是linux系统里实际存在的
+2）    要授权的用户和组名，必须是linux系统里实际存在的
 
 ```
 [root@oldboyedu35-nb oldboy]# chown oldboy.oldboy oldboy022
@@ -148,7 +148,7 @@ drw-r--r-- 2 oldboy oldboy 4096 Mar 28 13:37 oldboydir
 ---------- 1 oldboy oldboy   17 Mar 28 13:36 test.sh
 ```
 
-#### 13、ps process 查看进程 
+#### 13、ps process 查看进程
 
 参数： ps -ef  查看系统上的每个进程
 
@@ -183,7 +183,7 @@ vim 3367 root 4u REG 8,3 12288 145536 /oldboy/.oldboy.txt.swp
 
 lsof \|grep delete
 
+#### 练习题：
 
-
-
+回忆本章节的重要命令及如何使用
 

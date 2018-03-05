@@ -252,7 +252,11 @@ echo oldboy 2&gt;a.txt 1&gt;b.txt
 
 echo oldboy &gt;a.txt 2&gt;&1 错误和正确放在一起
 
-#### 
+#### 练习题：
+
+1、简述五个特殊符号及作用
+
+2、简述重定向符号的分类及含义
 
 
 

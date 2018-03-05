@@ -28,7 +28,7 @@ PING 223.5.5.5 \(223.5.5.5\) 56\(84\) bytes of data.
 
 64 bytes from 223.5.5.5: icmp\_seq=5 ttl=128 time=32.9 ms
 
-#### 3、小结
+#### 3、排查流程小结
 
 1.IPADDR-ONBOOT-BOOTPROTO-GATEWAY-DNS1-DNS2
 
@@ -59,4 +59,10 @@ ping www.baidu.com
 ping 223.5.5.5
 
 5.修改DNS-重启网卡
+
+#### 练习题：
+
+简述linux无法上午的排查过程
+
+
 

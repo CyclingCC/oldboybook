@@ -968,9 +968,7 @@ Access: \(0644/-rw-r--r--\)  Uid: \(    0/    root\)   Gid: \(    0/    root\)
 
 \[root@oldboyedu42-lnb ~\]\# stat /etc/hosts \|sed -n '4p'\|sed -r 's\#^.\*\\(0.\*/\#\#g'
 
-```
-root\)
-```
+root\\)
 
 \[root@oldboyedu42-lnb ~\]\# stat /etc/hosts \|sed -n '4p'\|sed -r 's\#^.\*\\(0\(.\*\)/-\#\#g'
 
@@ -1003,6 +1001,4 @@ rw-r--r--\)  Uid: \(    0/    root\)   Gid: \(    0/    root\)
 1、取ip地址
 
 2、取文件权限
-
-
 

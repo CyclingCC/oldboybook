@@ -75,7 +75,11 @@ iptables 0:off 1:off 2:off 3:off 4:off 5:off 6:off
 #### 7、小结：彻底的让一个服务，不再运行
 
 1. 关闭当前正在运行的进程（服务）=====&gt;/etc/init.d/iptablesstop  
-   1. 让他在开机不启动======&gt;chkconfigiptablesoff
+   让他在开机不启动======&gt;chkconfigiptablesoff
+
+#### 练习题：
+
+如何正确的关闭防火墙iptables？
 
 
 

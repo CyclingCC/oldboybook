@@ -19,9 +19,15 @@ nameserver 10.0.0.2    \#---&gt;配置DNS
 
 #### 3、在Red Hat Enterprise Linux \(RHEL\)中配置DNS在哪里配置？
 
-i、网卡配置文件 
+i、网卡配置文件
 
 /etc/sysconfig/network-scripts/ifcfg-eth0
 
 ii、/etc/resolv.conf
+
+#### 练习题：
+
+简述DNS的作用
+
+
 

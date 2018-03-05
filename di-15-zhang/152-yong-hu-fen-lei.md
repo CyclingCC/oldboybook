@@ -103,3 +103,11 @@ This account is currently not available.
 
 \[root@oldboyedu35-nb ~\]\# \#daemon:x:2:2:daemon:/sbin:/sbin/nologin
 
+#### 练习题：
+
+1、linux系统中有哪些个用户及用什么来区分的
+
+2、passwd文件中其中一行每列的含义
+
+
+

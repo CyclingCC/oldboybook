@@ -382,6 +382,54 @@ swapoff /tmp/newdisk
 
 rm -f /tmp/newdisk
 
+#### 11、企业案例：java环境内存不够用，大量占用swap.临时增加swap.
+
+创建一个大文件作为swap.
+
+```
+1.创建文件 
+[root@oldboyedu45-lnb data]# dd if=/dev/zero  of=/tmp/swap100  bs=1M  count=100 
+100+0 records in
+100+0 records out
+104857600 bytes (105 MB) copied, 0.143004 s, 733 MB/s
+[root@oldboyedu45-lnb data]# 
+[root@oldboyedu45-lnb data]# ll -h /tmp/swap100 
+-rw-r--r-- 1 root root 100M Mar  6 12:06 /tmp/swap100
+
+2.让这个文件变化为swap文件 
+
+[root@oldboyedu45-lnb data]# file /tmp/swap100 
+/tmp/swap100: data
+[root@oldboyedu45-lnb data]# mkswap /tmp/swap100 
+Setting up swapspace version 1, size = 102396 KiB
+no label, UUID=89271e7f-9625-48de-89a4-a5b8198a616d
+[root@oldboyedu45-lnb data]# file /tmp/swap100 
+/tmp/swap100: Linux/i386 swap file (new style) 1 (4K pages) size 25599 pages
+
+
+3.生效
+[root@oldboyedu45-lnb data]# swapon /tmp/swap100 
+[root@oldboyedu45-lnb data]# 
+[root@oldboyedu45-lnb data]# free -h
+             total       used       free     shared    buffers     cached
+Mem:          1.8G       1.5G       358M       244K        16M       795M
+-/+ buffers/cache:       691M       1.1G
+Swap:         867M         0B       867M
+
+
+4.永久生效
+
+ 法1 
+ swapon /tmp/swap100 写入/etc/rc.local 
+
+ 法2 
+ /etc/fstab
+
+[root@oldboyedu45-lnb ~]# tail -2 /etc/fstab 
+#/dev/sdb1               /data                   ext4    defaults        0 0
+#/tmp/swap100            swap                    swap    defaults        0 1
+```
+
 #### 练习题：
 
 1、fstab被破坏了，导致系统无法启动，如何修复？

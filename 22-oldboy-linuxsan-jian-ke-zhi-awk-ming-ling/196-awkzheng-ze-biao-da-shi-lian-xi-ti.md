@@ -240,7 +240,7 @@ Lao,Nanhai
 
 ```
 [root@oldboy files]# ifconfig eth0 | awk -F "(addr:)|( Bcast:)" 'NR==2{print $2}'
-192.168.197.133 
+192.168.197.133
 ```
 
 方法三：
@@ -258,8 +258,6 @@ Lao,Nanhai
 ```
 
 提示：
-
-
 
 前边的三种方法都还是比较好理解的，这第四种方法，需要学会逆向思维，看看我们要的结果10.0.0.50，ip地址：数字和点（.），我是否可以指定分隔符，以数字和点以外的字符为分隔符呢？
 
@@ -442,7 +440,7 @@ root:x:0:0:/root:/bin/bash
 
 ```
 awk -F":" '$5=="root"' /server/files/awk_equal.txt 
-awk -F":" '$5~/^root$/' /server/files/awk_equal.txt 
+awk -F":" '$5~/^root$/' /server/files/awk_equal.txt
 ```
 
 过程：
@@ -462,6 +460,12 @@ root:x:0:0:root:/root:/bin/bash
 #方法三：
 此题也可通过正则匹配来限制root的字符串。$5~/^root$/
 ```
+
+#### 练习题：
+
+1、如果判断某一列是否等于某个字符呢？
+
+2、取出文件/etc/services的15～20行
 
 
 

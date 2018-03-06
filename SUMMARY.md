@@ -23,6 +23,7 @@
   * [4.3 特殊符号与重定向符号详解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/43-te-shu-fu-hao-yu-zhong-ding-xiang-fu-hao-xiang-jie.md)
   * [4.4 Linux别名详解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/44-linuxbie-ming-xiang-jie.md)
   * [4.5 Linux三剑客与find命令实战](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/45-linuxsan-jian-ke-yu-find-ming-ling-shi-zhan.md)
+  * [4.6 第一关考试题](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/46-di-yi-guan-kao-shi-ti.md)
 * [第5章 linux系统基础优化](di-5-zhang-linux-xi-tong-ji-chu-you-hua.md)
   * [5.1 你是用的linux什么版本？](di-liu-jie-linux-ji-chu-you-hua/51-ni-shiyong-de-linux-shi-yao-ban-ben-ff1f.md)
   * [5.2 添加用户切换用户](di-liu-jie-linux-ji-chu-you-hua/52-tian-jia-yong-hu-qie-huan-yong-hu.md)

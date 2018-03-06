@@ -212,9 +212,9 @@ SATA SAS 都是 sd开头
 
 WARNING: DOS-compatible mode is deprecated. It's strongly recommended to
 
-switch off the mode \\\(command 'c'\\\) and change display units to
+switch off the mode \\(command 'c'\\) and change display units to
 
-sectors \\\(command 'u'\\\).
+sectors \\(command 'u'\\).
 
 Command \(m for help\): m
 
@@ -568,7 +568,9 @@ Device Boot Start End Blocks Id System
 
 /dev/sda3: UUID="70c86ea3-354e-45e3-a2d8-186ecbbc7292" TYPE="ext4"
 
-#### 
+#### 练习题：
 
+1、一台服务器6块600G的磁盘，raid5后，总大小3T，此时无法装系统，为什么？
 
+2、磁盘是如何分区的及都有哪些分区？
 

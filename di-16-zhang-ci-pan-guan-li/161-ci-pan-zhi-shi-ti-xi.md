@@ -10,5 +10,9 @@ IBM350RAMAC 可以说是磁盘的开山鼻祖，它与现代磁盘在外形上�
 
 ![](https://www.luffycity.com/linux-book/assets/tab23-25.png)
 
+#### 练习题：
+
+叙述磁盘知识中的五层结构都有哪些？
+
 
 

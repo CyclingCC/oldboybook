@@ -467,5 +467,7 @@ root:x:0:0:root:/root:/bin/bash
 
 2、取出文件/etc/services的15～20行
 
+3、取出常用服务端名称
 
+4、取出网卡eth0的ip地址
 

@@ -62,5 +62,9 @@ echo -e "\033[46;37m 天蓝白字 welcome to old7boy\033[0m"
 echo -e "\033[47;30m 白底黑字 welcome to old8boy\033[0m"
 ```
 
+#### 练习题：
+
+1、写出case语句的格式
+
 
 

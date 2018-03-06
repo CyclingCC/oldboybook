@@ -376,9 +376,17 @@ chmod 600 /tmp/newdisk
 
 5）卸载此磁盘
 
-swapoff /tmp/newdisk 
+swapoff /tmp/newdisk
 
 6）删除虚拟磁盘文件
 
 rm -f /tmp/newdisk
+
+#### 练习题：
+
+1、fstab被破坏了，导致系统无法启动，如何修复？
+
+2、故障案例-swap空间不足
+
+3、简述磁盘分区后格式化的过程
 

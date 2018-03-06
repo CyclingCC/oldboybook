@@ -13,7 +13,7 @@
   * [2.1 虚拟机环境搭建与系统部署](di-2-zhang-xu-ni-ji-da-5efa-centos-xi-tong-an-88c5-xshell-you-hua/21-xu-ni-ji-huan-jing-da-jian-yu-xi-tong-bu-shu.md)
   * [2.2 Xshell远程连接工具优化](di-2-zhang-xu-ni-ji-da-5efa-centos-xi-tong-an-88c5-xshell-you-hua/22-xshellyuan-cheng-lian-jie-gong-ju-you-hua.md)
 * [第3章 CentOS系统安装补充-远程连接拍错方法](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa.md)
-  * [3.1 远程连接拍错讲解](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa/31-yuan-cheng-lian-jie-pai-cuo-jiang-jie.md)
+  * [3.1 远程连接拍错](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa/31-yuan-cheng-lian-jie-pai-cuo-jiang-jie.md)
   * [3.2 Vmware网络多种连接模式讲解](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa/32-vmwarewang-luo-duo-zhong-lian-jie-mo-shi-jiang-jie.md)
   * [3.3 网站服务器多种分区方案说明](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa/33-wang-zhan-fu-wu-qi-duo-zhong-fen-qu-fang-an-shuo-ming.md)
   * [3.4 Linux命令行结构与命令特点讲解](di-san-zhang-centos-xi-tong-an-zhuang-bu-5145-yuan-cheng-lian-jie-pai-cuo-fang-fa/34-linuxming-ling-xing-jie-gou-yu-ming-ling-te-dian-jiang-jie.md)
@@ -23,6 +23,7 @@
   * [4.3 特殊符号与重定向符号详解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/43-te-shu-fu-hao-yu-zhong-ding-xiang-fu-hao-xiang-jie.md)
   * [4.4 Linux别名详解](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/44-linuxbie-ming-xiang-jie.md)
   * [4.5 Linux三剑客与find命令实战](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/45-linuxsan-jian-ke-yu-find-ming-ling-shi-zhan.md)
+  * [4.6 第一关考试题](di-4-zhang-di-yi-guan-lian-xi-ti-jiang-jie/46-di-yi-guan-kao-shi-ti.md)
 * [第5章 linux系统基础优化](di-5-zhang-linux-xi-tong-ji-chu-you-hua.md)
   * [5.1 你是用的linux什么版本？](di-liu-jie-linux-ji-chu-you-hua/51-ni-shiyong-de-linux-shi-yao-ban-ben-ff1f.md)
   * [5.2 添加用户切换用户](di-liu-jie-linux-ji-chu-you-hua/52-tian-jia-yong-hu-qie-huan-yong-hu.md)
@@ -44,6 +45,7 @@
   * [7.3 打包压缩命令详解](di-7-zhang-mu-lu-jie-6784-xia-bu/74-da-bao-ya-suo-ming-ling-xiang-jie.md)
   * [7.4 单引号双引号不加引号](di-7-zhang-mu-lu-jie-6784-xia-bu/76-dan-yin-hao-shuang-yin-hao-bu-jia-yin-hao.md)
   * [7.5 基础命令（2）](di-7-zhang-mu-lu-jie-6784-xia-bu/75-ji-chu-ming-ling-ff08-2.md)
+  * [7.6 第二关考试题](di-7-zhang-mu-lu-jie-6784-xia-bu/76-di-er-guan-kao-shi-ti.md)
 * [第8章 第一阶段课程扩展与回顾](di-8-zhang-di-yi-jie-duan-ke-cheng-kuo-zhan-yu-hui-gu.md)
   * [8.1 无法远程连接服务器常见原因](di-8-zhang-di-yi-jie-duan-ke-cheng-kuo-zhan-yu-hui-gu/81-wu-fa-yuan-cheng-lian-jie-fu-wu-qi-chang-jian-yuan-yin.md)
   * [8.2 查看端口是否开启的命令](di-8-zhang-di-yi-jie-duan-ke-cheng-kuo-zhan-yu-hui-gu/82-cha-kan-duan-kou-shi-fou-kai-qi-de-ming-ling.md)
@@ -63,9 +65,9 @@
   * [10.3 正则表达式详解](di-10-zhang-tong-pei-7b26-te-shu-fu-53f7-zheng-ze-biao-da-shi/103-zheng-ze-biao-da-shi-xiang-jie.md)
   * [10.4 正则表达式练习题](di-10-zhang-tong-pei-7b26-te-shu-fu-53f7-zheng-ze-biao-da-shi/104-zheng-ze-biao-da-shi-lian-xi-ti.md)
 * [第11章 第三关练习题](di-11-zhang-di-san-guan-lian-xi-ti.md)
-  * [11.1 三剑客过滤](111-san-jian-ke-guo-lv.md)
-  * [11.2 基础命令（3）](112-ji-chu-ming-ling-ff08-3.md)
-  * [11.3 Linux快捷键与vi、vim快捷键](114-linuxkuai-jie-jian-yu-vi-vim-kuai-jie-jian.md)
+  * [11.1 基础命令（3）](112-ji-chu-ming-ling-ff08-3.md)
+  * [11.2 Linux快捷键与vi、vim快捷键](114-linuxkuai-jie-jian-yu-vi-vim-kuai-jie-jian.md)
+  * [11.3 第三关考试题](113-di-san-guan-kao-shi-ti.md)
 * [第12章 linux权限](di-12-zhang-linux-quan-xian.md)
   * [12.1 rwx是啥](di-12-zhang-linux-quan-xian/121-rwxshi-sha.md)
   * [12.2 chmod 命令的使用](di-12-zhang-linux-quan-xian/123-chmod-ming-ling-de-shi-yong.md)
@@ -83,6 +85,7 @@
 * [第14章 定时任务补充-第四关练习题](di-13-zhang-ding-shi-ren-wu/di-14-zhang-ding-shi-ren-wu-bu-5145-di-si-guan-lian-xi-ti.md)
   * [14.1 多种打包备份定时任务题目](di-13-zhang-ding-shi-ren-wu/di-14-zhang-ding-shi-ren-wu-bu-5145-di-si-guan-lian-xi-ti/141-duo-zhong-da-bao-bei-fen-ding-shi-ren-wu-ti-mu.md)
   * [14.2 命令补充\(4\)](di-13-zhang-ding-shi-ren-wu/di-14-zhang-ding-shi-ren-wu-bu-5145-di-si-guan-lian-xi-ti/142-ming-ling-bu-chong.md)
+  * [14.3 第四关考试题](di-13-zhang-ding-shi-ren-wu/di-14-zhang-ding-shi-ren-wu-bu-5145-di-si-guan-lian-xi-ti/143-di-si-guan-kao-shi-ti.md)
 * [第15章 用户管理](di-15-zhang.md)
   * [15.1 让一个命令或脚本开机自启动有什么方法？ ](di-15-zhang/151-rang-yi-ge-ming-ling-huo-jiao-ben-kai-ji-zi-qi-dong-you-shi-yao-fang-fa-ff1f.md)
   * [15.2 用户分类](di-15-zhang/152-yong-hu-fen-lei.md)
@@ -109,6 +112,7 @@
   * [18.6 Shell脚本-循环](23-oldboy-linux-shellbian-cheng-ji-chu/186-shelljiao-672c-for-xun-huan.md)
   * [18.7 Shell脚本-case语句](23-oldboy-linux-shellbian-cheng-ji-chu/187-shelljiao-672c-case-yu-ju.md)
   * [18.8 Shell脚本调试](23-oldboy-linux-shellbian-cheng-ji-chu/188-shelljiao-ben-diao-shi.md)
+  * [18.9 第五关考试题](23-oldboy-linux-shellbian-cheng-ji-chu/189-di-wu-guan-kao-shi-ti.md)
 * [第19章 三剑客之awk实战](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling.md)
   * [19.1 awk基础入门](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/191-awkji-chu-ru-men.md)
   * [19.2 模式动作](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/192-mo-shi-dong-zuo.md)
@@ -120,6 +124,9 @@
   * [19.8 awk特殊模式-BEGIN模式与END模式](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/198-awkte-shu-mo-5f0f-begin-mo-shi-yu-end-mo-shi.md)
   * [19.9 awk中的动作](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/199-awkzhong-de-dong-zuo.md)
   * [19.10 awk数组](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/1910-awkshu-zu.md)
+  * [19.11 第六关考试题](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/1911-di-liu-guan-kao-shi-ti.md)
+
+
 
 
 

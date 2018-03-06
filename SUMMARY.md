@@ -67,6 +67,7 @@
 * [第11章 第三关练习题](di-11-zhang-di-san-guan-lian-xi-ti.md)
   * [11.1 基础命令（3）](112-ji-chu-ming-ling-ff08-3.md)
   * [11.2 Linux快捷键与vi、vim快捷键](114-linuxkuai-jie-jian-yu-vi-vim-kuai-jie-jian.md)
+  * [11.3 第三关考试题](113-di-san-guan-kao-shi-ti.md)
 * [第12章 linux权限](di-12-zhang-linux-quan-xian.md)
   * [12.1 rwx是啥](di-12-zhang-linux-quan-xian/121-rwxshi-sha.md)
   * [12.2 chmod 命令的使用](di-12-zhang-linux-quan-xian/123-chmod-ming-ling-de-shi-yong.md)

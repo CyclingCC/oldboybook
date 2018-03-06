@@ -299,7 +299,7 @@ c828c209-5b5f-4bc7-917c-678ed4215988
 961dc354-81b2-4564-9b85-6095ed4bc7b5
 ```
 
-#### 7、循环中的三个关键词 break continue exit return
+#### 7、循环中的四个关键词 break continue exit return
 
 ##### break continue exit用于循环结构中控制虚幻（for,while,if）的走向
 
@@ -391,5 +391,13 @@ echo $?
 7
 ```
 
+#### 练习题：
 
+1、while的基本语法
+
+2、for的基本语法
+
+3、防止脚本中断的方法
+
+4、解释下循环中的四个关键词 break continue exit return
 

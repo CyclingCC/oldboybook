@@ -155,5 +155,9 @@ fi
         echo "num1 num2 must be digit!"
     fi
 
+#### 练习题：
+
+1、if判断的基本语法
+
 
 

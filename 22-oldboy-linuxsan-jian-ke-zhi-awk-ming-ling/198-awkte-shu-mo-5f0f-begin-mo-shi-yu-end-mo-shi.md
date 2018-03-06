@@ -213,7 +213,17 @@ i=i+$0
 
 对比一下，其实只是把上边的1换成了$0
 
-\[root@oldboy files\]\# awk '{i=i+$0}END{print i}' count.txt 
+\[root@oldboy files\]\# awk '{i=i+$0}END{print i}' count.txt
 
 5050
+
+#### 练习题：
+
+1、取eth0的IP地址（BEGIN模块）
+
+2、统计/etc/servies文件里的空行数量
+
+3、BEGIN模块的三个作用
+
+
 

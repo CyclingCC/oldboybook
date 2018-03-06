@@ -124,4 +124,5 @@
   * [19.8 awk特殊模式-BEGIN模式与END模式](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/198-awkte-shu-mo-5f0f-begin-mo-shi-yu-end-mo-shi.md)
   * [19.9 awk中的动作](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/199-awkzhong-de-dong-zuo.md)
   * [19.10 awk数组](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/1910-awkshu-zu.md)
+  * [19.11 第六关考试题](22-oldboy-linuxsan-jian-ke-zhi-awk-ming-ling/1911-di-liu-guan-kao-shi-ti.md)
 
